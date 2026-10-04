@@ -1,0 +1,77 @@
+(kicad_sch
+	(version 20260306)
+	(generator "eeschema")
+	(generator_version "10.0")
+	(uuid "596641a7-eeca-47a8-9244-68f1910acd88")
+	(paper "A3")
+	(title_block
+		(title "The Harp")
+		(rev "A")
+		(company "The Frogmouth")
+	)
+	(lib_symbols)
+	(text "THE HARP - sympathetic-string digital pedal, 26-Z04-0005. One four-layer main board in a 125B; pots, toggles, LEDs and jacks board-mounted.
+Seeded from The Harp: only the Power and IO sheet (relay bypass, jacks, DC) is carried over. Still to draw: Controls and LEDs, MCU, Codec, Analog In, Analog Out, Power rework. See docs/pcb-plan.md.
+Datum: enclosure centre = drill/place origin."
+		(exclude_from_sim no)
+		(at 30 30 0)
+		(effects
+			(font
+				(size 1.5 1.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "e5faf93b-e311-401d-8ceb-8a2f47dcda45")
+	)
+	(sheet
+		(at 40 50)
+		(size 50.8 25.4)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.152)
+			(type solid)
+		)
+		(fill
+			(color 0 0 0 0)
+		)
+		(uuid "08d6352a-d0fb-4f6e-afca-78b92c096789")
+		(property "Sheetname" "Power and IO"
+			(at 40 49.288 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power and IO.kicad_sch"
+			(at 40 75.985 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet_instances
+		(path "/"
+			(page "1")
+		)
+	)
+)
