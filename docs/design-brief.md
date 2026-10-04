@@ -138,8 +138,21 @@ labour. Nothing carted.
 5. **STM32H750VBT6 (LQFP-100), no SDRAM.** Everything else in the digital
    and audio chain is the Timekeeper's.
 6. **Dry through the codec.** No analog dry path.
+7. **One face standard with The Alchemist and The Relic**: the same knob,
+   toggle, jack, DC, LED and footswitch coordinates, each pedal using the
+   subset it needs (table in `pcb-plan.md`). Open consequence: with four
+   jacks, only the centre toggle position is usable on the Harp.
+8. **QUADSPI on bank 2** (PB2, PC11, PE7–PE10), so SAI1 keeps the
+   Timekeeper's PE2–PE6 and the audio firmware ports unchanged.
+9. **Mono in, stereo out** in hardware: one input buffer and one ADC driver
+   channel; the codec's right ADC input is parked at VCOM.
 
 ## Still open
+
+- Toggle row: keep only the centre toggle, or give up a jack (see
+  `pcb-plan.md`, face schedule).
+- [CONFIRM] items on the schematic: QUADSPI bank 2 alternate functions,
+  AK4621 unused right input, THS4522 unused channel.
 
 - Chord tracker quality on distorted or fast playing. Key and Drone modes do
   not depend on it, so the pedal works even if Follow is weak.
