@@ -388,7 +388,7 @@
 					)
 					(embedded_fonts no)
 				)
-		(symbol "Connector_Audio:NRJ6HM-1"
+		(symbol "Connector_Audio:NMJ6HCD2"
 					(exclude_from_sim no)
 					(in_bom yes)
 					(on_board yes)
@@ -404,7 +404,7 @@
 							)
 						)
 					)
-					(property "Value" "NRJ6HM-1"
+					(property "Value" "NMJ6HCD2"
 						(at 0 8.89 0)
 						(show_name no)
 						(do_not_autoplace no)
@@ -414,7 +414,7 @@
 							)
 						)
 					)
-					(property "Footprint" "Connector_Audio:Jack_6.35mm_Neutrik_NRJ6HM-1_Horizontal"
+					(property "Footprint" "Connector_Audio:Jack_6.35mm_Neutrik_NMJ6HCD2_Horizontal"
 						(at 0 0 0)
 						(show_name no)
 						(do_not_autoplace no)
@@ -425,7 +425,7 @@
 							)
 						)
 					)
-					(property "Datasheet" "https://www.neutrik.com/en/product/nrj6hm-1"
+					(property "Datasheet" "https://www.neutrik.com/en/product/nmj6hcd2"
 						(at 0 0 0)
 						(show_name no)
 						(do_not_autoplace no)
@@ -436,7 +436,7 @@
 							)
 						)
 					)
-					(property "Description" "Slim Jacks, 6.35mm (1/4in) stereo jack, metal nose with efficient chassis ground connection, T+R+S normalling contact"
+					(property "Description" "M Series, 6.35mm (1/4in) stereo jack, switched, with chrome ferrule and straight PCB pins"
 						(at 0 0 0)
 						(show_name no)
 						(do_not_autoplace no)
@@ -469,7 +469,7 @@
 							)
 						)
 					)
-					(symbol "NRJ6HM-1_0_1"
+					(symbol "NMJ6HCD2_0_1"
 						(rectangle
 							(start -5.08 -5.08)
 							(end -6.35 -7.62)
@@ -601,7 +601,7 @@
 							)
 						)
 					)
-					(symbol "NRJ6HM-1_1_1"
+					(symbol "NMJ6HCD2_1_1"
 						(pin passive line
 							(at 5.08 0 180)
 							(length 2.54)
@@ -1552,33 +1552,47 @@
 					)
 					(embedded_fonts no)
 				)
-		(symbol "Relay:EE2-5NU"
+		(symbol "Relay:G6K-2"
 					(exclude_from_sim no)
 					(in_bom yes)
 					(on_board yes)
 					(in_pos_files yes)
 					(duplicate_pin_numbers_are_jumpers no)
 					(property "Reference" "K"
-						(at 15.24 8.89 0)
+						(at 16.51 3.81 0)
 						(show_name no)
 						(do_not_autoplace no)
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
+							(justify left)
 						)
 					)
-					(property "Value" "EE2-5NU"
-						(at 19.05 6.35 0)
+					(property "Value" "G6K-2"
+						(at 16.51 1.27 0)
 						(show_name no)
 						(do_not_autoplace no)
 						(effects
 							(font
 								(size 1.27 1.27)
 							)
+							(justify left)
 						)
 					)
-					(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU"
+					(property "Footprint" "Relay_SMD:Relay_DPDT_Omron_G6K-2F-Y"
+						(at 0 0 0)
+						(show_name no)
+						(do_not_autoplace no)
+						(hide yes)
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+							(justify left)
+						)
+					)
+					(property "Datasheet" "http://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf"
 						(at 0 0 0)
 						(show_name no)
 						(do_not_autoplace no)
@@ -1589,7 +1603,7 @@
 							)
 						)
 					)
-					(property "Datasheet" "https://content.kemet.com/datasheets/KEM_R7002_EC2_EE2.pdf"
+					(property "Description" "Miniature 2-pole relay, Single-side Stable"
 						(at 0 0 0)
 						(show_name no)
 						(do_not_autoplace no)
@@ -1600,7 +1614,7 @@
 							)
 						)
 					)
-					(property "Description" "General purpose signal relay, Kemet EE2 Series, DPDT (2 Form C), non-latching, SMD, 5V DC coil"
+					(property "ki_keywords" "Miniature Relay Dual Pole DPDT Omron"
 						(at 0 0 0)
 						(show_name no)
 						(do_not_autoplace no)
@@ -1611,7 +1625,7 @@
 							)
 						)
 					)
-					(property "ki_keywords" "signal relay double pole double throw DPDT DC coil non latching"
+					(property "ki_fp_filters" "Relay*DPDT*Omron*G6K?2*"
 						(at 0 0 0)
 						(show_name no)
 						(do_not_autoplace no)
@@ -1622,18 +1636,17 @@
 							)
 						)
 					)
-					(property "ki_fp_filters" "Relay*DPDT*Kemet*EE2*NU*"
-						(at 0 0 0)
-						(show_name no)
-						(do_not_autoplace no)
-						(hide yes)
-						(effects
-							(font
-								(size 1.27 1.27)
+					(symbol "G6K-2_0_0"
+						(text "+"
+							(at -9.271 2.921 0)
+							(effects
+								(font
+									(size 1.27 1.27)
+								)
 							)
 						)
 					)
-					(symbol "EE2-5NU_1_1"
+					(symbol "G6K-2_0_1"
 						(rectangle
 							(start -15.24 5.08)
 							(end 15.24 -5.08)
@@ -1944,14 +1957,8 @@
 								(type none)
 							)
 						)
-						(text "+"
-							(at -9.271 2.921 0)
-							(effects
-								(font
-									(size 1.27 1.27)
-								)
-							)
-						)
+					)
+					(symbol "G6K-2_1_1"
 						(pin passive line
 							(at -10.16 7.62 270)
 							(length 2.54)
@@ -1980,7 +1987,7 @@
 									)
 								)
 							)
-							(number "3"
+							(number "2"
 								(effects
 									(font
 										(size 1.27 1.27)
@@ -1998,7 +2005,7 @@
 									)
 								)
 							)
-							(number "4"
+							(number "3"
 								(effects
 									(font
 										(size 1.27 1.27)
@@ -2016,7 +2023,7 @@
 									)
 								)
 							)
-							(number "5"
+							(number "4"
 								(effects
 									(font
 										(size 1.27 1.27)
@@ -2034,7 +2041,7 @@
 									)
 								)
 							)
-							(number "8"
+							(number "5"
 								(effects
 									(font
 										(size 1.27 1.27)
@@ -2052,7 +2059,7 @@
 									)
 								)
 							)
-							(number "9"
+							(number "6"
 								(effects
 									(font
 										(size 1.27 1.27)
@@ -2070,7 +2077,7 @@
 									)
 								)
 							)
-							(number "10"
+							(number "7"
 								(effects
 									(font
 										(size 1.27 1.27)
@@ -2088,7 +2095,7 @@
 									)
 								)
 							)
-							(number "12"
+							(number "8"
 								(effects
 									(font
 										(size 1.27 1.27)
@@ -2798,7 +2805,7 @@
 				)
 	)
 	(symbol
-		(lib_id "Connector_Audio:NRJ6HM-1")
+		(lib_id "Connector_Audio:NMJ6HCD2")
 		(at 22.86 45.72 0)
 		(unit 1)
 		(body_style 1)
@@ -2819,7 +2826,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NRJ6HM-1"
+		(property "Value" "NMJ6HCD2"
 			(at 24.32 57.11 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2830,7 +2837,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_6.35mm_Neutrik_NRJ6HM-1_Horizontal"
+		(property "Footprint" "Connector_Audio:Jack_6.35mm_Neutrik_NMJ6HCD2_Horizontal"
 			(at 22.86 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -2863,23 +2870,89 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Neutrik"
+			(at 22.86 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "NMJ6HCD2"
+			(at 22.86 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C309277"
+			(at 22.86 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "HOOYA"
+			(at 22.86 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "PJ-609BA"
+			(at 22.86 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 22.86 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "R"
-			(uuid "af473933-e0d3-4092-a3fe-f8bd877908e1")
+			(uuid "fbd4f3c9-4ba6-4243-8adc-3343e16d3c92")
 		)
 		(pin "RN"
-			(uuid "f5c47201-32d7-4332-a61e-c0a2976f7f8d")
+			(uuid "3f8a9dce-be1d-4b9a-99d5-42ee8ac19165")
 		)
 		(pin "S"
-			(uuid "028e7126-33a8-4706-9a1b-687602da22a6")
+			(uuid "47e23cb5-5afb-453d-9256-857b645c26ef")
 		)
 		(pin "SN"
-			(uuid "5a17a2b1-4fae-45d2-b5fb-de76db3746f6")
+			(uuid "794684fd-f3d9-4ee3-8e9a-0a781edce3ab")
 		)
 		(pin "T"
-			(uuid "c4102b40-5be0-49ca-b793-1d5304aced9b")
+			(uuid "8732bdfc-a552-48f1-9465-87e615c80ba9")
 		)
 		(pin "TN"
-			(uuid "b8154d25-e539-4d45-803e-10390d953ee1")
+			(uuid "20520f21-f219-4240-97cd-433e1ae3fad3")
 		)
 		(instances
 			(project "The Harp"
@@ -2890,13 +2963,98 @@
 			)
 		)
 	)
-	(no_connect
-		(at 27.94 45.72)
-		(uuid "8b74563d-52cf-411e-85ac-b062d699d54d")
+	(wire
+		(pts
+			(xy 27.94 45.72) (xy 30.48 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "335c6e01-d9a7-4c2e-b9b4-a6c4c16768a9")
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 30.48 45.72 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c5e4452f-7dd8-4235-8391-c1750814b02d")
+		(property "Reference" "#PWR0126"
+			(at 30.48 43.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 30.48 48.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 30.48 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bec5c507-61c8-43b8-b90f-6ebf7b80b2fa")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
+					(reference "#PWR0126")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(no_connect
 		(at 27.94 48.26)
-		(uuid "d881bdda-b777-4342-9d7f-9bd2d8661574")
+		(uuid "ce212998-6e74-40c6-a4e2-2a4032466b01")
 	)
 	(wire
 		(pts
@@ -2906,7 +3064,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ec6249e5-0afe-4b2d-a359-3e1d65674e61")
+		(uuid "e65ebdbc-5509-4344-bd35-bacde923e3e2")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2918,8 +3076,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f9d9c297-b066-461b-857d-69a4baa24389")
-		(property "Reference" "#PWR0126"
+		(uuid "d2e3d295-06a6-4f79-8bac-0787b8459bb6")
+		(property "Reference" "#PWR0127"
 			(at 30.48 38.64 0)
 			(hide yes)
 			(show_name no)
@@ -2976,12 +3134,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "dd5a43c8-6d67-4502-a993-357030d382ec")
+			(uuid "6833c287-ec7d-4fe2-8d6e-30b60471439e")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0126")
+					(reference "#PWR0127")
 					(unit 1)
 				)
 			)
@@ -2989,7 +3147,7 @@
 	)
 	(no_connect
 		(at 27.94 43.18)
-		(uuid "31d500f4-5664-4d8d-9680-f5e5e744b2cf")
+		(uuid "69ad222c-0c05-45c8-9a29-2361920e32c2")
 	)
 	(wire
 		(pts
@@ -2999,7 +3157,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2098c8a6-b887-4cdb-8206-4e9cb1ef61a0")
+		(uuid "8aa1e0c9-02b3-4182-a6c2-5f44b77b52da")
 	)
 	(label "IN"
 		(at 30.48 50.8 0)
@@ -3010,14 +3168,14 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "307f9cf4-116f-4c94-acdd-9e6c9d9b43f7")
+		(uuid "7d246bed-ecdd-4803-bb19-6a1934e89f8c")
 	)
 	(no_connect
 		(at 27.94 53.34)
-		(uuid "046a3b65-4e5e-443d-a518-a5a88602536d")
+		(uuid "a496eaf4-202d-4406-b770-ead7b53ee0f1")
 	)
 	(symbol
-		(lib_id "Connector_Audio:NRJ6HM-1")
+		(lib_id "Connector_Audio:NMJ6HCD2")
 		(at 43.18 45.72 0)
 		(unit 1)
 		(body_style 1)
@@ -3038,7 +3196,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NRJ6HM-1"
+		(property "Value" "NMJ6HCD2"
 			(at 45.08 57.11 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3049,7 +3207,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_6.35mm_Neutrik_NRJ6HM-1_Horizontal"
+		(property "Footprint" "Connector_Audio:Jack_6.35mm_Neutrik_NMJ6HCD2_Horizontal"
 			(at 43.18 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -3082,23 +3240,89 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Neutrik"
+			(at 43.18 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "NMJ6HCD2"
+			(at 43.18 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C309277"
+			(at 43.18 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "HOOYA"
+			(at 43.18 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "PJ-609BA"
+			(at 43.18 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 43.18 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "R"
-			(uuid "f2d5163e-9a33-412a-9e9b-dbb13fe5b922")
+			(uuid "be6905b6-c22f-40ce-992e-6bcc17093f4f")
 		)
 		(pin "RN"
-			(uuid "55bd1e7f-b0ca-464c-a20a-acb043585b98")
+			(uuid "7b01c20d-5bc0-4050-ae8c-72fbb78a5acf")
 		)
 		(pin "S"
-			(uuid "4b2b2f9c-3e3b-4d20-98f5-50a38488f48d")
+			(uuid "b54c1998-4c20-4623-a731-ec361fc5593d")
 		)
 		(pin "SN"
-			(uuid "8aa1164b-d89b-46da-ae47-485186457b7c")
+			(uuid "1582a164-0701-4970-9153-23672274f6d1")
 		)
 		(pin "T"
-			(uuid "793a48cc-b381-4fef-9b1f-2a2fe97b5a52")
+			(uuid "72a785ac-4c20-4330-a260-8458033df0e4")
 		)
 		(pin "TN"
-			(uuid "a6a892bd-1ed5-40fa-9948-235c32b94db0")
+			(uuid "f950823b-7a4f-4b70-8232-2dc60a483be4")
 		)
 		(instances
 			(project "The Harp"
@@ -3111,11 +3335,11 @@
 	)
 	(no_connect
 		(at 48.26 45.72)
-		(uuid "d7f65a3b-4f98-4d65-a171-9a7884ec8ef4")
+		(uuid "8c8fd561-adaa-4bfa-9e9f-fec676df5c2b")
 	)
 	(no_connect
 		(at 48.26 48.26)
-		(uuid "f0f76f41-184f-4f00-9f2f-c32e777954b5")
+		(uuid "94665990-40fd-4514-b7c6-cf50a0f017be")
 	)
 	(wire
 		(pts
@@ -3125,7 +3349,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "63736183-483c-4f69-a559-f203d1b7efb9")
+		(uuid "2bf4b25d-52c6-41e3-a87c-2e3b317a6ea6")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3137,8 +3361,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "405fdaa0-587a-4137-ad4f-c01c4d8bb0c6")
-		(property "Reference" "#PWR0127"
+		(uuid "0b748297-5cec-4476-85ce-39294e1c4b64")
+		(property "Reference" "#PWR0128"
 			(at 50.8 38.64 0)
 			(hide yes)
 			(show_name no)
@@ -3195,12 +3419,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "159ef544-04ff-4d9f-9f83-e61abff0ba98")
+			(uuid "00b98f9d-9caf-455e-8012-1d4e16978344")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0127")
+					(reference "#PWR0128")
 					(unit 1)
 				)
 			)
@@ -3208,7 +3432,7 @@
 	)
 	(no_connect
 		(at 48.26 43.18)
-		(uuid "8827741e-3d6c-4686-a88d-e2401937e242")
+		(uuid "bd812638-1b57-44c2-8820-65b57deecc8e")
 	)
 	(wire
 		(pts
@@ -3218,7 +3442,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "163ebc18-88d8-46f9-b98c-4887975f9441")
+		(uuid "3574d289-ec12-460f-b186-6bc1ffcdb253")
 	)
 	(label "OUT_L"
 		(at 50.8 50.8 0)
@@ -3229,14 +3453,14 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "bc88021f-2eaa-4787-9ecb-821f9b1b55ef")
+		(uuid "9568ad8f-3825-4fe8-bd62-906fc4f99c14")
 	)
 	(no_connect
 		(at 48.26 53.34)
-		(uuid "2da877a3-a0da-46b5-aec7-62213deff12c")
+		(uuid "ae1b7ddf-6b57-4450-95b0-9acf12dea2a4")
 	)
 	(symbol
-		(lib_id "Connector_Audio:NRJ6HM-1")
+		(lib_id "Connector_Audio:NMJ6HCD2")
 		(at 66.04 45.72 0)
 		(unit 1)
 		(body_style 1)
@@ -3257,7 +3481,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NRJ6HM-1"
+		(property "Value" "NMJ6HCD2"
 			(at 69.74 57.11 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3268,7 +3492,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_6.35mm_Neutrik_NRJ6HM-1_Horizontal"
+		(property "Footprint" "Connector_Audio:Jack_6.35mm_Neutrik_NMJ6HCD2_Horizontal"
 			(at 66.04 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -3301,23 +3525,89 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Neutrik"
+			(at 66.04 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "NMJ6HCD2"
+			(at 66.04 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C309277"
+			(at 66.04 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "HOOYA"
+			(at 66.04 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "PJ-609BA"
+			(at 66.04 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 66.04 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "R"
-			(uuid "019c5ee6-2525-43b1-b102-6b4ece1c9612")
+			(uuid "a75c9cbf-eff1-4795-ba9a-5f5b4c1d80ea")
 		)
 		(pin "RN"
-			(uuid "7748a379-314e-4ff9-a461-82c6dae63eac")
+			(uuid "d93df577-5541-4cb4-bc4b-7b4b105d835c")
 		)
 		(pin "S"
-			(uuid "714f5cb0-d480-4212-baa3-77b48d156eb6")
+			(uuid "34a71b19-ccf9-4346-9ad0-73c183b8b354")
 		)
 		(pin "SN"
-			(uuid "ea1aa6d4-489d-4c39-9af6-7d6ba3476e4a")
+			(uuid "d50e7fd2-5be3-450c-a867-f87f1648260d")
 		)
 		(pin "T"
-			(uuid "104d64f3-6ef5-46f0-97db-54dbe092849f")
+			(uuid "e7a5a0eb-d05b-47dd-aedc-a136dc864e4c")
 		)
 		(pin "TN"
-			(uuid "b83d1662-5a95-4a00-b8df-40c702a1ef6b")
+			(uuid "f706f59b-6483-46c0-9b12-f905b657ded2")
 		)
 		(instances
 			(project "The Harp"
@@ -3330,11 +3620,11 @@
 	)
 	(no_connect
 		(at 71.12 45.72)
-		(uuid "f104547d-2f93-4b34-a630-fadc1d6622e5")
+		(uuid "20dc116c-86f1-4db7-8c3b-7e44ae42245e")
 	)
 	(no_connect
 		(at 71.12 48.26)
-		(uuid "c786c6f0-ceb5-4438-b442-3e9a940009b9")
+		(uuid "7eead523-6ab5-4c51-b293-c689dbe2b5b8")
 	)
 	(wire
 		(pts
@@ -3344,7 +3634,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0e9431f6-5009-418c-b35d-15bc595e6714")
+		(uuid "892da40e-2794-4ce8-aaaa-d2567730235c")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3356,8 +3646,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1238e34f-f071-402c-9a05-b872f65aff7b")
-		(property "Reference" "#PWR0128"
+		(uuid "2bce88a5-caf4-4c3a-b73b-dd125f625816")
+		(property "Reference" "#PWR0129"
 			(at 73.66 38.64 0)
 			(hide yes)
 			(show_name no)
@@ -3414,12 +3704,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "be989f95-ec2c-4f72-90e2-acd812a288e3")
+			(uuid "6f3a51cb-8af8-4bbe-8124-7231aeb8d912")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0128")
+					(reference "#PWR0129")
 					(unit 1)
 				)
 			)
@@ -3427,7 +3717,7 @@
 	)
 	(no_connect
 		(at 71.12 43.18)
-		(uuid "b01de8f4-07ba-437f-bc73-aa732e8c4b53")
+		(uuid "c87e0ac6-415e-4ff5-aca2-257c8ff82ac6")
 	)
 	(wire
 		(pts
@@ -3437,7 +3727,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bdca5582-0201-4015-830a-63f731e143f0")
+		(uuid "9f54b253-92e5-484d-a567-7be2d56873f6")
 	)
 	(global_label "EFFECT_OUT_R"
 		(shape passive)
@@ -3449,7 +3739,7 @@
 				)
 				(justify left)
 			)
-		(uuid "bb05d4e8-03fe-4869-9980-b4645105f7ee")
+		(uuid "50052980-536b-46cb-9944-88b2106b1e33")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 73.66 50.8 0)
 			(hide yes)
@@ -3465,10 +3755,10 @@
 	)
 	(no_connect
 		(at 71.12 53.34)
-		(uuid "11a280a1-7256-47ef-9c47-2d0ac8275338")
+		(uuid "7a4d1a0f-a7c8-4fff-ab78-024f375207a6")
 	)
 	(symbol
-		(lib_id "Connector_Audio:NRJ6HM-1")
+		(lib_id "Connector_Audio:NMJ6HCD2")
 		(at 101.6 45.72 0)
 		(unit 1)
 		(body_style 1)
@@ -3489,7 +3779,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "NRJ6HM-1"
+		(property "Value" "NMJ6HCD2"
 			(at 103.5 57.11 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3500,7 +3790,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_Audio:Jack_6.35mm_Neutrik_NRJ6HM-1_Horizontal"
+		(property "Footprint" "Connector_Audio:Jack_6.35mm_Neutrik_NMJ6HCD2_Horizontal"
 			(at 101.6 45.72 0)
 			(hide yes)
 			(show_name no)
@@ -3533,23 +3823,89 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Neutrik"
+			(at 101.6 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "NMJ6HCD2"
+			(at 101.6 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C309277"
+			(at 101.6 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "HOOYA"
+			(at 101.6 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "PJ-609BA"
+			(at 101.6 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 101.6 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "R"
-			(uuid "26c81e6b-ef00-4dfe-ae13-8bebd4581523")
+			(uuid "0a73a15b-62e3-47f6-9cd5-c590e46c4a3b")
 		)
 		(pin "RN"
-			(uuid "9590559e-9913-4081-8d84-d5be6a7c904c")
+			(uuid "1c8c6f05-c438-44ba-bfcc-21053c23bd04")
 		)
 		(pin "S"
-			(uuid "af1dabe9-0fff-46a3-a9ee-76bc6972e8e4")
+			(uuid "1b1bcf28-e2ee-4f59-a492-6548958a22ca")
 		)
 		(pin "SN"
-			(uuid "9552d1e6-c90b-4975-b566-143736c23585")
+			(uuid "be2688a3-f236-4ec7-b9fc-97c3bf4875a7")
 		)
 		(pin "T"
-			(uuid "0f1ee567-6bce-45e6-ada3-6cd5336d6a7a")
+			(uuid "7c83ae4d-2dc3-4207-a35e-9653a14bbcd5")
 		)
 		(pin "TN"
-			(uuid "3246fa99-2628-4780-b30d-fb769b7de10c")
+			(uuid "51a990f0-0c73-45da-b0e2-6f85ff56069d")
 		)
 		(instances
 			(project "The Harp"
@@ -3568,7 +3924,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5bad298f-bd05-406f-9285-d7b2a995bf6e")
+		(uuid "f89e3ecb-69d6-4f7f-b8ec-2753ef5f5f04")
 	)
 	(label "EXP_RING"
 		(at 109.22 45.72 0)
@@ -3579,11 +3935,11 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "075f6d59-7640-481d-8c98-788b4e6d1227")
+		(uuid "f1e2275e-88ae-43a5-a12b-e7fe4e7a0818")
 	)
 	(no_connect
 		(at 106.68 48.26)
-		(uuid "88ad4e41-3dd7-4488-938f-3ea95cdf6798")
+		(uuid "59e4d517-42bd-4dcc-a3da-2b43c258078d")
 	)
 	(wire
 		(pts
@@ -3593,7 +3949,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c502baaf-0251-48ec-95b4-66c9f7b31789")
+		(uuid "751f1eeb-fb3b-4363-b28b-0e8be2a8abc0")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3605,8 +3961,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e8c9fe7f-8da3-4549-b290-113f839e22cb")
-		(property "Reference" "#PWR0129"
+		(uuid "429c4168-b93f-425a-b94e-cf3d39bfae15")
+		(property "Reference" "#PWR0130"
 			(at 109.22 38.64 0)
 			(hide yes)
 			(show_name no)
@@ -3663,12 +4019,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "64f49743-dc37-401c-8215-fbbfd9441ce4")
+			(uuid "4e70dae8-b7c9-4f32-a7a3-4be0e3cd2db6")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0129")
+					(reference "#PWR0130")
 					(unit 1)
 				)
 			)
@@ -3676,7 +4032,7 @@
 	)
 	(no_connect
 		(at 106.68 43.18)
-		(uuid "1147287d-1334-4f10-b4db-cd5f980b504b")
+		(uuid "fa522d73-b32c-449a-b548-ad4631bf6898")
 	)
 	(wire
 		(pts
@@ -3686,7 +4042,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "849c6170-f83d-4408-98fc-30d02eb7e236")
+		(uuid "9cd08674-adcb-4968-b7b3-b0d5f249f9d9")
 	)
 	(label "EXP_TIP"
 		(at 109.22 50.8 0)
@@ -3697,11 +4053,11 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "6f28dcac-98eb-4308-a460-7d594ac1e149")
+		(uuid "258daffb-4c20-4df6-9b90-2bcaed683b91")
 	)
 	(no_connect
 		(at 106.68 53.34)
-		(uuid "0eade465-33b8-467b-bcaf-27b34475c857")
+		(uuid "ccd30906-c79c-43d0-acba-05bc39667d2d")
 	)
 	(symbol
 		(lib_id "Device:D_TVS")
@@ -3792,10 +4148,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "269db092-f0a3-4bc6-94a9-755ac676dd22")
+			(uuid "5d5f75d0-591a-4989-9102-d8791c41003c")
 		)
 		(pin "2"
-			(uuid "235c14a7-7f59-4846-b3ed-2b614ca56fa1")
+			(uuid "c40fc64e-878a-4c0d-a788-a167aeefced1")
 		)
 		(instances
 			(project "The Harp"
@@ -3814,7 +4170,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "35fef3c4-2b7c-4756-b942-511a287a94fe")
+		(uuid "395b51fd-4af1-4a1b-bcb5-594e525ca615")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3826,8 +4182,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "4d3cf5dc-b602-4f1b-9104-bf519b21397e")
-		(property "Reference" "#PWR0130"
+		(uuid "ed4e3557-b305-4f16-8f89-f3a912152bb2")
+		(property "Reference" "#PWR0131"
 			(at 130.81 38.64 0)
 			(hide yes)
 			(show_name no)
@@ -3884,12 +4240,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "9689d930-2e09-470e-81be-0a189122fe09")
+			(uuid "a89257d9-0fab-43b7-9f34-102bc9e5a968")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0130")
+					(reference "#PWR0131")
 					(unit 1)
 				)
 			)
@@ -3903,7 +4259,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2e6adcd1-800d-48b1-a5ca-1c993bef564c")
+		(uuid "76d7d817-55a5-443b-80b8-0975723dd381")
 	)
 	(label "IN"
 		(at 143.51 40.64 0)
@@ -3914,7 +4270,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "be6dd7d5-5276-4fe9-a154-ed150c0b231f")
+		(uuid "65343968-f0aa-4181-b186-15ea9d9efb6a")
 	)
 	(symbol
 		(lib_id "Device:D_TVS")
@@ -4005,10 +4361,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "7d7b4651-55c6-4770-b930-e76423508455")
+			(uuid "bed7f45e-3002-4620-9038-d5c8458fddf5")
 		)
 		(pin "2"
-			(uuid "4676fd24-5b01-4461-ae98-1db11126d74e")
+			(uuid "1a3b4167-5c68-4dad-a0c3-f4e0f1d2ed0f")
 		)
 		(instances
 			(project "The Harp"
@@ -4027,7 +4383,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7330c2dc-896d-4457-a0db-67a513c7a381")
+		(uuid "707edb8d-e260-4acc-9ef7-c655721d0b12")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4039,8 +4395,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "53d6a69b-4652-49ec-b122-e693ca420e6c")
-		(property "Reference" "#PWR0131"
+		(uuid "bc8972e5-ec14-45db-87fb-7f67abdbbe5a")
+		(property "Reference" "#PWR0132"
 			(at 161.29 38.64 0)
 			(hide yes)
 			(show_name no)
@@ -4097,12 +4453,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f11ec467-11f8-4827-8ee3-29d4191a8d91")
+			(uuid "330e1e2e-60da-4140-892e-6d8d29de40c1")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0131")
+					(reference "#PWR0132")
 					(unit 1)
 				)
 			)
@@ -4116,7 +4472,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3ff92012-0d14-4386-9ee5-d45a891d9fb7")
+		(uuid "43a93cf3-6676-4c47-8c7d-7f01e957f1f4")
 	)
 	(label "OUT_L"
 		(at 173.99 40.64 0)
@@ -4127,7 +4483,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "cd1e890f-9300-4789-85eb-c3bb9425bb87")
+		(uuid "e1fc9ed2-16c5-4fb4-8cad-33c287c9680f")
 	)
 	(symbol
 		(lib_id "Device:D_TVS")
@@ -4218,10 +4574,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "565cc275-6016-4353-b6f3-efa868675609")
+			(uuid "2f80a65f-76aa-4cc9-b41b-bf249e401d5a")
 		)
 		(pin "2"
-			(uuid "1ae5069a-9d1f-48d1-86ae-dd15a43db184")
+			(uuid "f7205f17-01b5-4489-be06-3d0252956624")
 		)
 		(instances
 			(project "The Harp"
@@ -4240,7 +4596,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0c912385-ef0c-470b-a7ee-69ed6fca29a9")
+		(uuid "ba0f337b-11df-4a9e-b193-53cc4d6aa0d4")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4252,8 +4608,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a093b7dc-207b-42b1-b54e-7247d2020e04")
-		(property "Reference" "#PWR0132"
+		(uuid "9d15d5f6-2fda-4f16-8a32-7399161e3e00")
+		(property "Reference" "#PWR0133"
 			(at 191.77 38.64 0)
 			(hide yes)
 			(show_name no)
@@ -4310,12 +4666,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "c436f770-5fda-4dcd-b02e-c67f31808d24")
+			(uuid "a4d3d764-3933-4b74-9c1f-1248ad581bbd")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0132")
+					(reference "#PWR0133")
 					(unit 1)
 				)
 			)
@@ -4329,7 +4685,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f39b7792-6220-43d9-aa90-ad2693cb833e")
+		(uuid "400baff4-dd39-4728-8855-cefe2228ffee")
 	)
 	(global_label "EFFECT_OUT_R"
 		(shape passive)
@@ -4341,7 +4697,7 @@
 				)
 				(justify left)
 			)
-		(uuid "76cb22e0-6431-4945-9728-0753f07bc119")
+		(uuid "addbf861-f272-4b05-9f29-a1fc558d9777")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 204.47 40.64 0)
 			(hide yes)
@@ -4444,10 +4800,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a6e93a3e-430e-4025-add6-21e6a6110bfe")
+			(uuid "f8e6f984-90f7-46dd-bcdd-6d9e3270625d")
 		)
 		(pin "2"
-			(uuid "b18ff9ba-cd5d-497f-adeb-3a43d26a55b9")
+			(uuid "304f4b3d-8f1a-4414-b8ac-c726b0de32f6")
 		)
 		(instances
 			(project "The Harp"
@@ -4466,7 +4822,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6305799e-ea5d-4a72-848c-becb27478f16")
+		(uuid "d36cda7c-7871-42e8-b7cd-037c29292274")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4478,8 +4834,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "58f1fe8e-71d2-44a4-ab31-36bfeab054c7")
-		(property "Reference" "#PWR0133"
+		(uuid "ba18c2f6-f3f4-4f10-8d3a-8114cb723f2d")
+		(property "Reference" "#PWR0134"
 			(at 234.95 38.64 0)
 			(hide yes)
 			(show_name no)
@@ -4536,12 +4892,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "e3cef9ce-f69b-4b10-aea8-fdc94e42d4e5")
+			(uuid "fd567ae4-893b-466b-bb4f-0dadc3561b39")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0133")
+					(reference "#PWR0134")
 					(unit 1)
 				)
 			)
@@ -4555,7 +4911,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "27c44faf-4cfd-4ff9-8d76-7c41862a8ae5")
+		(uuid "28717dee-5ab9-496e-a0f5-4a02787f14a0")
 	)
 	(label "EXP_TIP"
 		(at 247.65 40.64 0)
@@ -4566,10 +4922,10 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "810e63dc-f576-44e6-906f-2cc0767d741e")
+		(uuid "21ae8bd7-f65b-43fc-bca6-86f6cd59613d")
 	)
 	(symbol
-		(lib_id "Relay:EE2-5NU")
+		(lib_id "Relay:G6K-2")
 		(at 281.94 60.96 0)
 		(unit 1)
 		(body_style 1)
@@ -4590,7 +4946,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "EE2-5NU"
+		(property "Value" "G6K-2F-Y"
 			(at 268.98 72.35 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -4601,7 +4957,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Relay_SMD:Relay_DPDT_Kemet_EE2_NU"
+		(property "Footprint" "Relay_SMD:Relay_DPDT_Omron_G6K-2F-Y"
 			(at 281.94 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -4623,7 +4979,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "5 V coil (178R) from +9V through R405"
 			(at 281.94 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -4634,7 +4990,7 @@
 				)
 			)
 		)
-		(property "Manufacturer" "KEMET"
+		(property "Manufacturer" "Omron"
 			(at 281.94 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -4645,7 +5001,51 @@
 				)
 			)
 		)
-		(property "Mfg Part #" "EE2-5NU"
+		(property "Mfg Part #" "G6K-2F-Y DC5"
+			(at 281.94 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2982926"
+			(at 281.94 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "Omron Electronics"
+			(at 281.94 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "G6K-2F-Y-5V"
+			(at 281.94 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "JLCPCB"
 			(at 281.94 60.96 0)
 			(hide yes)
 			(show_name no)
@@ -4657,28 +5057,28 @@
 			)
 		)
 		(pin "1"
-			(uuid "3058adcf-f738-4049-b9ec-ac1101eeceb1")
+			(uuid "3ff06f6b-a520-4f56-b7df-15f46ff407d4")
+		)
+		(pin "2"
+			(uuid "1aed529f-ac48-4e32-b52b-80541b8b8a2c")
 		)
 		(pin "3"
-			(uuid "da7e275d-c1ab-4313-8e20-3014e99db7cf")
+			(uuid "feaebfc8-8833-43db-8063-2842f7430fe8")
 		)
 		(pin "4"
-			(uuid "bb2531de-ca92-4ad2-8b3b-ce3d834ef490")
+			(uuid "ca1085df-211d-42c8-9977-1937009fe570")
 		)
 		(pin "5"
-			(uuid "d2f48448-175d-4fcc-a92c-1a706d46b69f")
+			(uuid "b99346fd-9e76-46a2-9f09-886c9876a4c8")
+		)
+		(pin "6"
+			(uuid "60dc0cb3-f7c0-4040-ba0c-26de5d7e57f7")
+		)
+		(pin "7"
+			(uuid "0cb2406d-a0f4-4fad-9978-f3e7cba71f89")
 		)
 		(pin "8"
-			(uuid "92baac4d-8585-46e6-81a5-89bb6b15262b")
-		)
-		(pin "9"
-			(uuid "1a343365-780c-46a3-ba18-024744dd821f")
-		)
-		(pin "10"
-			(uuid "4334196d-7c59-4582-9d56-3e4a96d827be")
-		)
-		(pin "12"
-			(uuid "2487fba2-6437-471c-b748-09696004b60e")
+			(uuid "b6d28bf5-2144-4795-95b1-88dcd77de9dd")
 		)
 		(instances
 			(project "The Harp"
@@ -4697,7 +5097,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bcb84bb7-8d45-46c2-81ea-708ada076b2f")
+		(uuid "b7a324d3-b33d-40ad-a858-612b04f8a346")
 	)
 	(label "RELAY_COIL"
 		(at 271.78 50.8 90)
@@ -4708,7 +5108,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "38c09fb8-6180-4aba-ba63-7c5b62f7d818")
+		(uuid "1cb2bf0d-c8c8-4216-a1b8-90f4828b2621")
 	)
 	(wire
 		(pts
@@ -4718,7 +5118,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8391024a-8a66-4240-887f-9ca949c4953f")
+		(uuid "0a2acdfe-3450-476b-ad91-3661ee50ee68")
 	)
 	(label "IN"
 		(at 279.4 50.8 90)
@@ -4729,7 +5129,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "371eec31-a9cb-42e2-94bb-de4d81d01f1d")
+		(uuid "8d54ef0e-6ba7-4bcf-9b81-c7a75e767f15")
 	)
 	(wire
 		(pts
@@ -4739,7 +5139,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6c8bcbc9-0f8c-4334-b42a-6e14f233048c")
+		(uuid "beb7bd82-09fd-47de-8f38-6c1031bb485b")
 	)
 	(label "OUT_L"
 		(at 281.94 71.12 270)
@@ -4750,7 +5150,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "5a30a4ec-7eee-46ec-81d1-68bc5f2fbca8")
+		(uuid "2f2b8009-1368-4c05-9065-acd4ef1c55c1")
 	)
 	(wire
 		(pts
@@ -4760,7 +5160,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "cf63274e-17ef-4bd5-84a8-74f1cc206e6a")
+		(uuid "eef3eb62-c0d4-4cb7-83c0-29aed4e436d4")
 	)
 	(global_label "EFFECT_OUT_L"
 		(shape passive)
@@ -4772,7 +5172,7 @@
 				)
 				(justify left)
 			)
-		(uuid "551a91bf-d3f7-45fc-8984-82cdf1d277b6")
+		(uuid "1ae21e4f-a504-45b4-922c-1f4e3c754fd1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 284.48 50.8 0)
 			(hide yes)
@@ -4794,7 +5194,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "172eb0cf-4a48-4ccf-9279-4b79a5bc46ce")
+		(uuid "dd93cc96-15a8-4952-947c-d225545309e4")
 	)
 	(label "IN"
 		(at 294.64 50.8 90)
@@ -4805,7 +5205,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "d0d6a59c-5055-4294-8580-b76e1663d1a6")
+		(uuid "decf37ae-890d-4ab7-9d83-1b37ae8086a6")
 	)
 	(wire
 		(pts
@@ -4815,7 +5215,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "49f4ee52-3cf0-4287-8ffe-692a99295508")
+		(uuid "fb5b84e4-d0a0-444a-a3ec-7665f2068615")
 	)
 	(global_label "EFFECT_IN"
 		(shape passive)
@@ -4827,7 +5227,7 @@
 				)
 				(justify right)
 			)
-		(uuid "9f0285e6-2d06-4b99-950f-6daadc4ee41d")
+		(uuid "c33f6c68-b40d-4eb4-a0f4-8f66a26f8bca")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 292.1 71.12 0)
 			(hide yes)
@@ -4849,7 +5249,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "846c8ba8-2f18-43f6-b85f-cdb4f9296072")
+		(uuid "1c90c247-dd64-47b9-841f-5120825736df")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4861,8 +5261,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "b8aacf19-aed2-467c-8a85-631a8d7140a0")
-		(property "Reference" "#PWR0134"
+		(uuid "6e03d1a8-139b-4187-a112-a99bf0d20f22")
+		(property "Reference" "#PWR0135"
 			(at 289.56 48.8 0)
 			(hide yes)
 			(show_name no)
@@ -4919,12 +5319,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "6beebcd2-3d69-45af-ace7-107735857470")
+			(uuid "2e52276e-6e43-499f-85ac-d6245c49d25b")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0134")
+					(reference "#PWR0135")
 					(unit 1)
 				)
 			)
@@ -4938,7 +5338,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6105ac02-7f55-4e9f-9fb2-b3d6450cd9e6")
+		(uuid "250fb4d8-b6d5-420b-81d8-7ceb857b2166")
 	)
 	(label "RELAY_LOW"
 		(at 271.78 71.12 270)
@@ -4949,7 +5349,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "a790eda2-9667-42da-948c-7201186a1300")
+		(uuid "6703acea-1a8d-4df3-a560-c4b55dbd5b29")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -5017,11 +5417,77 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 312.42 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "RC1206FR-07150RL"
+			(at 312.42 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17917"
+			(at 312.42 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "UNI ROYAL Uniroyal Elec"
+			(at 312.42 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "1206W4F1500T5E"
+			(at 312.42 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 312.42 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "29caaf9c-decd-46f2-adf3-f75a5487c7e3")
+			(uuid "33b8ce86-c08c-45fa-b972-7a3036ac2266")
 		)
 		(pin "2"
-			(uuid "eeed57b3-653d-4908-91e9-89b05d3462dc")
+			(uuid "b2319822-4da2-40a7-ac8a-86cc1cc395a7")
 		)
 		(instances
 			(project "The Harp"
@@ -5040,7 +5506,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a658c789-7619-4af6-a074-01f9caf585f2")
+		(uuid "2a40faaf-02fb-48fe-b36e-77a71af079d7")
 	)
 	(symbol
 		(lib_id "power:+9V")
@@ -5052,8 +5518,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "ee71a110-2c90-4142-8ba9-ada15354af86")
-		(property "Reference" "#PWR0135"
+		(uuid "aa7ae0a7-f859-450d-a3d3-15375d71e5ac")
+		(property "Reference" "#PWR0136"
 			(at 312.42 37.37 0)
 			(hide yes)
 			(show_name no)
@@ -5110,12 +5576,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "261d638e-948d-48f2-89d2-2126115f77ad")
+			(uuid "4e58e70a-d583-4720-82bd-16d4184b8619")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0135")
+					(reference "#PWR0136")
 					(unit 1)
 				)
 			)
@@ -5129,7 +5595,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "208985ee-1616-476d-892c-05c63d8ed220")
+		(uuid "7424041a-e19b-4406-abba-c1205ded7874")
 	)
 	(label "RELAY_COIL"
 		(at 312.42 52.07 270)
@@ -5140,7 +5606,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "5f025c52-9d32-48a5-8812-a32673cc0935")
+		(uuid "b7ad7059-9843-4c96-a465-dd78f3e65305")
 	)
 	(symbol
 		(lib_id "Device:D")
@@ -5208,11 +5674,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "Diodes Incorporated"
+			(at 347.98 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "1N4148W-7-F"
+			(at 347.98 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7420318"
+			(at 347.98 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "hongjiacheng"
+			(at 347.98 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "1N4148W"
+			(at 347.98 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "a9933b72-3db4-402a-aee8-28a5d7e2d98b")
+			(uuid "e2f1e541-88a0-4dfa-93c9-ded5a2aaab7e")
 		)
 		(pin "2"
-			(uuid "3c43adad-9009-44a0-b10a-584ab9288ca0")
+			(uuid "89162ebf-e239-42d4-b4bb-a9ac3a33d4d2")
 		)
 		(instances
 			(project "The Harp"
@@ -5231,7 +5752,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c4cea9ba-549b-4b84-a550-da420f07c5fd")
+		(uuid "3cb8df76-0280-4d1b-a65a-ee61304508c7")
 	)
 	(label "RELAY_COIL"
 		(at 341.63 40.64 180)
@@ -5242,7 +5763,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "e2ceebd8-2898-48f3-9223-92c10706a69a")
+		(uuid "c902bdfd-e960-4f92-8a29-736746b52f59")
 	)
 	(wire
 		(pts
@@ -5252,7 +5773,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f8f0ef81-a2e2-4c03-adc2-e235ef2195d6")
+		(uuid "72e7fa10-bba0-4005-9364-6703cc23214d")
 	)
 	(label "RELAY_LOW"
 		(at 354.33 40.64 0)
@@ -5263,7 +5784,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "2edc1a10-03c8-4e9a-b054-8649faac1407")
+		(uuid "15f21c19-8633-4123-8e3e-02e9137cdeb9")
 	)
 	(symbol
 		(lib_id "Transistor_FET:2N7002")
@@ -5331,14 +5852,69 @@
 				)
 			)
 		)
+		(property "Manufacturer" "onsemi"
+			(at 396.24 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "2N7002LT1G"
+			(at 396.24 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7420321"
+			(at 396.24 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "hongjiacheng"
+			(at 396.24 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "2N7002"
+			(at 396.24 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "3d15e33e-c106-4dfd-90b8-cdcf31aebedd")
+			(uuid "f159bbc4-3afc-49f1-9277-95a213df98b7")
 		)
 		(pin "2"
-			(uuid "bc05f8a2-4f5f-4c63-b977-c7221c538b66")
+			(uuid "71905cab-c942-4a28-8f39-ae8e0b2e5e5b")
 		)
 		(pin "3"
-			(uuid "2f2de357-853d-4108-9f03-07b1ef843c89")
+			(uuid "c430f6c4-7f66-42de-8412-2c2c7a059f31")
 		)
 		(instances
 			(project "The Harp"
@@ -5357,7 +5933,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c4099b92-c3f1-438f-b270-d0aae318693f")
+		(uuid "ef90c9a0-d3d1-4681-bd25-c84e39b75fd4")
 	)
 	(label "RELAY_G"
 		(at 388.62 53.34 180)
@@ -5368,7 +5944,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "93cb09ec-c357-4fcb-b85c-e65ae4afec17")
+		(uuid "eb7a7d3c-a4a1-47e8-a81a-0d42e8ab9a39")
 	)
 	(wire
 		(pts
@@ -5378,7 +5954,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1a7a5cfa-71f5-49b2-8d72-4df0b795e722")
+		(uuid "d4fee1fd-267d-46fc-936a-67ff44bb0af0")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5390,8 +5966,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "194ab58c-c49d-4187-bf36-1557e36dfc6f")
-		(property "Reference" "#PWR0136"
+		(uuid "f6911781-e1f3-4524-9817-c3536e977fae")
+		(property "Reference" "#PWR0137"
 			(at 398.78 58.96 0)
 			(hide yes)
 			(show_name no)
@@ -5448,12 +6024,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f80a94a8-8243-4c19-8ce8-4f7bdffdfce8")
+			(uuid "878a71de-771d-4406-85e1-660107311756")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0136")
+					(reference "#PWR0137")
 					(unit 1)
 				)
 			)
@@ -5467,7 +6043,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ab0bc566-309c-4d46-bd46-fb6030169064")
+		(uuid "d19235b5-2763-4a06-9e26-aa7986889f2a")
 	)
 	(label "RELAY_LOW"
 		(at 398.78 45.72 90)
@@ -5478,7 +6054,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "e46cca91-0d23-4bf2-914b-321d9574943b")
+		(uuid "0a60dd50-683f-4534-84ef-89aa21b376bf")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -5546,11 +6122,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 27.94 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "AC0805FR-07100RL"
+			(at 27.94 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7468571"
+			(at 27.94 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "FOJAN"
+			(at 27.94 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "FRQ0805F1000TS"
+			(at 27.94 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "c1bdd880-990a-4276-b6ff-bb61bfa8c46f")
+			(uuid "d0d4a7cf-1f81-44e6-94f7-f7b72bb9110f")
 		)
 		(pin "2"
-			(uuid "2e5d0187-91d1-46da-aedc-b93fd7a7b87d")
+			(uuid "ace4e774-3cef-4817-9c40-06b294d66b08")
 		)
 		(instances
 			(project "The Harp"
@@ -5569,7 +6200,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2b716172-3c5e-484c-92c3-3ab92e14ccb8")
+		(uuid "b966b358-af93-4273-a88a-2b98520223a8")
 	)
 	(global_label "RELAY_DRV"
 		(shape passive)
@@ -5581,7 +6212,7 @@
 				)
 				(justify left)
 			)
-		(uuid "886462e0-74b1-4477-9388-5b831b9f6da2")
+		(uuid "f516eefd-da34-486f-a983-5976bb6d6d98")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 27.94 107.95 0)
 			(hide yes)
@@ -5603,7 +6234,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "22b1e3b1-d166-4adc-b626-8b3c20c3b28d")
+		(uuid "3d232d6c-c1d2-47c9-b60e-09fc63b470c0")
 	)
 	(label "RELAY_G"
 		(at 27.94 120.65 270)
@@ -5614,7 +6245,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "320b69e7-76a8-415a-88d9-827a73178f46")
+		(uuid "b042b88b-6f7c-4045-b4c9-6c3e69d43be3")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -5682,11 +6313,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 45.72 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "AC0805FR-07100KL"
+			(at 45.72 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
+			(at 45.72 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "UNI ROYAL Uniroyal Elec"
+			(at 45.72 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "0805W8F1003T5E"
+			(at 45.72 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "0e82d596-91c6-4900-89bc-712c52c70a05")
+			(uuid "8dbc6b6b-daa2-4da9-a757-d302673e7769")
 		)
 		(pin "2"
-			(uuid "59a3e4a0-afbb-4e7b-a880-37db553b3689")
+			(uuid "11a0a483-47b3-4f11-abc5-02aa3eedd555")
 		)
 		(instances
 			(project "The Harp"
@@ -5705,7 +6391,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5c305e5a-9bcd-4fe0-a35b-41168f26eec6")
+		(uuid "71f67479-4c49-480e-8eb9-a92dd3bc4f8a")
 	)
 	(label "RELAY_G"
 		(at 45.72 105.41 90)
@@ -5716,7 +6402,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "8107d770-2478-4856-b40e-e7b145fa0242")
+		(uuid "880c3253-c6a4-46f7-93ba-3d1439324986")
 	)
 	(wire
 		(pts
@@ -5726,7 +6412,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "16690f1f-8582-4986-b4b0-e947b97bdff4")
+		(uuid "57f9cabc-e44e-436c-b09b-b5a6e7c417f0")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -5738,8 +6424,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "4e9c77c5-5bb1-4d0d-bda8-36f2360cd131")
-		(property "Reference" "#PWR0137"
+		(uuid "9b82cef1-7c01-4380-ac92-b6c5671c13a2")
+		(property "Reference" "#PWR0138"
 			(at 45.72 116.11 0)
 			(hide yes)
 			(show_name no)
@@ -5796,12 +6482,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "f8c4d162-5a34-4f61-be94-96e810f10d20")
+			(uuid "427de61c-e2e3-4cb1-a813-4ffbc3ddbc2b")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0137")
+					(reference "#PWR0138")
 					(unit 1)
 				)
 			)
@@ -5816,7 +6502,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "67370b43-8fef-5772-912b-7f041bd52e36")
 		(property "Reference" "D113"
 			(at 81.28 98.83 0)
@@ -5829,7 +6515,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "RED_LED"
 			(at 81.28 105.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -5862,7 +6548,62 @@
 				)
 			)
 		)
-		(property "Description" "Effect LED (-20, -35)"
+		(property "Description" "Effect LED (-20, -35), fitted at final assembly"
+			(at 78.74 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Kingbright"
+			(at 78.74 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "WP710A10ID"
+			(at 78.74 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" ""
+			(at 78.74 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" ""
+			(at 78.74 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "Mouser"
 			(at 78.74 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -5874,10 +6615,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a4822f85-3cc5-45a5-aa36-9152b766aaea")
+			(uuid "3f20f3f0-e7a7-4a19-98c5-cf2a0d2c80a1")
 		)
 		(pin "2"
-			(uuid "8b70a7d4-f34e-4044-a372-d74a3209872d")
+			(uuid "bca00138-1d96-4b77-aaa8-465445e42ba2")
 		)
 		(instances
 			(project "The Harp"
@@ -5896,7 +6637,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2142fa10-5168-4dc2-89aa-aa99788f1ae3")
+		(uuid "f017b15c-0662-4d79-8634-30ac7ef584e9")
 	)
 	(label "LED_EFF_K"
 		(at 72.39 101.6 180)
@@ -5907,7 +6648,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "8fd155e9-ae36-488f-9c5b-382586a3bd93")
+		(uuid "33614817-a269-4498-bf25-cfa41dd7d944")
 	)
 	(wire
 		(pts
@@ -5917,7 +6658,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6376ef6f-79cf-42f2-aa51-b05c157d37ff")
+		(uuid "4d90b26e-2888-4134-9bc3-556e64f40193")
 	)
 	(symbol
 		(lib_id "power:+9V")
@@ -5929,8 +6670,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f431c470-d124-4ab2-9481-8a3aabfad960")
-		(property "Reference" "#PWR0138"
+		(uuid "97f81207-35ee-4af6-b743-8f5a87694690")
+		(property "Reference" "#PWR0139"
 			(at 85.09 99.6 0)
 			(hide yes)
 			(show_name no)
@@ -5987,12 +6728,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a78cf603-388d-4157-811e-907d6e306922")
+			(uuid "35e4d1f3-da9e-4bcf-8081-eae8d7547cf1")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0138")
+					(reference "#PWR0139")
 					(unit 1)
 				)
 			)
@@ -6064,11 +6805,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 101.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "AC0805FR-071KL"
+			(at 101.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 101.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "UNI ROYAL Uniroyal Elec"
+			(at 101.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "0805W8F1001T5E"
+			(at 101.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "114af98f-d58f-40c2-b13e-0f7853be84ca")
+			(uuid "26b9b03f-5406-476c-94f2-7b4912b20f2f")
 		)
 		(pin "2"
-			(uuid "d9db7ed2-a45e-4e0b-91ed-9cd2dc117f07")
+			(uuid "e91ddc99-e758-456b-a03c-97d352a03e76")
 		)
 		(instances
 			(project "The Harp"
@@ -6087,7 +6883,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c0a45cdf-20f3-459f-99f8-6eacd2c08eeb")
+		(uuid "af0cd9cf-3c47-4071-804e-58687062a708")
 	)
 	(label "LED_EFF_K"
 		(at 101.6 107.95 90)
@@ -6098,7 +6894,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "df6cae91-7581-4c83-84bd-f1e78e114466")
+		(uuid "90e2a51b-6b4a-486f-a403-540f998d1919")
 	)
 	(wire
 		(pts
@@ -6108,7 +6904,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6f377484-8932-4f4b-a21d-59e77a6050df")
+		(uuid "a005ce68-73b6-4d58-a907-5bb0d598e675")
 	)
 	(label "LED_EFF_LOW"
 		(at 101.6 120.65 270)
@@ -6119,7 +6915,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "6f2534ce-4ddf-45c4-81f3-b756679a37e9")
+		(uuid "31482c00-7abe-40fb-a555-5afd5c495b64")
 	)
 	(symbol
 		(lib_id "Transistor_FET:2N7002")
@@ -6187,14 +6983,69 @@
 				)
 			)
 		)
+		(property "Manufacturer" "onsemi"
+			(at 134.62 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "2N7002LT1G"
+			(at 134.62 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7420321"
+			(at 134.62 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "hongjiacheng"
+			(at 134.62 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "2N7002"
+			(at 134.62 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "7ae6d82c-3d9f-421e-b9cd-585677bb311d")
+			(uuid "d698cbba-de2b-4621-98fe-4b9406bca729")
 		)
 		(pin "2"
-			(uuid "3e9faaf2-f8d0-43e1-bba8-d92491d4c28b")
+			(uuid "a3c43c7a-2b65-47c5-84de-0d8a9bd103c4")
 		)
 		(pin "3"
-			(uuid "02e14330-2f60-4635-9dd7-d4813298b8a8")
+			(uuid "2a29b59e-efd6-483c-a297-2eef1f347e9d")
 		)
 		(instances
 			(project "The Harp"
@@ -6213,7 +7064,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9bbd0250-59b2-4ddb-99d0-5f1191002727")
+		(uuid "344872ea-4d26-47f0-bea0-3983469dca52")
 	)
 	(label "LED_EFF_G"
 		(at 127.0 116.84 180)
@@ -6224,7 +7075,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "cf26a5f3-a813-424b-9013-5d084e773751")
+		(uuid "9e71bdea-c566-41ea-b98e-d6bd37bbe2b8")
 	)
 	(wire
 		(pts
@@ -6234,7 +7085,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a75444c9-fe7a-40e3-b27e-0a35d1c9cbe0")
+		(uuid "5d026994-60c7-40ec-8bec-5600fa02e6b1")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6246,8 +7097,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "3c930217-910b-4e43-8d27-a3958164cd3b")
-		(property "Reference" "#PWR0139"
+		(uuid "00105668-3cdb-44b7-a10f-7f332d0ac341")
+		(property "Reference" "#PWR0140"
 			(at 137.16 122.46 0)
 			(hide yes)
 			(show_name no)
@@ -6304,12 +7155,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "a22c8ca5-ed85-4168-9437-04bfeffee18d")
+			(uuid "1ca1fdf4-0017-4253-ade1-04b17e3314c9")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0139")
+					(reference "#PWR0140")
 					(unit 1)
 				)
 			)
@@ -6323,7 +7174,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f74dc03f-4af2-449a-8c00-e7d868bea4b2")
+		(uuid "77b8df86-8677-44e4-b6da-c7610c6959fa")
 	)
 	(label "LED_EFF_LOW"
 		(at 137.16 109.22 90)
@@ -6334,7 +7185,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "1ed53a72-04b0-4754-9056-4cc28273a9b5")
+		(uuid "7540e0ec-5109-4b60-a232-be82ff64da42")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -6402,11 +7253,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 157.48 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "AC0805FR-07100RL"
+			(at 157.48 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7468571"
+			(at 157.48 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "FOJAN"
+			(at 157.48 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "FRQ0805F1000TS"
+			(at 157.48 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "631c68d9-d3ce-4594-a890-a578eaa7d8a9")
+			(uuid "78d080c3-ce04-46d5-90a0-ed5446856b85")
 		)
 		(pin "2"
-			(uuid "c80963c3-e8c4-440b-881f-7c187b388654")
+			(uuid "47fe2b44-a8be-4b3d-97aa-ca0d463b933b")
 		)
 		(instances
 			(project "The Harp"
@@ -6425,7 +7331,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "de7f2e2a-9a0f-4216-9047-2b0013aecffd")
+		(uuid "665181d1-f20e-4500-85b4-9fa807d32712")
 	)
 	(global_label "LED_EFFECT_DRV"
 		(shape passive)
@@ -6437,7 +7343,7 @@
 				)
 				(justify left)
 			)
-		(uuid "2d58a555-25b7-4110-ad06-9b1ca475b376")
+		(uuid "3a265dfa-21ca-4c37-ba71-f653bef479d4")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 157.48 113.03 0)
 			(hide yes)
@@ -6459,7 +7365,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9049aa78-d7ee-4273-9ce2-894992603d6d")
+		(uuid "cc89f641-3042-4b3f-ab3b-a36465ba6816")
 	)
 	(label "LED_EFF_G"
 		(at 157.48 125.73 270)
@@ -6470,7 +7376,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "9f10fadb-bbc0-4d41-8518-f2d571b982c4")
+		(uuid "c1398121-29b0-4f24-9b28-8999db69ec44")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -6538,11 +7444,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 175.26 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "AC0805FR-07100KL"
+			(at 175.26 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
+			(at 175.26 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "UNI ROYAL Uniroyal Elec"
+			(at 175.26 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "0805W8F1003T5E"
+			(at 175.26 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "c2dfc8b1-b695-43a3-88ec-e0aa1785fed7")
+			(uuid "83665961-697c-46b0-bc55-217dd0d2d46c")
 		)
 		(pin "2"
-			(uuid "af12c092-5d40-4b07-b231-a08c5b494a1b")
+			(uuid "1205b1be-5e66-4383-90da-1f759189dc57")
 		)
 		(instances
 			(project "The Harp"
@@ -6561,7 +7522,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b21b1b5e-7b12-49be-9a10-4da27dc5980f")
+		(uuid "78eb6c62-a057-425d-b827-760975e80d3b")
 	)
 	(label "LED_EFF_G"
 		(at 175.26 107.95 90)
@@ -6572,7 +7533,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "445b0eea-21a5-4ccd-b406-7dee5292ca7e")
+		(uuid "9617bae1-915e-4023-b189-a239ea90a518")
 	)
 	(wire
 		(pts
@@ -6582,7 +7543,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1f30fbd8-e9d9-4e44-aea3-0e2b5958ae02")
+		(uuid "d557e2b2-342f-4236-baa7-a1eec82a6a8f")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -6594,8 +7555,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0060f025-4c43-4d4b-b640-d8dbded0ad70")
-		(property "Reference" "#PWR0140"
+		(uuid "4c2f4636-f970-4a9a-a668-e82fa2061938")
+		(property "Reference" "#PWR0141"
 			(at 175.26 118.65 0)
 			(hide yes)
 			(show_name no)
@@ -6652,12 +7613,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "1879c19a-dcef-4731-bd0b-5307e823b64f")
+			(uuid "577b0aef-f4b5-42c1-bd2f-c20db3e04412")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0140")
+					(reference "#PWR0141")
 					(unit 1)
 				)
 			)
@@ -6672,7 +7633,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "81d41cc1-c7c5-5cc4-aa6f-43c59527c150")
 		(property "Reference" "D114"
 			(at 210.82 98.83 0)
@@ -6685,7 +7646,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "LED"
+		(property "Value" "RED_LED"
 			(at 210.82 105.37 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6718,7 +7679,62 @@
 				)
 			)
 		)
-		(property "Description" "Hold LED (+20, -35)"
+		(property "Description" "Hold LED (+20, -35), fitted at final assembly"
+			(at 208.28 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Kingbright"
+			(at 208.28 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "WP710A10ID"
+			(at 208.28 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" ""
+			(at 208.28 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" ""
+			(at 208.28 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "Mouser"
 			(at 208.28 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -6730,10 +7746,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "1149bee0-c549-4f50-bec7-705ffbb46b07")
+			(uuid "eab954c2-14d8-4097-a7ad-90e900e2836a")
 		)
 		(pin "2"
-			(uuid "d96499b3-1ec2-42bf-afb8-47b467d0ec3a")
+			(uuid "78b9bb3d-eac1-41ea-bc7e-29b7cb63e303")
 		)
 		(instances
 			(project "The Harp"
@@ -6752,7 +7768,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "27963d4e-a1cc-4c0a-b914-d262094f1ae3")
+		(uuid "5fa0d927-0859-4e2b-b05e-f7abfa1b17bd")
 	)
 	(label "LED_HOLD_K"
 		(at 201.93 101.6 180)
@@ -6763,7 +7779,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "97dde441-d065-47a4-8b3b-918933781c4b")
+		(uuid "f0f1c9d8-7728-4bc1-b913-18ef0bbcf1c5")
 	)
 	(wire
 		(pts
@@ -6773,7 +7789,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4138153f-2dac-439e-bd4a-51ee0a991281")
+		(uuid "fe99dabf-6ab8-42e3-897f-a7b9f6eb36fe")
 	)
 	(symbol
 		(lib_id "power:+9V")
@@ -6785,8 +7801,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "2a399b56-a7da-4472-8ab0-b47979b5ce76")
-		(property "Reference" "#PWR0141"
+		(uuid "f32d4e15-7f60-45ad-8550-e088e78ce82d")
+		(property "Reference" "#PWR0142"
 			(at 214.63 99.6 0)
 			(hide yes)
 			(show_name no)
@@ -6843,12 +7859,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "6f27c078-1012-49a8-8b9c-8a0ff2c14dd7")
+			(uuid "483ec651-26b8-44c2-92ba-8148ff157292")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0141")
+					(reference "#PWR0142")
 					(unit 1)
 				)
 			)
@@ -6920,11 +7936,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 231.14 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "AC0805FR-071KL"
+			(at 231.14 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 231.14 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "UNI ROYAL Uniroyal Elec"
+			(at 231.14 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "0805W8F1001T5E"
+			(at 231.14 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "fed0ea48-06ca-4cf8-ad54-7ce6447b162a")
+			(uuid "ca66353a-cb4b-48f1-a819-cb707a80f5fa")
 		)
 		(pin "2"
-			(uuid "fe416067-a6dd-4dfa-911e-70d838c422d8")
+			(uuid "7ff3e536-315c-4a20-8cca-c2e08b7af46b")
 		)
 		(instances
 			(project "The Harp"
@@ -6943,7 +8014,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7230779c-0faf-444c-99dc-2567aa4cc952")
+		(uuid "f260c91b-8e21-4ae4-b269-ce5cc3237173")
 	)
 	(label "LED_HOLD_K"
 		(at 231.14 107.95 90)
@@ -6954,7 +8025,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "1be3668c-ddf5-40f3-81e1-2376b3983e18")
+		(uuid "28e1a1ed-e12f-4365-b66b-4588bc770395")
 	)
 	(wire
 		(pts
@@ -6964,7 +8035,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "79ae9522-cefb-4da0-af10-7cab756fcdf1")
+		(uuid "d93e00ad-d03d-43e9-92f6-4edfb0ce8a59")
 	)
 	(label "LED_HOLD_LOW"
 		(at 231.14 120.65 270)
@@ -6975,7 +8046,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "25a694cd-9737-4a4d-8bd7-9640d02c6a79")
+		(uuid "f19642df-5dac-4957-8401-354a4d9c5d57")
 	)
 	(symbol
 		(lib_id "Transistor_FET:2N7002")
@@ -7043,14 +8114,69 @@
 				)
 			)
 		)
+		(property "Manufacturer" "onsemi"
+			(at 266.7 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "2N7002LT1G"
+			(at 266.7 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7420321"
+			(at 266.7 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "hongjiacheng"
+			(at 266.7 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "2N7002"
+			(at 266.7 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "a057e9f3-f321-4d9d-8bdd-0c07d54d990c")
+			(uuid "ccbad16a-66fb-4d95-909b-6f1126f404e3")
 		)
 		(pin "2"
-			(uuid "15ff53af-f131-46f3-89da-f065a6246ec1")
+			(uuid "4d52bf0b-4b2f-4eb2-99d3-dee256191022")
 		)
 		(pin "3"
-			(uuid "dfcfe8c0-3dba-4cd2-834a-4c728844de59")
+			(uuid "69685459-3501-4e6c-a335-0fdcc342ce78")
 		)
 		(instances
 			(project "The Harp"
@@ -7069,7 +8195,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6bf8c39c-0026-4fad-8894-dba436d6105a")
+		(uuid "c9f74c68-691e-47f5-a004-17dcd3998c0e")
 	)
 	(label "LED_HOLD_G"
 		(at 259.08 119.38 180)
@@ -7080,7 +8206,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "aa77a433-22ce-48d0-9f93-51114f3b945a")
+		(uuid "7e6a7b12-5d81-447c-a1e8-fd540ad10740")
 	)
 	(wire
 		(pts
@@ -7090,7 +8216,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "00c242c8-f189-46ad-847c-6da269cac698")
+		(uuid "e01f6812-36f3-4ddf-87f8-03bb44484c9b")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7102,8 +8228,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e72e3507-5113-40a6-9771-0f948ec6787d")
-		(property "Reference" "#PWR0142"
+		(uuid "e4e9d413-9597-4b89-a4e5-f34a14a3b475")
+		(property "Reference" "#PWR0143"
 			(at 269.24 125.0 0)
 			(hide yes)
 			(show_name no)
@@ -7160,12 +8286,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "b748ba22-2a24-4758-ae5d-d350f2a0d4d6")
+			(uuid "0e4aa117-e0b4-4561-b361-d135e5f5762c")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0142")
+					(reference "#PWR0143")
 					(unit 1)
 				)
 			)
@@ -7179,7 +8305,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ca0cc7c5-c254-4498-89c5-b491d577c620")
+		(uuid "849c7954-c9df-4e78-a557-08259294d59b")
 	)
 	(label "LED_HOLD_LOW"
 		(at 269.24 111.76 90)
@@ -7190,7 +8316,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "46da0148-7f84-4e49-bcb0-fe98654cf62a")
+		(uuid "5c4e1fe6-92eb-4aed-a628-ffa8d5553177")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -7258,11 +8384,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 289.56 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "AC0805FR-07100RL"
+			(at 289.56 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7468571"
+			(at 289.56 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "FOJAN"
+			(at 289.56 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "FRQ0805F1000TS"
+			(at 289.56 116.84 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "690a172a-c11e-4d68-943d-5fb9abfdf57e")
+			(uuid "c88340db-6eb4-4c61-9e0a-5152d0dcd4d5")
 		)
 		(pin "2"
-			(uuid "5d4660b6-cc3d-45e9-b57e-a3f63e194916")
+			(uuid "dd17a15e-33ba-4b69-b889-877490211719")
 		)
 		(instances
 			(project "The Harp"
@@ -7281,7 +8462,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3c297e64-1cf7-488a-b8a9-be106a98bea7")
+		(uuid "72258aa2-4853-448c-bacf-da35a0e73d44")
 	)
 	(global_label "LED_HOLD_DRV"
 		(shape passive)
@@ -7293,7 +8474,7 @@
 				)
 				(justify left)
 			)
-		(uuid "8a6c2322-2400-4857-a211-a2df9d3ae053")
+		(uuid "7d6f00f0-6ff7-486f-90c6-981a93298fc1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 289.56 110.49 0)
 			(hide yes)
@@ -7315,7 +8496,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "527ccbdd-c4e0-464e-9226-7a4948af1135")
+		(uuid "18381ac9-005f-4120-a077-5a0d4da00865")
 	)
 	(label "LED_HOLD_G"
 		(at 289.56 123.19 270)
@@ -7326,7 +8507,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "3d1612c2-5c75-41bc-9bf0-60e32c9d8ff8")
+		(uuid "cd0941bb-2d57-434f-8a2f-de4a68dcf69e")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -7394,11 +8575,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 307.34 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "AC0805FR-07100KL"
+			(at 307.34 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
+			(at 307.34 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "UNI ROYAL Uniroyal Elec"
+			(at 307.34 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "0805W8F1003T5E"
+			(at 307.34 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "ebf095b7-45c1-4842-9fce-51d4f5ba8bdb")
+			(uuid "96ac5c7a-82a0-467a-b2ec-224c3b0e55c1")
 		)
 		(pin "2"
-			(uuid "47acf9f6-9d2a-473e-a506-ebe30fd005c6")
+			(uuid "657969ee-2a79-4931-b782-c9be04cd8f24")
 		)
 		(instances
 			(project "The Harp"
@@ -7417,7 +8653,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9e35bc54-d419-4ebe-ba87-d9744d4ef8f0")
+		(uuid "0dc3ca6c-75fc-4732-b25d-6d87661e4e5f")
 	)
 	(label "LED_HOLD_G"
 		(at 307.34 107.95 90)
@@ -7428,7 +8664,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "1fd834d3-c3d2-462c-a914-a2fb4ed70df9")
+		(uuid "2d37e8c5-a068-404e-90a1-796a2752f8f2")
 	)
 	(wire
 		(pts
@@ -7438,7 +8674,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d44ba35e-d971-4a3c-8489-3944ad199a3d")
+		(uuid "e284c465-d48b-4858-9b55-83416211ffcd")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7450,8 +8686,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5a3a1e46-6c84-4b3d-ad7b-ad04c4552353")
-		(property "Reference" "#PWR0143"
+		(uuid "2e388a6d-fe6e-4740-b08b-dfe6493755fb")
+		(property "Reference" "#PWR0144"
 			(at 307.34 118.65 0)
 			(hide yes)
 			(show_name no)
@@ -7508,12 +8744,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d92d42dc-0405-4dcb-847a-fc7e3734b0ab")
+			(uuid "78e8cd85-a369-45b8-b5c2-ea97854665c0")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0143")
+					(reference "#PWR0144")
 					(unit 1)
 				)
 			)
@@ -7528,7 +8764,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "d99432cd-02cd-5d84-a6ab-23e7fa464ee8")
 		(property "Reference" "J405"
 			(at 345.44 98.83 0)
@@ -7552,7 +8788,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_SMD:R_2816_7142Metric_Pad3.20x4.45mm_HandSolder"
 			(at 342.9 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -7574,7 +8810,18 @@
 				)
 			)
 		)
-		(property "Description" "Bypass footswitch (-20, -49)"
+		(property "Description" "Bypass footswitch (-20, -49), wire pads"
+			(at 342.9 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "none"
 			(at 342.9 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -7586,10 +8833,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "ab402504-6517-4d6f-aac5-7ae89a578dbc")
+			(uuid "9976f5ad-8015-42bd-a373-43c7705f2278")
 		)
 		(pin "2"
-			(uuid "8c33989d-a196-4ac4-a2f3-175111041856")
+			(uuid "1b2123c6-c7b9-4f0c-886d-60d70b4199ae")
 		)
 		(instances
 			(project "The Harp"
@@ -7608,7 +8855,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e321057b-d853-40c3-b52d-f11c45543177")
+		(uuid "2b355f4e-02fa-4dd6-8ff4-b48e249211f3")
 	)
 	(label "FSW_BYPASS"
 		(at 335.28 101.6 180)
@@ -7619,7 +8866,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "e092297b-34b6-4274-8049-0e56abb31ceb")
+		(uuid "36d0dd8e-a116-484a-9608-c1fbe0409382")
 	)
 	(wire
 		(pts
@@ -7629,7 +8876,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2db72363-3ff3-4786-a639-ba2e63974ad3")
+		(uuid "7bd64f57-bc05-4fde-828d-9723dffc4d0f")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7641,8 +8888,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "67d85657-6d23-4efe-a6ef-7d7cd731f52d")
-		(property "Reference" "#PWR0144"
+		(uuid "04306701-9f72-412d-854a-d0779f89b86c")
+		(property "Reference" "#PWR0145"
 			(at 335.28 102.14 0)
 			(hide yes)
 			(show_name no)
@@ -7699,12 +8946,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "c248eb2e-c944-49df-9ab8-e5a5e7a834cd")
+			(uuid "866dcac9-08f5-4660-bce5-9d19356a8712")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0144")
+					(reference "#PWR0145")
 					(unit 1)
 				)
 			)
@@ -7776,11 +9023,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 355.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "AC0805FR-071KL"
+			(at 355.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 355.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "UNI ROYAL Uniroyal Elec"
+			(at 355.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "0805W8F1001T5E"
+			(at 355.6 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "2c9b2b33-dc5a-43b4-b4ef-9f7ebc7454de")
+			(uuid "8cef4bbb-56ed-4674-8d72-0f28fd42d235")
 		)
 		(pin "2"
-			(uuid "a33b452b-5080-4e68-a346-31d10c3d2169")
+			(uuid "f2fa897e-a3bb-4c9e-b33f-952dae4ba90d")
 		)
 		(instances
 			(project "The Harp"
@@ -7799,7 +9101,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c46fbb3a-b767-4b5d-b9e5-6246ea8c29cf")
+		(uuid "44fdc842-6dd9-4caf-8f64-4a8aff60394e")
 	)
 	(label "FSW_BYPASS"
 		(at 355.6 107.95 90)
@@ -7810,7 +9112,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "3c555485-a830-4e62-b84a-859ecd1a2bd6")
+		(uuid "590e559b-7e4c-4804-9c16-ea2c362067e6")
 	)
 	(wire
 		(pts
@@ -7820,7 +9122,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "77192f99-ed14-481a-9ceb-87053e585a3e")
+		(uuid "602bb938-6093-47ce-8ddd-623ad19de1d0")
 	)
 	(global_label "FSW_BYPASS_IN"
 		(shape passive)
@@ -7832,7 +9134,7 @@
 				)
 				(justify right)
 			)
-		(uuid "40d34ad1-1f30-4361-b7e6-9ef998e303c5")
+		(uuid "b9862022-cc5c-4fcc-b5bb-979e079b48d6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 355.6 120.65 0)
 			(hide yes)
@@ -7912,11 +9214,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 373.38 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "CC0603KRX7R9BB104"
+			(at 373.38 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 373.38 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "YAGEO"
+			(at 373.38 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "CC0603KRX7R9BB104"
+			(at 373.38 119.38 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "9737925f-d4da-4cb7-9d67-18665192dff6")
+			(uuid "bada8584-6217-4bb1-b201-acb722ecec84")
 		)
 		(pin "2"
-			(uuid "8cc7a3af-049e-4569-9328-3463ddcfc3a7")
+			(uuid "da8a8464-ed2e-43f0-bf53-6d1dfe7fe748")
 		)
 		(instances
 			(project "The Harp"
@@ -7935,7 +9292,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "704bc8fe-5777-431a-91a9-84bd419a9953")
+		(uuid "afe7e6e7-adec-4438-a4d6-18947f1cd440")
 	)
 	(global_label "FSW_BYPASS_IN"
 		(shape passive)
@@ -7947,7 +9304,7 @@
 				)
 				(justify left)
 			)
-		(uuid "3604d74e-9dcf-47a9-9f33-93eede0438ea")
+		(uuid "23275c46-e693-457b-b71c-424d29b5da86")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 373.38 113.03 0)
 			(hide yes)
@@ -7969,7 +9326,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "22caf0ba-082a-433f-b77a-c7a63802c7d1")
+		(uuid "882bacc3-8521-4c21-bc14-e6ee90bd7890")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -7981,8 +9338,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5d5b11d7-66c3-458f-8d67-490187e7c175")
-		(property "Reference" "#PWR0145"
+		(uuid "dc77093e-3ba4-43ca-ba62-94d09194db96")
+		(property "Reference" "#PWR0146"
 			(at 373.38 123.73 0)
 			(hide yes)
 			(show_name no)
@@ -8039,12 +9396,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "695ad692-ec96-4222-8089-9eecb81c86f2")
+			(uuid "15a6bc18-79f9-4c81-ae7d-7249a38e6f0a")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0145")
+					(reference "#PWR0146")
 					(unit 1)
 				)
 			)
@@ -8059,7 +9416,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "608af85b-c637-5bdf-868d-24bd48b72f9f")
 		(property "Reference" "J407"
 			(at 45.72 154.71 0)
@@ -8083,7 +9440,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_SMD:R_2816_7142Metric_Pad3.20x4.45mm_HandSolder"
 			(at 43.18 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -8105,7 +9462,18 @@
 				)
 			)
 		)
-		(property "Description" "Hold footswitch (+20, -49)"
+		(property "Description" "Hold footswitch (+20, -49), wire pads"
+			(at 43.18 157.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "none"
 			(at 43.18 157.48 0)
 			(hide yes)
 			(show_name no)
@@ -8117,10 +9485,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "6ab25a9a-be5d-4fea-ae2d-2023d510e687")
+			(uuid "e413c40e-aef3-43f4-a576-e4d91f848383")
 		)
 		(pin "2"
-			(uuid "72cb3370-28e3-4d1b-8292-2c2a6679c9d9")
+			(uuid "993a8772-c497-4965-acc7-02a581fc988d")
 		)
 		(instances
 			(project "The Harp"
@@ -8139,7 +9507,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6ed8003b-b4e3-4bab-92df-646bbdff993b")
+		(uuid "fc69295b-d117-41ea-a796-5f3e562fe513")
 	)
 	(label "FSW_HOLD"
 		(at 35.56 157.48 180)
@@ -8150,7 +9518,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "67ec1ae2-4be4-46b5-86ba-f0694beea2ca")
+		(uuid "cac4fa60-1fbc-46c5-b6b9-882a6d2f6bc8")
 	)
 	(wire
 		(pts
@@ -8160,7 +9528,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "775292c1-c5c5-48e5-8c37-1494a97b3520")
+		(uuid "61307e2f-f118-4865-bd41-42e69ed75c5e")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8172,8 +9540,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "fa5067b2-9810-4dbb-af0e-ef90eda7c808")
-		(property "Reference" "#PWR0146"
+		(uuid "6243b85b-45fb-4875-ab92-2359088a5b81")
+		(property "Reference" "#PWR0147"
 			(at 35.56 158.02 0)
 			(hide yes)
 			(show_name no)
@@ -8230,12 +9598,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "ec7f6911-65db-4878-a5ab-c182db712f5b")
+			(uuid "cd6b7e17-a524-4908-ade3-a75c2262fe3e")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0146")
+					(reference "#PWR0147")
 					(unit 1)
 				)
 			)
@@ -8307,11 +9675,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 55.88 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "AC0805FR-071KL"
+			(at 55.88 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
+			(at 55.88 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "UNI ROYAL Uniroyal Elec"
+			(at 55.88 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "0805W8F1001T5E"
+			(at 55.88 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "d4e55592-0807-41bc-80c2-74aa1e0407ec")
+			(uuid "c64fe6f5-c740-4416-bb69-23577ce21ef1")
 		)
 		(pin "2"
-			(uuid "fae7fe29-a8dc-4c74-97b9-be94f959aa9b")
+			(uuid "cf0e24bb-2699-45f0-8b19-d2807d9b9e72")
 		)
 		(instances
 			(project "The Harp"
@@ -8330,7 +9753,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2b6f5ce2-15bc-45c0-a2d0-e888c6ef75e1")
+		(uuid "3590a7dd-e7c7-42a5-82ff-9ff21b75e8a3")
 	)
 	(label "FSW_HOLD"
 		(at 55.88 161.29 90)
@@ -8341,7 +9764,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "1225f316-a752-4cae-8083-3180f427a672")
+		(uuid "3291153e-096e-4681-b826-fd6b5b4dfe26")
 	)
 	(wire
 		(pts
@@ -8351,7 +9774,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "aa15652f-4db5-48cf-b289-a7ff684b9f40")
+		(uuid "3d9a5764-240d-48d8-81e0-f0225811cee7")
 	)
 	(global_label "FSW_HOLD_IN"
 		(shape passive)
@@ -8363,7 +9786,7 @@
 				)
 				(justify right)
 			)
-		(uuid "2141d3b3-c918-4bb2-ac7a-a1bdaf6aa047")
+		(uuid "1a441e41-725d-4cb9-821c-026d7b3d0749")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 55.88 173.99 0)
 			(hide yes)
@@ -8443,11 +9866,66 @@
 				)
 			)
 		)
+		(property "Manufacturer" "YAGEO"
+			(at 73.66 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "CC0603KRX7R9BB104"
+			(at 73.66 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C14663"
+			(at 73.66 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "YAGEO"
+			(at 73.66 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "CC0603KRX7R9BB104"
+			(at 73.66 172.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
-			(uuid "a30d9f8a-22cc-41c3-b60e-271bab9fa285")
+			(uuid "cdf28d3f-76d3-468e-9b42-6fd06dc08301")
 		)
 		(pin "2"
-			(uuid "17177292-53ee-4cc3-bb6d-71d5dbabbc64")
+			(uuid "7fb51f40-06c5-488c-988c-e774e37ee507")
 		)
 		(instances
 			(project "The Harp"
@@ -8466,7 +9944,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7dbbe00d-2455-4e01-a4b5-816326129b1c")
+		(uuid "6d677cb4-6cf0-4657-8a34-d225a00b6b98")
 	)
 	(global_label "FSW_HOLD_IN"
 		(shape passive)
@@ -8478,7 +9956,7 @@
 				)
 				(justify left)
 			)
-		(uuid "65fed3c8-a1e1-4b40-9a8a-37d85bc36660")
+		(uuid "dc54ed73-70b6-47eb-9488-e5b09ef38e6c")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 73.66 166.37 0)
 			(hide yes)
@@ -8500,7 +9978,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "be530ec7-c3d7-448e-b1e5-a0627beaebe0")
+		(uuid "a4fe2de4-7a31-46ea-8c9b-9236105873f5")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -8512,8 +9990,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f2d145df-d10d-4ba1-9bb6-d217820770ee")
-		(property "Reference" "#PWR0147"
+		(uuid "6c9b548f-8e4d-43a0-88ce-229b50cf969e")
+		(property "Reference" "#PWR0148"
 			(at 73.66 177.07 0)
 			(hide yes)
 			(show_name no)
@@ -8570,12 +10048,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "0b4cd9e3-51b0-4cb3-83a3-b51739a91593")
+			(uuid "cecdc24c-e6fb-4a00-870f-4c01f825d702")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0147")
+					(reference "#PWR0148")
 					(unit 1)
 				)
 			)
@@ -8648,10 +10126,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5ec7eacc-61ce-4f3f-9b1e-177d04317ed1")
+			(uuid "970b31bb-d359-4944-94d3-8c4e1ebdcd16")
 		)
 		(pin "2"
-			(uuid "fa15aeb3-603d-460c-a8e7-e70de1095b5a")
+			(uuid "9d0f1832-8330-4907-8b17-eff09e19cd8b")
 		)
 		(instances
 			(project "The Harp"
@@ -8670,7 +10148,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ca87833e-cf5e-4ec1-af49-de60ca58a6a7")
+		(uuid "3bd69a64-3fa8-4a8d-ab64-e9d7254d7147")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -8682,8 +10160,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "44b50e6a-3bb3-4e02-a7ca-0c642cba6c68")
-		(property "Reference" "#PWR0148"
+		(uuid "015becc6-0035-43da-8d34-599757a1136a")
+		(property "Reference" "#PWR0149"
 			(at 91.44 151.67 0)
 			(hide yes)
 			(show_name no)
@@ -8740,12 +10218,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "d4aa82d8-5877-4cb3-bfca-b7ba0a12ae4d")
+			(uuid "9c4ecea3-56a4-42db-94a5-09237ce3b56e")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0148")
+					(reference "#PWR0149")
 					(unit 1)
 				)
 			)
@@ -8759,7 +10237,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c19ad87a-b840-4606-a2ff-66f1782b66ce")
+		(uuid "defe2361-6699-4e11-8592-86552dec1c95")
 	)
 	(label "EXP_RING"
 		(at 91.44 166.37 270)
@@ -8770,7 +10248,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "8ec77456-91db-4dda-a85c-9a35cdcfe978")
+		(uuid "9d74e4e5-06c7-4f6a-ad27-050ea2faccc6")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -8839,10 +10317,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "95020490-2c01-4e14-884e-878d7b22f627")
+			(uuid "3a2da5e1-c580-4fe8-a83a-dd08bdc1bbc6")
 		)
 		(pin "2"
-			(uuid "4ce70dcd-f9e6-428e-8c62-ed0356468677")
+			(uuid "056ff33f-37ec-488b-9e3f-7852a88f81fd")
 		)
 		(instances
 			(project "The Harp"
@@ -8861,7 +10339,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "9b5a7acc-029c-4cb6-ac04-fa52178386a1")
+		(uuid "b7007906-c147-4efd-a8a1-8454aed7257a")
 	)
 	(label "EXP_TIP"
 		(at 109.22 158.75 90)
@@ -8872,7 +10350,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "e9ffd68d-c297-462e-978e-fde27bde34af")
+		(uuid "89d86ad2-f299-4f0e-ad54-3345f2cd6fac")
 	)
 	(wire
 		(pts
@@ -8882,7 +10360,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0d50ee2a-7459-4fcf-bda8-7116c59f109b")
+		(uuid "87dc68d5-c2b3-4b67-a796-def6d155c8a2")
 	)
 	(label "EXP_BUF_IN"
 		(at 109.22 171.45 270)
@@ -8893,7 +10371,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "85739db5-5804-4045-95d3-c24a2c42982f")
+		(uuid "f840375c-8e73-45ff-ab55-54f21bc47301")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -8962,10 +10440,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "d32255ca-cbc7-4230-b1b4-93725b9e6e5b")
+			(uuid "addb3031-0d72-4c7a-87ef-e67e8557b4dc")
 		)
 		(pin "2"
-			(uuid "dc6381d2-6b66-4017-a678-60eafb4336dd")
+			(uuid "7e8dcef5-6eba-4afc-b127-3793938b8b5f")
 		)
 		(instances
 			(project "The Harp"
@@ -8984,7 +10462,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "be0382d5-bf68-4b17-9910-c60e997b5661")
+		(uuid "0e377fbd-c4aa-4f4e-a1e0-7f77bef49b01")
 	)
 	(label "EXP_TIP"
 		(at 127.0 158.75 90)
@@ -8995,7 +10473,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "a94c8d36-ba28-4437-a886-dc91590fa20d")
+		(uuid "7ca84d56-14a1-4a86-8846-d82c75ae8fb6")
 	)
 	(wire
 		(pts
@@ -9005,7 +10483,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "69bb9500-411c-4a30-85a2-42fcea286cd0")
+		(uuid "95c09cab-1fb8-4d8d-a7b4-948a977753b7")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9017,8 +10495,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f360c0f8-50d2-42f3-b03e-fbc693435e71")
-		(property "Reference" "#PWR0149"
+		(uuid "5086d1b3-4299-47b1-a843-86411f28de02")
+		(property "Reference" "#PWR0150"
 			(at 127.0 169.45 0)
 			(hide yes)
 			(show_name no)
@@ -9075,12 +10553,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "11abfd31-8c82-4c77-91b1-cec8979f6104")
+			(uuid "08f0d73a-d9c8-4ba4-9d86-218fca625c78")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0149")
+					(reference "#PWR0150")
 					(unit 1)
 				)
 			)
@@ -9153,10 +10631,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "6bcee1a3-8120-4b51-9a83-af8b77d976fa")
+			(uuid "925e6040-9786-4d85-8a0e-dfa0c4262e27")
 		)
 		(pin "2"
-			(uuid "e0d5e1f9-8bb6-4572-8bab-52f19727b4c9")
+			(uuid "9d560398-1167-4854-a942-dc3176c53d35")
 		)
 		(instances
 			(project "The Harp"
@@ -9175,7 +10653,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6b90fae7-1a0b-4460-94d2-ec166dbc74a3")
+		(uuid "93ee2310-36eb-47d3-8817-0192a401bb64")
 	)
 	(label "EXP_BUF_IN"
 		(at 147.32 163.83 90)
@@ -9186,7 +10664,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "314d72ca-0be1-4c57-bc51-1b19f6ab5929")
+		(uuid "873df31c-b09b-4e31-9d26-b66e55aa6ae6")
 	)
 	(wire
 		(pts
@@ -9196,7 +10674,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c9a48c06-46aa-4f52-9d92-5aa920198fb5")
+		(uuid "a20ea595-26e1-4b20-b42a-408f4e84dd0d")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9208,8 +10686,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "f2854a1e-af93-4eb0-8429-50c4bcddafbb")
-		(property "Reference" "#PWR0150"
+		(uuid "8904f6b0-99d3-4bf0-83b8-bded60323909")
+		(property "Reference" "#PWR0151"
 			(at 147.32 174.53 0)
 			(hide yes)
 			(show_name no)
@@ -9266,12 +10744,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "e003b3c4-7f76-4b80-955e-fe2cd95def7d")
+			(uuid "5e944a43-2150-4774-96a1-33e172541908")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0150")
+					(reference "#PWR0151")
 					(unit 1)
 				)
 			)
@@ -9366,19 +10844,19 @@
 			)
 		)
 		(pin "2"
-			(uuid "4c8676e6-ee46-4fc7-9b78-f25385f0e060")
+			(uuid "bd2657fd-d388-4c57-8391-5339f01b3556")
 		)
 		(pin "5"
-			(uuid "e507eb06-3c79-4bb6-9a3d-045074adbcf0")
+			(uuid "ab15b52a-d733-499e-812c-530c08fead54")
 		)
 		(pin "1"
-			(uuid "237b6cc8-a91c-438e-9561-41574bde8552")
+			(uuid "6c170258-9bd8-4925-9ae0-e9611aa6feba")
 		)
 		(pin "3"
-			(uuid "198e8543-5421-4540-9b9b-3a300579b265")
+			(uuid "4928e779-c4b8-4f33-a72c-912d1c91ce86")
 		)
 		(pin "4"
-			(uuid "b3b8a2e3-39ed-49c2-b82f-541f9ab49f10")
+			(uuid "63976cd2-7cad-4f39-9e0c-5fceea79647e")
 		)
 		(instances
 			(project "The Harp"
@@ -9397,7 +10875,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3b65d447-8e07-48cb-8ae0-7a0980a7df59")
+		(uuid "72561e87-fa4b-42ad-a4be-7e893d5e2010")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9409,8 +10887,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "9d3e0279-49a4-4081-b693-c15ccb53cbc3")
-		(property "Reference" "#PWR0151"
+		(uuid "961b7c06-6f53-420b-8720-73e26e1472f7")
+		(property "Reference" "#PWR0152"
 			(at 182.88 173.26 0)
 			(hide yes)
 			(show_name no)
@@ -9467,12 +10945,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "6fd99cfc-2bb5-4622-9940-190f6ceb69a6")
+			(uuid "97c15d3e-295b-40dd-95f7-67844fc088b8")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0151")
+					(reference "#PWR0152")
 					(unit 1)
 				)
 			)
@@ -9486,7 +10964,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a9686e21-6262-49fb-8e05-4ff8504723b8")
+		(uuid "4dca0faa-f5d3-434e-afae-a6bc9a871b1d")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -9498,8 +10976,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "eb62528a-754d-469b-8203-92b1bca0a42e")
-		(property "Reference" "#PWR0152"
+		(uuid "2520443f-0f84-47ad-80f8-74aad387be79")
+		(property "Reference" "#PWR0153"
 			(at 182.88 152.94 0)
 			(hide yes)
 			(show_name no)
@@ -9556,12 +11034,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "9ad53cf2-ba07-4644-acfd-6ecd4ee64f33")
+			(uuid "4c612b2b-4d88-4e0c-b788-bd596566c033")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0152")
+					(reference "#PWR0153")
 					(unit 1)
 				)
 			)
@@ -9575,7 +11053,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b5ac5fdb-b728-44e4-b2a7-c4beddf3a29b")
+		(uuid "88e497b1-3a41-420f-b4c9-49e52ba7f53f")
 	)
 	(label "EXP_BUF_OUT"
 		(at 195.58 165.1 0)
@@ -9586,7 +11064,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "5ab3a5b1-32ff-40ae-80b8-d34a27d63251")
+		(uuid "89fd7505-6bb1-4beb-b0df-17e598b0e901")
 	)
 	(wire
 		(pts
@@ -9596,7 +11074,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "e57a3f10-083e-4aab-9f42-710894a4c3c0")
+		(uuid "2b1e7acb-96e1-424d-a155-1224eb7fc4f3")
 	)
 	(label "EXP_BUF_IN"
 		(at 175.26 162.56 180)
@@ -9607,7 +11085,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "8d62867f-768f-4753-ab2c-35b70e0b1382")
+		(uuid "6ca62194-d039-4495-b3c6-adeea97c2335")
 	)
 	(wire
 		(pts
@@ -9617,7 +11095,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "70890021-fcf8-4f5f-b78c-8d3eed88ccb5")
+		(uuid "f310b3bd-9fd1-4006-b798-eb248c1ee6c5")
 	)
 	(label "EXP_BUF_OUT"
 		(at 175.26 167.64 180)
@@ -9628,7 +11106,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "4901d48f-8451-4172-9d1a-9b376c078229")
+		(uuid "0d57e6ea-76fc-41b9-95fb-a9e129b86465")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -9697,10 +11175,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "9ba1165e-3c00-419c-8ebb-47960acda242")
+			(uuid "2e51354f-4891-4fe1-b0bf-e5b1052abb45")
 		)
 		(pin "2"
-			(uuid "b659fa28-373c-4d55-a494-c0576736687e")
+			(uuid "38880ae3-dc9a-43ff-a152-399ae1933bfa")
 		)
 		(instances
 			(project "The Harp"
@@ -9719,7 +11197,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "1782789e-363f-4c20-a05b-40231cd66e7a")
+		(uuid "4a9b1410-921e-4ed4-af3f-3e8a16ef4ee5")
 	)
 	(symbol
 		(lib_id "power:+3V3")
@@ -9731,8 +11209,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5b77ca3a-faf9-496d-b9ac-76758f7b1b41")
-		(property "Reference" "#PWR0153"
+		(uuid "44f82cbf-6b54-4e31-b00b-fb8d57c69785")
+		(property "Reference" "#PWR0154"
 			(at 226.06 151.67 0)
 			(hide yes)
 			(show_name no)
@@ -9789,12 +11267,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "1a5c2d3c-1438-4563-995f-121e9a1dd958")
+			(uuid "6a42a5f3-61fc-463f-bfb1-f214f1e090fa")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0153")
+					(reference "#PWR0154")
 					(unit 1)
 				)
 			)
@@ -9808,7 +11286,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c9e3ce31-6821-41c7-9eb3-613292f89247")
+		(uuid "743984c0-8a9b-4047-83db-19279f5c4992")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -9820,8 +11298,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "2744b36b-fc0d-41bb-8048-e7c4952c949b")
-		(property "Reference" "#PWR0154"
+		(uuid "9d824456-ffef-43c7-b1d1-06d2f65f8555")
+		(property "Reference" "#PWR0155"
 			(at 226.06 164.37 0)
 			(hide yes)
 			(show_name no)
@@ -9878,12 +11356,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "cdec4e48-186a-460b-84e8-f9cb075c235d")
+			(uuid "85df3f63-7882-4335-be52-baa8bbe66710")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0154")
+					(reference "#PWR0155")
 					(unit 1)
 				)
 			)
@@ -9956,10 +11434,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "677fbdf1-a0a5-4962-be9f-371f1f50fcb8")
+			(uuid "32b6ee50-e5fe-43f6-b7f1-03f1894ee28d")
 		)
 		(pin "2"
-			(uuid "ea40f000-3ef3-48e7-a00a-5de37149e9f6")
+			(uuid "61779448-eafb-479c-b047-3e44603b4aa6")
 		)
 		(instances
 			(project "The Harp"
@@ -9978,7 +11456,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5e934a2a-bbee-48fd-8610-9dc1cbebb490")
+		(uuid "5aa49902-1044-4c24-a95e-3bf237982271")
 	)
 	(label "EXP_BUF_OUT"
 		(at 243.84 166.37 90)
@@ -9989,7 +11467,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "454979c0-bf1d-4883-85e2-ea8fba7b0455")
+		(uuid "8ca429d1-b343-4ae9-bcf4-a8daf2ad5aeb")
 	)
 	(wire
 		(pts
@@ -9999,7 +11477,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d3276937-c99e-454d-b6b1-42488c5b6d13")
+		(uuid "cfe9e5ea-02fa-404c-8082-3e06335b6c7d")
 	)
 	(global_label "EXP"
 		(shape passive)
@@ -10011,7 +11489,7 @@
 				)
 				(justify right)
 			)
-		(uuid "274de307-7335-4a53-aaa4-7dc6676c8fca")
+		(uuid "5a1a4baa-481a-48e7-a9a3-df8a1309d117")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 243.84 179.07 0)
 			(hide yes)
@@ -10092,10 +11570,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "24bc62f0-1040-41d0-905d-e75205898cd9")
+			(uuid "5fd0e6b4-60e0-4520-9c4b-85e66574dba9")
 		)
 		(pin "2"
-			(uuid "e415a9bd-705c-4149-87f8-58056a10b115")
+			(uuid "9fccd194-0e73-4cfa-8a57-68de7f6a767e")
 		)
 		(instances
 			(project "The Harp"
@@ -10114,7 +11592,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "bb4df1f2-fbfe-43f2-abca-ea4b46fcb710")
+		(uuid "6b2d4bd9-5cb7-48ed-b9ca-5f5300c0e05e")
 	)
 	(global_label "EXP"
 		(shape passive)
@@ -10126,7 +11604,7 @@
 				)
 				(justify left)
 			)
-		(uuid "dfd021f6-d5aa-45c6-818c-21698a7acff1")
+		(uuid "a1ca304b-999d-4e51-9273-81271201d6eb")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 261.62 153.67 0)
 			(hide yes)
@@ -10148,7 +11626,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6a4ec483-62c2-4301-b612-d0e20a48dac2")
+		(uuid "17b69f31-9943-430c-bbdd-07b7350dc511")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -10160,8 +11638,8 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1d02f3dd-2f47-4cdf-bdc2-fddc2bfb9807")
-		(property "Reference" "#PWR0155"
+		(uuid "146a6e2e-861a-4bab-9f88-ae001f0d6f0b")
+		(property "Reference" "#PWR0156"
 			(at 261.62 164.37 0)
 			(hide yes)
 			(show_name no)
@@ -10218,18 +11696,18 @@
 			)
 		)
 		(pin "1"
-			(uuid "ec58b305-b0dd-45e6-951d-36304078c08b")
+			(uuid "3f495fae-6cb0-487c-abdf-d48b58c923fb")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/e4049e47-7d7e-5fff-a503-0f184e0b2d1d"
-					(reference "#PWR0155")
+					(reference "#PWR0156")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(text "Jacks on the Alchemist positions: IN (J402, right lower), EXP (J406, right upper), OUT L (J403, left lower), OUT R (J404, left upper).\nRelay true bypass after The Relic: K401 at rest joins IN to OUT L (3-4) and grounds the effect input (9-10); energised it routes IN to the effect (8-9) and the effect to OUT L (4-5).\nOUT R is driven straight from the DSP and is silent in true bypass; stereo players use Trails mode. The effect and Hold LEDs and the relay coil run from +9V."
+	(text "Jacks on the Alchemist positions: IN (J402, right lower), EXP (J406, right upper), OUT L (J403, left lower), OUT R (J404, left upper).\nRelay true bypass after The Alchemist: K401 (Omron G6K-2F-Y, 5 V coil) at rest joins IN to OUT L (2-3) and grounds the effect input (6-7); energised it routes IN to the effect (5-6) and the effect to OUT L (3-4).\nIN jack ring to GND, as The Alchemist. OUT R is driven straight from the DSP and is silent in true bypass; stereo players use Trails mode. The effect and Hold LEDs and the relay coil run from +9V."
 		(exclude_from_sim no)
 		(at 20.32 15.24 0)
 		(effects
@@ -10238,6 +11716,6 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "c6dc7b14-5581-4b66-93de-bf7eee4856d1")
+		(uuid "b155fa43-2c6a-4419-92cf-9df17f5b57ec")
 	)
 )

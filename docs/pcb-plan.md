@@ -37,11 +37,11 @@ same depth, and that is the board the pots are on. So:
 | W25Q128 QSPI flash | 3 | Timekeeper U901 |
 | Power: TVS, series Schottky, buck TPS54202 (3.3 V), LDO NCP718 (5 VA), filters | 22 | Timekeeper U301/U302 |
 | AK4621EF codec, reference buffer OPA2348, 2 × THS4522 DFA, passives | 55 | Timekeeper IC401, U401, U501, U601 |
-| Input buffer OPA1656 + anti-alias, expression buffer MCP6001, ESD | 20 | Timekeeper U801, U702 |
+| Input buffer OPA2365 + anti-alias, expression buffer MCP6001, ESD | 20 | Timekeeper U801, U702 |
 | Output buffers OPA1688 L/R + reconstruction, ESD | 18 | Timekeeper U802 |
-| Relay bypass: EE2-5NU, 2N7002 ×2, diode, resistors, RC on the footswitch inputs | 12 | Relic K401 group |
+| Relay bypass: G6K-2F-Y, 2N7002 ×2, diode, resistors, RC on the footswitch inputs | 12 | Relic K401 group, Alchemist relay |
 | 6 pots, 3 toggles, 13 LEDs, LED resistors | 35 | Relic + new |
-| 5 jacks, 2 footswitch headers | 7 | Alchemist/Relic |
+| 5 jacks, 2 footswitch pad pairs | 7 | Alchemist |
 | **Total** | **≈ 195** | |
 
 The Relic places 120 parts on this outline with room to spare in the
@@ -88,9 +88,14 @@ the subset it needs.
 | Note LED band, Y −18 | — | — | D101–D112, X −27.5 to +27.5 at 5 mm |
 
 **Conflict: the upper jacks and the outer toggles.** The Relic's outer
-toggles at (±20, −5) sit on top of the upper jack pair's pins (pin rows at
-about Y +3.8 and −7.7, X ±12 to ±25). The Alchemist never hits this
-because it has no toggle row. The Harp needs all four jacks, so it can
+toggles at (±20, −5) sit over the upper jack pair. With the NMJ6HCD2 jacks
+(The Alchemist, 2026-10-05) the pads no longer collide: the jack pin rows
+are at Y +4.6 and −11.6, X ±13.3 to ±26, 6.6 mm from the toggle row. But
+the jack bodies are on the underside, filling face X ±6.5 to ±30, Y +5.6 to
+−12.6, and the outer toggles' through-hole pins and solder fillets at X
+±15.3 to ±24.7 would land on them. The centre toggle's outer pins (X ±4.7,
+pad edge ±6.1) clear the bodies by only about 0.4 mm. The Alchemist never
+hits this because its toggles sit in the knob row at Y +13. The Harp needs all four jacks, so it can
 only use the **centre toggle (0, −5)**; SW101 (Snap/Glide) and SW103
 (Exp target) have to move to footswitch-hold menus, or the pedal drops
 OUT R or EXP. Recommendation: keep SW102 (Bypass mode) at the centre and
@@ -98,8 +103,8 @@ make Snap/Glide and Exp target hold-plus-knob settings. Both toggles are
 still on the schematic until this is decided; deleting them is two
 symbols and two GPIO.
 
-The LED band at Y −18 lies between the two jack rows (bodies span Y +6.3 to
-−32.3 on both walls, X ±5 to ±30), which is why the LEDs must be SMD. The
+The LED band at Y −18 lies over the lower jack bodies (NMJ6HCD2 bodies span Y +5.6 to
+−12.6 and −13.4 to −31.6 on both walls, X ±6.5 to ±30), which is why the LEDs must be SMD. The
 outer LEDs at X ±27.5 are 2.6 mm from the cavity wall at ±30.15; check the
 light-pipe flange diameter (Bivar PLP1-xxx / Dialight 515 series, 3 mm)
 against the 5 mm pitch and the wall. If it does not fit, use 11 LEDs for
@@ -154,10 +159,10 @@ Relic's.
 | 1 | Controls and LEDs | RV101–106, R101–118, C101–106, SW101–103, D101–112 | Pots across +3V3, wipers through 1k / 100n to PA0–PA5; toggles to GND on PE12–PE14; 12 note LEDs on PD0–PD11 through 1k |
 | 2 | MCU | U201, U202, C201–214, R201–204, FB201, Y201, W201 | STM32H750VBT6, five 100n + 4.7u, 2 × 2.2u VCAP, VDDA/VREF+ through 220R ferrite, 25 MHz HSE, NRST 100n, BOOT0 10k, Segger needle SWD with 22R, W25Q128 on QUADSPI bank 2 |
 | 3 | Power | J401, D301–302, FB301–303, U301–302, L301, C301–312, R301–303 | Timekeeper power: SMAJ10CA, PMEG3010 series, TPS54202 → +3V3, NCP718 → +5V; +9V feeds relay and LEDs |
-| 4 | Jacks and Bypass | J402–407, K401, Q401–403, D113–114, D402–406, R404–418, C408–412, U401 | Four jacks, ESD on each, Relic relay bypass on OUT L, effect and Hold LED drivers, two footswitch headers with RC, Timekeeper expression buffer (MCP6001) |
+| 4 | Jacks and Bypass | J402–407, K401, Q401–403, D113–114, D402–406, R404–418, C408–412, U401 | Four NMJ6HCD2 jacks, ESD on each, relay bypass on OUT L (Omron G6K-2F-Y), effect and Hold LED drivers, two footswitch pad pairs with RC, Timekeeper expression buffer (MCP6001) |
 | 5 | Codec | IC501, U501, R501–505, C501–509 | AK4621EF, OPA2348 VCOM buffers (VCOM_A, VCOM_B), PDN RC, AINR parked at VCOM |
 | 6 | ADC Driver | U601, R601–606, C601–610 | THS4522 channel A, single-ended to differential, gain 0.59 (R603/R604 620 Ω); channel B powered down |
-| 7 | Analog In and Out | U701–702, R701–719, C701–707 | OPA1656 input buffer, OPA1688 difference amplifiers L and R, 10u, 100R, 1M |
+| 7 | Analog In and Out | U701–702, R701–719, C701–707 | OPA2365 input buffer, OPA1688 difference amplifiers L and R, 10u, 100R, 1M |
 
 195 parts. Every pin carries a label or power symbol on a short stub, the
 Relic convention, and the generator re-reads its own output and traces every

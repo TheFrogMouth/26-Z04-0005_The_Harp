@@ -29,7 +29,9 @@ designators, and its regulators are replaced by the Timekeeper's buck and LDO.
 The Relic's 56 × 90 mm outline with the DC tab, four-layer stack, GND zone
 and 125B guides. 28 footprints are placed: the six pots, three toggles, the
 effect LED, the five jacks (DC, IN, OUT L, OUT R, EXP), the relay and its
-driver, the effect-LED driver and the bypass footswitch header. The Relic's
+driver, the effect-LED driver and the bypass footswitch header. The four
+1/4 in jacks and the relay were replaced on 2026-10-05 with The Alchemist's
+NMJ6HCD2 and G6K-2F-Y footprints at its positions. The Relic's
 regulator parts (C401–C407, D401, R401–R403, U401, U402) were removed. The
 remaining footprints have no schematic links or pad nets yet.
 

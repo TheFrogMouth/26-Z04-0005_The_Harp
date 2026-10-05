@@ -26,4 +26,4 @@ Status: **first schematic draft, board seeded, unplaced.** Seven sheets generate
 Same as The Relic and The Alchemist: enclosure centre is the PCB drill/place
 and grid origin at (148.5, 105); face X right, face Y up; jacks on the board
 underside at the Alchemist's positions and heights; pots on the board;
-momentary footswitches wired to headers; relay true bypass.
+momentary footswitches wired to pads; relay true bypass.

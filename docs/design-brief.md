@@ -85,7 +85,7 @@ and +13, toggles at −5, 12.5 mm knobs.
 | (+20, −5) | Expression target | Bend / Swell |
 | band at −18 | 12 note LEDs | C to B, lit for the notes the strings are tuned to |
 | (−20, −35) | Effect LED | |
-| (−20, −49) | Bypass footswitch | Momentary SPST-NO, wired to a header |
+| (−20, −49) | Bypass footswitch | Momentary SPST-NO soft-touch, wired to hand-solder pads |
 | (+20, −49) | Hold footswitch | Freezes the tuning and sets infinite sustain while held or latched |
 | right wall | IN, EXP | Alchemist jack positions |
 | left wall | OUT L, OUT R | Alchemist jack positions |
@@ -97,9 +97,10 @@ holding a footswitch and turning a knob, with the note LEDs as the display.
 
 ## Bypass
 
-Relay true bypass, one relay, exactly The Relic's circuit (decision 7 in its
-brief): KEMET EE2-5NU DPDT driven by a 2N7002 from the MCU, coil from +9V
-through a series resistor, pull-down keeps it off through boot. Pole A
+Relay true bypass, one relay, The Relic's circuit (decision 7 in its brief)
+with The Alchemist's relay: Omron G6K-2F-Y (DC5, 5.2 mm tall, SMD) driven by
+a 2N7002 from the MCU, 5 V coil from +9V through 150 Ω, pull-down keeps it
+off through boot. Pole A
 switches OUT L between IN and the DSP; pole B disconnects the input buffer
 from IN and grounds it. **OUT R is silent in true bypass**; stereo players
 use Trails mode, where the relay stays energised and the DSP passes dry on
@@ -116,7 +117,7 @@ double and the rest is the same:
 |---|---:|
 | H750, codec, flash, buck, LDO, op-amps, passives | 22.00 |
 | 6 pots, 3 toggles, 2 momentary footswitches, 6 knobs, 13 LEDs + 12 light pipes | 19.00 |
-| 5 jacks, relay, headers | 7.00 |
+| 5 jacks, relay, footswitch pads | 7.00 |
 | 125B, Tayda drilled and UV printed | 9.20 |
 | PCB (4-layer), SMT assembly, freight, packaging allocation | 9.00 |
 | Estimate | 66.00 |
@@ -160,11 +161,22 @@ labour. Nothing carted.
     Night Sky, Eventide H90 or Meris pedals) was considered and rejected: it
     would put a switch at the high-impedance input, in the audio path, for a
     case the source's own volume control already covers. Decided 2026-10-05.
+12. **Shared parts follow The Alchemist** (its main branch, 2026-10-05):
+    Neutrik NMJ6HCD2 jacks (11.4 mm wall holes, same axis heights), Omron
+    G6K-2F-Y relay, Alpha RD901F-40-15R1-B10K pots, Kingbright WP710A10ID
+    panel LEDs fitted at final assembly, soft-touch footswitches on
+    hand-solder pads, IN jack ring to ground. Each shared symbol carries
+    the design part and the JLCPCB part (`LCSC`, `JLCPCB Manufacturer`,
+    `JLCPCB Part #`) The Alchemist records. The toggles are not yet changed:
+    The Alchemist's Taiway 100-DP6 is ON-ON-ON, and the Harp's toggles are
+    two-position (see Still open).
 
 ## Still open
 
 - Toggle row: keep only the centre toggle, or give up a jack (see
-  `pcb-plan.md`, face schedule).
+  `pcb-plan.md`, face schedule). Then pick the toggle part: a two-position
+  Taiway 100-series toggle on The Alchemist's footprint, or the same
+  ON-ON-ON part with a second input pin per toggle.
 - [CONFIRM] items on the schematic: QUADSPI bank 2 alternate functions,
   AK4621 unused right input, THS4522 unused channel.
 
@@ -174,7 +186,7 @@ labour. Nothing carted.
   worth the window cut. Decide after the first firmware prototype on the
   Timekeeper hardware.
 - The Alchemist's side-wall and top-wall hole heights are still to be fixed
-  from the NRJ6HM-1 and PJ-063AH drawings and the board depth; The Harp
+  from the NMJ6HCD2 and PJ-063AH drawings and the board depth; The Harp
   inherits whatever is measured.
 - Expression jack: TRS wiring and buffer as the Timekeeper (MCP6001).
 - Firmware prototype first: the whole engine can be developed and tested on

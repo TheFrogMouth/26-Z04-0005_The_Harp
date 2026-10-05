@@ -1,5 +1,7 @@
 """The Harp: schematic spec. Circuits after the Timekeeper DSP board
-(25-Z01-0001) and The Relic's relay bypass (26-A03-0003)."""
+(25-Z01-0001) and The Relic's relay bypass (26-A03-0003). Parts shared with
+The Alchemist (26-A02-0001) carry its design and JLCPCB part numbers, as of
+its main branch on 2026-10-05."""
 import sys, os
 sys.path.insert(0, os.path.dirname(__file__))
 from schgen import Part, Sheet
@@ -14,10 +16,38 @@ C0603, C0805, C1206, C1210 = ('Capacitor_SMD:C_0603_1608Metric', 'Capacitor_SMD:
 TANT = 'Capacitor_Tantalum_SMD:CP_EIA-3216-12_Kemet-S'
 TVS = 'Device:D_TVS'
 SOD523 = 'Diode_SMD:D_SOD-523'
-JACK = 'Connector_Audio:NRJ6HM-1'
-JACK_FP = 'Connector_Audio:Jack_6.35mm_Neutrik_NRJ6HM-1_Horizontal'
+JACK = 'Connector_Audio:NMJ6HCD2'
+JACK_FP = 'Connector_Audio:Jack_6.35mm_Neutrik_NMJ6HCD2_Horizontal'
 OPAMP = 'Amplifier_Operational:TL072'
 SOIC8 = 'Package_SO:SOIC-8_3.9x4.9mm_P1.27mm'
+
+
+def jlc(mfr, mpn, lcsc='', jmfr='', jpn='', supplier=''):
+    """Design part plus the part JLCPCB fits, the fields The Alchemist uses."""
+    d = {'Manufacturer': mfr, 'Mfg Part #': mpn}
+    if lcsc:
+        d['LCSC'] = lcsc
+    d['JLCPCB Manufacturer'], d['JLCPCB Part #'] = jmfr, jpn
+    if supplier:
+        d['Supplier'] = supplier
+    return d
+
+
+# Parts shared with The Alchemist, numbers from its bom_system.csv / symbols (2026-10-05)
+P_JACK = jlc('Neutrik', 'NMJ6HCD2', 'C309277', 'HOOYA', 'PJ-609BA', 'JLCPCB')
+P_POT = jlc('Alpha (Taiwan)', 'RD901F-40-15R1-B10K', 'C20619174', 'Alpha (Taiwan)', 'RD901F-40-15R1-B10K', 'LMS')
+P_RELAY = jlc('Omron', 'G6K-2F-Y DC5', 'C2982926', 'Omron Electronics', 'G6K-2F-Y-5V', 'JLCPCB')
+P_2N7002 = jlc('onsemi', '2N7002LT1G', 'C7420321', 'hongjiacheng', '2N7002')
+P_1N4148W = jlc('Diodes Incorporated', '1N4148W-7-F', 'C7420318', 'hongjiacheng', '1N4148W')
+P_150R_1206 = jlc('YAGEO', 'RC1206FR-07150RL', 'C17917', 'UNI ROYAL Uniroyal Elec', '1206W4F1500T5E', 'JLCPCB')
+P_100R_0805 = jlc('YAGEO', 'AC0805FR-07100RL', 'C7468571', 'FOJAN', 'FRQ0805F1000TS')
+P_100K_0805 = jlc('YAGEO', 'AC0805FR-07100KL', 'C149504', 'UNI ROYAL Uniroyal Elec', '0805W8F1003T5E')
+P_1K_0805 = jlc('YAGEO', 'AC0805FR-071KL', 'C17513', 'UNI ROYAL Uniroyal Elec', '0805W8F1001T5E')
+P_100N_0603 = jlc('YAGEO', 'CC0603KRX7R9BB104', 'C14663', 'YAGEO', 'CC0603KRX7R9BB104')
+P_PANEL_LED = jlc('Kingbright', 'WP710A10ID', supplier='Mouser')
+P_DC_JACK = jlc('Same Sky (formerly CUI Devices)', 'PJ-063AH', 'C22434582', 'CUI', 'PJ-063AH', 'JLCPCB')
+P_LDO5 = jlc('onsemi', 'NCP718ASN500T1G', 'C603786', 'onsemi', 'NCP718ASN500T1G')
+FSW_PADS = 'Resistor_SMD:R_2816_7142Metric_Pad3.20x4.45mm_HandSolder'
 
 
 def r(ref, val, a, b, fp=R0603, **kw):
@@ -48,7 +78,7 @@ POTS = ['Tuning', 'Sustain', 'Strings', 'Brightness', 'Jawari', 'Mix']
 for i, nm in enumerate(POTS):
     n = i + 1
     ctl.add(Part('RV10%d' % n, 'POT:RD901F-40-15R1-B10K-00DL1', 'B10K', 'Potentiometer_THT:RD901F4015R1B10K00DL1',
-                 {'1': 'GND', '2': 'POT%d_W' % n, '3': '+3V3', 'MH1': 'GND', 'MH2': 'GND'}, note=nm))
+                 {'1': 'GND', '2': 'POT%d_W' % n, '3': '+3V3', 'MH1': 'GND', 'MH2': 'GND'}, props=P_POT, note=nm))
     ctl.add(r('R10%d' % n, '1k', 'POT%d_W' % n, 'POT%d' % n))
     ctl.add(c('C10%d' % n, '100n', 'POT%d' % n, 'GND'))
 for i, nm in enumerate(['Snap/Glide', 'Bypass mode', 'Exp target']):
@@ -117,7 +147,7 @@ pw.notes.append('Power, after the Timekeeper: 9 V centre-negative on J401 (PJ-06
                 'TPS54202 buck to +3V3 (digital), NCP718 to +5V (codec analog and op-amps).\nThe relay coil and the LEDs run from +9V so the '
                 'audio rails never carry their current.')
 pw.add(Part('J401', 'Connector:Conn_01x02_Socket', 'PJ-063AH', 'Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal',
-            {'1': 'GND', '2': 'DC_IN'}, props={'Manufacturer': 'CUI Devices', 'Mfg Part #': 'PJ-063AH'}))
+            {'1': 'GND', '2': 'DC_IN'}, props=P_DC_JACK))
 pw.add(Part('FB301', FB, '600R', 'Inductor_SMD:L_0603_1608Metric', {'1': 'DC_IN', '2': 'DC_F'}))
 pw.add(c('C301', '2.2u', 'DC_IN', 'GND'))
 pw.add(Part('D301', TVS, 'SMAJ10CA', 'Diode_SMD:D_SMA', {'1': 'GND', '2': 'DC_IN'}, props={'Manufacturer': 'Littelfuse', 'Mfg Part #': 'SMAJ10CA'}))
@@ -136,7 +166,7 @@ pw.add(Part('FB302', FB, '600R', 'Inductor_SMD:L_0603_1608Metric', {'1': '+9V', 
 pw.add(c('C308', '47u', 'LDO_IN', 'GND', fp=C1210), c('C309', '2.2u', 'LDO_IN', 'GND'))
 pw.add(Part('U302', 'Regulator_Linear:NCP718xSN500', 'NCP718ASN500T1G', 'Package_TO_SOT_SMD:TSOT-23-5',
             {'1': 'LDO_IN', '2': 'GND', '3': 'LDO_IN', '4': None, '5': 'LDO_OUT'},
-            props={'Manufacturer': 'onsemi', 'Mfg Part #': 'NCP718ASN500T1G'}))
+            props=P_LDO5))
 pw.add(c('C310', '2.2u', 'LDO_OUT', 'GND'), c('C311', '2.2u', 'LDO_OUT', 'GND'))
 pw.add(Part('FB303', FB, '600R', 'Inductor_SMD:L_0603_1608Metric', {'1': 'LDO_OUT', '2': '+5V'}))
 pw.add(c('C312', '2.2u', '+5V', 'GND'))
@@ -146,37 +176,39 @@ SHEETS.append(pw)
 # ===================================================================== 4 Jacks and bypass
 io = Sheet('Jacks and Bypass', 'Jacks and Bypass.kicad_sch', 'Jacks and Bypass')
 io.notes.append('Jacks on the Alchemist positions: IN (J402, right lower), EXP (J406, right upper), OUT L (J403, left lower), OUT R (J404, left upper).\n'
-                'Relay true bypass after The Relic: K401 at rest joins IN to OUT L (3-4) and grounds the effect input (9-10); energised it routes '
-                'IN to the effect (8-9) and the effect to OUT L (4-5).\nOUT R is driven straight from the DSP and is silent in true bypass; '
+                'Relay true bypass after The Alchemist: K401 (Omron G6K-2F-Y, 5 V coil) at rest joins IN to OUT L (2-3) and grounds the effect input (6-7); '
+                'energised it routes IN to the effect (5-6) and the effect to OUT L (3-4).\nIN jack ring to GND, as The Alchemist. OUT R is driven straight from the DSP and is silent in true bypass; '
                 'stereo players use Trails mode. The effect and Hold LEDs and the relay coil run from +9V.')
-io.add(Part('J402', JACK, 'NRJ6HM-1', JACK_FP, {'T': 'IN', 'S': 'GND', 'R': None, 'RN': None, 'SN': None, 'TN': None}, note='IN'))
-io.add(Part('J403', JACK, 'NRJ6HM-1', JACK_FP, {'T': 'OUT_L', 'S': 'GND', 'R': None, 'RN': None, 'SN': None, 'TN': None}, note='OUT L'))
-io.add(Part('J404', JACK, 'NRJ6HM-1', JACK_FP, {'T': 'EFFECT_OUT_R', 'S': 'GND', 'R': None, 'RN': None, 'SN': None, 'TN': None}, note='OUT R'))
-io.add(Part('J406', JACK, 'NRJ6HM-1', JACK_FP, {'T': 'EXP_TIP', 'S': 'GND', 'R': 'EXP_RING', 'RN': None, 'SN': None, 'TN': None}, note='EXP (TRS)'))
+io.add(Part('J402', JACK, 'NMJ6HCD2', JACK_FP, {'T': 'IN', 'S': 'GND', 'R': 'GND', 'RN': None, 'SN': None, 'TN': None}, props=P_JACK, note='IN'))
+io.add(Part('J403', JACK, 'NMJ6HCD2', JACK_FP, {'T': 'OUT_L', 'S': 'GND', 'R': None, 'RN': None, 'SN': None, 'TN': None}, props=P_JACK, note='OUT L'))
+io.add(Part('J404', JACK, 'NMJ6HCD2', JACK_FP, {'T': 'EFFECT_OUT_R', 'S': 'GND', 'R': None, 'RN': None, 'SN': None, 'TN': None}, props=P_JACK, note='OUT R'))
+io.add(Part('J406', JACK, 'NMJ6HCD2', JACK_FP, {'T': 'EXP_TIP', 'S': 'GND', 'R': 'EXP_RING', 'RN': None, 'SN': None, 'TN': None}, props=P_JACK, note='EXP (TRS)'))
 io.add(tvs('D403', 'IN'), tvs('D404', 'OUT_L'), tvs('D405', 'EFFECT_OUT_R'), tvs('D406', 'EXP_TIP'))
-io.add(Part('K401', 'Relay:EE2-5NU', 'EE2-5NU', 'Relay_SMD:Relay_DPDT_Kemet_EE2_NU',
-            {'1': 'RELAY_COIL', '12': 'RELAY_LOW', '3': 'IN', '4': 'OUT_L', '5': 'EFFECT_OUT_L', '8': 'IN', '9': 'EFFECT_IN', '10': 'GND'},
-            props={'Manufacturer': 'KEMET', 'Mfg Part #': 'EE2-5NU'}))
-io.add(r('R405', '150R', '+9V', 'RELAY_COIL', fp=R1206))
-io.add(Part('D402', 'Device:D', '1N4148W', 'Diode_SMD:D_SOD-123', {'1': 'RELAY_COIL', '2': 'RELAY_LOW'}))
-io.add(Part('Q401', 'Transistor_FET:2N7002', '2N7002', 'Package_TO_SOT_SMD:SOT-23', {'1': 'RELAY_G', '2': 'GND', '3': 'RELAY_LOW'}))
-io.add(r('R406', '100R', 'RELAY_DRV', 'RELAY_G', fp=R0805), r('R407', '100k', 'RELAY_G', 'GND', fp=R0805))
+io.add(Part('K401', 'Relay:G6K-2', 'G6K-2F-Y', 'Relay_SMD:Relay_DPDT_Omron_G6K-2F-Y',
+            {'1': 'RELAY_COIL', '8': 'RELAY_LOW', '2': 'IN', '3': 'OUT_L', '4': 'EFFECT_OUT_L', '5': 'IN', '6': 'EFFECT_IN', '7': 'GND'},
+            props=P_RELAY, note='5 V coil (178R) from +9V through R405'))
+io.add(r('R405', '150R', '+9V', 'RELAY_COIL', fp=R1206, props=P_150R_1206))
+io.add(Part('D402', 'Device:D', '1N4148W', 'Diode_SMD:D_SOD-123', {'1': 'RELAY_COIL', '2': 'RELAY_LOW'}, props=P_1N4148W))
+io.add(Part('Q401', 'Transistor_FET:2N7002', '2N7002', 'Package_TO_SOT_SMD:SOT-23', {'1': 'RELAY_G', '2': 'GND', '3': 'RELAY_LOW'}, props=P_2N7002))
+io.add(r('R406', '100R', 'RELAY_DRV', 'RELAY_G', fp=R0805, props=P_100R_0805), r('R407', '100k', 'RELAY_G', 'GND', fp=R0805, props=P_100K_0805))
 # effect LED (D113, left heel) and Hold LED (D114, right heel)
-io.add(Part('D113', 'Device:LED', 'LED', 'LED_THT:LED_D3.0mm', {'1': 'LED_EFF_K', '2': '+9V'}, note='Effect LED (-20, -35)'))
-io.add(r('R404', '1k', 'LED_EFF_K', 'LED_EFF_LOW', fp=R0805))
-io.add(Part('Q402', 'Transistor_FET:2N7002', '2N7002', 'Package_TO_SOT_SMD:SOT-23', {'1': 'LED_EFF_G', '2': 'GND', '3': 'LED_EFF_LOW'}))
-io.add(r('R408', '100R', 'LED_EFFECT_DRV', 'LED_EFF_G', fp=R0805), r('R409', '100k', 'LED_EFF_G', 'GND', fp=R0805))
-io.add(Part('D114', 'Device:LED', 'LED', 'LED_THT:LED_D3.0mm', {'1': 'LED_HOLD_K', '2': '+9V'}, note='Hold LED (+20, -35)'))
-io.add(r('R411', '1k', 'LED_HOLD_K', 'LED_HOLD_LOW', fp=R0805))
-io.add(Part('Q403', 'Transistor_FET:2N7002', '2N7002', 'Package_TO_SOT_SMD:SOT-23', {'1': 'LED_HOLD_G', '2': 'GND', '3': 'LED_HOLD_LOW'}))
-io.add(r('R412', '100R', 'LED_HOLD_DRV', 'LED_HOLD_G', fp=R0805), r('R413', '100k', 'LED_HOLD_G', 'GND', fp=R0805))
-# footswitches: momentary SPST-NO, two wires each
-io.add(Part('J405', 'Connector:Conn_01x02_Socket', 'Bypass FSW', 'Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical',
-            {'1': 'FSW_BYPASS', '2': 'GND'}, note='Bypass footswitch (-20, -49)'))
-io.add(r('R410', '1k', 'FSW_BYPASS', 'FSW_BYPASS_IN', fp=R0805), c('C408', '100n', 'FSW_BYPASS_IN', 'GND'))
-io.add(Part('J407', 'Connector:Conn_01x02_Socket', 'Hold FSW', 'Connector_PinHeader_2.54mm:PinHeader_1x02_P2.54mm_Vertical',
-            {'1': 'FSW_HOLD', '2': 'GND'}, note='Hold footswitch (+20, -49)'))
-io.add(r('R414', '1k', 'FSW_HOLD', 'FSW_HOLD_IN', fp=R0805), c('C409', '100n', 'FSW_HOLD_IN', 'GND'))
+io.add(Part('D113', 'Device:LED', 'RED_LED', 'LED_THT:LED_D3.0mm', {'1': 'LED_EFF_K', '2': '+9V'}, dnp=True, props=P_PANEL_LED,
+            note='Effect LED (-20, -35), fitted at final assembly'))
+io.add(r('R404', '1k', 'LED_EFF_K', 'LED_EFF_LOW', fp=R0805, props=P_1K_0805))
+io.add(Part('Q402', 'Transistor_FET:2N7002', '2N7002', 'Package_TO_SOT_SMD:SOT-23', {'1': 'LED_EFF_G', '2': 'GND', '3': 'LED_EFF_LOW'}, props=P_2N7002))
+io.add(r('R408', '100R', 'LED_EFFECT_DRV', 'LED_EFF_G', fp=R0805, props=P_100R_0805), r('R409', '100k', 'LED_EFF_G', 'GND', fp=R0805, props=P_100K_0805))
+io.add(Part('D114', 'Device:LED', 'RED_LED', 'LED_THT:LED_D3.0mm', {'1': 'LED_HOLD_K', '2': '+9V'}, dnp=True, props=P_PANEL_LED,
+            note='Hold LED (+20, -35), fitted at final assembly'))
+io.add(r('R411', '1k', 'LED_HOLD_K', 'LED_HOLD_LOW', fp=R0805, props=P_1K_0805))
+io.add(Part('Q403', 'Transistor_FET:2N7002', '2N7002', 'Package_TO_SOT_SMD:SOT-23', {'1': 'LED_HOLD_G', '2': 'GND', '3': 'LED_HOLD_LOW'}, props=P_2N7002))
+io.add(r('R412', '100R', 'LED_HOLD_DRV', 'LED_HOLD_G', fp=R0805, props=P_100R_0805), r('R413', '100k', 'LED_HOLD_G', 'GND', fp=R0805, props=P_100K_0805))
+# footswitches: momentary SPST-NO soft-touch, two wires each to hand-solder pads, as The Alchemist's J502
+io.add(Part('J405', 'Connector:Conn_01x02_Socket', 'Bypass FSW', FSW_PADS,
+            {'1': 'FSW_BYPASS', '2': 'GND'}, dnp=True, props={'Supplier': 'none'}, note='Bypass footswitch (-20, -49), wire pads'))
+io.add(r('R410', '1k', 'FSW_BYPASS', 'FSW_BYPASS_IN', fp=R0805, props=P_1K_0805), c('C408', '100n', 'FSW_BYPASS_IN', 'GND', props=P_100N_0603))
+io.add(Part('J407', 'Connector:Conn_01x02_Socket', 'Hold FSW', FSW_PADS,
+            {'1': 'FSW_HOLD', '2': 'GND'}, dnp=True, props={'Supplier': 'none'}, note='Hold footswitch (+20, -49), wire pads'))
+io.add(r('R414', '1k', 'FSW_HOLD', 'FSW_HOLD_IN', fp=R0805, props=P_1K_0805), c('C409', '100n', 'FSW_HOLD_IN', 'GND', props=P_100N_0603))
 # expression input, after the Timekeeper (U702)
 io.add(r('R415', '100R', '+3V3', 'EXP_RING'))
 io.add(r('R416', '1k', 'EXP_TIP', 'EXP_BUF_IN'), r('R417', '100k', 'EXP_TIP', 'GND', note='reads 0 with no pedal'))
