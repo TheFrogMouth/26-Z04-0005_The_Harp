@@ -194,6 +194,9 @@ Differences from the Timekeeper, all deliberate:
   reaches full scale: a normally played single coil lands near −18 dBFS, a
   hard humbucker near −4 dBFS, a +4 dBu synth near −3 dBFS. Decided
   2026-10-05 for both the Harp and the Timekeeper.
+- **No input pad.** Sources above 4.8 Vpp (about +7 dBu) clip at the
+  OPA2365 and are turned down at the source; no switchable pad in the audio
+  path (design brief, decision 11).
 - **Outputs not crossed.** The Timekeeper wired AOUTR to its left output; here
   AOUTL is OUT L. Swap the channels in firmware when porting.
 - **Output pull-downs.** 100R series and 1M to GND after each 10u, the Relic
