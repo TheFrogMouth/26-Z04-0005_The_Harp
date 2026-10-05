@@ -16,7 +16,8 @@ yet: run ERC first.
 | Power | `Power.kicad_sch` |
 | Jacks and Bypass | `Jacks and Bypass.kicad_sch` |
 | Codec (AK4621EF) | `Codec.kicad_sch` |
-| Analog In and Out (OPA1656 buffer and ADC drive, OPA1688 outputs) | `Analog In and Out.kicad_sch` |
+| ADC Driver (THS4522) | `ADC Driver.kicad_sch` |
+| Analog In and Out (OPA1656, OPA1688) | `Analog In and Out.kicad_sch` |
 
 What each sheet holds, the pin map and the deliberate differences from the
 Timekeeper are in `docs/pcb-plan.md`. The Relic's `Power and IO` sheet is
@@ -39,7 +40,7 @@ remaining footprints have no schematic links or pad nets yet.
    power pins or unconnected pins is real, report it.
 2. Tools → Update PCB from Schematic, with **Re-link footprints to schematic
    symbols based on their reference designators** ticked. That keeps the 28
-   placed footprints where they are and adds the other parts.
+   placed footprints where they are and adds the other 161 parts.
 3. Place the rest per the zoning in `docs/pcb-plan.md`. The go/no-go for a
    one-board build is this placement.
 4. Regenerate the GND vias per the Relic rule, then route.
