@@ -222,8 +222,8 @@ Differences from the Timekeeper, all deliberate:
 3. ~~Draw the schematic.~~ First draft generated 2026-10-04 (sheets above).
    Open it in KiCad and run ERC.
 4. Decide the toggle conflict (face schedule) and confirm the [CONFIRM]
-   items: OPA2365 capacitive-load stability into C702 + C601 (about 320 pF)
-   through R705 (49.9 Ω), its noise at 1 kHz, QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
+   items: the OPA2365 1 kHz noise figure on its data sheet plot (estimated
+   about 11 nV/√Hz; capacitive-load stability is checked, see below), QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
    unused-channel handling.
 5. ERC, then *Update PCB from Schematic*; place the LED strip and check the
    light-pipe fit against the cavity; place MCU/flash in the centre band,
@@ -234,6 +234,21 @@ Differences from the Timekeeper, all deliberate:
 7. Export BOM with the adapted exporter; cost at 100; drill schedule for
    Tayda from the face table above (same tool as the Relic).
 8. Fix the wall-hole heights from the measured Alchemist/Relic assembly.
+
+## OPA2365 checks and simulation (2026-10-05)
+
+The Harp's input stage is the Timekeeper's, mono, with the same values (U701 = U801,
+R705 = R810, R601/R602 = R501/R502, C702 = C807), so the Timekeeper's input-chain
+simulation covers it: `25-Z01-0001_DSP_Development_Board/hardware/spice/InputChain`
+(TheFrogMouth/25-Z01-0001_DSP_Development_Board#199).
+
+- **Stability into about 320 pF through 49.9 Ω:** the OPA2365 data sheet gives unity-gain
+  stability to about 1 nF and recommends 10–20 Ω isolation; simulated overshoot at the THS4522
+  input is ≤ 0.5 % for open-loop output resistance 10–100 Ω (42–76 % without the resistor).
+- **Noise:** about 11 nV/√Hz at 1 kHz estimated from the data sheet's 100 kHz and 0.1–10 Hz
+  figures; it adds about 0.9 dB over the pickup and bias-resistor noise at the ADC.
+- **Gain and headroom:** jack to ADC 0.95; a 1.5 V peak input stays clean and reaches the ADC's
+  full scale.
 
 ## Timekeeper rework from the same findings
 
@@ -246,3 +261,5 @@ built boards and the next revision:
 | H2, series resistor | R809, R810 | 5.1 kΩ → 49.9 Ω |
 | H2, leg matching | R502 in both AnalogInputBuffer instances | 1 kΩ → 1.05 kΩ |
 | H1, floating IN_N | IN_N of InputBufferA and InputBufferB (CODEC sheet) | Connect to VCOM_A: a wire on built boards, a schematic fix next revision |
+
+All four are applied to the Timekeeper schematic, PCB values and BOM in TheFrogMouth/25-Z01-0001_DSP_Development_Board#199 (the H1 connection still needs routing).
