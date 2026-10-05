@@ -174,6 +174,20 @@ Differences from the Timekeeper, all deliberate:
   (rail-to-rail output, VOCM pins the output common mode to the codec's
   VCOM). Replacing it with the spare OPA1656 half was tried and reverted
   on 2026-10-05.
+- **Input op-amp: OPA2365, not OPA1656.** The OPA1656's input range is
+  (V−) to (V+) − 2.25 V (datasheet SBOS901C, 6.6), so on the 5 V rail it
+  stops at 2.75 V, only 0.25 V above the 2.5 V bias. The Timekeeper's own
+  bench numbers (input noise review, H2 table: peaks at −16 dBFS with a gain
+  of 0.152) put hard-played peaks at about ±1.5 V at the buffer, so its
+  positive peaks run more than 1 V past that limit. The OPA2365 is a
+  zero-crossover rail-to-rail-input part for 2.2–5.5 V, pin-compatible, so
+  the 2.5 V bias, the THS4522 and the 5 V rail stay as they are. A 9 V
+  buffer supply was ruled out; the OPA2156 (two input stages) was rejected
+  because every positive peak would cross its handover step.
+- **H2 fix from the Timekeeper's input noise review.** R705 (the
+  Timekeeper's R810) is 49.9 Ω, not 5.1 kΩ, and R602 is 1.05 kΩ to match
+  the signal leg, so the THS4522 runs at its designed gain of 1 with balanced
+  legs instead of about 0.16.
 - **Outputs not crossed.** The Timekeeper wired AOUTR to its left output; here
   AOUTL is OUT L. Swap the channels in firmware when porting.
 - **Output pull-downs.** 100R series and 1M to GND after each 10u, the Relic
@@ -208,7 +222,8 @@ Differences from the Timekeeper, all deliberate:
 3. ~~Draw the schematic.~~ First draft generated 2026-10-04 (sheets above).
    Open it in KiCad and run ERC.
 4. Decide the toggle conflict (face schedule) and confirm the [CONFIRM]
-   items: QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
+   items: OPA2365 capacitive-load stability into C702 + C601 (about 320 pF)
+   through R705 (49.9 Ω), its noise at 1 kHz, QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
    unused-channel handling.
 5. ERC, then *Update PCB from Schematic*; place the LED strip and check the
    light-pipe fit against the cavity; place MCU/flash in the centre band,
@@ -219,3 +234,15 @@ Differences from the Timekeeper, all deliberate:
 7. Export BOM with the adapted exporter; cost at 100; drill schedule for
    Tayda from the face table above (same tool as the Relic).
 8. Fix the wall-hole heights from the measured Alchemist/Relic assembly.
+
+## Timekeeper rework from the same findings
+
+The Timekeeper (25-Z01-0001) carries all three input-stage issues; fixes for
+built boards and the next revision:
+
+| Issue | Timekeeper parts | Fix |
+|---|---|---|
+| OPA1656 input range on 5 V | U801 | Swap for OPA2365AIDR (same SOIC-8 pinout, both halves used, L and R) |
+| H2, series resistor | R809, R810 | 5.1 kΩ → 49.9 Ω |
+| H2, leg matching | R502 in both AnalogInputBuffer instances | 1 kΩ → 1.05 kΩ |
+| H1, floating IN_N | IN_N of InputBufferA and InputBufferB (CODEC sheet) | Connect to VCOM_A: a wire on built boards, a schematic fix next revision |

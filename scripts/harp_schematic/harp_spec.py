@@ -228,7 +228,7 @@ ad.add(Part('U601', THS, 'THS4522IPW', 'Package_SO:TSSOP-16_4.4x5mm_P0.65mm',
             {'5': 'GND', '6': 'GND', '7': 'GND', '8': 'GND', '9': '+5V', '10': None, '11': None, '12': 'GND'},
             unit=2, props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'THS4522IPWR'}))
 ad.add(c('C601', '100p', 'EFFECT_IN_BUF', 'GND'), r('R601', '1k', 'EFFECT_IN_BUF', 'FDA_INP'))
-ad.add(c('C602', '100p', 'VCOM_A', 'GND'), r('R602', '1k', 'VCOM_A', 'FDA_INN'))
+ad.add(c('C602', '100p', 'VCOM_A', 'GND'), r('R602', '1.05k', 'VCOM_A', 'FDA_INN', note='= R601 + R705: matches the signal leg (Timekeeper review H2)'))
 ad.add(r('R603', '1k', 'FDA_INP', 'ADC_N'), c('C603', '1n', 'FDA_INP', 'FDA_OUTN'))
 ad.add(r('R604', '1k', 'FDA_INN', 'ADC_P'), c('C604', '1n', 'FDA_INN', 'FDA_OUTP'))
 ad.add(r('R605', '40.2', 'FDA_OUTN', 'ADC_N'), r('R606', '40.2', 'FDA_OUTP', 'ADC_P'))
@@ -238,20 +238,22 @@ SHEETS.append(ad)
 
 # ===================================================================== 7 Analog in/out
 an = Sheet('Analog In and Out', 'Analog In and Out.kicad_sch', 'Analog In and Out')
-an.notes.append('Input buffer (U701A, OPA1656) and output stages (U702, OPA1688), the Timekeeper\'s ANALOG_FRONT on one 5 V rail biased at VCOM.\n'
-                'In: 1M to ground at the relay, 100n film, 1M bias to VCOM_A, follower (R703 0R; R704 + C707 to VCOM_A, both DNP, set gain), 5k1 / 220p to the ADC driver.\n'
+an.notes.append('Input buffer (U701A, OPA2365) and output stages (U702, OPA1688), the Timekeeper\'s ANALOG_FRONT on one 5 V rail biased at VCOM.\n'
+                'U701 is an OPA2365 (zero-crossover rail-to-rail input) instead of the Timekeeper\'s OPA1656, whose input stops at (V+) - 2.25 V = 2.75 V on 5 V, '
+                '0.25 V above the 2.5 V bias; hard-played guitar peaks reach about +/-1.5 V here. R705 is 49.9R, not 5k1 (Timekeeper review H2).\n'
+                'In: 1M to ground at the relay, 100n film, 1M bias to VCOM_A, follower (R703 0R; R704 + C707 to VCOM_A, both DNP, set gain), 49.9R / 220p to the ADC driver.\n'
                 'Out: unity-gain difference amplifier per channel (10k x4) referenced to VCOM_B, 10u out, 100R series, 1M pull-down.')
 an.add(r('R701', '1M', 'EFFECT_IN', 'GND'))
 an.add(Part('C701', C, '100n', C1206, {'1': 'EFFECT_IN', '2': 'IN_AC'}, note='film/C0G'))
 an.add(r('R702', '1M', 'IN_AC', 'VCOM_A'))
-an.add(Part('U701', OPAMP, 'OPA1656IDR', SOIC8, {'3': 'IN_AC', '2': 'IN_FB', '1': 'IN_BUF_OUT'}, unit=1,
-            props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'OPA1656IDR'}))
-an.add(Part('U701', OPAMP, 'OPA1656IDR', SOIC8, {'5': 'VCOM_A', '6': 'U701B_OUT', '7': 'U701B_OUT'}, unit=2,
-            props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'OPA1656IDR'}, note='unused half: follower at VCOM_A'))
-an.add(Part('U701', OPAMP, 'OPA1656IDR', SOIC8, {'4': 'GND', '8': '+5V'}, unit=3,
-            props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'OPA1656IDR'}))
+an.add(Part('U701', OPAMP, 'OPA2365AIDR', SOIC8, {'3': 'IN_AC', '2': 'IN_FB', '1': 'IN_BUF_OUT'}, unit=1,
+            props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'OPA2365AIDR'}))
+an.add(Part('U701', OPAMP, 'OPA2365AIDR', SOIC8, {'5': 'VCOM_A', '6': 'U701B_OUT', '7': 'U701B_OUT'}, unit=2,
+            props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'OPA2365AIDR'}, note='unused half: follower at VCOM_A'))
+an.add(Part('U701', OPAMP, 'OPA2365AIDR', SOIC8, {'4': 'GND', '8': '+5V'}, unit=3,
+            props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'OPA2365AIDR'}))
 an.add(r('R703', '0R', 'IN_BUF_OUT', 'IN_FB'), r('R704', '0R', 'IN_FB', 'IN_GAIN', dnp=True, note='gain option, DNP'), c('C707', '10u', 'IN_GAIN', 'VCOM_A', fp=C0805, dnp=True, note='gain option, DNP'))
-an.add(r('R705', '5k1', 'IN_BUF_OUT', 'EFFECT_IN_BUF'), c('C702', '220p', 'EFFECT_IN_BUF', 'GND'))
+an.add(r('R705', '49.9', 'IN_BUF_OUT', 'EFFECT_IN_BUF', note='isolates U701A from C702 + C601; was 5k1 (Timekeeper review H2)'), c('C702', '220p', 'EFFECT_IN_BUF', 'GND'))
 an.add(c('C703', '100n', '+5V', 'GND'))
 for ch, base, unit, (pp, nn, oo) in (('L', 706, 1, ('3', '2', '1')), ('R', 714, 2, ('5', '6', '7'))):
     an.add(Part('U702', OPAMP, 'OPA1688IDR', SOIC8, {pp: 'OUT%s_P' % ch, nn: 'OUT%s_N' % ch, oo: 'OUT%s_AMP' % ch}, unit=unit,

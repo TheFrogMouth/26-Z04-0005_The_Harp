@@ -146,6 +146,11 @@ labour. Nothing carted.
    Timekeeper's PE2–PE6 and the audio firmware ports unchanged.
 9. **Mono in, stereo out** in hardware: one input buffer and one ADC driver
    channel; the codec's right ADC input is parked at VCOM.
+10. **Input op-amp OPA2365 on the 5 V rail** (zero-crossover rail-to-rail
+    input), replacing the Timekeeper's OPA1656, whose input stops 2.25 V
+    below the rail. With the Timekeeper's H2 fix (R705 49.9 Ω, R602 1.05 kΩ)
+    the THS4522 runs at a gain of 1. Decided 2026-10-05; 9 V for the buffer
+    was ruled out.
 
 ## Still open
 
