@@ -152,6 +152,14 @@ labour. Nothing carted.
     and R603/R604 at 620 Ω, the gain from the jack to the ADC is 0.59, so a
     4.8 Vpp input just reaches full scale: guitar and synth both fit.
     Decided 2026-10-05; 9 V for the buffer was ruled out.
+11. **No line/synth input pad.** The input takes up to 4.8 Vpp (about
+    +7 dBu), in line with most Strymon pedals (+8 dBu). A +4 dBu synth
+    peaks near −3 dBFS. Hotter sources (Eurorack at about 10 Vpp, a synth
+    at full volume) are turned down at the source, or go through a passive
+    inline attenuator, before the pedal. A switchable pad (as on the Strymon
+    Night Sky, Eventide H90 or Meris pedals) was considered and rejected: it
+    would put a switch at the high-impedance input, in the audio path, for a
+    case the source's own volume control already covers. Decided 2026-10-05.
 
 ## Still open
 
