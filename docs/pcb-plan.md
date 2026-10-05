@@ -69,18 +69,34 @@ Taken unchanged from The Relic (`docs/main-board-placement.md`):
 
 ## Face schedule
 
-| Part | Face (X, Y) | Notes |
-|---|---|---|
-| RV101 Tuning, RV102 Sustain, RV103 Strings | (−20, +38), (0, +38), (+20, +38) | B10K to ADC1 |
-| RV104 Brightness, RV105 Jawari, RV106 Mix | (−20, +13), (0, +13), (+20, +13) | B10K to ADC1 |
-| SW101 Snap/Glide, SW102 Bypass mode, SW103 Exp target | (−20, −5), (0, −5), (+20, −5) | SPDT on-on to GPIO |
-| D101–D112 note LEDs | X −27.5 to +27.5 at 5 mm pitch, Y −18 | 0603 SMD, top side, 3 mm light pipes in the face |
-| D113 effect LED | (−20, −35) | Relic position |
-| Bypass footswitch | (−20, −49) | Momentary, wired to J105 |
-| Hold footswitch | (+20, −49) | Momentary, wired to J106 (the Relic's free position) |
-| J201 IN (right wall, lower), J202 EXP (right wall, upper) | axis Y −22.5, −3.5 | NRJ6HM-1 on B.Cu, Alchemist J807/J202 positions |
-| J203 OUT L (left wall, lower), J204 OUT R (left wall, upper) | axis Y −22.5, −3.5 | Alchemist J301/J203 positions |
-| J301 DC | X 0, opening Y +57.2 | PJ-063AH on B.Cu on the tab |
+One face standard for The Alchemist, The Relic and The Harp: every
+position below is a shared Tayda drill coordinate, and each pedal uses
+the subset it needs.
+
+| Position (face X, Y) | Alchemist | Relic | Harp |
+|---|---|---|---|
+| Knob row +38: (−20), (0), (+20) | Rate, Depth, Wave | Wow, Flutter, Age | RV101 Tuning, RV102 Sustain, RV103 Strings |
+| Knob row +13: (−20), (0), (+20) | Mode toggle, Exp/offset pot, Resonance toggle | Saturation, Mix, Hiss | RV104 Brightness, RV105 Jawari, RV106 Mix |
+| Toggle row −5: (−20), (0), (+20) | — | Dropout, Age range, Hiss on | SW101, SW102, SW103 (see the conflict below) |
+| Right wall, lower jack, axis Y −22.5 | IN | IN | J402 IN |
+| Right wall, upper jack, axis Y −3.5 | Expression | — | J406 EXP |
+| Left wall, lower jack, axis Y −22.5 | OUT | OUT | J403 OUT L |
+| Left wall, upper jack, axis Y −3.5 | Sync | — | J404 OUT R |
+| Top wall DC, X 0 | DC | DC | J401 DC |
+| LEDs (−20, −35), (+20, −35) | Effect, Rate | Effect, — | D113 Effect, D114 Hold |
+| Footswitches (−20, −49), (+20, −49) | Bypass, Tap | Bypass, — | Bypass (J405), Hold (J407) |
+| Note LED band, Y −18 | — | — | D101–D112, X −27.5 to +27.5 at 5 mm |
+
+**Conflict: the upper jacks and the outer toggles.** The Relic's outer
+toggles at (±20, −5) sit on top of the upper jack pair's pins (pin rows at
+about Y +3.8 and −7.7, X ±12 to ±25). The Alchemist never hits this
+because it has no toggle row. The Harp needs all four jacks, so it can
+only use the **centre toggle (0, −5)**; SW101 (Snap/Glide) and SW103
+(Exp target) have to move to footswitch-hold menus, or the pedal drops
+OUT R or EXP. Recommendation: keep SW102 (Bypass mode) at the centre and
+make Snap/Glide and Exp target hold-plus-knob settings. Both toggles are
+still on the schematic until this is decided; deleting them is two
+symbols and two GPIO.
 
 The LED band at Y −18 lies between the two jack rows (bodies span Y +6.3 to
 −32.3 on both walls, X ±5 to ±30), which is why the LEDs must be SMD. The
@@ -96,19 +112,19 @@ the chromatic notes with C at the centre, or 4.5 mm pitch.
        │ RV101        RV102        RV103        │  row +38; buck output filter between the pots
        │   LDO 5VA, +3V3 distribution           │
        │ RV104        RV105        RV106        │  row +13; 3.3 V analog filter, pot RC filters
-       │ codec IC401 + refs (centre)            │  under the pot rows: codec, DFAs, OPA2348
+       │ codec IC501 + U501, ADC driver U601    │  under the pot rows: codec, DFAs, OPA2348
        │ SW101        SW102        SW103        │  row −5
        │ ─── LED strip D101–D112 at −18 ─────── │  over the jack bodies: SMD only
-       │ OUT bufs  │   H750 U401     │ IN buffer│  band −18…−38: output side left, input side right
-       │ relay K201│   QSPI flash    │ EXP buf  │
-       │ D113 (−35)  J105   SWD pads   J106     │
+       │ OUT U702  │   H750 U201     │ IN U701  │  band −18…−38: output side left, input side right
+       │ relay K401│   flash U202    │ EXP U401 │
+       │ D113 (−35)  J405  W201 SWD  J407  D114 │
  Y −38 ─────────────────────────────────────────
 ```
 
 Signal runs right to left as on the Alchemist: IN and EXP enter on the
 **right** wall, OUT L/R leave on the **left**. So the input and expression
-buffers sit at the right-hand end of the lower band next to J201/J202, the
-output buffers and the relay at the left-hand end next to J203/J204, and
+buffers sit at the right-hand end of the lower band next to J402/J406, the
+output buffers and the relay at the left-hand end next to J403/J404, and
 the H750 with the flash in the middle. The relay takes the Relic's K401
 position (the Alchemist's old FFC spot).
 
@@ -126,54 +142,95 @@ Rules carried over from The Relic:
   input buffer as the board allows; its switching node is kept off B.Cu over
   the jack bodies.
 
-## Schematic sheets
+## Schematic sheets (drawn 2026-10-04)
 
-Root sheet plus seven, Relic-style, with designator ranges per sheet:
+Root sheet plus seven, generated by `scripts/harp_schematic/build.py` from
+`harp_spec.py` (see that folder's README). Circuits are the Timekeeper's
+(`25-Z01-0001`, `hardware/kicad/dsp_board`) unless noted; the bypass is The
+Relic's.
 
-| # | Sheet | Designators | Copied from | Changes |
-|---|---|---|---|---|
-| 1 | Controls and LEDs | RV1xx, SW1xx, D1xx, J105–J106 | Relic (pots, toggles, LED, footswitch header) | Six pots to ADC1 PA0–PA5 via RC; three toggles to GPIO with pull-ups; 12 note LEDs on GPIO through 1 kΩ (direct drive, 12 pins; a 74HC595 pair is the fallback if pins run short); effect LED on a PWM pin |
-| 2 | Audio IO and Bypass | J2xx, K201, Q2xx | Relic Power and IO (relay, footswitches) + Alchemist jacks | Four NRJ6HM-1 plus relay as the brief; EXP jack TRS: tip to buffer, ring +3V3A via 1 kΩ, sleeve GND |
-| 3 | Power | J301, D3xx, U301, U302, L301 | Timekeeper power sheet | 9 V in, SMAJ10CA, PMEG3010, TPS54202 → +3V3 (digital), NCP718 5 V → +5VA for the codec analog side and op-amps, ferrite-fed +3V3A for the codec digital/ADC reference and pot supply. Relay coil from +9V via 150 Ω |
-| 4 | MCU | U401, Y401, SW401, W401 | Timekeeper MCU sheet | STM32H750VBT6; QSPI bank 1 on PB2/PB6/PD11–PD13; SAI1 to the codec; I2C for codec control; SWD on Segger pogo pads (Relic W501 footprint); BOOT0 pad; no FMC |
-| 5 | Codec | IC501, U5xx | Timekeeper codec sheet | AK4621EF, OPA2348 reference buffer, THS4522 ADC driver (L only populated; R DNP but on the board) and THS4522 DAC filter L/R, unchanged |
-| 6 | Analog In | U601, U602, D6xx | Timekeeper input sheet | OPA1656 input buffer + 2-pole anti-alias; MCP6001 expression buffer; PESD5V0U1 on each jack line |
-| 7 | Analog Out | U701, D7xx | Timekeeper output sheet | OPA1688 L and R reconstruction and output buffers; 100 Ω series, 1 M pull-down; ESD |
+| # | Sheet | Designators | Contents |
+|---|---|---|---|
+| 1 | Controls and LEDs | RV101–106, R101–118, C101–106, SW101–103, D101–112 | Pots across +3V3, wipers through 1k / 100n to PA0–PA5; toggles to GND on PE12–PE14; 12 note LEDs on PD0–PD11 through 1k |
+| 2 | MCU | U201, U202, C201–214, R201–204, FB201, Y201, W201 | STM32H750VBT6, five 100n + 4.7u, 2 × 2.2u VCAP, VDDA/VREF+ through 220R ferrite, 25 MHz HSE, NRST 100n, BOOT0 10k, Segger needle SWD with 22R, W25Q128 on QUADSPI bank 2 |
+| 3 | Power | J401, D301–302, FB301–303, U301–302, L301, C301–312, R301–303 | Timekeeper power: SMAJ10CA, PMEG3010 series, TPS54202 → +3V3, NCP718 → +5V; +9V feeds relay and LEDs |
+| 4 | Jacks and Bypass | J402–407, K401, Q401–403, D113–114, D402–406, R404–418, C408–412, U401 | Four jacks, ESD on each, Relic relay bypass on OUT L, effect and Hold LED drivers, two footswitch headers with RC, Timekeeper expression buffer (MCP6001) |
+| 5 | Codec | IC501, U501, R501–505, C501–509 | AK4621EF, OPA2348 VCOM buffers (VCOM_A, VCOM_B), PDN RC, AINR parked at VCOM |
+| 6 | ADC Driver | U601, R601–606, C601–610 | THS4522 channel A, single-ended to differential, gain 0.59 (R603/R604 620 Ω); channel B powered down |
+| 7 | Analog In and Out | U701–702, R701–719, C701–707 | OPA1656 input buffer, OPA1688 difference amplifiers L and R, 10u, 100R, 1M |
 
-Symbol properties (Manufacturer, Mfg Part #, LCSC) go on every symbol as
-in the Relic so `scripts/export_bom.py` can be adapted straight across.
+195 parts. Every pin carries a label or power symbol on a short stub, the
+Relic convention, and the generator re-reads its own output and traces every
+net against the spec (no shorts, no single-pin nets, every pin assigned).
 
-## MCU pin budget (LQFP-100)
+Differences from the Timekeeper, all deliberate:
 
-| Function | Pins |
-|---|---|
-| Power, VCAP, VREF, NRST, BOOT0, oscillator | ~22 |
-| QSPI (CLK, NCS, IO0–IO3) | 6 |
-| SAI1 (MCLK, SCK, FS, SD_A, SD_B) | 5 |
-| I2C1 to codec, codec reset/PDN | 3 |
-| SWD (SWDIO, SWCLK) + SWO | 3 |
-| ADC1 pots PA0–PA5, expression PA6 | 7 |
-| Toggles ×3, footswitches ×2 | 5 |
-| Note LEDs ×12, effect LED (PWM) | 13 |
-| Relay drive | 1 |
-| UART (debug / future MIDI), spare | 4 + |
-| **Used** | **≈ 69 of 100** |
+- **Mono in.** One input buffer and one ADC driver; AINR+/AINR− parked at
+  VCOM through 1k each [CONFIRM against the AK4621 datasheet].
+- **ADC driver reference.** The Timekeeper left the driver's IN_N open; here
+  it goes to VCOM_A, the DC level of the input buffer output. This is the
+  fix the Timekeeper's own input noise review recommends (finding H1).
+  The THS4522 itself stays: it is made for the single 5 V analog rail
+  (rail-to-rail output, VOCM pins the output common mode to the codec's
+  VCOM). Replacing it with the spare OPA1656 half was tried and reverted
+  on 2026-10-05.
+- **Input op-amp: OPA2365, not OPA1656.** The OPA1656's input range is
+  (V−) to (V+) − 2.25 V (datasheet SBOS901C, 6.6), so on the 5 V rail it
+  stops at 2.75 V, only 0.25 V above the 2.5 V bias. The Timekeeper's own
+  bench numbers (input noise review, H2 table: peaks at −16 dBFS with a gain
+  of 0.152) put hard-played peaks at about ±1.5 V at the buffer, so its
+  positive peaks run more than 1 V past that limit. The OPA2365 is a
+  zero-crossover rail-to-rail-input part for 2.2–5.5 V, pin-compatible, so
+  the 2.5 V bias, the THS4522 and the 5 V rail stay as they are. A 9 V
+  buffer supply was ruled out; the OPA2156 (two input stages) was rejected
+  because every positive peak would cross its handover step.
+- **H2 fix from the Timekeeper's input noise review.** R705 (the
+  Timekeeper's R810) is 49.9 Ω, not 5.1 kΩ, and R602 is 1.05 kΩ to match
+  the signal leg, so the legs are balanced and the gain is no longer cut to
+  about 0.16.
+- **Gain 0.59, not 1: R603/R604 are 620 Ω.** At unity a hard-played
+  humbucker already reaches ADC full scale and a synth or line source clips.
+  At 620 Ω a 4.8 Vpp input, the most the OPA2365 can swing on 5 V, just
+  reaches full scale: a normally played single coil lands near −18 dBFS, a
+  hard humbucker near −4 dBFS, a +4 dBu synth near −3 dBFS. Decided
+  2026-10-05 for both the Harp and the Timekeeper.
+- **Outputs not crossed.** The Timekeeper wired AOUTR to its left output; here
+  AOUTL is OUT L. Swap the channels in firmware when porting.
+- **Output pull-downs.** 100R series and 1M to GND after each 10u, the Relic
+  convention, so the outputs sit at 0 V when the DSP is muted.
+- **QUADSPI on bank 2** (next section).
 
-Enough headroom for direct LED drive; no shift register needed.
+## MCU pin map (LQFP-100)
+
+| Function | Pins | Note |
+|---|---|---|
+| SAI1 to codec | PE2 MCLK_A, PE4 FS_A, PE5 SCK_A, PE6 SD_A (to SDTI), PE3 SD_B (from SDTO) | Same as the Timekeeper |
+| Codec control | PC14 CCLK, PC15 CDTI, PB8 CSN, PB4 PDN | Same as the Timekeeper, bit-banged |
+| QUADSPI bank 2 | PB2 CLK, PC11 BK2_NCS, PE7–PE10 BK2_IO0–3 | PF6–PF10 do not exist on LQFP-100, and bank 1 IO2 is only on PE2 (taken by SAI1 MCLK). Single flash on bank 2: FSEL = 1 in the QSPI init. **[CONFIRM AF9/AF10 in CubeMX]** |
+| Pots | PA0–PA5 (ADC1) | Same as the Timekeeper's six-channel scan |
+| Expression | PB1 (ADC1) | Same as the Timekeeper |
+| Toggles | PE12, PE13, PE14 | Internal pull-ups |
+| Footswitches | PB12 bypass, PB13 hold | Internal pull-ups, 1k / 100n RC |
+| Relay | PC10 | Same as the Timekeeper |
+| LEDs | PC6 effect, PC7 hold (TIM3 CH1/CH2 PWM) | Through 2N7002 from +9V |
+| Note LEDs | PD0–PD11 | One GPIOD write; about 1.4 mA each with red/amber LEDs and 1k |
+| SWD | PA13, PA14, PB3 SWO, NRST | Segger 8.06.05 needle adapter |
+| HSE | PH0, PH1 | 25 MHz, 8 pF |
+| Free | PA6–PA12, PA15, PB0, PB5–PB7, PB9–PB11, PB14–PB15, PC0–PC5, PC8–PC9, PC12–PC13, PD12–PD15, PE0–PE1, PE11, PE15 | No-connect flags on the schematic |
 
 ## Order of work
 
 1. **Firmware first on the Timekeeper board**: string bank, chord tracker,
    tuning manager, with the Timekeeper's pots/expression as stand-ins. This
    proves the sound before any Harp PCB is drawn and gives the CPU number.
-2. Create the repo (`26-A0x-000x_The_Harp`), copy The Relic's
-   `kicad/the_relic/` as the project seed: keep the PCB (outline, Cmts.User
-   guides, jacks, pots, toggles, LED, relay), delete the PT2399 and analog
-   sheets, keep Power and IO.
-3. Draw sheets 3–7 by copying the Timekeeper's sheets and deleting the
-   SDRAM, TFT, USB-C, MIDI and FFC parts; swap the MCU symbol to the VBT6
-   and re-pin.
-4. Draw sheet 1 (controls, LEDs) and finish sheet 2 (bypass, four jacks).
+2. ~~Create the repo and seed the KiCad project from The Relic.~~ Done
+   2026-10-04.
+3. ~~Draw the schematic.~~ First draft generated 2026-10-04 (sheets above).
+   Open it in KiCad and run ERC.
+4. Decide the toggle conflict (face schedule) and confirm the [CONFIRM]
+   items: the OPA2365 1 kHz noise figure on its data sheet plot (estimated
+   about 11 nV/√Hz; capacitive-load stability is checked, see below), QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
+   unused-channel handling.
 5. ERC, then *Update PCB from Schematic*; place the LED strip and check the
    light-pipe fit against the cavity; place MCU/flash in the centre band,
    codec under the pots, buffers at the jack ends, buck on the tab. **Go/no-go
@@ -183,3 +240,33 @@ Enough headroom for direct LED drive; no shift register needed.
 7. Export BOM with the adapted exporter; cost at 100; drill schedule for
    Tayda from the face table above (same tool as the Relic).
 8. Fix the wall-hole heights from the measured Alchemist/Relic assembly.
+
+## OPA2365 checks and simulation (2026-10-05)
+
+The Harp's input stage is the Timekeeper's, mono, with the same values (U701 = U801,
+R705 = R810, R601/R602 = R501/R502, C702 = C807), so the Timekeeper's input-chain
+simulation covers it: `25-Z01-0001_DSP_Development_Board/hardware/spice/InputChain`
+(TheFrogMouth/25-Z01-0001_DSP_Development_Board#199).
+
+- **Stability into about 320 pF through 49.9 Ω:** the OPA2365 data sheet gives unity-gain
+  stability to about 1 nF and recommends 10–20 Ω isolation; simulated overshoot at the THS4522
+  input is ≤ 0.5 % for open-loop output resistance 10–100 Ω (42–76 % without the resistor).
+- **Noise:** about 11 nV/√Hz at 1 kHz estimated from the data sheet's 100 kHz and 0.1–10 Hz
+  figures; it adds about 0.9 dB over the pickup and bias-resistor noise at the ADC.
+- **Gain and headroom:** jack to ADC 0.59 with R603/R604 at 620 Ω (0.95 at 1 kΩ). Guitar and
+  synth sources up to 4.8 Vpp reach the ADC without clipping; see the simulation's level table,
+  gain against R503/R504, and the guitar and synth headroom graphs.
+
+## Timekeeper rework from the same findings
+
+The Timekeeper (25-Z01-0001) carries all three input-stage issues; fixes for
+built boards and the next revision:
+
+| Issue | Timekeeper parts | Fix |
+|---|---|---|
+| OPA1656 input range on 5 V | U801 | Swap for OPA2365AIDR (same SOIC-8 pinout, both halves used, L and R) |
+| H2, series resistor | R809, R810 | 5.1 kΩ → 49.9 Ω |
+| H2, leg matching | R502 in both AnalogInputBuffer instances | 1 kΩ → 1.05 kΩ |
+| H1, floating IN_N | IN_N of InputBufferA and InputBufferB (CODEC sheet) | Connect to VCOM_A: a wire on built boards, a schematic fix next revision |
+
+All four are applied to the Timekeeper schematic, PCB values and BOM in TheFrogMouth/25-Z01-0001_DSP_Development_Board#199 (the H1 connection still needs routing).

@@ -942,16 +942,36 @@
   },
   "sheets": [
     [
-      "b0c4b10f-d013-4957-a3b3-6b5be5788a41",
-      "The Harp"
+      "596641a7-eeca-47a8-9244-68f1910acd88",
+      "Root"
     ],
     [
-      "35671d40-3453-432a-a231-8dec66178f86",
-      "Audio In / Power supply"
+      "081123bd-8d69-5338-8158-1f150ab455dd",
+      "Controls and LEDs"
     ],
     [
-      "e00b4467-6f4b-46b0-8e05-af3c415ea24a",
-      "Filter and Modulation"
+      "b7e390ec-f73e-50c4-bd68-cb336df070bd",
+      "MCU"
+    ],
+    [
+      "3983f09c-79e8-5800-9821-cf9b89c4194a",
+      "Power"
+    ],
+    [
+      "e4049e47-7d7e-5fff-a503-0f184e0b2d1d",
+      "Jacks and Bypass"
+    ],
+    [
+      "772c7b2e-e76e-5ba5-a88d-5c0f9a24ff2d",
+      "Codec"
+    ],
+    [
+      "4c2ab8ff-3630-5d5d-ac66-e312a3c9a378",
+      "ADC Driver"
+    ],
+    [
+      "b9c627d2-2d27-52af-bf10-9a8b87be0765",
+      "Analog In and Out"
     ]
   ],
   "text_variables": {},
