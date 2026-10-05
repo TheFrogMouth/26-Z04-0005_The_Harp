@@ -149,8 +149,9 @@ labour. Nothing carted.
 10. **Input op-amp OPA2365 on the 5 V rail** (zero-crossover rail-to-rail
     input), replacing the Timekeeper's OPA1656, whose input stops 2.25 V
     below the rail. With the Timekeeper's H2 fix (R705 49.9 Ω, R602 1.05 kΩ)
-    the THS4522 runs at a gain of 1. Decided 2026-10-05; 9 V for the buffer
-    was ruled out.
+    and R603/R604 at 620 Ω, the gain from the jack to the ADC is 0.59, so a
+    4.8 Vpp input just reaches full scale: guitar and synth both fit.
+    Decided 2026-10-05; 9 V for the buffer was ruled out.
 
 ## Still open
 

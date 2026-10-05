@@ -1040,28 +1040,28 @@
 			)
 		)
 		(pin "1"
-			(uuid "f72a7727-3b6e-4a29-a1fc-331e26fece9a")
+			(uuid "9520a6ac-cb6f-4ce1-984c-e12e75199799")
 		)
 		(pin "2"
-			(uuid "ba9de2f0-941e-450a-b649-a2f40ea14b42")
+			(uuid "b9a1346a-d76f-4762-a722-002d76ab2968")
 		)
 		(pin "3"
-			(uuid "6e87b1a0-2724-4781-8428-1ca9bceeea61")
+			(uuid "dd94fb79-fdbd-4461-b528-061f82c7f7e0")
 		)
 		(pin "4"
-			(uuid "e059adf0-a3e2-4459-903a-0b496741c589")
+			(uuid "bbfd3fbe-c267-4b4c-8243-0ca54fbe0d82")
 		)
 		(pin "13"
-			(uuid "726cbf45-f5b5-4e50-a92d-2ce3be8e275c")
+			(uuid "f01b8e6f-fa2c-494d-8fa0-f90e74fbb20a")
 		)
 		(pin "14"
-			(uuid "e6a64dfc-cead-4ce9-bcf2-1a40b72a6587")
+			(uuid "5e31acba-e7f0-4ec4-b443-a372f2d9888e")
 		)
 		(pin "15"
-			(uuid "6915abfc-f9e0-48ba-8185-e79d22bb2c7b")
+			(uuid "382bbde3-77d2-45e6-94f0-4e7d7416f184")
 		)
 		(pin "16"
-			(uuid "7ec6f447-9a59-4d7c-9efd-412bc93429af")
+			(uuid "8ed6da08-db96-4998-954e-c453c78de437")
 		)
 		(instances
 			(project "The Harp"
@@ -1080,7 +1080,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "24bfb81d-e938-4a85-9f0a-e141d8610a74")
+		(uuid "2c33602e-7924-4c7d-aa74-2343c12922a7")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -1092,7 +1092,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1ccde5a0-0058-4cb0-b65f-a753d5976c20")
+		(uuid "dbbca551-bd8f-4acb-b77a-c744af1b3eb5")
 		(property "Reference" "#PWR0185"
 			(at 53.34 37.37 0)
 			(hide yes)
@@ -1150,7 +1150,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "127f69d3-1790-4c27-96bb-2746562a5fb2")
+			(uuid "fc74dbea-c165-4089-99c5-02aefd36febc")
 		)
 		(instances
 			(project "The Harp"
@@ -1169,7 +1169,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "efc0e8b9-97d8-4311-9399-a95245d091be")
+		(uuid "4f2abfe9-7a02-47db-9663-85fc7cb9b044")
 	)
 	(label "FDA_INP"
 		(at 33.02 53.34 180)
@@ -1180,7 +1180,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "9c09107a-047a-47da-8127-26f595dc6054")
+		(uuid "f9fcf8c6-c457-46ff-80b7-52962cafa398")
 	)
 	(wire
 		(pts
@@ -1190,7 +1190,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6ceb7ceb-db16-412f-b2eb-f002d71c3126")
+		(uuid "9b003c49-9a8e-4987-9d9a-457d7a812130")
 	)
 	(label "FDA_INN"
 		(at 33.02 63.5 180)
@@ -1201,7 +1201,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "fda33809-8a92-44ac-82e8-3a2b60651699")
+		(uuid "7b03bff3-ef9b-4b9c-a3fb-975305cc4c11")
 	)
 	(wire
 		(pts
@@ -1211,7 +1211,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "7c217410-061b-4eea-82fb-5ad4ea47657b")
+		(uuid "118b2cbd-8119-4922-8e86-e939235429be")
 	)
 	(global_label "VCOM_B"
 		(shape passive)
@@ -1223,7 +1223,7 @@
 				)
 				(justify right)
 			)
-		(uuid "d2e7be8b-3adf-48b2-8b39-b810a6c066a3")
+		(uuid "2536a44e-6737-472d-9693-81677a9dacc6")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 53.34 77.47 0)
 			(hide yes)
@@ -1245,7 +1245,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ae40855b-5f06-44c3-a751-9eb48592e071")
+		(uuid "ec1cb4a8-f463-4341-8a5a-2c4d2bd089d3")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -1257,7 +1257,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "e4ba7d00-50c3-4245-b3c5-e118206d6ab0")
+		(uuid "78185257-e0c3-4fd8-878e-912a47d590cc")
 		(property "Reference" "#PWR0186"
 			(at 49.53 36.1 0)
 			(hide yes)
@@ -1315,7 +1315,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "d84a71aa-88b1-4424-95ef-a0abfd4bca4c")
+			(uuid "1854a499-42be-4194-b110-6187c2fba9cc")
 		)
 		(instances
 			(project "The Harp"
@@ -1334,7 +1334,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c2f532d0-c1b6-41ae-b18e-b6757f5ad791")
+		(uuid "74e8b405-c869-4526-878a-ed976f1646ac")
 	)
 	(label "FDA_OUTP"
 		(at 72.39 63.5 0)
@@ -1345,7 +1345,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "41a5b43a-c6d1-46a1-a228-1a6f39b2bb3e")
+		(uuid "9bf4764d-dd6e-4f51-9a87-f4508b8e3579")
 	)
 	(wire
 		(pts
@@ -1355,7 +1355,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0d35d7d1-cd4b-4015-9cd8-98a1cc2c57eb")
+		(uuid "d045b524-d037-460f-911f-7c5b31a1f4e5")
 	)
 	(label "FDA_OUTN"
 		(at 72.39 53.34 0)
@@ -1366,7 +1366,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "61ea6ba8-c5d0-4e19-82c9-36165d8234c1")
+		(uuid "31d85ef0-8bf3-4297-a02a-68a61196e1f8")
 	)
 	(wire
 		(pts
@@ -1376,7 +1376,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "60896c86-342c-467a-b4ee-4fd00ac3680b")
+		(uuid "b5e2a1a4-e80e-474a-a7a7-c7a881683474")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1388,7 +1388,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "72926dfd-6215-418a-85f8-62a205608dc3")
+		(uuid "4023591f-17c8-40f2-a3ce-571e83509971")
 		(property "Reference" "#PWR0187"
 			(at 49.53 76.74 0)
 			(hide yes)
@@ -1446,7 +1446,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "8529c195-9ce4-409b-92cd-c441d61eb866")
+			(uuid "9494c561-8317-4722-b322-afff654d0a88")
 		)
 		(instances
 			(project "The Harp"
@@ -1546,28 +1546,28 @@
 			)
 		)
 		(pin "5"
-			(uuid "49c05243-4288-437b-b353-ca191904778b")
+			(uuid "5044f11e-e485-48d0-ac7f-34b5689ac588")
 		)
 		(pin "6"
-			(uuid "affb34d1-2a01-4ae2-a660-a24b2a19d5a3")
+			(uuid "07f4bbef-eb3c-41e9-be91-1fb35fcb45d6")
 		)
 		(pin "7"
-			(uuid "9994343c-b089-4522-9803-997e61c196ed")
+			(uuid "8fb088d4-e5cc-47a4-bc72-4efe840dd102")
 		)
 		(pin "8"
-			(uuid "a596fae6-299b-4c30-b0f1-1d00b20428c7")
+			(uuid "77b40d26-bd30-474d-8faf-cb6677af43a7")
 		)
 		(pin "9"
-			(uuid "4d8f4926-e6fa-4872-b595-c5dd1f8dfa57")
+			(uuid "f5421fee-175f-4cb4-8e67-17829aac1c3f")
 		)
 		(pin "10"
-			(uuid "fffabfa9-3bc4-4e64-9550-5626c00598eb")
+			(uuid "e1449bb2-5222-4561-84f9-d24254881784")
 		)
 		(pin "11"
-			(uuid "6f67b2e5-bd84-400e-b28b-86c79c57fded")
+			(uuid "b857ccda-dc2a-4bc6-8cda-8afb76fc2046")
 		)
 		(pin "12"
-			(uuid "d64e4831-389d-47d0-96c6-02ebc0c70054")
+			(uuid "24a833f1-c05c-4fe3-b25c-530100b7bd32")
 		)
 		(instances
 			(project "The Harp"
@@ -1586,7 +1586,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "769a363d-92ab-4c74-ae48-fae2801b5edf")
+		(uuid "46716c62-b7b8-4d9c-8341-0ba4522fcad5")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1598,7 +1598,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "566ad27c-90b3-48ee-b223-699d58cdc9ed")
+		(uuid "2f4f69cb-1b45-4fdb-9357-14554b7cb573")
 		(property "Reference" "#PWR0188"
 			(at 116.84 37.37 0)
 			(hide yes)
@@ -1656,7 +1656,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "3d67b8e4-8302-47a5-8b71-7a17992a10bb")
+			(uuid "a231c8d7-9253-4a34-9995-14fa5a00b5e4")
 		)
 		(instances
 			(project "The Harp"
@@ -1675,7 +1675,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b504ff4c-d75a-49b6-bcfd-a2f06282117c")
+		(uuid "6286c758-ae6b-45d1-97a0-d60ffba4d641")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1687,7 +1687,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "b8bd5cfa-b9b6-4909-bd5e-42b7e82ffd41")
+		(uuid "1572acd2-9b34-4f0e-8995-6c954e868955")
 		(property "Reference" "#PWR0189"
 			(at 96.52 51.34 0)
 			(hide yes)
@@ -1745,7 +1745,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "68a41fc9-9470-4def-b3dd-0ee3e9e86fc4")
+			(uuid "dca2bc60-8e7f-42ed-b0af-7f962afbffc4")
 		)
 		(instances
 			(project "The Harp"
@@ -1764,7 +1764,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "febebfa8-007b-4266-b290-d2958d0cb367")
+		(uuid "78db6e2b-d9cf-4451-a6e0-b82602ce362a")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1776,7 +1776,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "b4bc5f33-3f11-427d-a22e-51ca6a96dd78")
+		(uuid "e71f24ad-fbd7-4f3e-bc4f-721d49091369")
 		(property "Reference" "#PWR0190"
 			(at 96.52 61.5 0)
 			(hide yes)
@@ -1834,7 +1834,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "5b3a9a45-3032-4fb6-802f-fe2211c92d07")
+			(uuid "67e85ca6-a38a-4214-bb3e-e3ceb4bf07f2")
 		)
 		(instances
 			(project "The Harp"
@@ -1853,7 +1853,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "725c1e6d-0ca1-4da0-b164-341a6ebb54c4")
+		(uuid "648b5012-cbce-4cc3-ab56-f426d7c53824")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1865,7 +1865,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "74719eb3-859f-49bd-85a4-eeff6ec119b9")
+		(uuid "48338a89-98b5-4771-8725-dcdd7566c7e8")
 		(property "Reference" "#PWR0191"
 			(at 116.84 75.47 0)
 			(hide yes)
@@ -1923,7 +1923,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "99973e8e-3184-4892-93c4-5a17d756cba6")
+			(uuid "b497a7b4-6f52-4e7a-9ff5-a0c5c9eef65b")
 		)
 		(instances
 			(project "The Harp"
@@ -1942,7 +1942,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ef404ca1-ee52-442d-b3e0-e5c9dcbf30b9")
+		(uuid "82a6043e-d2a4-4de6-842d-7c881bb35c9d")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -1954,7 +1954,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d070c0d7-648c-4014-9579-f1c956332146")
+		(uuid "ea48e9ba-a1bd-4381-9221-5e24131adc03")
 		(property "Reference" "#PWR0192"
 			(at 113.03 36.1 0)
 			(hide yes)
@@ -2012,7 +2012,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "9cd28ab0-d83a-41a0-a539-2484c2222c8d")
+			(uuid "c6f55e75-57ad-4a62-8c26-0fbdfb5bf461")
 		)
 		(instances
 			(project "The Harp"
@@ -2025,11 +2025,11 @@
 	)
 	(no_connect
 		(at 133.35 63.5)
-		(uuid "1e9be29e-a60f-4b77-b582-cabe2c690f06")
+		(uuid "5e83a58a-83b2-4383-837c-dfc2d4377833")
 	)
 	(no_connect
 		(at 133.35 53.34)
-		(uuid "4f258fb5-b8ee-46b6-9a95-3cca3959cd09")
+		(uuid "3b05b406-46cf-4017-bbf0-2d8465467027")
 	)
 	(wire
 		(pts
@@ -2039,7 +2039,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "336e37ca-971b-432d-9c66-156f8d4a701f")
+		(uuid "2f246efa-adcc-4986-b465-0fcec780ae53")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2051,7 +2051,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1a81b21a-80ed-4ad9-a003-01d07ba3bd30")
+		(uuid "d7782423-af19-4715-8acc-0f63609d2eda")
 		(property "Reference" "#PWR0193"
 			(at 113.03 76.74 0)
 			(hide yes)
@@ -2109,7 +2109,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "b9446f9d-29ae-4da6-af3f-ed2ef15825cc")
+			(uuid "6978f95a-900a-422d-b74c-7a7e89c0ac14")
 		)
 		(instances
 			(project "The Harp"
@@ -2187,10 +2187,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "04acbf07-0c75-4f94-974f-3aa99a660e73")
+			(uuid "9a7e72c2-040e-48a0-b7e1-bc0b3d662092")
 		)
 		(pin "2"
-			(uuid "441864a9-1d1b-417e-994b-f454e5b2302c")
+			(uuid "0bff1de4-e7f1-4cce-a584-18ebfeedea69")
 		)
 		(instances
 			(project "The Harp"
@@ -2209,7 +2209,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b73cae96-873f-4ced-a0f7-8b06097ad317")
+		(uuid "c35b82e2-1cd2-44ee-ae4a-5a6dad5d10f5")
 	)
 	(global_label "EFFECT_IN_BUF"
 		(shape passive)
@@ -2221,7 +2221,7 @@
 				)
 				(justify left)
 			)
-		(uuid "0afa1aef-d21c-4e0a-943b-05e736956f2b")
+		(uuid "4f188c84-80bf-414a-a27a-760c690f47d5")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 152.4 52.07 0)
 			(hide yes)
@@ -2243,7 +2243,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "dacbd76d-9084-4d4a-8a14-46952f9fc7fc")
+		(uuid "246a5180-8904-47ef-99d2-179f3de75a45")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2255,7 +2255,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "1d21ff1b-385b-4dbb-9e8e-78817fd91ac5")
+		(uuid "79293bc8-2fe5-479a-8752-fa47f94a713f")
 		(property "Reference" "#PWR0194"
 			(at 152.4 62.769999999999996 0)
 			(hide yes)
@@ -2313,7 +2313,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "0e6bf03f-e578-4ebc-be87-28b641fc1c31")
+			(uuid "bcb8d382-0c43-4ba7-b411-36cea0d2f70f")
 		)
 		(instances
 			(project "The Harp"
@@ -2391,10 +2391,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "fd1a3cfd-ccda-43aa-ae5d-376716fa34b1")
+			(uuid "73dc4d18-d474-4d4e-b66b-a120b032a82a")
 		)
 		(pin "2"
-			(uuid "d1280e0c-6a26-4f4b-b9ad-eb0041b0a958")
+			(uuid "e532927e-00f5-443e-86f7-b760b6f50032")
 		)
 		(instances
 			(project "The Harp"
@@ -2413,7 +2413,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5d9ae5c3-406f-4ea0-8cd5-a692b9a8e4d1")
+		(uuid "873f62e1-169a-44b9-8754-8891b3c4345b")
 	)
 	(global_label "EFFECT_IN_BUF"
 		(shape passive)
@@ -2425,7 +2425,7 @@
 				)
 				(justify left)
 			)
-		(uuid "f0660b17-01fa-4c90-b827-3a831ee636d3")
+		(uuid "7903df16-ec42-486f-8ac5-ec3688ab6fc0")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 170.18 52.07 0)
 			(hide yes)
@@ -2447,7 +2447,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "588a6cca-1ae8-4cfb-a586-5bd4e206e4d3")
+		(uuid "dc3a294a-1df0-4b40-9b3f-5b66010916ef")
 	)
 	(label "FDA_INP"
 		(at 170.18 64.77 270)
@@ -2458,7 +2458,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "891a6c44-92fd-47fa-a779-6e450ecbbcc3")
+		(uuid "3e041862-7b18-4520-bd90-7a9950fc7f1f")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -2527,10 +2527,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "4292efce-731a-4b87-91a7-1213901cda55")
+			(uuid "20d7c420-f480-4968-939a-4acab047f40a")
 		)
 		(pin "2"
-			(uuid "fa8d7c6a-3c05-4a7e-95ec-3cd4c460f7c1")
+			(uuid "5053f666-9a39-4729-8ded-76d86304eb0d")
 		)
 		(instances
 			(project "The Harp"
@@ -2549,7 +2549,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d41fcb18-3bbb-4b66-90f3-9c9b4db248e8")
+		(uuid "762f6e10-6844-4906-87a9-ac4a8325c5e7")
 	)
 	(global_label "VCOM_A"
 		(shape passive)
@@ -2561,7 +2561,7 @@
 				)
 				(justify left)
 			)
-		(uuid "419a552c-4876-4683-8030-28e0dbbc3ada")
+		(uuid "210de841-cf6b-488f-b944-b1c4ee39bf05")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 187.96 41.91 0)
 			(hide yes)
@@ -2583,7 +2583,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "f84c47bd-afc2-4dd0-b3b2-0a91ef4e958b")
+		(uuid "fc002f19-f0ae-4777-99ca-55fc9d99a01a")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -2595,7 +2595,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "837ae05d-d314-4f55-80c5-6c0e99db11d0")
+		(uuid "efcd61d9-4908-46e7-91d7-2ac9747f4ad5")
 		(property "Reference" "#PWR0195"
 			(at 187.96 52.61 0)
 			(hide yes)
@@ -2653,7 +2653,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "1bb77773-e22a-4b3a-9e00-07587e7226aa")
+			(uuid "9b3ae24a-68b2-41a1-94bf-432f427c42ed")
 		)
 		(instances
 			(project "The Harp"
@@ -2731,10 +2731,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "5dbffb05-08dd-442c-bfb2-7bae25a64035")
+			(uuid "02d18f5d-1cf1-433e-b006-ef318171b27b")
 		)
 		(pin "2"
-			(uuid "0ace82ac-a716-465a-bb0f-bce2e92ffe7f")
+			(uuid "972d82b1-eaa7-4e8e-aef2-8fe9aea9cd9d")
 		)
 		(instances
 			(project "The Harp"
@@ -2753,7 +2753,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "eeadeda8-626c-4b6b-b6d2-df510ec0b7a7")
+		(uuid "8ec0fe6e-35ba-4a73-a7fb-53a419da709a")
 	)
 	(global_label "VCOM_A"
 		(shape passive)
@@ -2765,7 +2765,7 @@
 				)
 				(justify left)
 			)
-		(uuid "d67d2cab-e2c1-4424-ba2d-5bb5bedf0ec2")
+		(uuid "1817ff81-e706-410e-9d2b-e64a619ae7be")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 205.74 41.91 0)
 			(hide yes)
@@ -2787,7 +2787,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6986b698-6d54-4c45-a39b-b60f2495f8ea")
+		(uuid "1bd7e170-7394-4762-86a9-bc2b472554d7")
 	)
 	(label "FDA_INN"
 		(at 205.74 54.61 270)
@@ -2798,7 +2798,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "bf0c6764-1562-4b8c-b473-ffc6385ad485")
+		(uuid "207eb066-e0fa-4cc2-b7d3-e402b5cd8799")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -2822,7 +2822,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "620"
 			(at 226.06 58.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2855,7 +2855,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "gain 0.59: a 4.8 Vpp input just reaches ADC full scale"
 			(at 223.52 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -2867,10 +2867,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "42408c0e-b44a-472c-8c63-a24527627417")
+			(uuid "999fdd1b-81fa-4e66-b872-5140748473ff")
 		)
 		(pin "2"
-			(uuid "dc8079c0-4552-4ee1-8dc6-b11264ed5ed2")
+			(uuid "1dcd6ded-1cbd-4b63-94bd-ea264c3ce662")
 		)
 		(instances
 			(project "The Harp"
@@ -2889,7 +2889,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "eb367736-f657-4176-b30c-064e9043c11f")
+		(uuid "6142f75a-9dc0-4f19-a4de-3c7647d3def8")
 	)
 	(label "FDA_INP"
 		(at 223.52 44.45 90)
@@ -2900,7 +2900,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "7517cc0c-99cd-4b70-a79d-520ca4debcab")
+		(uuid "e0d76c73-3fcb-4533-a165-30cb3c46fd35")
 	)
 	(wire
 		(pts
@@ -2910,7 +2910,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "54f242bd-52e5-4994-a890-811439f4295c")
+		(uuid "eea855de-c038-4a7f-a66a-f62daabf32a4")
 	)
 	(global_label "ADC_N"
 		(shape passive)
@@ -2922,7 +2922,7 @@
 				)
 				(justify right)
 			)
-		(uuid "fa916050-4548-4e27-8e38-503c9c21fd1b")
+		(uuid "54bbcccf-7993-49fc-919c-5da68b87caba")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 223.52 57.15 0)
 			(hide yes)
@@ -3003,10 +3003,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "a6d141f8-66b5-49af-a2b1-e6421373d901")
+			(uuid "75870dab-7a65-45ef-9fab-5a0c8f7fe162")
 		)
 		(pin "2"
-			(uuid "efe6029b-533a-4bd4-9862-5eede74d42a2")
+			(uuid "7326d195-8ebb-4b39-8fc5-6c3106d64bf1")
 		)
 		(instances
 			(project "The Harp"
@@ -3025,7 +3025,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "0d75c04d-7b39-4355-90cd-38c59ecd16ce")
+		(uuid "1f7eb0ee-1199-49e4-a683-457c9039810b")
 	)
 	(label "FDA_INP"
 		(at 241.3 44.45 90)
@@ -3036,7 +3036,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "9639f0ff-7c19-4fa9-a619-b1410409e505")
+		(uuid "2798f5b2-1ff3-4299-a71a-30a83a3aa161")
 	)
 	(wire
 		(pts
@@ -3046,7 +3046,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "2f9bf6ef-4f9a-47ad-aeaa-479c08d5af93")
+		(uuid "ce144f2d-dcad-4c9d-9a81-1d9a502da553")
 	)
 	(label "FDA_OUTN"
 		(at 241.3 57.15 270)
@@ -3057,7 +3057,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "3ce1abf1-e323-4c0b-b062-e873b894e5bb")
+		(uuid "a3f82778-dd04-46bf-88cb-8e7ac4e601cc")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -3081,7 +3081,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "620"
 			(at 261.62 58.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3114,7 +3114,7 @@
 				)
 			)
 		)
-		(property "Description" ""
+		(property "Description" "gain 0.59: a 4.8 Vpp input just reaches ADC full scale"
 			(at 259.08 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -3126,10 +3126,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "f4b80581-45c2-4b5a-9843-24b890ff912a")
+			(uuid "f680fe22-5df7-4553-965e-bde94ef8cd74")
 		)
 		(pin "2"
-			(uuid "b23806a9-9d64-4b8e-8cd4-8c5e1c40098a")
+			(uuid "9d986113-1e4d-46cd-92a1-8490ccee5e71")
 		)
 		(instances
 			(project "The Harp"
@@ -3148,7 +3148,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "3daf1487-2b14-4c60-93ae-5932d7bf8809")
+		(uuid "0b7b022c-732c-4025-99af-c3cea376f599")
 	)
 	(label "FDA_INN"
 		(at 259.08 44.45 90)
@@ -3159,7 +3159,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "190abac0-3df7-46c8-a728-346f98a13ef1")
+		(uuid "f90bd39e-0768-4a04-b9ea-fd8c8c9ec460")
 	)
 	(wire
 		(pts
@@ -3169,7 +3169,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b174667c-1d29-4e3e-ac02-ba6f4c5d714e")
+		(uuid "4e68cdbd-dc76-481e-a63b-2ae0db2d4079")
 	)
 	(global_label "ADC_P"
 		(shape passive)
@@ -3181,7 +3181,7 @@
 				)
 				(justify right)
 			)
-		(uuid "450699b9-2bbd-4604-a9f9-4776d23d1ec9")
+		(uuid "6357b193-07f9-4405-b784-3ee8daf85f00")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 259.08 57.15 0)
 			(hide yes)
@@ -3262,10 +3262,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "33a49f7e-3ca0-4824-bd0d-29eb8cc3baa1")
+			(uuid "cdba2e64-6c0a-4693-a113-0194627ca122")
 		)
 		(pin "2"
-			(uuid "48183cba-c5c9-4bfa-b0d7-700964bbfcaa")
+			(uuid "16205047-873e-4b5a-9aac-5ec59af4203e")
 		)
 		(instances
 			(project "The Harp"
@@ -3284,7 +3284,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "25f858c7-6aa5-4ed0-9894-8e789ed4015f")
+		(uuid "125d20ea-1e60-443e-9b8f-e759a1ed8976")
 	)
 	(label "FDA_INN"
 		(at 279.4 44.45 90)
@@ -3295,7 +3295,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "564d5bb8-7b95-4938-b730-b0026a1e6297")
+		(uuid "bc360fc2-ea6e-44df-863c-f537dd5e4fab")
 	)
 	(wire
 		(pts
@@ -3305,7 +3305,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "656eb2e1-02de-4f2c-a3f4-edb657e997d9")
+		(uuid "368e70ef-8532-4cea-a61e-38cb9804ebea")
 	)
 	(label "FDA_OUTP"
 		(at 279.4 57.15 270)
@@ -3316,7 +3316,7 @@
 				)
 				(justify right bottom)
 			)
-		(uuid "4607911e-9dcb-4e38-96a5-8d3306300a9f")
+		(uuid "b798396e-b172-48fb-8c8c-0a298d23072d")
 	)
 	(symbol
 		(lib_id "Device:R")
@@ -3385,10 +3385,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "fd938cf5-6374-4b46-876d-770ab61187fd")
+			(uuid "5756494b-413f-443e-b254-d9c2335dc07c")
 		)
 		(pin "2"
-			(uuid "7675b633-ed54-483c-b732-717b7e05e37e")
+			(uuid "74b75fab-4b6e-418b-8b09-58226f4eceb3")
 		)
 		(instances
 			(project "The Harp"
@@ -3407,7 +3407,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4560491c-d777-44fc-8e86-861ea45f1a19")
+		(uuid "9bab0872-1de1-444b-90c7-98f4b79cfa29")
 	)
 	(label "FDA_OUTN"
 		(at 297.18 44.45 90)
@@ -3418,7 +3418,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "a702643a-67c6-43c4-ba27-f857b6f69a8b")
+		(uuid "79d66c12-a10a-4a96-b93b-d490e94c8840")
 	)
 	(wire
 		(pts
@@ -3428,7 +3428,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b5cca1d5-b5b5-482d-80ec-1995609dd459")
+		(uuid "74c5d921-abe9-4a13-a3ee-abb1dd83f52d")
 	)
 	(global_label "ADC_N"
 		(shape passive)
@@ -3440,7 +3440,7 @@
 				)
 				(justify right)
 			)
-		(uuid "e510e821-9c50-4471-bdf9-e3d6d3a6975a")
+		(uuid "cecc538f-e06f-4a1b-a8ec-43dee6c9f11b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 297.18 57.15 0)
 			(hide yes)
@@ -3521,10 +3521,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "bb03da8b-67b2-4a92-b48f-5b66683d76c9")
+			(uuid "975dbe5a-b56d-424a-904f-e0e5aa650559")
 		)
 		(pin "2"
-			(uuid "5cb5c011-f2f7-476e-92d5-49e18408be43")
+			(uuid "877c8766-e9fa-49f3-86bd-b2e0e532a1e9")
 		)
 		(instances
 			(project "The Harp"
@@ -3543,7 +3543,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "6a57230b-9ba8-4379-9f18-66819fa6e7bd")
+		(uuid "34879f12-11be-478b-a755-06b6edbd4f90")
 	)
 	(label "FDA_OUTP"
 		(at 314.96 44.45 90)
@@ -3554,7 +3554,7 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "95394ab2-d980-462e-9fbc-3621a480f435")
+		(uuid "063eb9cc-b288-417a-814b-d72d725ef97e")
 	)
 	(wire
 		(pts
@@ -3564,7 +3564,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d7069851-1acf-479a-9937-fb9f1e1f8c7e")
+		(uuid "59111c6a-f2c1-420d-bdfd-6f4890882241")
 	)
 	(global_label "ADC_P"
 		(shape passive)
@@ -3576,7 +3576,7 @@
 				)
 				(justify right)
 			)
-		(uuid "69b171ce-113e-4956-8ee0-8b263f206044")
+		(uuid "6722d050-6936-4a0e-959c-59cd649642a1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 314.96 57.15 0)
 			(hide yes)
@@ -3657,10 +3657,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "0fdcfeb3-5750-46b7-a90c-947c01478d9c")
+			(uuid "9ef0ecb3-31ee-43b1-930c-e95e2e995935")
 		)
 		(pin "2"
-			(uuid "342ebaf5-bfca-485e-aa90-9f4b38f2fe5d")
+			(uuid "3d881dbc-debe-47b7-b8fb-2a93d1b1aec6")
 		)
 		(instances
 			(project "The Harp"
@@ -3679,7 +3679,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "5ea879d2-8044-4281-b449-b6f616537eaa")
+		(uuid "997c06cf-b2c4-4371-a299-1b359743ea45")
 	)
 	(global_label "ADC_P"
 		(shape passive)
@@ -3691,7 +3691,7 @@
 				)
 				(justify left)
 			)
-		(uuid "7a6ef2c1-0669-41a2-bd77-238ccb194f51")
+		(uuid "3cd7a1cd-4184-49f0-b8c5-360482166dcc")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 332.74 41.91 0)
 			(hide yes)
@@ -3713,7 +3713,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a2b592ce-969f-451d-b6aa-dc664bcfe371")
+		(uuid "d9461f4a-b834-4cba-8d86-22961271abab")
 	)
 	(global_label "ADC_N"
 		(shape passive)
@@ -3725,7 +3725,7 @@
 				)
 				(justify right)
 			)
-		(uuid "92da673f-272e-426f-b149-ff32422a26cd")
+		(uuid "44eca2ce-6a04-4f76-8719-819769dfe2c1")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 332.74 54.61 0)
 			(hide yes)
@@ -3806,10 +3806,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "180245ba-4439-4b3d-a698-8dd157d5d96d")
+			(uuid "fc9db2d8-5449-4210-ae3b-4d34b2e01049")
 		)
 		(pin "2"
-			(uuid "0f8c8e22-222a-4b55-bb9d-91e65932282a")
+			(uuid "3e082b22-d9fe-4b60-81fc-72d7e4f3ea62")
 		)
 		(instances
 			(project "The Harp"
@@ -3828,7 +3828,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "4fcd362e-1b91-471e-9d5a-85481c5e7ff1")
+		(uuid "22826cc8-83c3-43f1-b9a2-ad9fc55eaf66")
 	)
 	(global_label "ADC_P"
 		(shape passive)
@@ -3840,7 +3840,7 @@
 				)
 				(justify left)
 			)
-		(uuid "294007b6-59c4-4ef2-bea3-c4364db0ca26")
+		(uuid "5bf355de-57b3-4617-9f8a-bd31e164fb65")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 350.52 41.91 0)
 			(hide yes)
@@ -3862,7 +3862,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "8f60f7df-90b4-4e21-a028-96cf67fd950e")
+		(uuid "2e0bf21b-b4d4-4f96-9ff7-8b3bc8d6e0cd")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -3874,7 +3874,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "54d70c9f-62b9-4715-91ec-d8315148b401")
+		(uuid "49bb6972-3da3-4b2e-896e-6973e6ddcd70")
 		(property "Reference" "#PWR0196"
 			(at 350.52 52.61 0)
 			(hide yes)
@@ -3932,7 +3932,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "42d78c42-56aa-43c3-9fd6-5f2025beee01")
+			(uuid "c80e105c-16cc-431c-865c-5bb300613d40")
 		)
 		(instances
 			(project "The Harp"
@@ -4010,10 +4010,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "d89902f0-7652-49a9-8d43-c2a2fe96b41c")
+			(uuid "305865d9-6f89-45fb-89c3-23c2ca5e454b")
 		)
 		(pin "2"
-			(uuid "20767654-1f05-4dab-8e7a-5fff0c7fbe0d")
+			(uuid "e07afb69-16a4-4034-bb21-c6ea6d1e9624")
 		)
 		(instances
 			(project "The Harp"
@@ -4032,7 +4032,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "b07cab54-af9f-4d6d-88a0-85dd5054a94a")
+		(uuid "33de4e9e-7b08-41fa-9e0f-2f50fb851b57")
 	)
 	(global_label "ADC_N"
 		(shape passive)
@@ -4044,7 +4044,7 @@
 				)
 				(justify left)
 			)
-		(uuid "36764bde-feef-400b-b69b-70adaea6ba5a")
+		(uuid "5afe88e5-f162-437c-96f0-ab01fb872f91")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 368.3 41.91 0)
 			(hide yes)
@@ -4066,7 +4066,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "075ecc1a-54c3-42bd-843a-a787981bc849")
+		(uuid "76bc737e-ca8d-42ce-9c4f-e71798a44314")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4078,7 +4078,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c9ec58ff-79a7-446e-82b2-f10f031b1b0f")
+		(uuid "96ad213a-5c33-4917-8a1d-2bf0937a561a")
 		(property "Reference" "#PWR0197"
 			(at 368.3 52.61 0)
 			(hide yes)
@@ -4136,7 +4136,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "f7e59a1d-0eab-465b-8bba-18166834d0bf")
+			(uuid "e6965356-6312-496c-8db8-fa0230fe09c2")
 		)
 		(instances
 			(project "The Harp"
@@ -4214,10 +4214,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "b1e27633-4bfb-47bf-8e04-46fa8d7b75bf")
+			(uuid "7c7a8520-53fe-4614-97e2-eb7cdce331e3")
 		)
 		(pin "2"
-			(uuid "25d234df-fb1b-4f92-84cf-ce3d6c1b14e8")
+			(uuid "c0315aa5-1315-4d95-91c1-984680a4bf2a")
 		)
 		(instances
 			(project "The Harp"
@@ -4236,7 +4236,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "a40cf114-f6d7-46e7-b638-517754dd20b4")
+		(uuid "ab430718-eb47-48be-8473-2b8d0b8e434b")
 	)
 	(global_label "VCOM_B"
 		(shape passive)
@@ -4248,7 +4248,7 @@
 				)
 				(justify left)
 			)
-		(uuid "782deaa8-90a1-4514-be00-36b1431ad947")
+		(uuid "3ab6f68b-692a-4c47-b5f9-a2f15b211c78")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 386.08 41.91 0)
 			(hide yes)
@@ -4270,7 +4270,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "d5ec362a-747c-4f02-b3ba-15b552f55d80")
+		(uuid "173565cc-4b77-4c07-b71e-a9e5560dec82")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4282,7 +4282,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a5921ac4-88c3-409e-8c11-065d4ad4f58d")
+		(uuid "5546279b-7858-4df8-88bf-a6737aa6fd06")
 		(property "Reference" "#PWR0198"
 			(at 386.08 52.61 0)
 			(hide yes)
@@ -4340,7 +4340,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "e29dfb28-844d-49eb-9c3e-a6551b85825b")
+			(uuid "f944a8db-d057-40e8-ae9e-02f7077ae5f1")
 		)
 		(instances
 			(project "The Harp"
@@ -4418,10 +4418,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "9bb202d6-86f2-4eaa-9271-d336f2c6e2cf")
+			(uuid "c491725a-a60d-41f3-a239-c7efc301a7c6")
 		)
 		(pin "2"
-			(uuid "fdf556f8-f5be-4704-ad17-a959a5e90a80")
+			(uuid "a0938834-0f9c-42e1-8953-84dfc4ff7d7d")
 		)
 		(instances
 			(project "The Harp"
@@ -4440,7 +4440,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "cf2fbc5e-e3ca-42cd-9ff6-eaa745136327")
+		(uuid "6e38fae0-d9df-4256-97f4-a9ae508cb1a4")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -4452,7 +4452,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "a9ca7c7b-253a-4820-8abb-47e2d2d0a949")
+		(uuid "832bf80c-3f12-45c3-a360-a4cf468e166a")
 		(property "Reference" "#PWR0199"
 			(at 27.94 100.87 0)
 			(hide yes)
@@ -4510,7 +4510,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "07e56c6d-ad7e-4222-ba56-77c32d3510ed")
+			(uuid "f8969512-6215-46e7-8020-a2c82fd56cb5")
 		)
 		(instances
 			(project "The Harp"
@@ -4529,7 +4529,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "11cece3c-e893-401d-b781-6a2ad56bda0a")
+		(uuid "38747bd6-2c0d-4c57-bcb4-69d4b5e46078")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4541,7 +4541,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "8bc5b511-70e9-4a38-b09d-29430caeeeaa")
+		(uuid "63bbd6a2-638e-4d08-a43b-b45209a4cfbf")
 		(property "Reference" "#PWR0200"
 			(at 27.94 113.57 0)
 			(hide yes)
@@ -4599,7 +4599,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "48604c78-563a-42f3-b398-092cf7648b2c")
+			(uuid "23257cac-7ea9-4bc6-b57a-98bfa8d9ddb9")
 		)
 		(instances
 			(project "The Harp"
@@ -4677,10 +4677,10 @@
 			)
 		)
 		(pin "1"
-			(uuid "61ed4ee0-b826-4086-8a0a-7b9c973b4a31")
+			(uuid "cea52de5-557f-4215-83b8-670fd3a50d78")
 		)
 		(pin "2"
-			(uuid "a011620c-c14e-44da-8efc-c1f46ab182f7")
+			(uuid "9adee6d8-359d-4dae-bc37-2bc0f5bd2e66")
 		)
 		(instances
 			(project "The Harp"
@@ -4699,7 +4699,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "c68552ed-eed8-4c9f-a38f-34b08b7dad98")
+		(uuid "b0744fc6-abd0-4a1d-8e56-7bcd7a61b1c1")
 	)
 	(symbol
 		(lib_id "power:+5V")
@@ -4711,7 +4711,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d38c1466-8386-4404-87d0-92d4ae78e5fb")
+		(uuid "f5be084f-5786-40ff-baaa-578796d99dbb")
 		(property "Reference" "#PWR0201"
 			(at 45.72 100.87 0)
 			(hide yes)
@@ -4769,7 +4769,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "c3b53ccb-561b-4293-a0b5-c709e0a3586e")
+			(uuid "fe9ad749-a9e5-4683-b1b4-d36753665da3")
 		)
 		(instances
 			(project "The Harp"
@@ -4788,7 +4788,7 @@
 			(width 0)
 			(type default)
 		)
-		(uuid "ad76dda0-b6a0-4d65-b006-2f65e8396432")
+		(uuid "6895b4e6-a60b-4567-b312-072d5213f151")
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -4800,7 +4800,7 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "388c0410-7a78-4349-a450-7e8ac0ff94bf")
+		(uuid "0106826a-f5ab-462a-bcdc-3c37d2269f65")
 		(property "Reference" "#PWR0202"
 			(at 45.72 113.57 0)
 			(hide yes)
@@ -4858,7 +4858,7 @@
 			)
 		)
 		(pin "1"
-			(uuid "cffcd470-2454-4890-a0b2-02cd632966fa")
+			(uuid "848b15a4-173b-4d7f-b715-49633acda7b6")
 		)
 		(instances
 			(project "The Harp"
@@ -4869,7 +4869,7 @@
 			)
 		)
 	)
-	(text "Single-ended to differential ADC driver, the Timekeeper's AnalogInputBuffer: THS4522 channel A, gain 1 (1k/1k), 40.2R + 2.7n differential filter, VOCM from VCOM_B.\nThe input reference (INN side) goes to VCOM_A, the DC level of the input buffer output (the Timekeeper left it open). Channel B is powered down [CONFIRM unused-channel handling in the THS4522 datasheet]."
+	(text "Single-ended to differential ADC driver, the Timekeeper's AnalogInputBuffer: THS4522 channel A, gain 0.59 (620R / 1.05k), 40.2R + 2.7n differential filter, VOCM from VCOM_B.\nThe input reference (INN side) goes to VCOM_A, the DC level of the input buffer output (the Timekeeper left it open). Channel B is powered down [CONFIRM unused-channel handling in the THS4522 datasheet]."
 		(exclude_from_sim no)
 		(at 20.32 15.24 0)
 		(effects
@@ -4878,6 +4878,6 @@
 				)
 				(justify left bottom)
 			)
-		(uuid "3fa1ad16-f3be-46fd-a6de-00dd708b7a14")
+		(uuid "29b694e1-8859-4d97-8afb-5cd4034cc2bf")
 	)
 )

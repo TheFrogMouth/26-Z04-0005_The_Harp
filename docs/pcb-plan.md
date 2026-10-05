@@ -156,7 +156,7 @@ Relic's.
 | 3 | Power | J401, D301–302, FB301–303, U301–302, L301, C301–312, R301–303 | Timekeeper power: SMAJ10CA, PMEG3010 series, TPS54202 → +3V3, NCP718 → +5V; +9V feeds relay and LEDs |
 | 4 | Jacks and Bypass | J402–407, K401, Q401–403, D113–114, D402–406, R404–418, C408–412, U401 | Four jacks, ESD on each, Relic relay bypass on OUT L, effect and Hold LED drivers, two footswitch headers with RC, Timekeeper expression buffer (MCP6001) |
 | 5 | Codec | IC501, U501, R501–505, C501–509 | AK4621EF, OPA2348 VCOM buffers (VCOM_A, VCOM_B), PDN RC, AINR parked at VCOM |
-| 6 | ADC Driver | U601, R601–606, C601–610 | THS4522 channel A, single-ended to differential, gain 1; channel B powered down |
+| 6 | ADC Driver | U601, R601–606, C601–610 | THS4522 channel A, single-ended to differential, gain 0.59 (R603/R604 620 Ω); channel B powered down |
 | 7 | Analog In and Out | U701–702, R701–719, C701–707 | OPA1656 input buffer, OPA1688 difference amplifiers L and R, 10u, 100R, 1M |
 
 195 parts. Every pin carries a label or power symbol on a short stub, the
@@ -186,8 +186,14 @@ Differences from the Timekeeper, all deliberate:
   because every positive peak would cross its handover step.
 - **H2 fix from the Timekeeper's input noise review.** R705 (the
   Timekeeper's R810) is 49.9 Ω, not 5.1 kΩ, and R602 is 1.05 kΩ to match
-  the signal leg, so the THS4522 runs at its designed gain of 1 with balanced
-  legs instead of about 0.16.
+  the signal leg, so the legs are balanced and the gain is no longer cut to
+  about 0.16.
+- **Gain 0.59, not 1: R603/R604 are 620 Ω.** At unity a hard-played
+  humbucker already reaches ADC full scale and a synth or line source clips.
+  At 620 Ω a 4.8 Vpp input, the most the OPA2365 can swing on 5 V, just
+  reaches full scale: a normally played single coil lands near −18 dBFS, a
+  hard humbucker near −4 dBFS, a +4 dBu synth near −3 dBFS. Decided
+  2026-10-05 for both the Harp and the Timekeeper.
 - **Outputs not crossed.** The Timekeeper wired AOUTR to its left output; here
   AOUTL is OUT L. Swap the channels in firmware when porting.
 - **Output pull-downs.** 100R series and 1M to GND after each 10u, the Relic
@@ -247,8 +253,9 @@ simulation covers it: `25-Z01-0001_DSP_Development_Board/hardware/spice/InputCha
   input is ≤ 0.5 % for open-loop output resistance 10–100 Ω (42–76 % without the resistor).
 - **Noise:** about 11 nV/√Hz at 1 kHz estimated from the data sheet's 100 kHz and 0.1–10 Hz
   figures; it adds about 0.9 dB over the pickup and bias-resistor noise at the ADC.
-- **Gain and headroom:** jack to ADC 0.95; a 1.5 V peak input stays clean and reaches the ADC's
-  full scale.
+- **Gain and headroom:** jack to ADC 0.59 with R603/R604 at 620 Ω (0.95 at 1 kΩ). Guitar and
+  synth sources up to 4.8 Vpp reach the ADC without clipping; see the simulation's level table,
+  gain against R503/R504, and the guitar and synth headroom graphs.
 
 ## Timekeeper rework from the same findings
 

@@ -217,7 +217,7 @@ SHEETS.append(cd)
 
 # ===================================================================== 6 ADC driver
 ad = Sheet('ADC Driver', 'ADC Driver.kicad_sch', 'ADC Driver')
-ad.notes.append('Single-ended to differential ADC driver, the Timekeeper\'s AnalogInputBuffer: THS4522 channel A, gain 1 (1k/1k), 40.2R + 2.7n '
+ad.notes.append('Single-ended to differential ADC driver, the Timekeeper\'s AnalogInputBuffer: THS4522 channel A, gain 0.59 (620R / 1.05k), 40.2R + 2.7n '
                 'differential filter, VOCM from VCOM_B.\nThe input reference (INN side) goes to VCOM_A, the DC level of the input buffer output '
                 '(the Timekeeper left it open). Channel B is powered down [CONFIRM unused-channel handling in the THS4522 datasheet].')
 THS = 'SuperAudioBoard-rescue:THS4521'
@@ -229,8 +229,8 @@ ad.add(Part('U601', THS, 'THS4522IPW', 'Package_SO:TSSOP-16_4.4x5mm_P0.65mm',
             unit=2, props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'THS4522IPWR'}))
 ad.add(c('C601', '100p', 'EFFECT_IN_BUF', 'GND'), r('R601', '1k', 'EFFECT_IN_BUF', 'FDA_INP'))
 ad.add(c('C602', '100p', 'VCOM_A', 'GND'), r('R602', '1.05k', 'VCOM_A', 'FDA_INN', note='= R601 + R705: matches the signal leg (Timekeeper review H2)'))
-ad.add(r('R603', '1k', 'FDA_INP', 'ADC_N'), c('C603', '1n', 'FDA_INP', 'FDA_OUTN'))
-ad.add(r('R604', '1k', 'FDA_INN', 'ADC_P'), c('C604', '1n', 'FDA_INN', 'FDA_OUTP'))
+ad.add(r('R603', '620', 'FDA_INP', 'ADC_N', note='gain 0.59: a 4.8 Vpp input just reaches ADC full scale'), c('C603', '1n', 'FDA_INP', 'FDA_OUTN'))
+ad.add(r('R604', '620', 'FDA_INN', 'ADC_P', note='gain 0.59: a 4.8 Vpp input just reaches ADC full scale'), c('C604', '1n', 'FDA_INN', 'FDA_OUTP'))
 ad.add(r('R605', '40.2', 'FDA_OUTN', 'ADC_N'), r('R606', '40.2', 'FDA_OUTP', 'ADC_P'))
 ad.add(c('C605', '2.7n', 'ADC_P', 'ADC_N'), c('C606', '100p', 'ADC_P', 'GND'), c('C607', '100p', 'ADC_N', 'GND'))
 ad.add(c('C608', '100n', 'VCOM_B', 'GND'), c('C609', '100n', '+5V', 'GND'), c('C610', '100n', '+5V', 'GND'))
