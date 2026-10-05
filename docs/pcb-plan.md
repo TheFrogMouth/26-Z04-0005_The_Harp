@@ -168,7 +168,12 @@ Differences from the Timekeeper, all deliberate:
 - **Mono in.** One input buffer and one ADC driver; AINR+/AINR− parked at
   VCOM through 1k each [CONFIRM against the AK4621 datasheet].
 - **ADC driver reference.** The Timekeeper left the driver's IN_N open; here
-  it goes to VCOM_A, the DC level of the input buffer output.
+  it goes to VCOM_A, the DC level of the input buffer output. This is the
+  fix the Timekeeper's own input noise review recommends (finding H1).
+  The THS4522 itself stays: it is made for the single 5 V analog rail
+  (rail-to-rail output, VOCM pins the output common mode to the codec's
+  VCOM). Replacing it with the spare OPA1656 half was tried and reverted
+  on 2026-10-05.
 - **Outputs not crossed.** The Timekeeper wired AOUTR to its left output; here
   AOUTL is OUT L. Swap the channels in firmware when porting.
 - **Output pull-downs.** 100R series and 1M to GND after each 10u, the Relic
