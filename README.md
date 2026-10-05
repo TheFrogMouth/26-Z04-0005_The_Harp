@@ -13,6 +13,7 @@ Status: **first schematic draft, board seeded, unplaced.** Seven sheets generate
 |------|----------|
 | `docs/design-brief.md` | What the pedal is, engine, controls, bypass, cost target, decisions, open items |
 | `docs/pcb-plan.md` | One-board plan and two-board fallback, face schedule, zoning, schematic sheets, pin budget, order of work |
+| `docs/firmware-requirements.md` | Firmware requirements (draft): audio path, engine, controls, display, bypass, persistence, budgets, verification |
 | `hardware/kicad/the_harp/` | KiCad 10 project: seven-sheet schematic, Relic-outline board |
 | `hardware/gerbers/` | Fabrication output |
 | `firmware/the_harp/` | STM32H750 firmware |
