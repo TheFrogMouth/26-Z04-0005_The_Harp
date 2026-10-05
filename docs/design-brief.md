@@ -144,15 +144,16 @@ labour. Nothing carted.
    jacks, only the centre toggle position is usable on the Harp.
 8. **QUADSPI on bank 2** (PB2, PC11, PE7–PE10), so SAI1 keeps the
    Timekeeper's PE2–PE6 and the audio firmware ports unchanged.
-9. **Mono in, stereo out** in hardware: one input buffer and one ADC driver
-   channel; the codec's right ADC input is parked at VCOM.
+9. **Mono in, stereo out** in hardware: one input buffer, and the ADC driven
+   differentially by the two halves of the same OPA1656 (no THS4522); the codec's right ADC input is parked at VCOM.
 
 ## Still open
 
 - Toggle row: keep only the centre toggle, or give up a jack (see
   `pcb-plan.md`, face schedule).
 - [CONFIRM] items on the schematic: QUADSPI bank 2 alternate functions,
-  AK4621 unused right input, THS4522 unused channel.
+  AK4621 unused right input, AK4621 input full scale and impedance against
+  the OPA1656 drive.
 
 - Chord tracker quality on distorted or fast playing. Key and Drone modes do
   not depend on it, so the pedal works even if Follow is weak.

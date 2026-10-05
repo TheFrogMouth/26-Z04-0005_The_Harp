@@ -5,7 +5,7 @@ that nobody plays ring when the guitar sounds their note, retuned continuously
 to the chord being played. STM32H750VBT6, AK4621EF codec, no SDRAM, relay
 bypass, in a Hammond 125B on the Alchemist/Relic board and jack layout.
 
-Status: **first schematic draft, board seeded, unplaced.** Seven sheets generated from the Timekeeper's circuits and The Relic's bypass (195 parts, net-traced, not yet opened in KiCad); board outline and 28 face/jack/bypass footprints placed from The Relic. See `docs/pcb-plan.md` and `hardware/kicad/README.md`.
+Status: **first schematic draft, board seeded, unplaced.** Six sheets generated from the Timekeeper's circuits and The Relic's bypass (183 parts, net-traced, not yet opened in KiCad); board outline and 28 face/jack/bypass footprints placed from The Relic. See `docs/pcb-plan.md` and `hardware/kicad/README.md`.
 
 ## Layout
 
@@ -13,7 +13,7 @@ Status: **first schematic draft, board seeded, unplaced.** Seven sheets generate
 |------|----------|
 | `docs/design-brief.md` | What the pedal is, engine, controls, bypass, cost target, decisions, open items |
 | `docs/pcb-plan.md` | One-board plan and two-board fallback, face schedule, zoning, schematic sheets, pin budget, order of work |
-| `hardware/kicad/the_harp/` | KiCad 10 project: seven-sheet schematic, Relic-outline board |
+| `hardware/kicad/the_harp/` | KiCad 10 project: six-sheet schematic, Relic-outline board |
 | `hardware/gerbers/` | Fabrication output |
 | `firmware/the_harp/` | STM32H750 firmware |
 | `Documents/` | Controlled LaTeX documents, one folder each |
