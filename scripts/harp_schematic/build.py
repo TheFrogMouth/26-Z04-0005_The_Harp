@@ -5,7 +5,7 @@ from schgen import render, root_sheet, POWER_NETS
 from harp_spec import SHEETS
 from kisch import parse, sheet_nets, find, first, prop
 from collections import defaultdict
-OUT=sys.argv[1] if len(sys.argv)>1 else os.path.join(S,'..','..','hardware','kicad','the_harp')
+OUT=sys.argv[1] if len(sys.argv)>1 else os.path.join(S,'..','..','kicad','the_harp')
 PROJECT='The Harp'
 ROOT_UUID='596641a7-eeca-47a8-9244-68f1910acd88'   # kept from the seed root sheet
 # nets per sheet

@@ -35,7 +35,7 @@ def lib_blocks(path):
         name=m.group(1)
         res[name]=b
     return res
-srcs=sorted(glob.glob('/home/user/25-Z01-0001_DSP_Development_Board/hardware/kicad/dsp_board/*.kicad_sch')+
+srcs=sorted(glob.glob('/home/user/25-Z01-0001_DSP_Development_Board/kicad/dsp_board/*.kicad_sch')+
             glob.glob('/home/user/26-A03-0003_The_Relic/kicad/the_relic/*.kicad_sch')+
             glob.glob('/home/user/26-A02-0001_The_Alchemist/kicad/the_alchemist/*.kicad_sch'))
 allb={}
