@@ -3,7 +3,7 @@
 \section{Risks}
 \begin{itemize}
   \item \textbf{Codec and H750 next to a high-impedance guitar input} on one 56 by 90\,mm board. Mitigation: The Relic's four-layer stack with an unbroken ground plane, the zoning in Chapter~\ref{ch:pcb}, and the buck converter at the DC end away from the input.
-  \item \textbf{Chord tracker quality} on distorted or fast playing. Key, Drone and Fifths modes do not depend on it, so the pedal still works if Follow is weak.
+  \item \textbf{Chord tracker quality} on distorted or fast playing. Key and Drone modes do not depend on it, so the pedal still works if Follow is weak.
   \item \textbf{CPU load} of 24 strings, Jawari and the tracker together has not been measured.
   \item \textbf{Internal flash.} Whether the image fits the H750's 128\,KB is unknown.
   \item \textbf{AK4621EF lifecycle,} already flagged in the Timekeeper's BOM audit.
@@ -18,7 +18,7 @@
     \toprule
     \fmtophead{Item} & \fmtophead{Status} \\
     \midrule
-    Toggle row & Keep only the centre toggle, or give up a jack (Section~\ref{sec:toggleconflict}). Then pick the toggle part: a two-position Taiway 100-series toggle on The Alchemist's footprint, or The Alchemist's ON-ON-ON part with a second input pin per toggle. \\
+    Secondary layer & More settings than knobs: key or drone set, spread, bypass mode, expression target and range, Hold latching, Brightness trim, chord commit time, output trim. Pick a second page or drop some, on the prototype. \\
     Schematic confirmations & QUADSPI bank~2 alternate functions, AK4621 unused right input, THS4522 unused channel, OPA2365 noise at 1\,kHz, then ERC. \\
     Wall-hole heights & To be fixed from the NMJ6HCD2 and PJ-063AH drawings and the measured Alchemist and Relic assemblies; the Harp inherits them. \\
     Note display & Whether 12 LEDs are enough, or a small I$^2$C OLED in the same band is worth the window cut. Judged after the firmware prototype, using the Timekeeper's TFT as a stand-in. \\
@@ -42,9 +42,9 @@ Writing this report found three small disagreements, to be corrected at the sour
 
 \section{Order of Work}
 \begin{enumerate}
-  \item \textbf{Firmware first on the Timekeeper board.} String bank with a fixed tuning, then Jawari, then the tuning manager in Key, Drone and Fifths modes. Measure the CPU load and settle the TBC ranges by ear.
+  \item \textbf{Firmware first on the Timekeeper board.} String bank with a fixed tuning, then Jawari, then the tuning manager in Key and Drone modes. Measure the CPU load and settle the TBC ranges by ear.
   \item Chord tracker and Follow mode, offline against reference recordings, then on the board.
-  \item Open the schematic in KiCad and run ERC. Decide the toggle conflict and close the confirmation items.
+  \item Open the schematic in KiCad and run ERC. Close the confirmation items.
   \item \emph{Update PCB from Schematic}. Place the LED strip and check the light-pipe fit; place the MCU and flash in the centre band, the codec under the pots, the buffers at the jack ends and the buck on the tab. \textbf{Go/no-go for Plan~A.}
   \item GND vias per The Relic's rule, routing (F.Cu short, B.Cu long, In2 power), DRC with The Relic's rules.
   \item Adapt The Relic's BOM exporter, cost at 100, and produce the Tayda drill schedule from the face table.

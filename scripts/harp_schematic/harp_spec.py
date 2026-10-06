@@ -71,19 +71,23 @@ SHEETS = []
 
 # ===================================================================== 1 Controls
 ctl = Sheet('Controls and LEDs', 'Controls and LEDs.kicad_sch', 'Controls and LEDs')
-ctl.notes.append('Controls and LEDs. Six B10K pots on the Relic/Alchemist grid (rows +38 / +13, columns -20 / 0 / +20) across +3V3, wipers to ADC1 PA0-PA5 '
-                 'through 1k / 100n.\nThree SPDT toggles (row -5) pull PE12-PE14 to ground; internal pull-ups. Twelve 0603 note LEDs, C to B, '
-                 'on PD0-PD11 (one port write), 1k each, behind 3 mm light pipes at face Y -18.')
-POTS = ['Tuning', 'Sustain', 'Strings', 'Brightness', 'Jawari', 'Mix']
-for i, nm in enumerate(POTS):
-    n = i + 1
+ctl.notes.append('Controls and LEDs. Four B10K pots on the Alchemist grid: Mix, Sustain, Strings (row +38) and Jawari (0, +13), across +3V3, '
+                 'wipers to ADC1 PA0, PA1, PA2, PA4 through 1k / 100n.\nThree Taiway 100-DP6 ON-ON-ON toggles, as The Alchemist: Tuning (-20, +13), '
+                 'Brightness (+20, +13), Retune (0, -5). Commons (2, 5) to GND, pins 3 and 4 to two MCU inputs with internal pull-ups: '
+                 'up = A low B high, centre = both low, down = A high B low.\nTwelve 0603 note LEDs, C to B, on PD0-PD11 (one port write), '
+                 '1k each, behind 3 mm light pipes at face Y -18.')
+POTS = {1: 'Mix', 2: 'Sustain', 3: 'Strings', 5: 'Jawari'}   # RV10n keeps its face position: 1-3 row +38, 5 = (0, +13)
+for n, nm in POTS.items():
     ctl.add(Part('RV10%d' % n, 'POT:RD901F-40-15R1-B10K-00DL1', 'B10K', 'Potentiometer_THT:RD901F4015R1B10K00DL1',
                  {'1': 'GND', '2': 'POT%d_W' % n, '3': '+3V3', 'MH1': 'GND', 'MH2': 'GND'}, props=P_POT, note=nm))
     ctl.add(r('R10%d' % n, '1k', 'POT%d_W' % n, 'POT%d' % n))
     ctl.add(c('C10%d' % n, '100n', 'POT%d' % n, 'GND'))
-for i, nm in enumerate(['Snap/Glide', 'Bypass mode', 'Exp target']):
-    ctl.add(Part('SW10%d' % (i + 1), 'Switch:SW_SPDT', nm, 'SPDT Switches:SPDT love my Switches',
-                 {'1': 'TOG%d' % (i + 1), '2': 'GND', '3': None}, note=nm))
+P_TOGGLE = jlc('Taiway', '100-DP6-T200B1M2QE', supplier='LMS')
+for i, nm in enumerate(['Tuning: Follow / Key / Drone', 'Retune: Snap / Glide / Lock', 'Brightness: Dark / Warm / Glassy']):
+    n = i + 1
+    for unit, pins in ((1, {'1': None, '2': 'GND', '3': 'TOG%d_A' % n}), (2, {'4': 'TOG%d_B' % n, '5': 'GND', '6': None})):
+        ctl.add(Part('SW10%d' % n, 'Switch:SW_DPDT_x2', '100-DP6', 'SPDT Switches:100DP3T1B2M2QE', pins, unit=unit,
+                     dnp=True, props=P_TOGGLE, note=nm if unit == 1 else None))
 NOTES = ['C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs', 'A', 'As', 'B']
 for i, nm in enumerate(NOTES):
     ctl.add(r('R%d' % (107 + i), '1k', 'NOTE_%s' % nm, 'NOTE_%s_A' % nm))
@@ -101,8 +105,8 @@ PIN = {
     'PE2': 'CODEC_MCLK', 'PE3': 'CODEC_SDTO', 'PE4': 'CODEC_LRCK', 'PE5': 'CODEC_BICK', 'PE6': 'CODEC_SDTI',
     'PC14': 'CODEC_CCLK', 'PC15': 'CODEC_CDTI', 'PB8': 'CODEC_CSN', 'PB4': 'CODEC_PDN',
     'PB2': 'QSPI_CLK', 'PC11': 'QSPI_NCS', 'PE7': 'QSPI_IO0', 'PE8': 'QSPI_IO1', 'PE9': 'QSPI_IO2', 'PE10': 'QSPI_IO3',
-    'PA0': 'POT1', 'PA1': 'POT2', 'PA2': 'POT3', 'PA3': 'POT4', 'PA4': 'POT5', 'PA5': 'POT6', 'PB1': 'EXP',
-    'PE12': 'TOG1', 'PE13': 'TOG2', 'PE14': 'TOG3',
+    'PA0': 'POT1', 'PA1': 'POT2', 'PA2': 'POT3', 'PA4': 'POT5', 'PB1': 'EXP',
+    'PE11': 'TOG1_A', 'PE12': 'TOG1_B', 'PE13': 'TOG2_A', 'PE14': 'TOG2_B', 'PE15': 'TOG3_A', 'PB10': 'TOG3_B',
     'PB12': 'FSW_BYPASS_IN', 'PB13': 'FSW_HOLD_IN', 'PC10': 'RELAY_DRV', 'PC6': 'LED_EFFECT_DRV', 'PC7': 'LED_HOLD_DRV',
     'PA13': 'SWDIO', 'PA14': 'SWCLK', 'PB3': 'SWO', 'PH0': 'HSE_IN', 'PH1': 'HSE_OUT', 'NRST': 'NRST', 'BOOT0': 'BOOT0',
     'VBAT': '+3V3', 'VDDA': 'VDDA', 'VREF+': 'VDDA', 'VSSA': 'GND', 'VDD': '+3V3', 'VSS': 'GND',

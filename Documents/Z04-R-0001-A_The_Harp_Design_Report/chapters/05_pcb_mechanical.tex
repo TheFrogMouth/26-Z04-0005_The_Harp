@@ -22,15 +22,15 @@ The jacks decide it. The Alchemist and The Relic mount the four 1/4-inch jacks a
     Input buffer, anti-alias, expression buffer, ESD & 20 & Timekeeper U801, U702 \\
     Output buffers L/R, reconstruction, ESD & 18 & Timekeeper U802 \\
     Relay bypass, footswitch RC & 12 & Relic K401 group, Alchemist relay \\
-    6 pots, 3 toggles, 13 LEDs, LED resistors & 35 & Relic and new \\
+    4 pots, 3 toggles, 13 LEDs, LED resistors & 31 & Alchemist and new \\
     5 jacks, 2 footswitch pad pairs & 7 & Alchemist \\
     \midrule
-    Total & $\approx$195 & \\
+    Total & $\approx$191 & \\
     \bottomrule
   \end{tabularx}
 \end{table}
 
-The Relic places 120 parts on this outline with room to spare in the digital zone. The Timekeeper's DSP board carries 145 parts, including SDRAM and a 144-pin MCU, on a larger board. About 195 parts, most of them 0402 and 0603 with a 14 by 14\,mm LQFP-100, on 56 by 90\,mm less the DC tab is tight but expected to fit. SMD parts may sit over the jack bodies (The Relic's rule), and the four-layer stack keeps routing off the top layer. The go/no-go is placement: if the codec and MCU groups cannot be zoned away from the input buffer with the LEDs in place, the design moves to Plan B rather than being squeezed.
+The Relic places 120 parts on this outline with room to spare in the digital zone. The Timekeeper's DSP board carries 145 parts, including SDRAM and a 144-pin MCU, on a larger board. About 190 parts, most of them 0402 and 0603 with a 14 by 14\,mm LQFP-100, on 56 by 90\,mm less the DC tab is tight but expected to fit. SMD parts may sit over the jack bodies (The Relic's rule), and the four-layer stack keeps routing off the top layer. The go/no-go is placement: if the codec and MCU groups cannot be zoned away from the input buffer with the LEDs in place, the design moves to Plan B rather than being squeezed.
 
 \section{Enclosure and Datum}
 Taken unchanged from The Relic:
@@ -50,9 +50,9 @@ One face standard covers The Alchemist, The Relic and The Harp. Every position i
     \toprule
     \fmtophead{Position} & \fmtophead{Alchemist} & \fmtophead{Relic} & \fmtophead{Harp} \\
     \midrule
-    Knob row $+38$ & Rate, Depth, Wave & Wow, Flutter, Age & \req{RV101} Tuning, \req{RV102} Sustain, \req{RV103} Strings \\
-    Knob row $+13$ & Mode toggle, Exp/offset pot, Resonance toggle & Saturation, Mix, Hiss & \req{RV104} Brightness, \req{RV105} Jawari, \req{RV106} Mix \\
-    Toggle row $-5$ & -- & Dropout, Age range, Hiss on & \req{SW101}, \req{SW102}, \req{SW103} \\
+    Knob row $+38$ & Rate, Depth, Wave & Wow, Flutter, Age & \req{RV101} Mix, \req{RV102} Sustain, \req{RV103} Strings \\
+    Knob row $+13$ & Mode toggle, Exp/offset pot, Resonance toggle & Saturation, Mix, Hiss & \req{SW101} Tuning toggle, \req{RV105} Jawari, \req{SW103} Brightness toggle \\
+    Toggle row $-5$ & -- & Dropout, Age range, Hiss on & centre only: \req{SW102} Retune toggle \\
     Right wall, lower jack (Y $-22.5$) & IN & IN & \req{J402} IN \\
     Right wall, upper jack (Y $-3.5$) & Expression & -- & \req{J406} EXP \\
     Left wall, lower jack (Y $-22.5$) & OUT & OUT & \req{J403} OUT L \\
@@ -65,10 +65,10 @@ One face standard covers The Alchemist, The Relic and The Harp. Every position i
   \end{tabularx}
 \end{table}
 
-\section{Toggle and Jack Conflict}\label{sec:toggleconflict}
-The Relic's outer toggles at ($\pm$20, $-5$) sit over the upper jack pair. With the NMJ6HCD2 jacks the pads no longer collide: the jack pin rows are at Y $+4.6$ and $-11.6$, X $\pm$13.3 to $\pm$26, 6.6\,mm from the toggle row. However, the jack bodies on the underside fill face X $\pm$6.5 to $\pm$30, Y $+5.6$ to $-12.6$, and the outer toggles' through-hole pins and fillets at X $\pm$15.3 to $\pm$24.7 would land on them. The centre toggle's outer pins (X $\pm$4.7, pad edge $\pm$6.1) clear the bodies by only about 0.4\,mm. The Alchemist avoids this because its toggles sit in the knob row at Y $+13$.
+\section{Controls over the Upper Jacks}\label{sec:toggleconflict}
+The upper jack bodies sit on the underside at face X $\pm$6.5 to $\pm$30, Y $+5.6$ to $-12.6$, with their rear pin row at Y $+4.6$. The first face, The Relic's six knobs and three toggles, did not fit them: the outer lower-row pots have their pins at Y $+5.5$, on the jacks' rear pads, and the outer toggles at ($\pm$20, $-5$) put their pins over the jack bodies. The Relic has no upper jacks, and The Alchemist puts toggles, not pots, at ($\pm$20, $+13$), so neither board meets this.
 
-The Harp needs all four jacks, so only the centre toggle (0, $-5$) is usable. The recommendation is to keep \req{SW102} (Bypass mode) at the centre and make Snap/Glide and the expression target hold-plus-knob settings in the secondary layer. Both outer toggles remain on the schematic until this is decided; removing them is two symbols and two GPIO.
+The Harp now uses The Alchemist's arrangement (decision 13). The outer positions of the $+13$ row carry the Tuning and Brightness toggles; a toggle's pins sit around its bat, from Y $+8.3$ up, 1.3\,mm clear of the jack bodies. Jawari is the only knob in that row, at X 0 where there is no jack body. The Retune toggle at (0, $-5$) uses the Taiway footprint, whose pins lie within X $\pm$2.4, about 2.7\,mm clear of the bodies. The board has no through-hole pad over a jack.
 
 The note LED band at Y $-18$ also lies over the lower jack bodies, which is why the LEDs must be SMD. The outer LEDs at X $\pm$27.5 are 2.6\,mm from the cavity wall at $\pm$30.15; the light-pipe flange (Bivar PLP1 or Dialight 515 series, 3\,mm) is to be checked against the 5\,mm pitch and the wall. If it does not fit, the fallback is 11 LEDs with C at the centre, or a 4.5\,mm pitch.
 
@@ -80,9 +80,9 @@ Signal runs right to left as on The Alchemist: IN and EXP enter on the right wal
  Y +52 ------------------------------------------  DC tab: TVS, Schottky, buck and inductor
        | RV101        RV102        RV103        |  row +38
        |   LDO 5VA, +3V3 distribution           |
-       | RV104        RV105        RV106        |  row +13
+       | SW101        RV105        SW103        |  row +13
        | codec IC501 + U501, ADC driver U601    |  under the pot rows
-       | SW101        SW102        SW103        |  row -5
+       |              SW102                     |  row -5
        | --- LED strip D101-D112 at -18 ------- |  over the jack bodies: SMD only
        | OUT U702  |   H750 U201     | IN U701  |  output side left, input side right
        | relay K401|   flash U202    | EXP U401 |

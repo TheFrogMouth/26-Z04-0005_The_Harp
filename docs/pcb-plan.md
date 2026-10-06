@@ -40,13 +40,13 @@ same depth, and that is the board the pots are on. So:
 | Input buffer OPA2365 + anti-alias, expression buffer MCP6001, ESD | 20 | Timekeeper U801, U702 |
 | Output buffers OPA1688 L/R + reconstruction, ESD | 18 | Timekeeper U802 |
 | Relay bypass: G6K-2F-Y, 2N7002 ×2, diode, resistors, RC on the footswitch inputs | 12 | Relic K401 group, Alchemist relay |
-| 6 pots, 3 toggles, 13 LEDs, LED resistors | 35 | Relic + new |
+| 4 pots, 3 toggles, 13 LEDs, LED resistors | 31 | Alchemist + new |
 | 5 jacks, 2 footswitch pad pairs | 7 | Alchemist |
-| **Total** | **≈ 195** | |
+| **Total** | **≈ 191** | |
 
 The Relic places 120 parts on this outline with room to spare in the
 digital zone; the Timekeeper's DSP board carries 145 (with SDRAM and a
-144-pin MCU) on a larger board. About 195 parts, most of them 0402/0603
+144-pin MCU) on a larger board. About 190 parts, most of them 0402/0603
 and the LQFP-100 at 14 × 14 mm, on 56 × 90 mm minus the DC tab is **tight
 but expected to fit**, because SMD parts may sit over the jack bodies
 (Relic rule) and the four-layer stack keeps the routing off the top. The
@@ -75,9 +75,9 @@ the subset it needs.
 
 | Position (face X, Y) | Alchemist | Relic | Harp |
 |---|---|---|---|
-| Knob row +38: (−20), (0), (+20) | Rate, Depth, Wave | Wow, Flutter, Age | RV101 Tuning, RV102 Sustain, RV103 Strings |
-| Knob row +13: (−20), (0), (+20) | Mode toggle, Exp/offset pot, Resonance toggle | Saturation, Mix, Hiss | RV104 Brightness, RV105 Jawari, RV106 Mix |
-| Toggle row −5: (−20), (0), (+20) | — | Dropout, Age range, Hiss on | SW101, SW102, SW103 (see the conflict below) |
+| Knob row +38: (−20), (0), (+20) | Rate, Depth, Wave | Wow, Flutter, Age | RV101 Mix, RV102 Sustain, RV103 Strings |
+| Knob row +13: (−20), (0), (+20) | Mode toggle, Exp/offset pot, Resonance toggle | Saturation, Mix, Hiss | SW101 Tuning toggle, RV105 Jawari, SW103 Brightness toggle |
+| Toggle row −5: (−20), (0), (+20) | — | Dropout, Age range, Hiss on | centre only: SW102 Retune toggle |
 | Right wall, lower jack, axis Y −22.5 | IN | IN | J402 IN |
 | Right wall, upper jack, axis Y −3.5 | Expression | — | J406 EXP |
 | Left wall, lower jack, axis Y −22.5 | OUT | OUT | J403 OUT L |
@@ -87,21 +87,19 @@ the subset it needs.
 | Footswitches (−20, −49), (+20, −49) | Bypass, Tap | Bypass, — | Bypass (J405), Hold (J407) |
 | Note LED band, Y −18 | — | — | D101–D112, X −27.5 to +27.5 at 5 mm |
 
-**Conflict: the upper jacks and the outer toggles.** The Relic's outer
-toggles at (±20, −5) sit over the upper jack pair. With the NMJ6HCD2 jacks
-(The Alchemist, 2026-10-05) the pads no longer collide: the jack pin rows
-are at Y +4.6 and −11.6, X ±13.3 to ±26, 6.6 mm from the toggle row. But
-the jack bodies are on the underside, filling face X ±6.5 to ±30, Y +5.6 to
-−12.6, and the outer toggles' through-hole pins and solder fillets at X
-±15.3 to ±24.7 would land on them. The centre toggle's outer pins (X ±4.7,
-pad edge ±6.1) clear the bodies by only about 0.4 mm. The Alchemist never
-hits this because its toggles sit in the knob row at Y +13. The Harp needs all four jacks, so it can
-only use the **centre toggle (0, −5)**; SW101 (Snap/Glide) and SW103
-(Exp target) have to move to footswitch-hold menus, or the pedal drops
-OUT R or EXP. Recommendation: keep SW102 (Bypass mode) at the centre and
-make Snap/Glide and Exp target hold-plus-knob settings. Both toggles are
-still on the schematic until this is decided; deleting them is two
-symbols and two GPIO.
+**Controls over the upper jacks (resolved 2026-10-06).** The upper jack
+bodies sit on the underside at face X ±6.5 to ±30, Y +5.6 to −12.6, with
+their rear pin row at Y +4.6. The first face (The Relic's six knobs and
+three toggles) did not fit them: the outer lower-row pots RV104/RV106 had
+their pins at Y +5.5, on the jacks' rear pads, and the outer toggles at
+(±20, −5) put their pins over the jack bodies. The Harp now follows The
+Alchemist (design brief, decision 13): the outer positions of the +13 row
+carry the Tuning and Brightness toggles, whose pins start at Y +8.3, 1.3 mm
+clear of the bodies; Jawari is the only knob in that row, at X 0 where
+there is no jack body; the Retune toggle at (0, −5) uses the Taiway
+footprint, pins within X ±2.4, about 2.7 mm clear. No through-hole pad sits
+over a jack. All three toggles are Taiway 100-DP6-T200B1M2QE ON-ON-ON on The
+Alchemist's `100DP3T1B2M2QE` footprint (shaft at origin + (−2.415, +4.7)).
 
 The LED band at Y −18 lies over the lower jack bodies (NMJ6HCD2 bodies span Y +5.6 to
 −12.6 and −13.4 to −31.6 on both walls, X ±6.5 to ±30), which is why the LEDs must be SMD. The
@@ -116,9 +114,9 @@ the chromatic notes with C at the centre, or 4.5 mm pitch.
  Y +52 ─────────────────────────────────────────  DC tab: TVS, Schottky, buck (U301) and its inductor
        │ RV101        RV102        RV103        │  row +38; buck output filter between the pots
        │   LDO 5VA, +3V3 distribution           │
-       │ RV104        RV105        RV106        │  row +13; 3.3 V analog filter, pot RC filters
+       │ SW101        RV105        SW103        │  row +13; 3.3 V analog filter, pot RC filters
        │ codec IC501 + U501, ADC driver U601    │  under the pot rows: codec, DFAs, OPA2348
-       │ SW101        SW102        SW103        │  row −5
+       │              SW102                     │  row −5
        │ ─── LED strip D101–D112 at −18 ─────── │  over the jack bodies: SMD only
        │ OUT U702  │   H750 U201     │ IN U701  │  band −18…−38: output side left, input side right
        │ relay K401│   flash U202    │ EXP U401 │
@@ -156,7 +154,7 @@ Relic's.
 
 | # | Sheet | Designators | Contents |
 |---|---|---|---|
-| 1 | Controls and LEDs | RV101–106, R101–118, C101–106, SW101–103, D101–112 | Pots across +3V3, wipers through 1k / 100n to PA0–PA5; toggles to GND on PE12–PE14; 12 note LEDs on PD0–PD11 through 1k |
+| 1 | Controls and LEDs | RV101–103, RV105, R101–103, R105, R107–118, C101–103, C105, SW101–103, D101–112 | Pots across +3V3, wipers through 1k / 100n to PA0, PA1, PA2, PA4; ON-ON-ON toggles, commons to GND, pins 3 and 4 to PE11–PE15 and PB10; 12 note LEDs on PD0–PD11 through 1k |
 | 2 | MCU | U201, U202, C201–214, R201–204, FB201, Y201, W201 | STM32H750VBT6, five 100n + 4.7u, 2 × 2.2u VCAP, VDDA/VREF+ through 220R ferrite, 25 MHz HSE, NRST 100n, BOOT0 10k, Segger needle SWD with 22R, W25Q128 on QUADSPI bank 2 |
 | 3 | Power | J401, D301–302, FB301–303, U301–302, L301, C301–312, R301–303 | Timekeeper power: SMAJ10CA, PMEG3010 series, TPS54202 → +3V3, NCP718 → +5V; +9V feeds relay and LEDs |
 | 4 | Jacks and Bypass | J402–407, K401, Q401–403, D113–114, D402–406, R404–418, C408–412, U401 | Four NMJ6HCD2 jacks, ESD on each, relay bypass on OUT L (Omron G6K-2F-Y), effect and Hold LED drivers, two footswitch pad pairs with RC, Timekeeper expression buffer (MCP6001) |
@@ -164,7 +162,7 @@ Relic's.
 | 6 | ADC Driver | U601, R601–606, C601–610 | THS4522 channel A, single-ended to differential, gain 0.59 (R603/R604 620 Ω); channel B powered down |
 | 7 | Analog In and Out | U701–702, R701–719, C701–707 | OPA2365 input buffer, OPA1688 difference amplifiers L and R, 10u, 100R, 1M |
 
-195 parts. Every pin carries a label or power symbol on a short stub, the
+192 parts. Every pin carries a label or power symbol on a short stub, the
 Relic convention, and the generator re-reads its own output and traces every
 net against the spec (no shorts, no single-pin nets, every pin assigned).
 
@@ -215,9 +213,9 @@ Differences from the Timekeeper, all deliberate:
 | SAI1 to codec | PE2 MCLK_A, PE4 FS_A, PE5 SCK_A, PE6 SD_A (to SDTI), PE3 SD_B (from SDTO) | Same as the Timekeeper |
 | Codec control | PC14 CCLK, PC15 CDTI, PB8 CSN, PB4 PDN | Same as the Timekeeper, bit-banged |
 | QUADSPI bank 2 | PB2 CLK, PC11 BK2_NCS, PE7–PE10 BK2_IO0–3 | PF6–PF10 do not exist on LQFP-100, and bank 1 IO2 is only on PE2 (taken by SAI1 MCLK). Single flash on bank 2: FSEL = 1 in the QSPI init. **[CONFIRM AF9/AF10 in CubeMX]** |
-| Pots | PA0–PA5 (ADC1) | Same as the Timekeeper's six-channel scan |
+| Pots | PA0 Mix, PA1 Sustain, PA2 Strings, PA4 Jawari (ADC1) | The Timekeeper's DMA scan; PA3 and PA5 free |
 | Expression | PB1 (ADC1) | Same as the Timekeeper |
-| Toggles | PE12, PE13, PE14 | Internal pull-ups |
+| Toggles | PE11/PE12 Tuning, PE13/PE14 Retune, PE15/PB10 Brightness | Two inputs each, internal pull-ups; up = A low B high, centre = both low, down = A high B low |
 | Footswitches | PB12 bypass, PB13 hold | Internal pull-ups, 1k / 100n RC |
 | Relay | PC10 | Same as the Timekeeper |
 | LEDs | PC6 effect, PC7 hold (TIM3 CH1/CH2 PWM) | Through 2N7002 from +9V |
@@ -235,7 +233,7 @@ Differences from the Timekeeper, all deliberate:
    2026-10-04.
 3. ~~Draw the schematic.~~ First draft generated 2026-10-04 (sheets above).
    Open it in KiCad and run ERC.
-4. Decide the toggle conflict (face schedule) and confirm the [CONFIRM]
+4. Confirm the [CONFIRM]
    items: the OPA2365 1 kHz noise figure on its data sheet plot (estimated
    about 11 nV/√Hz; capacitive-load stability is checked, see below), QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
    unused-channel handling.
