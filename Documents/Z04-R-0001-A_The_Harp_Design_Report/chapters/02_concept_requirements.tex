@@ -27,7 +27,7 @@ The dry signal is converted too. The point of the pedal is the wet sound, and ke
     String bank & 24 Karplus--Strong / waveguide strings, each a fractional delay line with a one-pole loss filter and a tuning allpass. The guitar reaches each string through a narrow resonant band-pass at the string's pitch, so a string rings only when its note or an overtone is played. No envelope trigger. & New \\
     Jawari & Nonlinear bridge: a soft clip and a short extra delay tap in the loop, depth on the Jawari knob. Zero is a harp, full is a sitar. & New \\
     Chord tracker & FFT of the input, chroma vector and template match to a chord set with hysteresis. Only chords lasting more than about 400\,ms retune the strings. & Timekeeper spectral bank \\
-    Tuning manager & Sets the string pitches from the chord (Follow), a fixed key (Key), an open tuning (Drone) or stacked fifths (Fifths). Snap retunes only silent strings; Glide slides sounding strings to the new pitch. & New \\
+    Tuning manager & Sets the string pitches from the chord (Follow), a fixed key (Key) or an open tuning (Drone, stacked fifths among the sets). Snap retunes only silent strings; Glide slides sounding strings to the new pitch; Lock stops retuning. & New \\
     Stereo spread & Strings panned by pitch, low to the left and high to the right. & New \\
     Front end & Hum filter and noise gate before the strings. & Timekeeper \\
     Framework & Effect chain, settings in QSPI flash, control smoothing, expression, UI simulator. & Timekeeper \\
@@ -38,7 +38,7 @@ The dry signal is converted too. The point of the pedal is the wet sound, and ke
 Twenty-four strings at 44.1\,kHz cost a few MIPS each, and the Timekeeper's spectral bank alone is heavier, so the load should be comfortable on the H750 at 480\,MHz. It has \textbf{not been measured}. Measuring it on the Timekeeper board is the first step of the firmware plan (Chapter~\ref{ch:firmware}).
 
 \section{Controls}
-The face follows The Relic's grid: 20\,mm columns at $-20$, 0 and $+20$, knob rows at $+38$ and $+13$, a toggle row at $-5$, and 12.5\,mm knobs. Coordinates are face X and Y in millimetres from the enclosure centre.
+The face follows The Alchemist's grid (20\,mm columns at $-20$, 0 and $+20$, rows at $+38$ and $+13$, the same 20 by 25\,mm pitch as The Gremlin and the Timekeeper) with one more toggle at (0, $-5$), and 12.5\,mm knobs. Nothing through-hole sits over the upper jacks (Section~\ref{sec:toggleconflict}). The three toggles are Taiway 100-DP6 ON-ON-ON, The Alchemist's part, so each one stages the effect in three steps. Coordinates are face X and Y in millimetres from the enclosure centre.
 
 \begin{table}[H]
   \small\renewcommand{\arraystretch}{1.12}
@@ -47,15 +47,13 @@ The face follows The Relic's grid: 20\,mm columns at $-20$, 0 and $+20$, knob ro
     \toprule
     \fmtophead{Position} & \fmtophead{Control} & \fmtophead{Function} \\
     \midrule
-    ($-20$, $+38$) & Tuning & Follow / Key / Drone / Fifths \\
-    (0, $+38$) & Sustain & String decay time \\
-    ($+20$, $+38$) & Strings & 6 to 24 active strings \\
-    ($-20$, $+13$) & Brightness & Loss-filter cutoff, dark to glassy \\
-    (0, $+13$) & Jawari & Bridge buzz \\
-    ($+20$, $+13$) & Mix & Dry/wet \\
-    ($-20$, $-5$) & Snap / Glide & Retune behaviour (see Section~\ref{sec:toggleconflict}) \\
-    (0, $-5$) & Bypass mode & True (relay) / Trails (strings ring out) \\
-    ($+20$, $-5$) & Expression target & Bend / Swell (see Section~\ref{sec:toggleconflict}) \\
+    ($-20$, $+38$) knob & Mix & Dry/wet \\
+    (0, $+38$) knob & Sustain & String decay time \\
+    ($+20$, $+38$) knob & Strings & 6 to 24 active strings \\
+    ($-20$, $+13$) toggle & Tuning & Follow / Key / Drone \\
+    (0, $+13$) knob & Jawari & Bridge buzz \\
+    ($+20$, $+13$) toggle & Brightness & Dark / Warm / Glassy loss-filter voicings \\
+    (0, $-5$) toggle & Retune & Snap / Glide / Lock \\
     band at $-18$ & 12 note LEDs & C to B, lit for the notes the strings are tuned to \\
     ($-20$, $-35$) & Effect LED & \\
     ($-20$, $-49$) & Bypass footswitch & Momentary SPST-NO soft-touch on hand-solder pads \\
@@ -67,7 +65,7 @@ The face follows The Relic's grid: 20\,mm columns at $-20$, 0 and $+20$, knob ro
   \end{tabularx}
 \end{table}
 
-All six pots go to the MCU; none is in the audio path. Without a screen, secondary settings (key, drone set, Hold latching, spread width and others) are reached by a footswitch gesture and set with the knobs, with the note LEDs as the display.
+All four pots and the three toggles go to the MCU; none is in the audio path. Without a screen, secondary settings (key, drone set, bypass mode True or Trails, expression target Bend or Swell, spread width and others) are reached by a footswitch gesture and set with the knobs, with the note LEDs as the display.
 
 \section{Bypass Behaviour}
 There is one relay, with true bypass on OUT~L. De-energised, the relay connects OUT~L to IN and grounds the input buffer, so the pedal passes signal unpowered; \textbf{OUT~R is silent in true bypass}. In Trails mode the relay stays energised and the DSP passes the dry signal to both outputs while the strings ring out, which is the stereo player's bypass. Before every relay change the DSP fades its outputs to silence, switches, waits for the contacts to settle and fades back in. There is no mute transistor.
@@ -85,7 +83,7 @@ The firmware requirements are drafted in \texttt{docs/firmware-requirements.md} 
     PLT & Platform: H750 at 480\,MHz, internal RAM only, 128\,KB flash budget, one source tree for the Harp and Timekeeper boards, host-testable modules, no dynamic allocation \\
     AUD & Audio path: AK4621EF over SAI1 at 44.1\,kHz / 24-bit, mono in, dry at unity, latency target 3\,ms, wet limiter, no clicks \\
     FE, STR, JAW & Front end, string bank (24 strings, C2 to C6, $\pm$2 cents), Jawari \\
-    CHD, TUN & Chord tracker (chord set, 400\,ms commit, 90\,\% accuracy target on clean DI) and tuning manager (four modes, Snap / Glide, Hold) \\
+    CHD, TUN & Chord tracker (chord set, 400\,ms commit, 90\,\% accuracy target on clean DI) and tuning manager (three modes, Snap / Glide / Lock, Hold) \\
     OUT & Stereo spread, mix law, bypass-matched level \\
     POT, TGL, FSW, EXP, SEC & Controls, footswitches, expression and the secondary layer \\
     DSP & Note LEDs and effect LED \\

@@ -31,8 +31,9 @@ The Harp is a cut-down Timekeeper on the Alchemist/Relic 125B hardware set:
 - **No TFT.** Twelve note LEDs replace the screen.
 - **Pots, not encoders.** Encoders only make sense with a screen that shows
   the value; the Timekeeper has one, this does not. Pots also keep the
-  Relic's face, parts and feel. The H750 reads them on ADC1 PA0–PA5, the
-  same six-channel DMA scan the Timekeeper's `controls.c` already runs.
+  Relic's parts and feel. The H750 reads the four of them on ADC1 PA0,
+  PA1, PA2 and PA4, with the DMA scan the Timekeeper's `controls.c`
+  already runs.
 - **Jacks and DC jack in the Alchemist's positions and heights.** See
   `pcb-plan.md`; this is the main reason the design is one board.
 
@@ -58,7 +59,7 @@ trails and output level in firmware. Latency is one block (about 6 ms at
 | String bank | 24 Karplus-Strong / waveguide strings, each a fractional delay line with a one-pole loss filter and an allpass for tuning. Guitar signal feeds each string through a narrow resonant band-pass at the string's pitch so a string only rings when its note or an overtone is played. No envelope trigger. | New |
 | Jawari | Nonlinear bridge: a soft clip plus a short extra delay tap in the loop, depth on the Jawari knob. Zero is a harp, full is a sitar. | New |
 | Chord tracker | FFT of the input (the Timekeeper's spectral bank already has the analysis), chroma vector, template match to a chord set with hysteresis. Only chords that last more than ~400 ms retune the strings. | Timekeeper spectral |
-| Tuning manager | Assigns string pitches from the chord (Follow), a fixed key (Key), an open tuning set (Drone) or stacked fifths. Snap retunes only silent strings; Glide slides sounding strings to the new pitch. | New |
+| Tuning manager | Assigns string pitches from the chord (Follow), a fixed key (Key) or an open tuning set (Drone, stacked fifths among the sets). Snap retunes only silent strings; Glide slides sounding strings to the new pitch; Lock stops retuning. | New |
 | Stereo spread | Strings panned low-left to high-right. | New |
 | Front end | Hum filter and noise gate before the strings. | Timekeeper |
 | Framework | Effect chain, presets in QSPI flash, control smoothing, expression, UI simulator. | Timekeeper |
@@ -69,20 +70,21 @@ measured**.
 
 ## Controls
 
-125B face on The Relic's grid: 20 mm columns −20 / 0 / +20, knob rows +38
-and +13, toggles at −5, 12.5 mm knobs.
+125B face laid out as The Alchemist's: 20 mm columns −20 / 0 / +20, rows
++38 and +13 (the same 20 × 25 mm pitch as The Gremlin and the Timekeeper),
+plus one toggle at (0, −5); 12.5 mm knobs. Nothing through-hole sits over
+the upper jacks (`pcb-plan.md`). The toggles are The Alchemist's Taiway
+100-DP6 ON-ON-ON, so each one stages the effect in three steps.
 
 | Position (face X, Y) | Control | Notes |
 |---|---|---|
-| (−20, +38) | Tuning | Follow / Key / Drone / Fifths, with sub-positions (key, drone set) inside each |
-| (0, +38) | Sustain | String decay time |
-| (+20, +38) | Strings | 6 to 24 active strings |
-| (−20, +13) | Brightness | Loss-filter cutoff, dark to glassy |
-| (0, +13) | Jawari | Bridge buzz |
-| (+20, +13) | Mix | Dry/wet |
-| (−20, −5) | Snap / Glide | Retune behaviour |
-| (0, −5) | Bypass mode | True (relay) / Trails (buffered, strings ring out) |
-| (+20, −5) | Expression target | Bend / Swell |
+| (−20, +38) knob | Mix | Dry/wet |
+| (0, +38) knob | Sustain | String decay time |
+| (+20, +38) knob | Strings | 6 to 24 active strings |
+| (−20, +13) toggle | Tuning | Follow / Key / Drone (key and drone set in the secondary layer) |
+| (0, +13) knob | Jawari | Bridge buzz |
+| (+20, +13) toggle | Brightness | Dark / Warm / Glassy loss-filter voicings |
+| (0, −5) toggle | Retune | Snap / Glide / Lock |
 | band at −18 | 12 note LEDs | C to B, lit for the notes the strings are tuned to |
 | (−20, −35) | Effect LED | |
 | (−20, −49) | Bypass footswitch | Momentary SPST-NO soft-touch, wired to hand-solder pads |
@@ -91,9 +93,10 @@ and +13, toggles at −5, 12.5 mm knobs.
 | left wall | OUT L, OUT R | Alchemist jack positions |
 | top wall | DC | Alchemist DC position |
 
-All six pots go to the MCU; no pot is in the audio path. There is no
-screen, so secondary settings (key, drone set, latch behaviour) are set by
-holding a footswitch and turning a knob, with the note LEDs as the display.
+All four pots and the three toggles go to the MCU; none is in the audio
+path. There is no screen, so secondary settings (key, drone set, bypass
+mode True / Trails, expression target Bend / Swell, latch behaviour) are
+set by a footswitch gesture and a knob, with the note LEDs as the display.
 
 ## Bypass
 
@@ -116,7 +119,7 @@ double and the rest is the same:
 | Group | EUR |
 |---|---:|
 | H750, codec, flash, buck, LDO, op-amps, passives | 22.00 |
-| 6 pots, 3 toggles, 2 momentary footswitches, 6 knobs, 13 LEDs + 12 light pipes | 19.00 |
+| 4 pots, 3 ON-ON-ON toggles, 2 momentary footswitches, 4 knobs, 13 LEDs + 12 light pipes | 19.00 |
 | 5 jacks, relay, footswitch pads | 7.00 |
 | 125B, Tayda drilled and UV printed | 9.20 |
 | PCB (4-layer), SMT assembly, freight, packaging allocation | 9.00 |
@@ -141,8 +144,7 @@ labour. Nothing carted.
 6. **Dry through the codec.** No analog dry path.
 7. **One face standard with The Alchemist and The Relic**: the same knob,
    toggle, jack, DC, LED and footswitch coordinates, each pedal using the
-   subset it needs (table in `pcb-plan.md`). Open consequence: with four
-   jacks, only the centre toggle position is usable on the Harp.
+   subset it needs (table in `pcb-plan.md`).
 8. **QUADSPI on bank 2** (PB2, PC11, PE7–PE10), so SAI1 keeps the
    Timekeeper's PE2–PE6 and the audio firmware ports unchanged.
 9. **Mono in, stereo out** in hardware: one input buffer and one ADC driver
@@ -167,16 +169,23 @@ labour. Nothing carted.
     panel LEDs fitted at final assembly, soft-touch footswitches on
     hand-solder pads, IN jack ring to ground. Each shared symbol carries
     the design part and the JLCPCB part (`LCSC`, `JLCPCB Manufacturer`,
-    `JLCPCB Part #`) The Alchemist records. The toggles are not yet changed:
-    The Alchemist's Taiway 100-DP6 is ON-ON-ON, and the Harp's toggles are
-    two-position (see Still open).
+    `JLCPCB Part #`) The Alchemist records.
+13. **Face as The Alchemist's** (2026-10-06): four knobs (Mix, Sustain,
+    Strings, Jawari) and three Taiway 100-DP6-T200B1M2QE ON-ON-ON toggles,
+    Tuning (Follow / Key / Drone) and Brightness (Dark / Warm / Glassy) at
+    (±20, +13) and Retune (Snap / Glide / Lock) at (0, −5). The Relic's six
+    knobs and three toggles did not fit four jacks: the outer lower-row
+    pots' pins land on the upper jacks' rear pads and the outer toggles sit
+    over the jack bodies. Each toggle is read on two MCU inputs. Bypass mode
+    and expression target move to the secondary layer; Fifths becomes a
+    drone set.
 
 ## Still open
 
-- Toggle row: keep only the centre toggle, or give up a jack (see
-  `pcb-plan.md`, face schedule). Then pick the toggle part: a two-position
-  Taiway 100-series toggle on The Alchemist's footprint, or the same
-  ON-ON-ON part with a second input pin per toggle.
+- Secondary layer: it now holds more settings than there are knobs (key
+  or drone set, spread, bypass mode, expression target and range, Hold
+  latching, Brightness trim, chord commit time, output trim). Pick a second
+  page or drop some, on the prototype.
 - [CONFIRM] items on the schematic: QUADSPI bank 2 alternate functions,
   AK4621 unused right input, THS4522 unused channel.
 

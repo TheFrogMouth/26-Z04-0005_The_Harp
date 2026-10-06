@@ -24,24 +24,23 @@ Jawari adds a soft clip and a short extra delay tap inside each string loop. At 
 \section{Chord Tracker and Tuning Manager}
 The tracker turns the front-end signal into a 12-bin chroma vector and matches it to a chord set with hysteresis, reusing the Timekeeper STFT where it fits [CHD-1]. The first-release chord set is major, minor, power chord, dominant 7th, minor 7th, sus2, sus4 and single note [CHD-2]. A chord is adopted only after it has been stable for the commit time, 400\,ms by default, and silence never changes the chord [CHD-3]. The accuracy target is at least 90\,\% of chords correct within 600\,ms on clean DI recordings of open and barre chords. On distorted input accuracy is measured and recorded but is not a release gate [CHD-4].
 
-A 1024-point frame at 44.1\,kHz has 43\,Hz bins, wider than a semitone below about C4. The tracker must still resolve pitch classes down to E2, by a longer frame, harmonic weighting or another method [CHD-5]. It runs outside the audio ISR or is spread over hops, so it never pushes a block over budget [CHD-6], and it does not run in Key, Drone or Fifths mode [CHD-7].
+A 1024-point frame at 44.1\,kHz has 43\,Hz bins, wider than a semitone below about C4. The tracker must still resolve pitch classes down to E2, by a longer frame, harmonic weighting or another method [CHD-5]. It runs outside the audio ISR or is spread over hops, so it never pushes a block over budget [CHD-6], and it does not run in Key or Drone mode [CHD-7].
 
-The tuning manager has four modes on the Tuning knob [TUN-1]:
+The tuning manager has three modes on the Tuning toggle, \req{SW101} [TUN-1]:
 \begin{description}
-  \item[Follow] the strings take the tracked chord;
-  \item[Key] the diatonic scale of a set key, 12 roots in major or natural minor [TUN-2];
-  \item[Drone] a fixed open tuning from a set: sitar tarab, open D, open G, DADGAD, root and fifth [TUN-3];
-  \item[Fifths] stacked fifths from a set root.
+  \item[Follow (up)] the strings take the tracked chord;
+  \item[Key (centre)] the diatonic scale of a set key, 12 roots in major or natural minor [TUN-2];
+  \item[Drone (down)] a fixed open tuning from a set: sitar tarab, open D, open G, DADGAD, root and fifth, stacked fifths [TUN-3].
 \end{description}
-Allocation is deterministic, with the low strings taking the root and fifth first [TUN-4]. A string whose pitch is still in the new set keeps it [TUN-5]. In Snap, only strings that have decayed below a silence threshold retune [TUN-7]. In Glide, sounding strings slide to the new pitch over about 150\,ms with the loop gain held constant [TUN-8]. Hold freezes the tuning completely [TUN-9]. The Key, Drone and Fifths modes do not depend on the tracker, so the pedal is useful even if Follow proves weak on some playing.
+Allocation is deterministic, with the low strings taking the root and fifth first [TUN-4]. A string whose pitch is still in the new set keeps it [TUN-5]. In Snap, only strings that have decayed below a silence threshold retune [TUN-7]. In Glide, sounding strings slide to the new pitch over about 150\,ms with the loop gain held constant [TUN-8]. Lock, the Retune toggle's third position, stops all retuning while the sustain stays on the knob [TUN-11]; Hold freezes the tuning too, and also makes the sustain infinite [TUN-9]. The Key and Drone modes do not depend on the tracker, so the pedal is useful even if Follow proves weak on some playing.
 
 \section{Stereo, Mix and Output}
 Strings are panned by pitch, low to the left and high to the right, at constant power, with the spread width as a secondary setting [OUT-1]. A player using OUT~L alone must still hear every string [OUT-2]. The dry signal is centred [OUT-3]. The proposed mix law holds the dry at unity from fully counter-clockwise to noon while the wet rises, then fades the dry with the wet at full [OUT-4]. With Mix fully counter-clockwise the output level matches true bypass within $\pm$0.5\,dB [OUT-5].
 
 \section{Controls and Display}
-The six pots are scanned at 1\,kHz or more per channel and smoothed, with 2\,\% dead bands at each end [POT-2]. Continuous parameters are slewed in the audio path [POT-3], and stepped ones (Tuning mode, string count) have at least half a step of hysteresis [POT-4]. Toggles are debounced over 20\,ms [TGL-1]. Footswitches act on the press edge [FSW-1]. Bypass toggles the effect [FSW-2]. Hold is momentary by default and latching as a secondary setting; while it is active the tuning is frozen and sustain is infinite [FSW-3]. Expression bends all strings up to a whole tone or swells the wet level, selected by the expression-target setting [EXP-2, EXP-3].
+The four pots are scanned at 1\,kHz or more per channel and smoothed, with 2\,\% dead bands at each end [POT-2]. Continuous parameters are slewed in the audio path [POT-3], and the string count has at least half a step of hysteresis [POT-4]. Each ON-ON-ON toggle is read on two inputs and debounced over 20\,ms; a Brightness change cross-fades the loss filter [TGL-1, STR-6]. Footswitches act on the press edge [FSW-1]. Bypass toggles the effect [FSW-2]. Hold is momentary by default and latching as a secondary setting; while it is active the tuning is frozen and sustain is infinite [FSW-3]. Expression bends all strings up to a whole tone or swells the wet level, selected by the expression-target setting [EXP-2, EXP-3].
 
-With no screen, secondary settings are reached by holding both footswitches for 2\,s [FSW-5]. In that layer each knob takes a second job: key, drone set or fifths root; spread width; Hold latch; chord commit time; bend range; and output trim [SEC-1]. On return each pot is ignored until it is moved past its stored value, so leaving the layer never jumps a parameter [SEC-2].
+With no screen, secondary settings are reached by holding both footswitches for 2\,s [FSW-5]. In that layer each knob takes a second job: key or drone set; spread width; bypass mode (True or Trails); and expression target and bend range [SEC-1]. On return each pot is ignored until it is moved past its stored value, so leaving the layer never jumps a parameter [SEC-2].
 
 The twelve note LEDs show every pitch class the strings are tuned to, with the root brighter [DSP-1]. A chord change shows as it is committed; in Snap mode the LEDs show the target tuning [DSP-2]. In the secondary layer the LEDs show the value of the knob last moved [DSP-3]. LED switching must not be audible, because the LEDs sit over the jack bodies [DSP-5].
 

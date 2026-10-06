@@ -1,7 +1,7 @@
 \chapter{Schematic Design}\label{ch:schematic}
 
 \section{Sheets}
-The schematic is a root sheet plus seven sheets in \texttt{kicad/the\_harp/}. They were generated on 2026-10-04 by \texttt{scripts/harp\_schematic/build.py} from \texttt{harp\_spec.py}. The circuits are the Timekeeper's unless noted; the bypass is The Relic's. Every pin carries a label or power symbol on a short stub (The Relic's convention). The generator re-reads its own output and traces every net against the specification: no shorts, no single-pin nets, every pin assigned. It reports 195 parts, 48 global nets and no problems. The sheets have not yet been opened in KiCad, and ERC has not been run.
+The schematic is a root sheet plus seven sheets in \texttt{kicad/the\_harp/}. They were generated on 2026-10-04 by \texttt{scripts/harp\_schematic/build.py} from \texttt{harp\_spec.py}. The circuits are the Timekeeper's unless noted; the bypass is The Relic's. Every pin carries a label or power symbol on a short stub (The Relic's convention). The generator re-reads its own output and traces every net against the specification: no shorts, no single-pin nets, every pin assigned. It reports 192 parts, 49 global nets and no problems. The sheets have not yet been opened in KiCad, and ERC has not been run.
 
 \begin{table}[H]
   \small\renewcommand{\arraystretch}{1.12}
@@ -10,7 +10,7 @@ The schematic is a root sheet plus seven sheets in \texttt{kicad/the\_harp/}. Th
     \toprule
     \fmtophead{\#} & \fmtophead{Sheet} & \fmtophead{Contents} \\
     \midrule
-    1 & Controls and LEDs & Pots \req{RV101}--\req{RV106} across $+$3V3, wipers through 1\,k$\Omega$ / 100\,nF to PA0--PA5; toggles \req{SW101}--\req{SW103} to GND on PE12--PE14; 12 note LEDs \req{D101}--\req{D112} on PD0--PD11 through 1\,k$\Omega$ \\
+    1 & Controls and LEDs & Pots \req{RV101}--\req{RV103} and \req{RV105} across $+$3V3, wipers through 1\,k$\Omega$ / 100\,nF to PA0, PA1, PA2, PA4; ON-ON-ON toggles \req{SW101}--\req{SW103} with both commons to GND and pins 3 and 4 to PE11--PE15 and PB10; 12 note LEDs \req{D101}--\req{D112} on PD0--PD11 through 1\,k$\Omega$ \\
     2 & MCU & \req{U201} STM32H750VBT6 with five 100\,nF and a 4.7\,\textmu F, two 2.2\,\textmu F VCAP, VDDA/VREF$+$ through a 220\,$\Omega$ ferrite, 25\,MHz HSE, NRST 100\,nF, BOOT0 10\,k$\Omega$, Segger needle SWD with 22\,$\Omega$; \req{U202} W25Q128 on QUADSPI bank~2 \\
     3 & Power & \req{J401} DC jack, SMAJ10CA TVS, PMEG3010 series Schottky, TPS54202 buck to $+$3V3, NCP718 LDO to $+$5V; $+$9V feeds the relay and LEDs \\
     4 & Jacks and Bypass & Four NMJ6HCD2 jacks \req{J402}--\req{J404}, \req{J406} with ESD on each; relay bypass on OUT~L (\req{K401}, G6K-2F-Y); effect and Hold LED drivers; two footswitch pad pairs \req{J405}, \req{J407} with RC filtering; expression buffer \req{U401} (MCP6001) \\
@@ -58,9 +58,9 @@ The Harp's input stage is the Timekeeper's, mono, with the same values (\req{U70
     SAI1 to codec & PE2 MCLK\_A, PE4 FS\_A, PE5 SCK\_A, PE6 SD\_A, PE3 SD\_B & As the Timekeeper \\
     Codec control & PC14 CCLK, PC15 CDTI, PB8 CSN, PB4 PDN & As the Timekeeper, bit-banged \\
     QUADSPI bank~2 & PB2 CLK, PC11 BK2\_NCS, PE7--PE10 BK2\_IO0--3 & PF6--PF10 do not exist on LQFP-100, and bank~1 IO2 is only on PE2, which SAI1 MCLK takes. Single flash on bank~2 (FSEL = 1). Alternate functions to be confirmed in CubeMX \\
-    Pots & PA0--PA5 (ADC1) & The Timekeeper's six-channel scan \\
+    Pots & PA0, PA1, PA2, PA4 (ADC1) & Mix, Sustain, Strings, Jawari; PA3 and PA5 free \\
     Expression & PB1 (ADC1) & As the Timekeeper \\
-    Toggles & PE12, PE13, PE14 & Internal pull-ups \\
+    Toggles & PE11/PE12 Tuning, PE13/PE14 Retune, PE15/PB10 Brightness & Two inputs each, internal pull-ups: up = A low B high, centre = both low, down = A high B low \\
     Footswitches & PB12 bypass, PB13 hold & Internal pull-ups, 1\,k$\Omega$ / 100\,nF RC \\
     Relay & PC10 & As the Timekeeper \\
     LEDs & PC6 effect, PC7 hold & TIM3 CH1/CH2 PWM, through 2N7002 from $+$9V \\

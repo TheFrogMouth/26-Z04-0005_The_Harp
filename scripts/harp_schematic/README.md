@@ -14,7 +14,7 @@ description of the circuit.
 
 ```bash
 python3 scripts/harp_schematic/build.py
-# sheets 7 parts 195 global nets 48 problems 0
+# sheets 7 parts 192 global nets 49 problems 0
 ```
 
 Sheet and symbol UUIDs are derived from the sheet name and reference, so a

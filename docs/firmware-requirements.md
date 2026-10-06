@@ -87,7 +87,7 @@ the smaller figure; the brief should be corrected once it is measured.
 | STR-3 | Tuning accuracy ±2 cents across the range, at every Brightness setting (the loss filter's phase delay is compensated). | T | 1 |
 | STR-4 | Excitation: the front-end signal reaches each string through a resonant band-pass at the string's pitch. A string shall respond to a played note whose fundamental or a low partial (up to the 4th *(TBC)*) coincides with its pitch, and stay at least 20 dB *(TBC)* quieter for a note a semitone away. No envelope or onset trigger. | T, L | 1 |
 | STR-5 | Sustain sets the string decay, T60 from 0.5 s to 20 s *(TBC)*, log taper. Infinite sustain (Hold) shall be stable: string energy bounded, no runaway, indefinitely. | T | 1 |
-| STR-6 | Brightness sets the loss-filter cutoff, dark to glassy, roughly 800 Hz to 12 kHz *(TBC)*, without changing pitch (STR-3) or, by more than 3 dB, level. | T, L | 1 |
+| STR-6 | Brightness (SW103) selects one of three loss-filter voicings, **Dark / Warm / Glassy**, roughly 1.2 kHz / 4 kHz / 10 kHz cutoff *(TBC by ear)*, without changing pitch (STR-3) or, by more than 3 dB, level. A change cross-fades over 50 ms *(TBC)* with no click (AUD-9). | T, L | 1 |
 | STR-7 | Strings sets 6 to 24 active strings in steps of 1. Strings removed fade out over ≥ 50 ms; strings added start silent. Which strings drop is set by the tuning manager (TUN-6). | T | 1 |
 | STR-8 | Inactive strings cost no CPU beyond a branch. | I | 2 |
 
@@ -109,22 +109,23 @@ the smaller figure; the brief should be corrected once it is measured.
 | CHD-4 | Accuracy target on a reference set of clean DI recordings of open and barre chords in standard tuning: ≥ 90 % of chords correct within 600 ms. On distorted input: best effort, measured and recorded, not a release gate (the brief's open item). | T | 2 |
 | CHD-5 | Low-note resolution. A 1024-point frame at 44.1 kHz has 43 Hz bins, wider than a semitone below about C4. The tracker shall resolve pitch classes down to E2, by a longer frame (4096 points), harmonic weighting or another method; whichever is chosen is justified by CHD-4. | T | 1 |
 | CHD-6 | The tracker runs outside the audio ISR or spread over hops so that it never pushes a block over the CPU budget (PRF-1). | B | 1 |
-| CHD-7 | The tracker is not needed in Key, Drone or Fifths mode and shall not run there, to save CPU. | I | 2 |
+| CHD-7 | The tracker is not needed in Key or Drone mode and shall not run there, to save CPU. | I | 2 |
 
 ### 5.5 Tuning manager
 
 | ID | Requirement | Ver. | Pri. |
 |---|---|---|---|
-| TUN-1 | Four modes on the Tuning knob: **Follow** (strings take the tracked chord), **Key** (the diatonic scale of a set key), **Drone** (a fixed open tuning chosen from a set), **Fifths** (stacked fifths from a set root). | T | 1 |
+| TUN-1 | Three modes on the Tuning toggle (SW101): **Follow** (up: strings take the tracked chord), **Key** (centre: the diatonic scale of a set key), **Drone** (down: a fixed open tuning chosen from a set, TUN-3). | T | 1 |
 | TUN-2 | Key mode: 12 roots × major / natural minor *(TBC: modes beyond these)*. | T | 1 |
-| TUN-3 | Drone sets, first release: sitar tarab (Sa–Re–Ga–Ma–Pa scale on a set root), open D (D A D F♯ A D), open G, DADGAD, root + fifth *(TBC: list to be settled by ear)*. | T | 1 |
+| TUN-3 | Drone sets, first release: sitar tarab (Sa–Re–Ga–Ma–Pa scale on a set root), open D (D A D F♯ A D), open G, DADGAD, root + fifth, stacked fifths on a set root *(TBC: list to be settled by ear)*. | T | 1 |
 | TUN-4 | Allocation is deterministic: the same pitch-class set and string count always give the same tuning. Low strings take the root and fifth first; pitches are spread over the bank range (STR-2). | T | 1 |
 | TUN-5 | Minimum movement: on a change of set, a string whose pitch is still in the new set keeps it. | T | 1 |
 | TUN-6 | When Strings is reduced, strings are dropped from the top of the range first, keeping the root and fifth. | T | 2 |
-| TUN-7 | **Snap** (SW101): only strings below a silence threshold (−60 dB re. full scale *(TBC)*) retune; sounding strings keep their pitch until they decay below it. | T | 1 |
-| TUN-8 | **Glide** (SW101): sounding strings slide to the new pitch over the glide time, 150 ms default *(TBC)*, without clicks (AUD-9) and with the loop gain held constant during the slide. | T, L | 1 |
+| TUN-7 | **Snap** (SW102 up): only strings below a silence threshold (−60 dB re. full scale *(TBC)*) retune; sounding strings keep their pitch until they decay below it. | T | 1 |
+| TUN-8 | **Glide** (SW102 centre): sounding strings slide to the new pitch over the glide time, 150 ms default *(TBC)*, without clicks (AUD-9) and with the loop gain held constant during the slide. | T, L | 1 |
 | TUN-9 | Hold (FSW-3) freezes the tuning: no retune of any kind while Hold is active. | T | 1 |
-| TUN-10 | A tuning change in Key, Drone or Fifths (a new key or set chosen by the user) follows Snap / Glide like a chord change. | T | 1 |
+| TUN-10 | A tuning change in Key or Drone (a new key or set chosen by the user) follows Snap / Glide like a chord change. | T | 1 |
+| TUN-11 | **Lock** (SW102 down): no retune of any kind, as TUN-9, while the sustain stays on the Sustain knob. Leaving Lock retunes to the current set through Glide. | T | 1 |
 
 ### 5.6 Stereo, mix and output
 
@@ -140,28 +141,23 @@ the smaller figure; the brief should be corrected once it is measured.
 
 ### 6.1 Pots
 
-All six pots are B10K on ADC1 PA0–PA5, the Timekeeper's six-channel DMA
-scan (`controls.c`).
+Four pots, B10K on ADC1 PA0, PA1, PA2, PA4, read with the Timekeeper's DMA
+scan (`controls.c`). PA3 and PA5 are free.
 
 | ID | Requirement | Ver. | Pri. |
 |---|---|---|---|
-| POT-1 | Pot map: PA0 Tuning (RV101), PA1 Sustain (RV102), PA2 Strings (RV103), PA3 Brightness (RV104), PA4 Jawari (RV105), PA5 Mix (RV106), final assignment confirmed against the schematic. | I | 1 |
+| POT-1 | Pot map: PA0 Mix (RV101), PA1 Sustain (RV102), PA2 Strings (RV103), PA4 Jawari (RV105). | I | 1 |
 | POT-2 | Scan at ≥ 1 kHz per channel, smoothed so that a still pot causes no audible change and no change in a stepped value. Dead bands of 2 % at each end so every pot reaches 0 and 1. | T, B | 1 |
 | POT-3 | Continuous parameters are slewed in the audio path (one-pole, 20 ms *(TBC)*) so knob moves are click-free. | T | 1 |
-| POT-4 | Stepped parameters (Tuning mode, string count) use hysteresis of at least half a step, so a pot on a boundary never toggles. | T | 1 |
-| POT-5 | Tuning knob: four equal zones Follow / Key / Drone / Fifths, counter-clockwise to clockwise. | T | 1 |
-
-The brief says the Tuning knob has "sub-positions (key, drone set) inside
-each" mode, and also that key and drone set are secondary settings. This
-draft takes the second reading (POT-5, SEC-1): at 270° of travel, twelve
-keys inside one quarter of the knob would be 5–6° each. See open item 3.
+| POT-4 | Stepped parameters (string count, secondary-layer selections) use hysteresis of at least half a step, so a pot on a boundary never toggles. | T | 1 |
 
 ### 6.2 Toggles
 
 | ID | Requirement | Ver. | Pri. |
 |---|---|---|---|
-| TGL-1 | SW101 Snap / Glide, SW102 Bypass mode True / Trails, SW103 Expression target Bend / Swell; SPDT on-on to GPIO with pull-ups, read at start-up and on change, debounced 20 ms. | T, B | 1 |
-| TGL-2 | Changing SW102 while the effect is off follows the bypass sequence (BYP-3) so the relay never switches with signal on the DSP outputs. | T, B | 1 |
+| TGL-1 | Three Taiway 100-DP6 ON-ON-ON toggles: SW101 Tuning Follow / Key / Drone (PE11 A, PE12 B), SW102 Retune Snap / Glide / Lock (PE13, PE14), SW103 Brightness Dark / Warm / Glassy (PE15, PB10). Commons to GND, internal pull-ups. Decode: A low, B high = up; both low = centre; A high, B low = down; both high (between positions) keeps the last state. Read at start-up and on change, debounced 20 ms. | T, B | 1 |
+| TGL-2 | A toggle change acts like a knob move: Tuning through TUN-10, Retune at once, Brightness through its cross-fade (STR-6), never with a click (AUD-9). | T, B | 1 |
+| TGL-3 | Changing the bypass-mode secondary setting while the effect is off follows the bypass sequence (BYP-3), so the relay never switches with signal on the DSP outputs. | T, B | 1 |
 
 ### 6.3 Footswitches
 
@@ -180,9 +176,9 @@ Two momentary SPST-NO switches: Bypass (J105, face −20, −49) and Hold
 
 | ID | Requirement | Ver. | Pri. |
 |---|---|---|---|
-| EXP-1 | Expression on the buffered TRS input to the ADC (PA6), smoothed as POT-2. | B | 1 |
-| EXP-2 | **Bend** (SW103): heel = no bend, toe = all strings up a whole tone *(TBC: range and direction as a secondary setting)*, pitch kept within STR-3 at both ends. | T, L | 1 |
-| EXP-3 | **Swell** (SW103): heel = wet silent, toe = wet at the Mix setting. Dry unaffected. | T | 1 |
+| EXP-1 | Expression on the buffered TRS input to the ADC (PB1), smoothed as POT-2. | B | 1 |
+| EXP-2 | **Bend** (expression target, secondary setting): heel = no bend, toe = all strings up a whole tone *(TBC: range and direction as a secondary setting)*, pitch kept within STR-3 at both ends. | T, L | 1 |
+| EXP-3 | **Swell** (expression target, secondary setting): heel = wet silent, toe = wet at the Mix setting. Dry unaffected. | T | 1 |
 | EXP-4 | Heel and toe calibration as a secondary setting, stored (PER-1), so any 10–50 kΩ pedal reaches both ends. | T, B | 2 |
 | EXP-5 | With no pedal plugged in the expression shall have no effect. Whether the input reads a detectable rail when empty depends on the buffer circuit; if it does not, the firmware ignores expression until a value change larger than 10 % is seen *(TBC with the schematic)*. | B | 1 |
 
@@ -193,7 +189,7 @@ and set with the knobs, with the note LEDs as the display.
 
 | ID | Requirement | Ver. | Pri. |
 |---|---|---|---|
-| SEC-1 | In the secondary layer the knobs set: Tuning → key / drone set / fifths root (the meaning follows the current mode), Sustain → spread width, Strings → Hold latch on/off, Brightness → chord commit time, Jawari → expression bend range, Mix → output level trim (−6 to +6 dB) *(all TBC)*. | T | 1 |
+| SEC-1 | In the secondary layer the knobs set: Mix → key / drone set (the meaning follows the Tuning toggle), Sustain → spread width, Strings → bypass mode (counter-clockwise half True, clockwise half Trails), Jawari → expression target and range (counter-clockwise half Swell, clockwise half Bend with the range growing to the end) *(all TBC; Hold latching, Brightness trim, chord commit time and output trim need a second page or a default, see open item 3)*. The toggles keep their primary job in the layer. | T | 1 |
 | SEC-2 | Entering and leaving the layer never changes a primary parameter: on return each pot is ignored until it is moved past the stored value (pick-up), and the effect LED shows a pot that has not been picked up. | T | 1 |
 | SEC-3 | The layer is left by the same gesture or after 10 s with no knob moved. Values are saved on leaving (PER-1). | T | 1 |
 | SEC-4 | The note LEDs show the value of the knob last moved (DSP-3). | T | 1 |
@@ -221,8 +217,8 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
 
 | ID | Requirement | Ver. | Pri. |
 |---|---|---|---|
-| BYP-1 | **True bypass** (SW102 = True): effect off = relay de-energised. | B | 1 |
-| BYP-2 | **Trails bypass** (SW102 = Trails): the relay stays energised; effect off feeds dry to both outputs, stops feeding the strings and lets them ring out at their current decay (or hold, FSW-4). | T, B | 1 |
+| BYP-1 | **True bypass** (bypass mode = True, the default): effect off = relay de-energised. | B | 1 |
+| BYP-2 | **Trails bypass** (bypass mode = Trails, secondary setting): the relay stays energised; effect off feeds dry to both outputs, stops feeding the strings and lets them ring out at their current decay (or hold, FSW-4). | T, B | 1 |
 | BYP-3 | Every relay change follows: fade the DSP outputs to silence (10 ms *(TBC)*), switch, wait for the contacts to settle (operate time plus bounce from the G6K datasheet, 5 ms *(TBC)*), fade back in. No mute transistor. | T, B | 1 |
 | BYP-4 | A footswitch tap reaches the relay within 20 ms. | B | 1 |
 | BYP-5 | Bypass in True mode produces no click at OUT L louder than −60 dBu *(TBC)* with the input shorted. | B | 2 |
@@ -268,7 +264,7 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
 | ARC-2 | Reused from the Timekeeper: the `audio_fx_t` chain and ISR parameter hand-off, `controls.c`, the hum filter, the noise gate, the STFT from `fx_spectral.c`, the QSPI preset storage, the AK4621EF driver, the IWDG and crash record, the DWT budget timing. How they are shared (copy with a recorded source commit, or a shared library) is open item 7. | I | 1 |
 | ARC-3 | Not carried over: SDRAM, FMC, TFT and LVGL, USB, MIDI, encoders, the knob board link, the mod matrix and the other effects. | I | 1 |
 | ARC-4 | Parameter changes from the main loop reach the ISR by the Timekeeper's staging pattern (stage, adopt at block boundary); no locks in the audio path. | I | 1 |
-| ARC-5 | `BOARD_TIMEKEEPER` build: the note LEDs are drawn on the Timekeeper's TFT, the six controls on its six ADC channels, Hold and Bypass on its existing switches. | B | 1 |
+| ARC-5 | `BOARD_TIMEKEEPER` build: the note LEDs are drawn on the Timekeeper's TFT, the four pots on four of its control channels and the three toggles in the UI simulator *(TBC)*, Hold and Bypass on its existing switches. | B | 1 |
 
 ## 13. Verification
 
@@ -283,8 +279,8 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
 ## 14. Order of work
 
 1. **On the Timekeeper board** (`BOARD_TIMEKEEPER`): string bank with a
-   fixed tuning, then Jawari, then the tuning manager in Key / Drone /
-   Fifths (none of which needs the tracker). Measure PRF-2. Listen; settle
+   fixed tuning, then Jawari, then the tuning manager in Key / Drone
+   (neither needs the tracker). Measure PRF-2. Listen; settle
    the *(TBC)* ranges in sections 5 and 6.
 2. Chord tracker and Follow mode, offline first against the reference
    recordings (VER-3, VER-4), then on the board.
@@ -301,9 +297,10 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
 2. **Internal flash.** Whether the Harp image fits 128 KB (PLT-3). Build
    the Timekeeper image without TFT, LVGL, USB and SDRAM code to get a
    first number.
-3. **Tuning knob sub-positions.** Brief wording allows the key or drone
-   set to be chosen on the Tuning knob itself; this draft puts them in the
-   secondary layer (POT-5, SEC-1).
+3. **Secondary layer size.** With Tuning, Brightness and Retune on
+   toggles, bypass mode and expression target join the secondary layer,
+   which now has more settings than knobs (SEC-1). Choose a second page or
+   defaults on the prototype.
 4. **Secondary-layer gesture.** Both footswitches together (FSW-5) keeps
    each switch's single job simple; the alternative, holding Bypass,
    delays every bypass action until release. Decide on the prototype.
@@ -329,11 +326,11 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
 | String bank, 24 strings, no envelope trigger | STR-1 – STR-8 |
 | Jawari | JAW-1 – JAW-3 |
 | Chord tracker, ~400 ms commit, hysteresis | CHD-1 – CHD-7 |
-| Tuning manager, Follow / Key / Drone / Fifths, Snap / Glide | TUN-1 – TUN-10 |
+| Tuning manager, Follow / Key / Drone, Snap / Glide / Lock | TUN-1 – TUN-11 |
 | Stereo spread | OUT-1, OUT-2 |
 | Front end | FE-1, FE-2 |
 | Framework: chain, presets in QSPI, smoothing, expression, UI simulator | ARC-2, ARC-4, PER-1 – PER-5, POT-3, EXP-1 – EXP-5, ARC-5 |
-| Controls and face | POT-1 – POT-5, TGL-1, TGL-2, FSW-1 – FSW-5 |
+| Controls and face | POT-1 – POT-4, TGL-1 – TGL-3, FSW-1 – FSW-5 |
 | Secondary settings by footswitch + knob | SEC-1 – SEC-5 |
 | 12 note LEDs, effect LED | DSP-1 – DSP-6 |
 | Relay true bypass, Trails, fades, no mute transistor | BYP-1 – BYP-7 |
