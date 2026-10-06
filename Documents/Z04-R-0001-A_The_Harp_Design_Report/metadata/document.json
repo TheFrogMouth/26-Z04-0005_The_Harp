@@ -1,0 +1,44 @@
+{
+  "build": {
+    "last_build_at": null,
+    "last_build_status": "never",
+    "latest_pdf_path": null,
+    "pdf_outdated": true
+  },
+  "created_at": "2026-10-06T14:37:44.616794+00:00",
+  "document_id": "Z04-R-0001-A_The_Harp_Design_Report",
+  "document_number": "Z04-R-0001-A",
+  "document_type": "R",
+  "git": {
+    "default_branch": "main",
+    "last_sync_at": null,
+    "last_sync_message": "",
+    "last_sync_status": "not_configured",
+    "remote_url": "https://github.com/TheFrogMouth/26-Z04-0005_The_Harp.git",
+    "repo_path": "/Users/allanwaller/Documents/Comp Repo Directory/_git_sources/_git_sources/26-Z04-0005_The_Harp/Documents/Z04-R-0001-A_The_Harp_Design_Report"
+  },
+  "latest_output_pdf_path": null,
+  "main_source_file": "docs/main.tex",
+  "output_filename": "Z04-R-0001-A_The_Harp_Design_Report.pdf",
+  "prefill": {
+    "created_at": "2026-10-06T14:37:44.616794+00:00",
+    "generated_sections_dir": "docs/generated",
+    "source": "openai",
+    "used": true
+  },
+  "prefill_created_at": "2026-10-06T14:37:44.616794+00:00",
+  "prefill_source": "openai",
+  "prefill_used": true,
+  "project_id": 9,
+  "project_number": "26-Z04-0005",
+  "revision": "A",
+  "revision_summary": null,
+  "revision_updated_at": "2026-10-06T14:37:44.616794+00:00",
+  "source_repo_path": "/Users/allanwaller/Documents/Comp Repo Directory/_git_sources/_git_sources/26-Z04-0005_The_Harp/Documents/Z04-R-0001-A_The_Harp_Design_Report",
+  "status": "Draft",
+  "template_id": "default",
+  "template_source": "templates-repo",
+  "template_version": "791ad84",
+  "title": "The Harp Design Report",
+  "updated_at": "2026-10-06T14:37:44.616794+00:00"
+}
