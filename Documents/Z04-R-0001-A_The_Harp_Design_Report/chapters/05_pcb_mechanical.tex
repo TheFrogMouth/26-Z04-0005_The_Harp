@@ -1,0 +1,102 @@
+\chapter{PCB and Mechanical Design}\label{ch:pcb}
+
+\section{One Board or Two}
+The jacks decide it. The Alchemist and The Relic mount the four 1/4-inch jacks and the DC jack on the underside of the pot board, so the wall-hole heights are set by the board's depth under the face (about 10 to 12\,mm on the pot bushings) plus the jack's axis height. To put the Harp's jacks at the same positions and heights, they must sit on a board hanging at that same depth, and that is the board the pots are on.
+
+\begin{description}
+  \item[Plan A, one board (default).] The Alchemist and Relic 56 by 90\,mm outline with the DC tab and four layers, carrying the pots, toggles, LEDs, jacks, relay, analogue section and the whole digital section.
+  \item[Plan B, fallback.] A face board keeps everything that touches the enclosure: pots, toggles, LEDs, jacks, DC, relay and the input and output buffers. The H750, flash, codec and power move to a DSP board below it, joined by a 24-way 1.0\,mm FFC as the Timekeeper's two boards are. The face board keeps The Relic's outline exactly, so jacks and pots do not move. The cost is a second PCB, two FFC connectors and the cable (about 3\,EUR at 100) and about 8\,mm more depth, which the 125B has.
+\end{description}
+
+\begin{table}[H]
+  \small\renewcommand{\arraystretch}{1.12}
+  \caption{Plan A part count estimate.}\label{tab:fit}
+  \begin{tabularx}{\textwidth}{@{}L r >{\raggedright\arraybackslash}p{40mm}@{}}
+    \toprule
+    \fmtophead{Section} & \fmtophead{Parts} & \fmtophead{Source} \\
+    \midrule
+    H750VBT6, decoupling, crystal, NRST, BOOT0, SWD pads & 25 & Timekeeper U201 group \\
+    W25Q128 QSPI flash & 3 & Timekeeper U901 \\
+    Power: TVS, series Schottky, buck, LDO, filters & 22 & Timekeeper U301/U302 \\
+    AK4621EF codec, OPA2348, THS4522, passives & 55 & Timekeeper IC401, U401, U501, U601 \\
+    Input buffer, anti-alias, expression buffer, ESD & 20 & Timekeeper U801, U702 \\
+    Output buffers L/R, reconstruction, ESD & 18 & Timekeeper U802 \\
+    Relay bypass, footswitch RC & 12 & Relic K401 group, Alchemist relay \\
+    6 pots, 3 toggles, 13 LEDs, LED resistors & 35 & Relic and new \\
+    5 jacks, 2 footswitch pad pairs & 7 & Alchemist \\
+    \midrule
+    Total & $\approx$195 & \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+The Relic places 120 parts on this outline with room to spare in the digital zone. The Timekeeper's DSP board carries 145 parts, including SDRAM and a 144-pin MCU, on a larger board. About 195 parts, most of them 0402 and 0603 with a 14 by 14\,mm LQFP-100, on 56 by 90\,mm less the DC tab is tight but expected to fit. SMD parts may sit over the jack bodies (The Relic's rule), and the four-layer stack keeps routing off the top layer. The go/no-go is placement: if the codec and MCU groups cannot be zoned away from the input buffer with the LEDs in place, the design moves to Plan B rather than being squeezed.
+
+\section{Enclosure and Datum}
+Taken unchanged from The Relic:
+\begin{itemize}
+  \item Tayda 125B: face 64.7 by 119.8\,mm, cavity 60.3 by 115.4\,mm, corner bosses avoided. These are nominal figures until a casting is measured.
+  \item Datum: the enclosure centre is PCB (148.5, 105), face X right, face Y up; the drill/place origin and grid origin are there.
+  \item Board: 56 by 90\,mm, corner radius 2\,mm, face X $\pm$28, Y $+52$ to $-38$, with an 18\,mm tab to $+56.5$ under the DC jack. Components on the top side only, except the jacks. Through-hole parts only where no jack body is underneath; SMD parts over the jack bodies are allowed.
+\end{itemize}
+
+\section{Shared Face Standard}
+One face standard covers The Alchemist, The Relic and The Harp. Every position is a shared Tayda drill coordinate, and each pedal uses the subset it needs.
+
+\begin{table}[H]
+  \small\renewcommand{\arraystretch}{1.12}
+  \caption{Face schedule across the three pedals.}\label{tab:face}
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{36mm} >{\raggedright\arraybackslash}p{26mm} >{\raggedright\arraybackslash}p{26mm} L@{}}
+    \toprule
+    \fmtophead{Position} & \fmtophead{Alchemist} & \fmtophead{Relic} & \fmtophead{Harp} \\
+    \midrule
+    Knob row $+38$ & Rate, Depth, Wave & Wow, Flutter, Age & \req{RV101} Tuning, \req{RV102} Sustain, \req{RV103} Strings \\
+    Knob row $+13$ & Mode toggle, Exp/offset pot, Resonance toggle & Saturation, Mix, Hiss & \req{RV104} Brightness, \req{RV105} Jawari, \req{RV106} Mix \\
+    Toggle row $-5$ & -- & Dropout, Age range, Hiss on & \req{SW101}, \req{SW102}, \req{SW103} \\
+    Right wall, lower jack (Y $-22.5$) & IN & IN & \req{J402} IN \\
+    Right wall, upper jack (Y $-3.5$) & Expression & -- & \req{J406} EXP \\
+    Left wall, lower jack (Y $-22.5$) & OUT & OUT & \req{J403} OUT L \\
+    Left wall, upper jack (Y $-3.5$) & Sync & -- & \req{J404} OUT R \\
+    Top wall DC (X 0) & DC & DC & \req{J401} DC \\
+    LEDs ($\pm$20, $-35$) & Effect, Rate & Effect, -- & \req{D113} Effect, \req{D114} Hold \\
+    Footswitches ($\pm$20, $-49$) & Bypass, Tap & Bypass, -- & Bypass (\req{J405}), Hold (\req{J407}) \\
+    Note LED band (Y $-18$) & -- & -- & \req{D101}--\req{D112}, X $-27.5$ to $+27.5$ at 5\,mm pitch \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\section{Toggle and Jack Conflict}\label{sec:toggleconflict}
+The Relic's outer toggles at ($\pm$20, $-5$) sit over the upper jack pair. With the NMJ6HCD2 jacks the pads no longer collide: the jack pin rows are at Y $+4.6$ and $-11.6$, X $\pm$13.3 to $\pm$26, 6.6\,mm from the toggle row. However, the jack bodies on the underside fill face X $\pm$6.5 to $\pm$30, Y $+5.6$ to $-12.6$, and the outer toggles' through-hole pins and fillets at X $\pm$15.3 to $\pm$24.7 would land on them. The centre toggle's outer pins (X $\pm$4.7, pad edge $\pm$6.1) clear the bodies by only about 0.4\,mm. The Alchemist avoids this because its toggles sit in the knob row at Y $+13$.
+
+The Harp needs all four jacks, so only the centre toggle (0, $-5$) is usable. The recommendation is to keep \req{SW102} (Bypass mode) at the centre and make Snap/Glide and the expression target hold-plus-knob settings in the secondary layer. Both outer toggles remain on the schematic until this is decided; removing them is two symbols and two GPIO.
+
+The note LED band at Y $-18$ also lies over the lower jack bodies, which is why the LEDs must be SMD. The outer LEDs at X $\pm$27.5 are 2.6\,mm from the cavity wall at $\pm$30.15; the light-pipe flange (Bivar PLP1 or Dialight 515 series, 3\,mm) is to be checked against the 5\,mm pitch and the wall. If it does not fit, the fallback is 11 LEDs with C at the centre, or a 4.5\,mm pitch.
+
+\section{Zoning}
+Signal runs right to left as on The Alchemist: IN and EXP enter on the right wall, OUT~L and OUT~R leave on the left. The input and expression buffers sit at the right-hand end of the lower band next to \req{J402}/\req{J406}, the output buffers and the relay at the left-hand end next to \req{J403}/\req{J404}, and the H750 with the flash in the middle. The codec, its VCOM buffers and the ADC driver sit under the pot rows. The buck converter and its inductor sit on the DC tab, as far from the input buffer as the board allows.
+
+{\footnotesize
+\begin{verbatim}
+ Y +52 ------------------------------------------  DC tab: TVS, Schottky, buck and inductor
+       | RV101        RV102        RV103        |  row +38
+       |   LDO 5VA, +3V3 distribution           |
+       | RV104        RV105        RV106        |  row +13
+       | codec IC501 + U501, ADC driver U601    |  under the pot rows
+       | SW101        SW102        SW103        |  row -5
+       | --- LED strip D101-D112 at -18 ------- |  over the jack bodies: SMD only
+       | OUT U702  |   H750 U201     | IN U701  |  output side left, input side right
+       | relay K401|   flash U202    | EXP U401 |
+       | D113 (-35)  J405  W201 SWD  J407  D114 |
+ Y -38 ------------------------------------------
+\end{verbatim}
+}
+
+\section{Layout Rules}
+Carried over from The Relic:
+\begin{itemize}
+  \item Four layers: F.Cu for signals and parts, In1.Cu solid GND that is never cut, In2.Cu for power ($+$9V, $+$3V3, $+$3V3A, $+$5VA), B.Cu for longer signals and the jacks.
+  \item Every SMD GND pad gets its own via to In1.Cu; through-hole parts use their barrels. No via under the SWD needle pads.
+  \item Analogue and digital are separated by placement, not by a split plane. The codec's analogue side and the input and output buffers face the jacks; the MCU, flash and buck stay in the centre and at the DC end. QSPI, SAI and SWD tracks stay inside the MCU zone.
+  \item The buck's switching node is kept off B.Cu over the jack bodies.
+  \item DRC uses The Relic's \texttt{.kicad\_dru}.
+\end{itemize}
