@@ -1,0 +1,58 @@
+\chapter{Firmware Design}\label{ch:firmware}
+
+This chapter describes the firmware that \texttt{docs/firmware-requirements.md} (Draft~A) asks for. That document is the requirement record, with an ID, a verification method and a priority for every requirement. Requirement IDs are quoted here in brackets. No firmware has been written yet.
+
+\section{Platform and Structure}
+The target is the STM32H750VBT6 at 480\,MHz with the FPU and caches on and no external SDRAM [PLT-1]. Every audio buffer, delay line and FFT work area lives in internal RAM, and no DMA buffer is placed in DTCM, which no DMA reaches [PLT-2]. The image must fit the H750's 128\,KB internal flash with at least 16\,KB free at the first Harp build. Executing from QSPI is a fallback to raise as a decision, not to take silently [PLT-3]. All buffers are sized for 24 strings at compile time, with no dynamic allocation after start-up [PLT-6].
+
+One source tree builds for two boards, \texttt{BOARD\_HARP} and \texttt{BOARD\_TIMEKEEPER}, with pin maps, relay polarity, LED driver and codec wiring selected by a board header [PLT-4]. Every DSP and control module builds and runs on a desktop compiler with no HAL, CMSIS or heap, so the engine can be tested without hardware [PLT-5].
+
+The engine modules are new: string bank, Jawari, chord tracker, tuning manager, and stereo, mix and output [ARC-1]. Reused from the Timekeeper are the \texttt{audio\_fx\_t} chain and its ISR parameter hand-off, \texttt{controls.c}, the hum filter, the noise gate, the STFT from \texttt{fx\_spectral.c}, the QSPI preset storage, the AK4621EF driver, the watchdog and crash record, and the DWT budget timing [ARC-2]. SDRAM, FMC, the TFT and LVGL, USB, MIDI, encoders, the knob-board link, the modulation matrix and the other effects are not carried over [ARC-3]. Parameters reach the ISR through the Timekeeper's staging pattern, adopted at a block boundary, with no locks in the audio path [ARC-4].
+
+\section{Audio Path}
+The AK4621EF runs over SAI1 at 44.1\,kHz and 24 bits using the Timekeeper's driver [AUD-1]. The input is the codec's left ADC; the right ADC is ignored [AUD-2]. Processing runs in the SAI DMA half and complete callbacks on the Timekeeper's 64-frame blocks [AUD-3]. The dry signal passes at unity gain ($\pm$0.1\,dB). Apart from the mix, the bypass fades and the output limiter it is not processed: the hum filter and gate act only on the signal feeding the strings [AUD-4]. The dry-path latency target is 3\,ms jack to jack [AUD-5]. A wet-bus limiter keeps the output from clipping, and the wet level is normalised for the number of active strings, so the Strings knob changes density rather than loudness [AUD-6]. Denormals are flushed, and a string whose state becomes non-finite is reset to silence within one block [AUD-7].
+
+The design brief gives the latency as one block of about 6\,ms at 256 samples. The Timekeeper's \texttt{AUDIO\_BUFFER\_SIZE} of 256 is in half-words of interleaved stereo, which is 64 frames or about 1.5\,ms per DMA half. The firmware requirements use the smaller figure, and the brief is to be corrected once latency is measured.
+
+\section{String Bank and Jawari}
+Each of the 24 strings is a waveguide (Karplus--Strong) loop: a fractional delay line, a one-pole loss filter and a tuning allpass [STR-1]. The proposed pitch range is C2 (65.4\,Hz) to C6 (1047\,Hz). Delay memory is about 24 strings $\times$ 700 samples $\times$ 4 bytes, roughly 70\,KB, inside the brief's 100\,KB [STR-2]. Tuning must hold within $\pm$2 cents across the range at every Brightness setting, which means compensating the loss filter's phase delay [STR-3].
+
+The front-end signal excites each string through a resonant band-pass at the string's pitch. A string responds to a played note whose fundamental or low partial coincides with its pitch, and stays at least 20\,dB quieter for a note a semitone away. There is no onset trigger [STR-4]. Sustain sets the decay (T60 from about 0.5 to 20\,s), and infinite sustain under Hold must stay bounded indefinitely [STR-5]. Brightness moves the loss-filter cutoff from about 800\,Hz to 12\,kHz without changing pitch, or level by more than 3\,dB [STR-6]. Strings sets 6 to 24 active strings; strings that are removed fade out over at least 50\,ms [STR-7].
+
+Jawari adds a soft clip and a short extra delay tap inside each string loop. At zero the loop is linear, like a harp; at full it buzzes like a sitar bridge [JAW-1]. The loop must stay stable and in tune at every setting [JAW-2], and louder notes should buzz more, as on a real bridge [JAW-3].
+
+\section{Chord Tracker and Tuning Manager}
+The tracker turns the front-end signal into a 12-bin chroma vector and matches it to a chord set with hysteresis, reusing the Timekeeper STFT where it fits [CHD-1]. The first-release chord set is major, minor, power chord, dominant 7th, minor 7th, sus2, sus4 and single note [CHD-2]. A chord is adopted only after it has been stable for the commit time, 400\,ms by default, and silence never changes the chord [CHD-3]. The accuracy target is at least 90\,\% of chords correct within 600\,ms on clean DI recordings of open and barre chords. On distorted input accuracy is measured and recorded but is not a release gate [CHD-4].
+
+A 1024-point frame at 44.1\,kHz has 43\,Hz bins, wider than a semitone below about C4. The tracker must still resolve pitch classes down to E2, by a longer frame, harmonic weighting or another method [CHD-5]. It runs outside the audio ISR or is spread over hops, so it never pushes a block over budget [CHD-6], and it does not run in Key, Drone or Fifths mode [CHD-7].
+
+The tuning manager has four modes on the Tuning knob [TUN-1]:
+\begin{description}
+  \item[Follow] the strings take the tracked chord;
+  \item[Key] the diatonic scale of a set key, 12 roots in major or natural minor [TUN-2];
+  \item[Drone] a fixed open tuning from a set: sitar tarab, open D, open G, DADGAD, root and fifth [TUN-3];
+  \item[Fifths] stacked fifths from a set root.
+\end{description}
+Allocation is deterministic, with the low strings taking the root and fifth first [TUN-4]. A string whose pitch is still in the new set keeps it [TUN-5]. In Snap, only strings that have decayed below a silence threshold retune [TUN-7]. In Glide, sounding strings slide to the new pitch over about 150\,ms with the loop gain held constant [TUN-8]. Hold freezes the tuning completely [TUN-9]. The Key, Drone and Fifths modes do not depend on the tracker, so the pedal is useful even if Follow proves weak on some playing.
+
+\section{Stereo, Mix and Output}
+Strings are panned by pitch, low to the left and high to the right, at constant power, with the spread width as a secondary setting [OUT-1]. A player using OUT~L alone must still hear every string [OUT-2]. The dry signal is centred [OUT-3]. The proposed mix law holds the dry at unity from fully counter-clockwise to noon while the wet rises, then fades the dry with the wet at full [OUT-4]. With Mix fully counter-clockwise the output level matches true bypass within $\pm$0.5\,dB [OUT-5].
+
+\section{Controls and Display}
+The six pots are scanned at 1\,kHz or more per channel and smoothed, with 2\,\% dead bands at each end [POT-2]. Continuous parameters are slewed in the audio path [POT-3], and stepped ones (Tuning mode, string count) have at least half a step of hysteresis [POT-4]. Toggles are debounced over 20\,ms [TGL-1]. Footswitches act on the press edge [FSW-1]. Bypass toggles the effect [FSW-2]. Hold is momentary by default and latching as a secondary setting; while it is active the tuning is frozen and sustain is infinite [FSW-3]. Expression bends all strings up to a whole tone or swells the wet level, selected by the expression-target setting [EXP-2, EXP-3].
+
+With no screen, secondary settings are reached by holding both footswitches for 2\,s [FSW-5]. In that layer each knob takes a second job: key, drone set or fifths root; spread width; Hold latch; chord commit time; bend range; and output trim [SEC-1]. On return each pot is ignored until it is moved past its stored value, so leaving the layer never jumps a parameter [SEC-2].
+
+The twelve note LEDs show every pitch class the strings are tuned to, with the root brighter [DSP-1]. A chord change shows as it is committed; in Snap mode the LEDs show the target tuning [DSP-2]. In the secondary layer the LEDs show the value of the knob last moved [DSP-3]. LED switching must not be audible, because the LEDs sit over the jack bodies [DSP-5].
+
+\section{Bypass, Persistence and Faults}
+True bypass de-energises the relay [BYP-1]. Trails keeps it energised, feeds dry to both outputs and lets the strings ring out [BYP-2]. Every relay change follows the fade, switch, settle and fade-in sequence [BYP-3], and a footswitch tap reaches the relay within 20\,ms [BYP-4]. The relay drive stays low from reset until the codec is running [BYP-6].
+
+Secondary settings and the expression calibration are kept in the W25Q128 with a version number and CRC, as in the Timekeeper's \texttt{preset.c} [PER-1]. Writes are deferred, rate-limited and alternate between sectors, so a power loss leaves the previous copy valid [PER-2]. A corrupt record loads defaults and never blocks start-up [PER-3].
+
+Power to audio should take no more than about 500\,ms [SYS-1]. The independent watchdog and crash record come from the Timekeeper. A watchdog reset drops the relay, so the guitar still reaches OUT~L [SYS-2]. A codec or SAI failure at start-up leaves the relay off and shows a fault pattern on the note LEDs [SYS-3].
+
+\section{Budgets and Verification}
+The worst-case audio callback, with 24 strings, full Jawari, Glide active and the tracker running, must take no more than 60\,\% of the block period. It is measured with the DWT cycle counter over a ten-minute playing test [PRF-1], first on the Timekeeper board before the Harp schematic is frozen [PRF-2]. Engine state and buffers must stay within 75\,\% of internal RAM [PRF-3].
+
+A host test suite runs with warnings as errors, as the Timekeeper's does [VER-1]. It covers string pitch accuracy, stability under Hold and full Jawari, excitation selectivity, tuning allocation, Snap and Glide, the chord tracker on synthetic chords and reference recordings, the mix law and limiter, pot pick-up, and the settings CRC [VER-2]. An offline render tool runs the engine over a WAV file for listening tests and tracker evaluation [VER-3]. A production test mode, entered by holding both footswitches at power-up, walks the LEDs, toggles the relay, shows each control on the LEDs and outputs a 1\,kHz tone [VER-5].

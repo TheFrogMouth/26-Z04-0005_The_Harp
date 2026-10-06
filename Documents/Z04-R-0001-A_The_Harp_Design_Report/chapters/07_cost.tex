@@ -1,0 +1,23 @@
+\chapter{Cost Target}\label{ch:cost}
+
+The estimate starts from The Relic's (46.20\,EUR at a quantity of 100). The electronics roughly double; the enclosure, assembly and packaging are the same. No part has been carted and the BOM has not been generated, so these are planning figures only.
+
+\begin{table}[H]
+  \small\renewcommand{\arraystretch}{1.12}
+  \caption{Unit cost estimate at 100.}\label{tab:cost}
+  \begin{tabularx}{\textwidth}{@{}L r@{}}
+    \toprule
+    \fmtophead{Group} & \fmtophead{EUR} \\
+    \midrule
+    H750, codec, flash, buck, LDO, op-amps, passives & 22.00 \\
+    6 pots, 3 toggles, 2 momentary footswitches, 6 knobs, 13 LEDs and 12 light pipes & 19.00 \\
+    5 jacks, relay, footswitch pads & 7.00 \\
+    125B enclosure, Tayda drilled and UV printed & 9.20 \\
+    PCB (four layers), SMT assembly, freight, packaging allocation & 9.00 \\
+    \midrule
+    Estimate & 66.00 \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+At a retail price of 299\,EUR, which the category supports, this leaves roughly 165\,EUR gross before labour. Plan~B (two boards) would add about 3\,EUR. The BOM will be exported with The Relic's exporter, adapted, once the schematic has passed ERC; this chapter is then replaced by the exported cost.

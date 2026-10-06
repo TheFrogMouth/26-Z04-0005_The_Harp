@@ -1,30 +1,49 @@
 % ============================================================
 %  The Harp Design Report
-%  Z04-R-0001-A\_The\_Harp\_Design\_Report  --  The Frogmouth
+%  Z04-R-0001-A  --  The Frogmouth
 %
-%  Build:  latexmk -xelatex main.tex      (or lualatex)
-%  Style:  packages/frogmouth.sty -- see README.md for font notes.
+%  Build:  xelatex -interaction=nonstopmode -output-directory=build main.tex
+%          Run from inside this folder; build/chapters must exist first.
+%  Style:  packages/frogmouth.sty -- requires XeLaTeX or LuaLaTeX for the
+%          brand fonts; add [nofonts] below to build under pdfLaTeX.
+%
+%  Sources: docs/design-brief.md, docs/pcb-plan.md and
+%  docs/firmware-requirements.md in this repository, and the schematic in
+%  kicad/the_harp/. Where this report and those documents disagree, they
+%  are the working record and this report is updated to match.
 % ============================================================
 \documentclass[11pt, a4paper, openany]{report}
 
 \usepackage[bone]{packages/frogmouth} % [paper] for plain white, [nofonts] to build under pdflatex
+
+\usepackage{longtable}
+\usepackage{amsmath}
+\usepackage{float}    % [H] table placement
+\emergencystretch=3em
 
 \fmdocid{Z04-R-0001-A}
 
 % Title-page plate, keyed to the document type. Guarded so this file still
 % builds against an older bundled frogmouth.sty that predates cover schemes.
 \ifdefined\fmcoverscheme\fmcoverscheme{report}\fi
+\fmproject{The Harp}
 
 \title{The Harp Design Report}
-\author{allanwaller}
+\author{Allan Waller}
 
+\setlength{\headheight}{14pt}
 \begin{document}
 
 \fmtitlepage
-  {The Harp Design Report}
-  {}
-  {allanwaller \textemdash\ The Frogmouth}
-  {Z04-R-0001-A}
+  {The Harp\\Design Report}
+  {Concept, hardware architecture, schematic, board plan and firmware
+   requirements for The Harp, a digital sympathetic-string pedal: up to 24
+   modelled strings that ring when the guitar plays their note, retuned
+   continuously to the chord being played. This revision records the design
+   as a first generated schematic and a seeded board; nothing has been
+   built, placed or measured.}
+  {Allan Waller \textemdash\ The Frogmouth \textemdash\ Made in Belgium}
+  {Z04-R-0001-A \textemdash\ Revision A \textemdash\ \today}
 
 % ---------- Contents ----------
 \pagenumbering{roman}
@@ -33,19 +52,13 @@
 
 \pagenumbering{arabic}
 
-\include{chapters/01_Introduction}
-\include{chapters/02_Objectives}
-\include{chapters/03_Technical_Requirements}
-\include{chapters/04_Under_the_Hood_FilteringProcessing}
-\include{chapters/05_Design_Overview}
-\include{chapters/06_Core_Effect_1}
-\include{chapters/07_Core_Effect_2}
-\include{chapters/08_Core_Effect_3}
-\include{chapters/09_Transciption_to_UI}
-\include{chapters/10_Risks__Mitigations}
-\include{chapters/11_Next_Steps}
-
-
-% No appendices
+\include{chapters/01_executive_summary}
+\include{chapters/02_concept_requirements}
+\include{chapters/03_hardware_architecture}
+\include{chapters/04_schematic_design}
+\include{chapters/05_pcb_mechanical}
+\include{chapters/06_firmware_design}
+\include{chapters/07_cost}
+\include{chapters/08_risks_open_items}
 
 \end{document}

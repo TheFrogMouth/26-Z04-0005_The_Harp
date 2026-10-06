@@ -1,0 +1,40 @@
+\chapter{Hardware Architecture}\label{ch:architecture}
+
+\section{Why This Hardware}
+The Harp reuses two existing designs. The digital and audio chain is the Timekeeper's DSP board (25-Z01-0001, \texttt{kicad/dsp\_board}); the board outline, face, jacks, pots and relay bypass are The Relic's, which in turn follow The Alchemist.
+
+\begin{itemize}
+  \item \textbf{Same codec, flash, buck converter, input and output stages and relay bypass} as the Timekeeper and The Relic, so most of the schematic is copied.
+  \item \textbf{No SDRAM.} The strings need about 100\,KB of delay memory and the STM32H750 has 1\,MB of internal RAM. Dropping SDRAM removes the external memory bus and about 60 MCU pins.
+  \item \textbf{STM32H750VBT6 in LQFP-100} instead of the Timekeeper's LQFP-144: the same core and firmware with a new pin map.
+  \item \textbf{No TFT.} Twelve note LEDs replace the screen.
+  \item \textbf{Pots, not encoders.} Encoders make sense only with a screen that shows the value. Pots also keep The Relic's face, parts and feel, and the H750 reads them on ADC1 PA0--PA5, the six-channel DMA scan that the Timekeeper's \texttt{controls.c} already runs.
+  \item \textbf{Jacks and DC jack at The Alchemist's positions and heights.} This is the main reason the design is one board (Chapter~\ref{ch:pcb}).
+\end{itemize}
+
+\section{Design Decisions}
+\begin{table}[H]
+  \small\renewcommand{\arraystretch}{1.12}
+  \caption{Decisions recorded on 2026-10-04 and 2026-10-05.}\label{tab:decisions}
+  \begin{tabularx}{\textwidth}{@{}r L@{}}
+    \toprule
+    \fmtophead{\#} & \fmtophead{Decision} \\
+    \midrule
+    1 & One relay with true bypass on OUT~L only, and Trails mode in firmware for stereo use. Two relays were rejected as a cost and current increase for a case most players do not have. \\
+    2 & One board on The Alchemist's outline, with jacks and pots on it, unless placement fails; the fallback is a two-board stack (Chapter~\ref{ch:pcb}). \\
+    3 & Pots, not encoders. \\
+    4 & Twelve top-side SMD LEDs with 3\,mm light pipes for the note display. They sit over the jack bodies, where through-hole parts are not allowed. \\
+    5 & STM32H750VBT6 (LQFP-100) with no SDRAM; everything else in the digital and audio chain is the Timekeeper's. \\
+    6 & Dry signal through the codec; no analogue dry path. \\
+    7 & One face standard with The Alchemist and The Relic: the same knob, toggle, jack, DC, LED and footswitch coordinates, each pedal using the subset it needs. With four jacks, only the centre toggle position is usable on the Harp. \\
+    8 & QUADSPI on bank~2 (PB2, PC11, PE7--PE10), so SAI1 keeps the Timekeeper's PE2--PE6 and the audio firmware ports unchanged. \\
+    9 & Mono in, stereo out in hardware: one input buffer and one ADC-driver channel; the codec's right ADC input is parked at VCOM. \\
+    10 & Input op-amp OPA2365 on the 5\,V rail, replacing the Timekeeper's OPA1656. With the Timekeeper's H2 fix and R603/R604 at 620\,$\Omega$, the jack-to-ADC gain is 0.59, so a 4.8\,Vpp input just reaches full scale. A 9\,V buffer supply was ruled out (2026-10-05). \\
+    11 & No line or synth input pad. The input takes up to 4.8\,Vpp (about $+7$\,dBu); hotter sources are turned down at the source. A switchable pad was rejected because it would put a switch at the high-impedance input (2026-10-05). \\
+    12 & Shared parts follow The Alchemist: Neutrik NMJ6HCD2 jacks, Omron G6K-2F-Y relay, Alpha RD901F-40-15R1-B10K pots, Kingbright WP710A10ID panel LEDs fitted at final assembly, soft-touch footswitches on hand-solder pads, IN jack ring to ground. Each shared symbol carries the design part and the JLCPCB part. The toggles are not yet changed (Chapter~\ref{ch:risks}). \\
+    \bottomrule
+  \end{tabularx}
+\end{table}
+
+\section{Bypass Circuit}
+The bypass is The Relic's circuit with The Alchemist's relay. An Omron G6K-2F-Y (DC5, 5.2\,mm tall, SMD) is driven by a 2N7002 from the MCU. The 5\,V coil is fed from $+9$\,V through 150\,$\Omega$, and a pull-down holds the relay off through boot. Pole~A switches OUT~L between IN and the DSP output; pole~B disconnects the input buffer from IN and grounds it. The firmware keeps the relay drive low from reset until the codec is running and its outputs are silent, so a pedal that fails to start still passes the guitar to OUT~L.
