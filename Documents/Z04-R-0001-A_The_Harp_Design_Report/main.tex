@@ -1,0 +1,51 @@
+% ============================================================
+%  The Harp Design Report
+%  Z04-R-0001-A\_The\_Harp\_Design\_Report  --  The Frogmouth
+%
+%  Build:  latexmk -xelatex main.tex      (or lualatex)
+%  Style:  packages/frogmouth.sty -- see README.md for font notes.
+% ============================================================
+\documentclass[11pt, a4paper, openany]{report}
+
+\usepackage[bone]{packages/frogmouth} % [paper] for plain white, [nofonts] to build under pdflatex
+
+\fmdocid{Z04-R-0001-A}
+
+% Title-page plate, keyed to the document type. Guarded so this file still
+% builds against an older bundled frogmouth.sty that predates cover schemes.
+\ifdefined\fmcoverscheme\fmcoverscheme{report}\fi
+
+\title{The Harp Design Report}
+\author{allanwaller}
+
+\begin{document}
+
+\fmtitlepage
+  {The Harp Design Report}
+  {}
+  {allanwaller \textemdash\ The Frogmouth}
+  {Z04-R-0001-A}
+
+% ---------- Contents ----------
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+
+\pagenumbering{arabic}
+
+\include{chapters/01_Introduction}
+\include{chapters/02_Objectives}
+\include{chapters/03_Technical_Requirements}
+\include{chapters/04_Under_the_Hood_FilteringProcessing}
+\include{chapters/05_Design_Overview}
+\include{chapters/06_Core_Effect_1}
+\include{chapters/07_Core_Effect_2}
+\include{chapters/08_Core_Effect_3}
+\include{chapters/09_Transciption_to_UI}
+\include{chapters/10_Risks__Mitigations}
+\include{chapters/11_Next_Steps}
+
+
+% No appendices
+
+\end{document}

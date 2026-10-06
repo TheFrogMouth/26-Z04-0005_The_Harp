@@ -1,0 +1,25 @@
+{
+  "document_id": "Z04-R-0001-A_The_Harp_Design_Report",
+  "document_number": "Z04-R-0001-A",
+  "title": "The Harp Design Report",
+  "doc_type": "R",
+  "purpose": "test",
+  "context_notes": "",
+  "structure": [
+    "Introduction",
+    "Objectives",
+    "Technical Requirements",
+    "Under the Hood Filtering/Processing",
+    "Design Overview",
+    "Core Effect 1",
+    "Core Effect 2",
+    "Core Effect 3",
+    "Transciption to UI",
+    "Risks & Mitigations",
+    "Next Steps"
+  ],
+  "generated_at": "2026-10-06T14:37:40.428135+00:00",
+  "model": "gpt-5-thinking",
+  "appendices": [],
+  "references": []
+}

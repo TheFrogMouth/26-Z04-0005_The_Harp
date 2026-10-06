@@ -1,0 +1,391 @@
+% ============================================================
+%  frogmouth.sty — The Frogmouth document aesthetic
+%  Warm retro-futurist instrumentation, in print.
+%  Requires XeLaTeX or LuaLaTeX (fontspec).
+%
+%  Options:
+%    bone   (default) bone page tint, ink text
+%    paper            plain white paper (for offset print / archive)
+%    nofonts          skip fontspec, use whatever the class provides
+%
+%  Document metadata (set in the preamble, all optional):
+%    \fmdocid{Z02-R-0001-A}   footer document identifier
+%    \fmproject{The Castle}   running-head project name
+%    \fmbrand{The Frogmouth}  running-head brand (default shown)
+%    \fmlogo{resources/logo-ink}  title-page logo path (no extension)
+% ============================================================
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{frogmouth}[2026/07/26 v1.1 The Frogmouth document style]
+
+\newif\iffm@bone \fm@bonetrue
+\newif\iffm@fonts \fm@fontstrue
+\DeclareOption{bone}{\fm@bonetrue}
+\DeclareOption{paper}{\fm@bonefalse}
+\DeclareOption{nofonts}{\fm@fontsfalse}
+\ProcessOptions\relax
+
+\RequirePackage[table,dvipsnames]{xcolor}
+\RequirePackage{geometry}
+\RequirePackage[explicit]{titlesec}
+\RequirePackage{titletoc}
+\RequirePackage{enumitem}
+\RequirePackage{booktabs}
+\RequirePackage{tabularx}
+\RequirePackage{array}
+\RequirePackage{fancyhdr}
+\RequirePackage{graphicx}
+\RequirePackage{tikz}
+\RequirePackage{microtype}
+\RequirePackage{ragged2e}
+\RequirePackage{etoolbox}
+\RequirePackage[hidelinks]{hyperref}
+
+% ---------- 0. DOCUMENT METADATA ----------------------------
+% Settable per document; used by the running head, footer and title page.
+\newcommand{\fm@brand}{The Frogmouth}
+\newcommand{\fmbrand}[1]{\renewcommand{\fm@brand}{#1}}
+\newcommand{\fm@project}{}
+\newcommand{\fmproject}[1]{\renewcommand{\fm@project}{#1}}
+\newcommand{\fm@docid}{}
+\newcommand{\fmdocid}[1]{\renewcommand{\fm@docid}{#1}}
+\newcommand{\fm@logo}{resources/logo-ink}
+\newcommand{\fmlogo}[1]{\renewcommand{\fm@logo}{#1}}
+
+% ---------- 1. COLOUR ---------------------------------------
+% Brand Guidelines v2. Orange is the brand; surfaces are warm.
+\definecolor{fmorange}{HTML}{FF6B00}   % Safety Orange — primary
+\definecolor{fmink}{HTML}{14120F}      % Ink — body text
+\definecolor{fmcharcoal}{HTML}{1D1A16} % Warm Charcoal — panels
+\definecolor{fmblack}{HTML}{0D0C0A}
+\definecolor{fmbone}{HTML}{F0EDE4}     % Bone — page canvas
+\definecolor{fmbonetwo}{HTML}{E9E5D9}  % deeper bone — blocks
+\definecolor{fmmuted}{HTML}{6E6A60}    % warm grey — secondary text
+\definecolor{fmviolet}{HTML}{B04DFF}   % neon violet  (<=5% of a page)
+\definecolor{fmgreen}{HTML}{3BFF6E}    % neon phosphor
+\definecolor{fmamber}{HTML}{FFB13D}    % readout amber
+\definecolor{fmred}{HTML}{FF4F47}      % warm red — heritage
+\definecolor{fmhairline}{HTML}{D3CFC4}  % ~16% ink on bone, flattened for print
+
+\iffm@bone
+  \pagecolor{fmbone}
+\fi
+\color{fmink}
+
+% ---------- 2. TYPE -----------------------------------------
+% Bebas Neue = display only. Barlow Condensed = every label.
+% Barlow = body. Nothing else.
+\iffm@fonts
+  \RequirePackage{fontspec}
+  \defaultfontfeatures{Ligatures=TeX}
+  % The brand fonts ship with the document in resources/fonts, so a build needs
+  % nothing installed and works identically on macOS, Windows and Linux -- and
+  % anyone who clones the project repository can build the PDF straight away.
+  % \fmfontpath can be redefined before loading this package if the fonts live
+  % elsewhere; leave it empty to fall back to system-installed copies.
+  \providecommand{\fmfontpath}{resources/fonts/}
+  \IfFileExists{\fmfontpath BebasNeue-Regular.ttf}{}{\renewcommand{\fmfontpath}{}}
+  \setmainfont{Barlow}[
+    Path = \fmfontpath, Extension = .ttf,
+    UprightFont = *-Regular, BoldFont = *-Bold,
+    ItalicFont = *-Italic, BoldItalicFont = *-BoldItalic]
+  \newfontfamily\fmdisplay{BebasNeue}[
+    Path = \fmfontpath, Extension = .ttf, UprightFont = *-Regular]
+  \newfontfamily\fmcond{BarlowCondensed}[
+    Path = \fmfontpath, Extension = .ttf,
+    UprightFont = *-SemiBold, BoldFont = *-Black, ItalicFont = *-SemiBoldItalic]
+  \newfontfamily\fmcondlight{BarlowCondensed}[
+    Path = \fmfontpath, Extension = .ttf, UprightFont = *-Regular]
+  % DSEG7 is numerals-only; used for readout figures if you want them.  It is
+  % not part of the bundle, so probe for the file rather than asking fontspec
+  % for the font: MiKTeX answers \IfFontExistsTF for an absent font by trying to
+  % *generate* it (miktex-makemf/maketfm on "[DSEG7Classic-Bo.cfg"), and that
+  % failure aborts the build under -halt-on-error.  \IfFileExists is a plain
+  % file probe on either engine, so an absent DSEG7 falls back silently -- the
+  % same test line 86 already uses for the bundled fonts.
+  \IfFileExists{\fmfontpath DSEG7Classic-Bold.ttf}
+    {\newfontfamily\fmreadout{DSEG7Classic}[
+       Path = \fmfontpath, Extension = .ttf, UprightFont = *-Bold]}
+    {\let\fmreadout\fmdisplay}
+\else
+  \let\fmdisplay\bfseries
+  \let\fmcond\bfseries
+  \let\fmcondlight\mdseries
+  \let\fmreadout\ttfamily
+\fi
+
+% Letterspacing helpers. All UI/label type in this brand is tracked.
+% microtype's \textls cannot letterspace under XeTeX ("Letterspacing currently
+% doesn't work with xetex"), which made every tracked label a fatal error.
+% fontspec's LetterSpace feature is native to both XeTeX and LuaTeX, so the
+% brand's tracking works on either engine.  Values are percent of an em
+% (microtype's thousandths divided by ten), so the design is unchanged.
+\iffm@fonts
+  \newcommand{\fmsetls}[1]{\addfontfeature{LetterSpace=#1}}
+\else
+  % No fontspec under the [nofonts] pdflatex fallback: keep the text, drop the
+  % tracking rather than failing the build.
+  \newcommand{\fmsetls}[1]{}
+\fi
+\newcommand{\fmtrack}[2]{{\fmsetls{#1}#2}}
+\newcommand{\fmls}[2][16]{\fmtrack{#1}{#2}}
+% micro label: 8.5pt, .22em tracking, uppercase — overlines, meta, headers
+\newcommand{\fmmicro}[1]{{\fmcondlight\fontsize{8.5}{11}\selectfont\fmtrack{22}{\MakeUppercase{#1}}}}
+\newcommand{\fmmicromuted}[1]{{\color{fmmuted}\fmmicro{#1}}}
+% raw variant: tracking and size only, no \MakeUppercase -- for running heads,
+% where the mark text is uppercased when the mark is set (see \chaptermark).
+% Nesting fancyhdr's \nouppercase inside \MakeUppercase is fragile and dies
+% with "\f@nch@noUppercase has an extra }" on some page breaks.
+\newcommand{\fmmicroraw}[1]{{\fmcondlight\fontsize{8.5}{11}\selectfont\fmtrack{22}{#1}}}
+% label: 10pt, .1em tracking — run-in headings, table headers
+\newcommand{\fmlabel}[1]{{\fmcond\fontsize{10}{12}\selectfont\fmtrack{10}{\MakeUppercase{#1}}}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.62\baselineskip}
+\linespread{1.16}
+\frenchspacing
+
+% ---------- 3. PAGE -----------------------------------------
+\geometry{a4paper, top=26mm, bottom=24mm, inner=27mm, outer=32mm,
+          headsep=9mm, footskip=13mm, marginparsep=5mm, marginparwidth=22mm}
+
+% Hairline rule — the brand's structural element (1px, ~16% ink)
+\newcommand{\fmrule}{\par\nointerlineskip\vspace{2pt}%
+  {\color{fmhairline}\hrule height 0.4pt}\vspace{2pt}\par}
+\newcommand{\fmrulewide}{\par\nointerlineskip{\color{fmink}\hrule height 1.2pt}\par}
+
+% Orange tab — the number chip that precedes every heading
+\newcommand{\fmtab}[1]{%
+  \colorbox{fmorange}{\raisebox{0pt}[7.4pt][2.6pt]{\color{black}%
+  \fmcond\fontsize{9.5}{9.5}\selectfont\fmtrack{20}{\MakeUppercase{#1}}}}}
+
+% ---------- 4. HEADINGS -------------------------------------
+\titleformat{\chapter}[display]
+  {\vspace*{-6mm}}
+  {\fmtab{\thechapter}\hspace{9pt}\fmmicromuted{Chapter \thechapter}}
+  {8pt}
+  {\fmdisplay\fontsize{46}{44}\selectfont\fmtrack{0.8}{#1}}
+  [\vspace{-2pt}\fmrulewide\vspace{-4pt}]
+\titleformat{name=\chapter,numberless}[display]
+  {\vspace*{-6mm}}{}{0pt}
+  {\fmdisplay\fontsize{46}{44}\selectfont\fmtrack{0.8}{#1}}
+  [\vspace{-2pt}\fmrulewide\vspace{-4pt}]
+\titlespacing*{\chapter}{0pt}{0pt}{18pt}
+
+\titleformat{\section}
+  {\fmcond\fontsize{13.5}{16}\selectfont}
+  {\color{fmorange}\thesection\hspace{9pt}}
+  {0pt}
+  {\fmtrack{11}{\MakeUppercase{#1}}}
+  [\vspace{-9pt}\fmrule]
+\titlespacing*{\section}{0pt}{20pt}{6pt}
+
+\titleformat{\subsection}
+  {\fmcond\fontsize{10.5}{13}\selectfont}
+  {\color{fmorange}\thesubsection\hspace{7pt}}
+  {0pt}
+  {\fmtrack{9}{\MakeUppercase{#1}}}
+\titlespacing*{\subsection}{0pt}{14pt}{2pt}
+
+% ---------- 5. HEADER / FOOTER ------------------------------
+\newcommand{\fm@headleft}{%
+  \fm@brand\ifdefempty{\fm@project}{}{ \textemdash\ \fm@project}}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancyhead[L]{\fmmicromuted{\fm@headleft}}
+\fancyhead[R]{{\color{fmmuted}\fmmicroraw{\leftmark}}}
+\fancyfoot[L]{\fmmicromuted{\fm@docid}}
+\fancyfoot[R]{{\fmdisplay\fontsize{15}{15}\selectfont\fmtrack{4}{\thepage}}}
+\fancypagestyle{plain}{\fancyhf{}%
+  \fancyfoot[L]{\fmmicromuted{\fm@docid}}%
+  \fancyfoot[R]{{\fmdisplay\fontsize{15}{15}\selectfont\fmtrack{4}{\thepage}}}}
+% Uppercase at mark time, the way the standard classes do -- the header then
+% typesets \leftmark raw instead of case-changing arbitrary mark content.
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{#1}}{}}
+
+% ---------- 6. LISTS ----------------------------------------
+% Square orange bullets — the brand replaces round markers everywhere.
+\newcommand{\fmbullet}{\raisebox{1.6pt}{\color{fmorange}\rule{4.2pt}{4.2pt}}}
+\setlist[itemize,1]{label=\fmbullet, leftmargin=14pt, labelsep=8pt,
+  topsep=4pt, itemsep=5pt, parsep=0pt}
+\setlist[itemize,2]{label=\raisebox{1.6pt}{\color{fmmuted}\rule{3.4pt}{3.4pt}},
+  leftmargin=13pt, labelsep=7pt, topsep=3pt, itemsep=3pt}
+\setlist[enumerate,1]{label={\fmcond\color{fmorange}\arabic*}, leftmargin=15pt,
+  labelsep=8pt, topsep=4pt, itemsep=5pt}
+
+% ---------- 7. REQUIREMENT IDS ------------------------------
+% Stable spec identifiers (ENG-3, PWR-2) read as instrument legends:
+% tracked condensed caps in orange. \req for inline, \reqitem to open a bullet.
+\newcommand{\req}[1]{{\fmcond\fontsize{9.6}{9.6}\selectfont\color{fmorange}\fmtrack{11}{\MakeUppercase{#1}}}}
+\newcommand{\reqitem}[1]{\item[\fmbullet]\req{#1}\hspace{6pt}\ignorespaces}
+% state stamps: LOCKED / RESOLVED / OPEN
+\newcommand{\fmstamp}[2][fmink]{\colorbox{#1}{\raisebox{0pt}[6.6pt][2.2pt]{%
+  \color{fmbone}\fmcond\fontsize{8}{8}\selectfont\fmtrack{18}{\MakeUppercase{#2}}}}}
+\newcommand{\locked}{\fmstamp{locked}}
+\newcommand{\resolved}{\fmstamp{resolved}}
+\newcommand{\open}{\fmstamp[fmred]{open}}
+
+% ---------- 8. PANELS ---------------------------------------
+% The charcoal instrument panel, flattened for print: a dark block for
+% rationale / locked-decision notes. Used sparingly (dark is 25-35%).
+\newenvironment{fmpanel}[1][]{%
+  \par\vspace{8pt}\begingroup
+  \setlength{\fboxsep}{11pt}%
+  \color{fmbone}%
+  \noindent\begin{lrbox}{\@tempboxa}\begin{minipage}{\dimexpr\linewidth-22pt\relax}%
+  \color{fmbone}%
+  % Colour outside \fmmicro, which uppercases its argument (see \fmspec).
+  \notblank{#1}{\textcolor{fmamber}{\fmmicro{#1}}\par\vspace{4pt}}{}%
+}{%
+  \end{minipage}\end{lrbox}\colorbox{fmcharcoal}{\usebox{\@tempboxa}}%
+  \endgroup\par\vspace{8pt}
+}
+% Bone block — quiet aside on the canvas
+\newenvironment{fmblock}[1][]{%
+  \par\vspace{8pt}\begingroup\setlength{\fboxsep}{11pt}%
+  \noindent\begin{lrbox}{\@tempboxa}\begin{minipage}{\dimexpr\linewidth-22pt\relax}%
+  \notblank{#1}{\fmmicromuted{#1}\par\vspace{4pt}}{}%
+}{%
+  \end{minipage}\end{lrbox}\colorbox{fmbonetwo}{\usebox{\@tempboxa}}%
+  \endgroup\par\vspace{8pt}
+}
+
+% ---------- 9. TABLES ---------------------------------------
+% Hairline rules only, uppercase condensed headers, no vertical rules.
+\renewcommand{\arraystretch}{1.28}
+\setlength{\aboverulesep}{2pt}\setlength{\belowrulesep}{3pt}
+\arrayrulecolor{fmhairline}
+\newcommand{\fmtophead}[1]{\fmlabel{#1}}
+% \tabularx/\endtabularx rather than \begin{tabularx}...\end{tabularx}:
+% tabularx reads its body by scanning for a literal \end{tabularx}, so wrapping
+% the environment form inside another environment runs off the end of the file
+% ("File ended while scanning use of \TX@get@body").  The macro form is the
+% documented way to reuse tabularx in a custom environment.
+\newenvironment{fmtable}[1]{%
+  \par\vspace{6pt}\tabularx{\linewidth}{#1}\arrayrulecolor{fmink}\toprule[1.2pt]\arrayrulecolor{fmhairline}%
+}{\arrayrulecolor{fmink}\bottomrule[1.2pt]\arrayrulecolor{fmhairline}\endtabularx\par\vspace{6pt}}
+\newcolumntype{L}{>{\RaggedRight\arraybackslash}X}
+\newcolumntype{S}[1]{>{\RaggedRight\arraybackslash}p{#1}}
+
+% ---------- 10. SPEC ROW ------------------------------------
+% label ... value, hairline between — the brand's spec-list pattern.
+\newcommand{\fmspec}[2]{%
+  % The colour goes outside \fmlabel: it uppercases its argument, which would
+  % otherwise turn \textcolor{fmmuted} into an undefined colour `FMMUTED'.
+  \noindent\makebox[0.42\linewidth][l]{\textcolor{fmmuted}{\fmlabel{#1}}}%
+  {\fmcond\fontsize{10}{12}\selectfont\fmtrack{6}{\MakeUppercase{#2}}}\fmrule}
+
+% ---------- 11. TITLE PAGE ----------------------------------
+% Full-bleed plate, ink mark, Bebas title, three segmented strips.
+%
+% The plate is keyed to the document type: the generator emits
+% \fmcoverscheme{<scheme>} from the type letter in the document number.  Each
+% scheme sets the field, the title/foot inks, the accent square, the three
+% strip colours and the logo variant together -- they cannot be chosen
+% independently without risking ink-on-ink.  Defaults reproduce the original
+% orange plate, so a document that never calls \fmcoverscheme is unchanged.
+\colorlet{fmcoverfield}{fmorange}
+\colorlet{fmcovertitle}{fmink}
+\colorlet{fmcoverfoot}{fmink}
+\colorlet{fmcoveraccent}{fmink}
+\colorlet{fmcoverstripa}{fmink}
+\colorlet{fmcoverstripb}{fmred}
+\colorlet{fmcoverstripc}{fmviolet}
+
+% Report -- the brand default and the internal workhorse.
+\newcommand{\fm@cover@report}{%
+  \colorlet{fmcoverfield}{fmorange}\colorlet{fmcovertitle}{fmink}%
+  \colorlet{fmcoverfoot}{fmink}\colorlet{fmcoveraccent}{fmink}%
+  \colorlet{fmcoverstripa}{fmink}\colorlet{fmcoverstripb}{fmred}%
+  \colorlet{fmcoverstripc}{fmviolet}\fmlogo{resources/logo-ink}}
+% Proposal -- external paper: no flood, no colour, cheapest to print.
+\newcommand{\fm@cover@proposal}{%
+  \colorlet{fmcoverfield}{fmbone}\colorlet{fmcovertitle}{fmink}%
+  \colorlet{fmcoverfoot}{fmink}\colorlet{fmcoveraccent}{fmink}%
+  \colorlet{fmcoverstripa}{fmink}\colorlet{fmcoverstripb}{fmmuted}%
+  \colorlet{fmcoverstripc}{fmhairline}\fmlogo{resources/logo-ink}}
+% Procedure -- reference matter you read and do not write on.  Foot stays ink:
+% bone micro-type on the mid-tone field is too weak at 8.5pt.
+\newcommand{\fm@cover@procedure}{%
+  \colorlet{fmcoverfield}{fmmuted}\colorlet{fmcovertitle}{fmbone}%
+  \colorlet{fmcoverfoot}{fmink}\colorlet{fmcoveraccent}{fmbone}%
+  \colorlet{fmcoverstripa}{fmink}\colorlet{fmcoverstripb}{fmbone}%
+  \colorlet{fmcoverstripc}{fmhairline}\fmlogo{resources/logo-cream}}
+% Marketing -- the one place loud is correct, and the least-printed type.
+\newcommand{\fm@cover@marketing}{%
+  \colorlet{fmcoverfield}{fmviolet}\colorlet{fmcovertitle}{fmink}%
+  \colorlet{fmcoverfoot}{fmink}\colorlet{fmcoveraccent}{fmink}%
+  \colorlet{fmcoverstripa}{fmink}\colorlet{fmcoverstripb}{fmbone}%
+  \colorlet{fmcoverstripc}{fmamber}\fmlogo{resources/logo-ink}}
+
+\newcommand{\fmcoverscheme}[1]{%
+  \ifcsname fm@cover@#1\endcsname
+    \csname fm@cover@#1\endcsname
+  \else
+    \PackageWarning{frogmouth}{Unknown cover scheme `#1'; falling back to `report'}%
+    \fm@cover@report
+  \fi}
+
+\newcommand{\fmstrips}{%
+  \begin{tikzpicture}
+    \foreach \w/\c [count=\i from 0] in
+        {40/fmcoverstripa, 29/fmcoverstripb, 18/fmcoverstripc} {
+      \begin{scope}[xshift=\i*0mm, yshift=-\i*0mm]
+      \foreach \k in {0,...,20} {
+        \pgfmathsetmacro{\xx}{\k*5.3}
+        \ifdim \xx pt < \w pt
+          \fill[\c, xslant=0.62] (\xx mm + \i*0mm + \i*46mm, 0) rectangle ++(3.4mm, 3.1mm);
+        \fi}
+      \end{scope}}
+  \end{tikzpicture}}
+
+\newcommand{\fmtitlepage}[4]{% {title}{subtitle}{author}{meta}
+  \begingroup
+  \thispagestyle{empty}
+  \newgeometry{margin=0pt}
+  \noindent\begin{tikzpicture}[remember picture, overlay]
+    \fill[fmcoverfield] (current page.north west) rectangle (current page.south east);
+    \IfFileExists{\fm@logo.png}{%
+      \node[anchor=north west, inner sep=0pt] at ([shift={(27mm,-26mm)}]current page.north west)
+        {\includegraphics[width=30mm]{\fm@logo}};}{}
+    \node[anchor=north west, text width=150mm, inner sep=0pt, align=left]
+      at ([shift={(27mm,-62mm)}]current page.north west)
+      {\color{fmcovertitle}\fmdisplay\fontsize{62}{56}\selectfont\fmtrack{1}{#1}};
+    \node[anchor=north west, inner sep=0pt] at ([shift={(27mm,-105mm)}]current page.north west)
+      {\fmstrips};
+    \node[anchor=north west, text width=105mm, inner sep=0pt, align=left]
+      at ([shift={(27mm,-118mm)}]current page.north west)
+      {\color{fmcovertitle}\normalfont\fontsize{11}{16}\selectfont #2};
+    \node[anchor=south west, inner sep=0pt] at ([shift={(27mm,44mm)}]current page.south west)
+      {\begin{minipage}{140mm}\color{fmcoverfoot}\fmmicro{#3}\par\vspace{3pt}\fmmicro{#4}\end{minipage}};
+    \fill[fmcoveraccent] ([shift={(-27mm,24mm)}]current page.south east) rectangle ++(-12mm,-12mm);
+  \end{tikzpicture}
+  \null\clearpage\restoregeometry
+  \endgroup}
+
+% ---------- 12. TOC -----------------------------------------
+\renewcommand{\contentsname}{Contents}
+\titlecontents{chapter}[0pt]
+  {\vspace{9pt}}
+  % \MakeUppercase is left open deliberately: titlecontents appends the entry
+  % text after this format, so it becomes the argument.  Set the tracking with
+  % \fmsetls (which applies to the rest of the group) rather than \fmtrack,
+  % whose braces would leave \MakeUppercase without an argument.
+  {\fmcond\fontsize{11}{13}\selectfont\textcolor{fmorange}{\thecontentslabel}\hspace{8pt}\fmsetls{8}\MakeUppercase}
+  {\fmcond\fontsize{11}{13}\selectfont}
+  {\hfill{\fmdisplay\fontsize{11}{11}\selectfont\contentspage}}
+\titlecontents{section}[16pt]
+  {\vspace{1pt}}
+  {\normalfont\fontsize{9.6}{12}\selectfont\textcolor{fmmuted}{\thecontentslabel}\hspace{7pt}}
+  {\normalfont\fontsize{9.6}{12}\selectfont}
+  {\hspace{6pt}{\color{fmhairline}\titlerule*[4pt]{.}}\hspace{4pt}{\fmcond\contentspage}}
+\setcounter{tocdepth}{1}
+
+% ---------- 13. MISC ----------------------------------------
+\newcommand{\qin}{\textonequarter\kern0.5pt\textquotedbl}   % 1/4" jack
+\newcommand{\fmref}[1]{\textcolor{fmorange}{#1}}
+\hypersetup{colorlinks=false, linkbordercolor=fmorange, urlbordercolor=fmorange}
+\urlstyle{same}
+
+\endinput
