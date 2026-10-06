@@ -1,0 +1,29 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Python
+__pycache__/
+*.pyc
+
+# LaTeX build output (each document builds into its own build/)
+Documents/**/build/
+
+# KiCad per-user state, backups and locks
+*.kicad_prl
+*-backups/
+*.kicad_sch-bak
+*.kicad_pcb-bak
+*.bak
+*.lck
+fp-info-cache
+_autosave-*
+.history/
+
+# Firmware build output
+firmware/**/build/
+firmware/**/Debug/
+firmware/**/Release/
