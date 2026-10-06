@@ -215,7 +215,7 @@ Twelve note LEDs D101–D112, C to B left to right, on direct GPIO through
 
 ## 8. Bypass and relay
 
-One KEMET EE2-5NU relay, driven by a 2N7002 from the MCU, pull-down off
+One Omron G6K-2F-Y relay (5 V coil), driven by a 2N7002 from the MCU, pull-down off
 through boot (brief, Bypass). De-energised: OUT L = IN, input buffer
 grounded, OUT R silent. Energised: signal goes through the DSP.
 
@@ -223,7 +223,7 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
 |---|---|---|---|
 | BYP-1 | **True bypass** (SW102 = True): effect off = relay de-energised. | B | 1 |
 | BYP-2 | **Trails bypass** (SW102 = Trails): the relay stays energised; effect off feeds dry to both outputs, stops feeding the strings and lets them ring out at their current decay (or hold, FSW-4). | T, B | 1 |
-| BYP-3 | Every relay change follows: fade the DSP outputs to silence (10 ms *(TBC)*), switch, wait for the contacts to settle (operate time plus bounce from the EE2 datasheet, 5 ms *(TBC)*), fade back in. No mute transistor. | T, B | 1 |
+| BYP-3 | Every relay change follows: fade the DSP outputs to silence (10 ms *(TBC)*), switch, wait for the contacts to settle (operate time plus bounce from the G6K datasheet, 5 ms *(TBC)*), fade back in. No mute transistor. | T, B | 1 |
 | BYP-4 | A footswitch tap reaches the relay within 20 ms. | B | 1 |
 | BYP-5 | Bypass in True mode produces no click at OUT L louder than −60 dBu *(TBC)* with the input shorted. | B | 2 |
 | BYP-6 | The relay drive pin stays low (relay off, true bypass) from reset until the codec is running and the outputs are at silence. | B | 1 |

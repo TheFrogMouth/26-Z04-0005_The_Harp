@@ -9,7 +9,7 @@ description of the circuit.
 | `schgen.py` | Writes `.kicad_sch` files: each pin gets a 2.54 mm stub and a power symbol, a global label (net on more than one sheet) or a local label; unused pins get a no-connect flag |
 | `kisch.py` | Minimal schematic reader and net tracer, used to check the output |
 | `build.py` | Runs the generator into `hardware/kicad/the_harp/`, then re-reads every sheet, traces the nets and compares them with the spec |
-| `symbols.sexpr` | The 32 symbol definitions used, copied from the Timekeeper, Relic and Alchemist schematics and KiCad's `STM32H750VBTx` |
+| `symbols.sexpr` | The 34 symbol definitions used, copied from the Timekeeper, Relic and Alchemist schematics and KiCad's `STM32H750VBTx` |
 | `libcollect.py`, `h750vb.kicad_sym` | Only needed to rebuild `symbols.sexpr` (delete it and run `build.py` with the sibling repos checked out next to this one) |
 
 ```bash
