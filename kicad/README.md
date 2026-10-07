@@ -1,10 +1,12 @@
 # KiCad project — The Harp
 
 `the_harp/` is the KiCad 10 project. The board was seeded from The Relic
-(2026-10-04); the schematic is a first draft **generated** by
-`scripts/harp_schematic/build.py` from the circuits of the Timekeeper DSP
-board and The Relic's relay bypass. Nothing here has been opened in KiCad
-yet: run ERC first.
+(2026-10-04); the schematic is **generated** by
+`scripts/harp_schematic/build_layout.py` from the circuits of the Timekeeper
+DSP board and The Relic's relay bypass (`harp_spec.py`) and a hand layout per
+sheet (`layouts/`), drawn to the Frogmouth schematic standard
+(`docs/schematic-standard.md` in 26-F01-0001_Frogmouth, 2026-10-07). Nothing
+here has been opened in KiCad yet: run ERC first.
 
 ## Sheets
 
