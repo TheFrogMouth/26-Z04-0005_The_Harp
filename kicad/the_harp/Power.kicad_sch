@@ -26,6 +26,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -36,6 +37,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -47,6 +49,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -58,6 +61,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -69,6 +73,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -79,6 +84,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -90,6 +96,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -101,6 +108,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -160,6 +168,7 @@
 							(name "Pin_1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -167,6 +176,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -178,6 +188,7 @@
 							(name "Pin_2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -185,6 +196,7 @@
 							(number "2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -211,6 +223,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 							(justify left)
@@ -222,6 +235,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 							(justify left)
@@ -234,6 +248,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -245,6 +260,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -256,6 +272,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -267,6 +284,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -278,6 +296,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -315,6 +334,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -322,6 +342,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -333,6 +354,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -340,6 +362,7 @@
 							(number "2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -367,6 +390,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -377,6 +401,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -388,6 +413,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -399,6 +425,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -410,6 +437,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -421,6 +449,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -432,6 +461,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -481,6 +511,7 @@
 							(name "A1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -488,6 +519,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -499,6 +531,7 @@
 							(name "A2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -506,6 +539,7 @@
 							(number "2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -532,6 +566,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -542,6 +577,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -553,6 +589,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -564,6 +601,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -575,6 +613,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -586,6 +625,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -597,6 +637,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -646,6 +687,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -653,6 +695,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -664,6 +707,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -671,6 +715,7 @@
 							(number "2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -698,6 +743,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -708,6 +754,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -719,6 +766,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -730,6 +778,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -741,6 +790,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -752,6 +802,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -763,6 +814,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -824,6 +876,7 @@
 							(name "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -831,6 +884,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -842,6 +896,7 @@
 							(name "2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -849,6 +904,7 @@
 							(number "2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -875,6 +931,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -885,6 +942,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -896,6 +954,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -907,6 +966,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -918,6 +978,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -929,6 +990,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -940,6 +1002,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -964,6 +1027,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -971,6 +1035,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -982,6 +1047,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -989,6 +1055,7 @@
 							(number "2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1015,6 +1082,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1025,6 +1093,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1036,6 +1105,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1047,6 +1117,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1058,6 +1129,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1069,6 +1141,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1080,6 +1153,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1129,6 +1203,7 @@
 							(name "K"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1136,6 +1211,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1147,6 +1223,7 @@
 							(name "A"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1154,6 +1231,7 @@
 							(number "2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1174,6 +1252,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1184,6 +1263,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1195,6 +1275,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1206,6 +1287,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1217,6 +1299,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1228,6 +1311,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1239,6 +1323,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1261,6 +1346,7 @@
 							(name "IN"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1268,6 +1354,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1279,6 +1366,7 @@
 							(name "GND"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1286,6 +1374,7 @@
 							(number "2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1297,6 +1386,7 @@
 							(name "EN"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1304,6 +1394,7 @@
 							(number "3"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1316,6 +1407,7 @@
 							(name "NC"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1323,6 +1415,7 @@
 							(number "4"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1334,6 +1427,7 @@
 							(name "OUT"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1341,6 +1435,7 @@
 							(number "5"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1361,6 +1456,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 							(justify left)
@@ -1372,6 +1468,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 							(justify left)
@@ -1384,6 +1481,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 							(justify left)
@@ -1396,6 +1494,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1407,6 +1506,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1418,6 +1518,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1429,6 +1530,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1453,6 +1555,7 @@
 							(name "GND"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1460,6 +1563,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1471,6 +1575,7 @@
 							(name "SW"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1478,6 +1583,7 @@
 							(number "2"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1489,6 +1595,7 @@
 							(name "VIN"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1496,6 +1603,7 @@
 							(number "3"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1507,6 +1615,7 @@
 							(name "FB"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1514,6 +1623,7 @@
 							(number "4"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1525,6 +1635,7 @@
 							(name "EN"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1532,6 +1643,7 @@
 							(number "5"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1543,6 +1655,7 @@
 							(name "BOOT"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1550,6 +1663,7 @@
 							(number "6"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1579,6 +1693,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1589,6 +1704,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1600,6 +1716,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1611,6 +1728,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1622,6 +1740,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1633,6 +1752,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1682,6 +1802,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1689,6 +1810,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1718,6 +1840,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1728,6 +1851,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1739,6 +1863,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1750,6 +1875,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1761,6 +1887,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1772,6 +1899,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1821,6 +1949,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1828,6 +1957,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1857,6 +1987,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1867,6 +1998,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1878,6 +2010,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1889,6 +2022,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1900,6 +2034,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1911,6 +2046,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -1960,6 +2096,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1967,6 +2104,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -1996,6 +2134,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2006,6 +2145,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2017,6 +2157,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2028,6 +2169,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2039,6 +2181,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2050,6 +2193,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2075,6 +2219,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -2082,6 +2227,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -2111,6 +2257,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2121,6 +2268,7 @@
 						(do_not_autoplace no)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2132,6 +2280,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2143,6 +2292,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2154,6 +2304,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2165,6 +2316,7 @@
 						(hide yes)
 						(effects
 							(font
+								(face "Oswald")
 								(size 1.27 1.27)
 							)
 						)
@@ -2176,6 +2328,7 @@
 							(name ""
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -2183,6 +2336,7 @@
 							(number "1"
 								(effects
 									(font
+										(face "Oswald")
 										(size 1.27 1.27)
 									)
 								)
@@ -2207,2074 +2361,8 @@
 				)
 	)
 	(symbol
-		(lib_id "Connector:Conn_01x02_Socket")
-		(at 38.1 40.64 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "e990b451-7c42-550d-9c9a-dbea083547ac")
-		(property "Reference" "J401"
-			(at 40.64 37.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PJ-063AH"
-			(at 40.64 46.95 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal"
-			(at 38.1 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 38.1 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 38.1 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Same Sky (formerly CUI Devices)"
-			(at 38.1 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mfg Part #" "PJ-063AH"
-			(at 38.1 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C22434582"
-			(at 38.1 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Manufacturer" "CUI"
-			(at 38.1 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Part #" "PJ-063AH"
-			(at 38.1 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Supplier" "JLCPCB"
-			(at 38.1 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "64a0f369-8695-4e08-a80e-5c7e800c9803")
-		)
-		(pin "2"
-			(uuid "384ca23f-f09f-437c-a11f-a2893e2354d6")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "J401")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 33.02 40.64) (xy 30.48 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "08052c5e-ee3c-436c-bb99-4678e8731f81")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 30.48 40.64 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "a40ddfaf-c98d-41b1-b81c-a6199453ee4a")
-		(property "Reference" "#PWR0084"
-			(at 30.48 38.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 30.48 43.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 30.48 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 30.48 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 30.48 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f0facfac-5a9d-441b-ac7e-1d93048ff8af")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0084")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 33.02 43.18) (xy 30.48 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9a7d7eea-de44-4540-834e-f1aeab23b064")
-	)
-	(label "DC_IN"
-		(at 30.48 43.18 180)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		(uuid "aa4daeab-afab-4dab-8d8a-baf35ad4a5fb")
-	)
-	(symbol
-		(lib_id "Device:FerriteBead")
-		(at 50.8 48.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d0f634b6-e6ed-5edd-8bde-2a635f2680c0")
-		(property "Reference" "FB301"
-			(at 53.34 41.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "600R"
-			(at 53.34 55.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
-			(at 50.8 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 50.8 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 50.8 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "029e183f-d18d-4e31-b4ef-c6fbec9479fd")
-		)
-		(pin "2"
-			(uuid "74a7120f-43c6-47a0-86d4-0884fef247bc")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "FB301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 50.8 44.45) (xy 50.8 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "3dd2784c-0523-4da4-9a6a-b44cd2c44377")
-	)
-	(label "DC_IN"
-		(at 50.8 41.91 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "237e871c-546f-4a08-aee6-2fd04e095f45")
-	)
-	(wire
-		(pts
-			(xy 50.8 52.07) (xy 50.8 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "04ee6617-7857-4881-a7eb-2cff445d4632")
-	)
-	(label "DC_F"
-		(at 50.8 54.61 270)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		(uuid "c193e14b-1499-419f-a751-a0c258c4d10d")
-	)
-	(symbol
 		(lib_id "Device:C")
-		(at 68.58 48.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "452a3bd7-d61b-51b5-acd1-596666d5dbd4")
-		(property "Reference" "C301"
-			(at 71.12 41.68 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2.2u"
-			(at 71.12 55.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 68.58 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 68.58 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 68.58 48.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "cb92dc5c-d10c-4733-9d54-3e48780063fb")
-		)
-		(pin "2"
-			(uuid "ccb98924-5383-47a3-8dd4-767700c23970")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "C301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 68.58 44.45) (xy 68.58 41.91)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca4bac6c-8275-4664-8891-500085eeec59")
-	)
-	(label "DC_IN"
-		(at 68.58 41.91 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "cdc01d9f-7a15-495f-8fe6-6c6740c470bc")
-	)
-	(wire
-		(pts
-			(xy 68.58 52.07) (xy 68.58 54.61)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6403636a-56ba-4048-b7ea-409e00a792b7")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 68.58 54.61 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "256a4a7a-6bb8-496a-bb42-b8506e8ba9fb")
-		(property "Reference" "#PWR0085"
-			(at 68.58 52.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 68.58 57.81 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 68.58 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 68.58 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 68.58 54.61 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d7b7ac48-3b57-47cf-8146-8c561b080a10")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0085")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:D_TVS")
-		(at 91.44 40.64 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "61a38b72-4f89-5182-bb4f-866cdfadf4f3")
-		(property "Reference" "D301"
-			(at 93.98 37.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "SMAJ10CA"
-			(at 93.98 44.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:D_SMA"
-			(at 91.44 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 91.44 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 91.44 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Littelfuse"
-			(at 91.44 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mfg Part #" "SMAJ10CA"
-			(at 91.44 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "2e0507a0-1897-483a-b2a0-461790782eb3")
-		)
-		(pin "2"
-			(uuid "ac2b57bd-70fe-454f-b470-9fc44e203e44")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "D301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 87.63 40.64) (xy 85.09 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "92cb10e4-6b45-4a2d-a7cc-949815225317")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 85.09 40.64 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ff2b3f54-590f-4252-a4e2-80cf4dafaecb")
-		(property "Reference" "#PWR0086"
-			(at 85.09 38.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 85.09 43.84 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 85.09 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 85.09 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 85.09 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "31bc4fc0-d991-4f8c-b861-54cb36e6f458")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0086")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 95.25 40.64) (xy 97.79 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ad8b48e9-7a23-417c-a7d3-8efd73177e4c")
-	)
-	(label "DC_IN"
-		(at 97.79 40.64 0)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "48b0620f-c1ec-481f-b2d4-9520368cf14e")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 119.38 45.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "30de454e-42d7-545d-a283-6bfe12578c3e")
-		(property "Reference" "C302"
-			(at 121.92 39.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2.2u"
-			(at 121.92 53.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 119.38 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 119.38 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 119.38 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7b4b8d97-daed-439a-8e17-953121fb0937")
-		)
-		(pin "2"
-			(uuid "890165a9-987f-4ee6-8531-feb230900132")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "C302")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 119.38 41.91) (xy 119.38 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "035d5e82-ead0-402f-9691-24557c4e70a8")
-	)
-	(label "DC_F"
-		(at 119.38 39.37 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "646ac3f2-b455-486b-9e63-7f67172c9323")
-	)
-	(wire
-		(pts
-			(xy 119.38 49.53) (xy 119.38 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "01993010-224a-4243-a640-7ffab1206515")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 119.38 52.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "cf98facf-4308-4b92-af14-769fb7d30435")
-		(property "Reference" "#PWR0087"
-			(at 119.38 50.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 119.38 55.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 119.38 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 119.38 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 119.38 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0541dc48-17ba-4e17-83fb-c13e6b47332e")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0087")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:PMEG3010ER")
-		(at 142.24 40.64 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "3a68c989-30a2-5985-9b9d-61b59de25790")
-		(property "Reference" "D302"
-			(at 144.78 37.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PMEG3010ER"
-			(at 144.78 44.41 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W"
-			(at 142.24 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 142.24 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 142.24 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Nexperia"
-			(at 142.24 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mfg Part #" "PMEG3010ER,115"
-			(at 142.24 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "1c85a87d-beb2-4a0b-b02a-059ed3369be4")
-		)
-		(pin "2"
-			(uuid "612db9a6-77e1-4729-886a-dd8c12d1f315")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "D302")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 138.43 40.64) (xy 135.89 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5ef90ab7-436f-4e8c-b00c-87befa921c1d")
-	)
-	(symbol
-		(lib_id "power:+9V")
-		(at 135.89 40.64 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c047be51-f536-4c7c-90d9-dd5d3179fd04")
-		(property "Reference" "#PWR0088"
-			(at 135.89 38.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "+9V"
-			(at 135.89 37.44 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 135.89 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 135.89 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 135.89 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c6ae85e7-5da0-46e5-abaa-f91d2cd4ffc0")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0088")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 146.05 40.64) (xy 148.59 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "313a8b9f-845b-40a2-a851-54335ca72133")
-	)
-	(label "DC_F"
-		(at 148.59 40.64 0)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "6ab297a5-b53b-4c1a-941d-93b7a239ca46")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 170.18 45.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fe0bc5ba-0efb-5dbd-8893-4e7847a57244")
-		(property "Reference" "C303"
-			(at 172.72 39.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10u"
-			(at 172.72 53.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
-			(at 170.18 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 170.18 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "641e1c8f-bff8-400d-b2bd-1a8df3614ef9")
-		)
-		(pin "2"
-			(uuid "2c45daca-625a-4625-954e-c2f4423d00f7")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "C303")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 170.18 41.91) (xy 170.18 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "de33ca2f-ec5d-46f3-8848-84d72ab8d34e")
-	)
-	(symbol
-		(lib_id "power:+9V")
-		(at 170.18 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d43d3246-9a05-4844-99c8-80b0ae0e2f3b")
-		(property "Reference" "#PWR0089"
-			(at 170.18 37.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "+9V"
-			(at 170.18 42.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 170.18 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6b1a32c8-9f27-444e-8451-90f979517871")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0089")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 170.18 49.53) (xy 170.18 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a091eae3-b953-426e-8a5c-9520c7548a9a")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 170.18 52.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "5811020a-1190-46bd-a053-bcc82bad0157")
-		(property "Reference" "#PWR0090"
-			(at 170.18 50.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 170.18 55.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 170.18 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 170.18 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 170.18 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "37fb6021-ec89-42ee-8f68-03103f4a9ba1")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0090")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 187.96 45.72 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "34359a9f-629c-5ac1-a179-939970e749d1")
-		(property "Reference" "C304"
-			(at 190.5 39.14 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "100n"
-			(at 190.5 53.3 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 187.96 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 187.96 45.72 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "26f60520-b69f-4762-bbf6-85928ffd7c03")
-		)
-		(pin "2"
-			(uuid "9c856d54-bb0d-44c7-8760-8ffed0a617a5")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "C304")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 187.96 41.91) (xy 187.96 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "54df9dab-8599-4dcc-b329-63643c8df515")
-	)
-	(symbol
-		(lib_id "power:+9V")
-		(at 187.96 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f837c47f-d5a5-4d06-9f29-56baf9c2469f")
-		(property "Reference" "#PWR0091"
-			(at 187.96 37.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "+9V"
-			(at 187.96 42.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 187.96 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 187.96 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "691c5f2e-6a38-417e-b507-9c21f45329bf")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0091")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 187.96 49.53) (xy 187.96 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "dbdbb0bf-c9ed-45a9-b9bf-6e193023e1a1")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 187.96 52.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "43ef58a2-3c9e-4e8b-9d1c-80b134523e29")
-		(property "Reference" "#PWR0092"
-			(at 187.96 50.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 187.96 55.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 187.96 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 187.96 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 187.96 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "10dba837-47bd-4c71-983f-d70b3b32bbd6")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0092")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Switching:TPS54202DDC")
-		(at 215.9 43.18 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "d2dc8c2a-d614-5a6b-a43f-00add5eab4ee")
-		(property "Reference" "U301"
-			(at 203.04 37.87 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "TPS54202DDC"
-			(at 203.04 54.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
-			(at 215.9 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 215.9 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 215.9 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "Texas Instruments"
-			(at 215.9 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mfg Part #" "TPS54202DDCR"
-			(at 215.9 43.18 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "dd88509d-22b4-4c3e-8fae-1e5716af712a")
-		)
-		(pin "2"
-			(uuid "d05f339d-f0e0-4293-99dc-c58c22689f07")
-		)
-		(pin "3"
-			(uuid "6890218e-90c8-461f-9f78-15a34ce21ac6")
-		)
-		(pin "4"
-			(uuid "6b99d590-c643-4418-86f5-eebb01baa4ec")
-		)
-		(pin "5"
-			(uuid "73bb69dc-099c-49e1-9593-506fcf0fe518")
-		)
-		(pin "6"
-			(uuid "501ff41e-c5c9-434a-8c1f-e5e759c0b887")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "U301")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 215.9 50.8) (xy 215.9 53.34)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e096bba1-90fe-4d8f-bf99-b44460588a8a")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 215.9 53.34 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6821f8f9-3be4-4416-b92d-de2154b8b15f")
-		(property "Reference" "#PWR0093"
-			(at 215.9 51.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 215.9 56.54 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 215.9 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 215.9 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 215.9 53.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "fdb490a9-a23d-4799-bae2-54e00a71fc1b")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0093")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 226.06 43.18) (xy 228.6 43.18)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "42ba55ec-2fd3-4f9d-95e6-6fba4ff65dcf")
-	)
-	(label "SW"
-		(at 228.6 43.18 0)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "c70c3db2-aa9b-49fb-9c9b-f4b147681d95")
-	)
-	(wire
-		(pts
-			(xy 205.74 40.64) (xy 203.2 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7998d8c7-afdb-466f-90be-cac121bd9415")
-	)
-	(symbol
-		(lib_id "power:+9V")
-		(at 203.2 40.64 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "eeddddee-22a5-47a9-a67e-d1319c2d6b84")
-		(property "Reference" "#PWR0094"
-			(at 203.2 38.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "+9V"
-			(at 203.2 37.44 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 203.2 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 203.2 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 203.2 40.64 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "d8efe906-7c54-42a6-b420-fb49b214f50d")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0094")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 226.06 45.72) (xy 228.6 45.72)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe91736d-16a0-4034-8b58-4ddc669b6e87")
-	)
-	(label "BUCK_FB"
-		(at 228.6 45.72 0)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "84154702-80b0-42de-bfb1-cba3d3371157")
-	)
-	(no_connect
-		(at 205.74 45.72)
-		(uuid "3d8b94af-d36f-4dc2-a0c1-3305afcc30dc")
-	)
-	(wire
-		(pts
-			(xy 226.06 40.64) (xy 228.6 40.64)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ff39dd8a-8bbf-40a4-9fab-cbc390477d3e")
-	)
-	(label "BUCK_BOOT"
-		(at 228.6 40.64 0)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "5781a690-e396-4cfa-8305-9f75e8561208")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 256.54 53.34 0)
+		(at 199.39 40.64 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4284,65 +2372,70 @@
 		(dnp no)
 		(uuid "c1513fe2-0ecf-5309-bb60-18a078eaeaf2")
 		(property "Reference" "C305"
-			(at 259.08 46.76 0)
+			(at 199.39 37.61 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Value" "100n"
-			(at 259.08 60.92 0)
+			(at 199.39 44.27 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 256.54 53.34 0)
+			(at 199.39 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 256.54 53.34 0)
+			(at 199.39 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 256.54 53.34 0)
+			(at 199.39 40.64 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "89053177-4eec-4196-89de-18f693fb1317")
+			(uuid "ba94e7ce-f13d-4390-ac7d-f74450794b9d")
 		)
 		(pin "2"
-			(uuid "6a2011ce-7855-4546-930d-c3b18eea0bd4")
+			(uuid "8b73795b-d6a8-4b92-b31c-f08a729df056")
 		)
 		(instances
 			(project "The Harp"
@@ -4353,51 +2446,485 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 256.54 49.53) (xy 256.54 46.99)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a36bcbcd-917e-4a5c-be01-842f075dddde")
-	)
-	(label "BUCK_BOOT"
-		(at 256.54 46.99 90)
-		(fields_autoplaced yes)
-		(effects
+	(symbol
+		(lib_id "Device:FerriteBead")
+		(at 95.25 50.8 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d0f634b6-e6ed-5edd-8bde-2a635f2680c0")
+		(property "Reference" "FB301"
+			(at 95.25 47.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left bottom)
+				(justify center)
 			)
-		(uuid "5dc1b938-0ecc-49de-b240-bffb057fce59")
-	)
-	(wire
-		(pts
-			(xy 256.54 57.15) (xy 256.54 59.69)
 		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d9f6e366-2b85-40bd-94e6-fae605c12e2b")
-	)
-	(label "SW"
-		(at 256.54 59.69 270)
-		(fields_autoplaced yes)
-		(effects
+		(property "Value" "600R"
+			(at 95.25 55.17 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify right bottom)
+				(justify center)
 			)
-		(uuid "44094f3c-b018-45da-baba-063ae93510f0")
+		)
+		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
+			(at 95.25 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 95.25 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 95.25 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0ab82933-d1fb-42ee-99cc-498240cf0a1a")
+		)
+		(pin "2"
+			(uuid "a7f5b15f-c3a3-4089-811b-07a9642cd42d")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "FB301")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:PMEG3010ER")
+		(at 118.11 50.8 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "3a68c989-30a2-5985-9b9d-61b59de25790")
+		(property "Reference" "D302"
+			(at 118.11 48.53 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Value" "PMEG3010ER"
+			(at 118.11 53.67 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W"
+			(at 118.11 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 118.11 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 118.11 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Nexperia"
+			(at 118.11 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "PMEG3010ER,115"
+			(at 118.11 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f5f7d927-d88c-455e-af33-2f34ab18cf08")
+		)
+		(pin "2"
+			(uuid "833bb18e-bfc7-4319-a397-519306b8cd95")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "D302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:Conn_01x02_Socket")
+		(at 30.48 53.34 180)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "e990b451-7c42-550d-9c9a-dbea083547ac")
+		(property "Reference" "J401"
+			(at 20.32 47.244 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PJ-063AH"
+			(at 20.32 59.944 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Connector_BarrelJack:BarrelJack_CUI_PJ-063AH_Horizontal"
+			(at 30.48 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 30.48 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 30.48 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Same Sky (formerly CUI Devices)"
+			(at 30.48 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "PJ-063AH"
+			(at 30.48 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C22434582"
+			(at 30.48 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "CUI"
+			(at 30.48 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "PJ-063AH"
+			(at 30.48 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Supplier" "JLCPCB"
+			(at 30.48 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c0351454-0877-4917-ad94-49b8bbe8ab51")
+		)
+		(pin "2"
+			(uuid "c4790e31-d8e8-4d91-a4af-a517a93378b5")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "J401")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Regulator_Switching:TPS54202DDC")
+		(at 177.8 53.34 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d2dc8c2a-d614-5a6b-a43f-00add5eab4ee")
+		(property "Reference" "U301"
+			(at 170.18 43.942 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TPS54202DDC"
+			(at 170.18 65.024 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-6"
+			(at 177.8 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 177.8 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 177.8 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Texas Instruments"
+			(at 177.8 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "TPS54202DDCR"
+			(at 177.8 53.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "d1fb4d8a-0f61-40ba-9010-0fffaf1f535d")
+		)
+		(pin "2"
+			(uuid "0da74b7d-7db3-422a-bd0c-a95216255ce9")
+		)
+		(pin "3"
+			(uuid "9885b102-5cfe-4010-a451-93142cdf602a")
+		)
+		(pin "4"
+			(uuid "ed920568-e0c4-461d-b2bf-885da092b933")
+		)
+		(pin "5"
+			(uuid "fc896a96-09da-4da5-83e2-652e72e0e0f1")
+		)
+		(pin "6"
+			(uuid "8a574238-e66d-4980-a32f-b7edfd90e497")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "U301")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "Device:L")
-		(at 274.32 43.18 0)
+		(at 212.09 53.34 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4407,65 +2934,70 @@
 		(dnp no)
 		(uuid "d9ea6e15-3780-5c8f-b55f-49e8646496dc")
 		(property "Reference" "L301"
-			(at 276.86 36.6 0)
+			(at 212.09 51.71 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Value" "10u"
-			(at 276.86 50.76 0)
+			(at 212.09 54.94 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_APV_ANR5020"
-			(at 274.32 43.18 0)
+			(at 212.09 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 274.32 43.18 0)
+			(at 212.09 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 274.32 43.18 0)
+			(at 212.09 53.34 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "20f57d88-5ec6-4121-b840-566b4791d1b1")
+			(uuid "a9df4ed6-a825-4940-abc1-ba77be61bcc9")
 		)
 		(pin "2"
-			(uuid "34388792-da3f-4e99-a50e-615fafcc3d1c")
+			(uuid "08e78a1d-63c2-421d-8583-5fac5edbaf12")
 		)
 		(instances
 			(project "The Harp"
@@ -4476,119 +3008,9 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 274.32 39.37) (xy 274.32 36.83)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c27e4555-c753-43b8-8ca8-4253fe0c1c4a")
-	)
-	(label "SW"
-		(at 274.32 36.83 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "f97912c6-6fea-4145-b62a-37496a4d4811")
-	)
-	(wire
-		(pts
-			(xy 274.32 46.99) (xy 274.32 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f757fc3b-0138-4bf9-a540-b3bd39172851")
-	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 274.32 49.53 180)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "8ac1aaaa-cd6c-4a75-b056-fd2b6c9e4ee9")
-		(property "Reference" "#PWR0095"
-			(at 274.32 47.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 274.32 46.33 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 274.32 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 274.32 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 274.32 49.53 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "45b310c9-9a06-41ef-9b3d-87a8b03aa6c8")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0095")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 292.1 45.72 0)
+		(lib_id "Device:C")
+		(at 53.34 54.61 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4596,190 +3018,85 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d6f8871f-e538-551c-bd82-dc80befb7804")
-		(property "Reference" "R301"
-			(at 294.64 39.14 0)
+		(uuid "452a3bd7-d61b-51b5-acd1-596666d5dbd4")
+		(property "Reference" "C301"
+			(at 55.97 53.61 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "49.9"
-			(at 294.64 53.3 0)
+		(property "Value" "2.2u"
+			(at 55.97 56.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 292.1 45.72 0)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 53.34 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 292.1 45.72 0)
+			(at 53.34 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 292.1 45.72 0)
+			(at 53.34 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "91636960-84c0-4987-b5b0-8c63abb1c4d1")
+			(uuid "1c5a3baa-a609-4adf-a823-8cfe8cd0e658")
 		)
 		(pin "2"
-			(uuid "4e7f0818-a10b-46a9-89c9-8670e860b99a")
+			(uuid "43889ce8-9c87-489f-8810-0b0df181eb9b")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "R301")
+					(reference "C301")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 292.1 41.91) (xy 292.1 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4965dee2-6507-437d-bca0-2bfa2e1e734d")
-	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 292.1 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "fe4354e8-4651-46ce-9a1d-79517a8845d5")
-		(property "Reference" "#PWR0096"
-			(at 292.1 37.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 292.1 42.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 292.1 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 292.1 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 292.1 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "c44f2f96-b3be-4e1e-9ef3-9cfda9784fdb")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0096")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 292.1 49.53) (xy 292.1 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7c900b20-303a-4d1b-a853-d804d9f067d2")
-	)
-	(label "BUCK_FBT"
-		(at 292.1 52.07 270)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		(uuid "404edd28-3179-4a9d-b5d0-82a2325f7376")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 309.88 50.8 0)
+		(lib_id "Device:D_TVS")
+		(at 68.58 54.61 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -4787,305 +3104,101 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "c0bef2a5-e4ad-5e6e-a22a-1914ec2d9616")
-		(property "Reference" "R302"
-			(at 312.42 44.22 0)
+		(uuid "61a38b72-4f89-5182-bb4f-866cdfadf4f3")
+		(property "Reference" "D301"
+			(at 70.45 53.61 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "100k"
-			(at 312.42 58.38 0)
+		(property "Value" "SMAJ10CA"
+			(at 70.45 56.01 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 309.88 50.8 0)
+		(property "Footprint" "Diode_SMD:D_SMA"
+			(at 68.58 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 309.88 50.8 0)
+			(at 68.58 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 309.88 50.8 0)
+			(at 68.58 54.61 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "Littelfuse"
+			(at 68.58 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "SMAJ10CA"
+			(at 68.58 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "a5b64f47-cd9c-434f-a7c6-f0be41aa0460")
+			(uuid "aad9ae5a-2c35-4478-8c6e-07817f92a2de")
 		)
 		(pin "2"
-			(uuid "081167aa-8569-46e2-80db-c8ffa0caffee")
+			(uuid "806c6086-416d-4d12-bfda-730703edc1b4")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "R302")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 309.88 46.99) (xy 309.88 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6cb28cd6-1e69-46df-a52b-ae32d96547b1")
-	)
-	(label "BUCK_FBT"
-		(at 309.88 44.45 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "74159b0a-dde9-406a-a973-314166b1790c")
-	)
-	(wire
-		(pts
-			(xy 309.88 54.61) (xy 309.88 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fe49d2d5-9bbc-40a2-bc2e-3dcc5b9d5ad7")
-	)
-	(label "BUCK_FB"
-		(at 309.88 57.15 270)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		(uuid "6116493c-2ae4-4248-b011-a23a19fbf9d1")
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 327.66 50.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4ff65b38-28c4-5b5f-a8b8-20088dda2a4e")
-		(property "Reference" "R303"
-			(at 330.2 44.22 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "22k"
-			(at 330.2 58.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
-			(at 327.66 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 327.66 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 327.66 50.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f08e0b89-fe47-4a1c-b6b6-bfea21813e13")
-		)
-		(pin "2"
-			(uuid "48780aa9-5ff5-4dcd-8cb1-01ee623f7b37")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "R303")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 327.66 46.99) (xy 327.66 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e29ca58-52e4-4a7c-9e90-1c9ef9de6f29")
-	)
-	(label "BUCK_FB"
-		(at 327.66 44.45 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "72165b12-f1f9-4236-9ccd-80c7bc26c99c")
-	)
-	(wire
-		(pts
-			(xy 327.66 54.61) (xy 327.66 57.15)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a9d560f8-5e89-4256-9867-271df0559216")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 327.66 57.15 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "60e585cb-3d21-44c3-af6c-10f4d2669196")
-		(property "Reference" "#PWR0097"
-			(at 327.66 55.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 327.66 60.35 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 327.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 327.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 327.66 57.15 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e70df504-de58-4c90-bac9-88c01d153e70")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0097")
+					(reference "D301")
 					(unit 1)
 				)
 			)
@@ -5093,7 +3206,265 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 345.44 45.72 0)
+		(at 106.68 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "30de454e-42d7-545d-a283-6bfe12578c3e")
+		(property "Reference" "C302"
+			(at 109.31 53.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2u"
+			(at 109.31 56.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 106.68 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 106.68 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "f002bc68-5f58-4813-abf1-3ac0ba00a12c")
+		)
+		(pin "2"
+			(uuid "d9371e22-8b6a-44ca-8952-9451ddf0397d")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "C302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 129.54 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fe0bc5ba-0efb-5dbd-8893-4e7847a57244")
+		(property "Reference" "C303"
+			(at 132.17 53.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10u"
+			(at 132.17 56.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric"
+			(at 129.54 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ce55bb20-6e70-4f7d-8f00-e64ae7b2787e")
+		)
+		(pin "2"
+			(uuid "62ebfeaf-3b9f-4183-bfee-3a0cdc89b7e4")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "C303")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 139.7 54.61 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "34359a9f-629c-5ac1-a179-939970e749d1")
+		(property "Reference" "C304"
+			(at 142.33 53.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 142.33 56.01 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 139.7 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 54.61 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "e780e62a-9101-45c7-86a3-a63e7121188a")
+		)
+		(pin "2"
+			(uuid "e3c489a5-4582-49ab-af8a-6305c9f85c68")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "C304")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 226.06 57.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5103,65 +3474,70 @@
 		(dnp no)
 		(uuid "2dd17e26-f7f9-5056-83a2-d740a10b0a4c")
 		(property "Reference" "C306"
-			(at 347.98 39.14 0)
+			(at 228.69 56.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "22u"
-			(at 347.98 53.3 0)
+			(at 228.69 58.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
-			(at 345.44 45.72 0)
+			(at 226.06 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 345.44 45.72 0)
+			(at 226.06 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 345.44 45.72 0)
+			(at 226.06 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "d6908164-0f44-46a9-98a3-0ec3136b5732")
+			(uuid "9da801ee-e97f-4432-ae92-d6240fc4a61d")
 		)
 		(pin "2"
-			(uuid "313c47bc-6605-40e5-a1c0-1d9df12d7831")
+			(uuid "7fa00e0d-59f7-4f5a-bb38-41e1c45b21f0")
 		)
 		(instances
 			(project "The Harp"
@@ -5172,187 +3548,9 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 345.44 41.91) (xy 345.44 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "55acd6eb-6af6-47d0-b5e0-429d31d64dab")
-	)
-	(symbol
-		(lib_id "power:+3V3")
-		(at 345.44 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "92a87036-396d-447d-a89f-439a4acfd454")
-		(property "Reference" "#PWR0098"
-			(at 345.44 37.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "+3V3"
-			(at 345.44 42.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 345.44 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 345.44 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 345.44 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "205fe3d7-ae3e-4053-868f-eb1a5099af00")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0098")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 345.44 49.53) (xy 345.44 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "d7b47285-124f-4a95-8188-9fcc506bf57c")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 345.44 52.07 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "86c527d9-5d50-4a11-bd57-1eaf015aa8d9")
-		(property "Reference" "#PWR0099"
-			(at 345.44 50.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 345.44 55.27 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 345.44 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 345.44 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 345.44 52.07 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "953b6f9e-e8d9-45de-8e39-25f6fa266f3e")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0099")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Device:C")
-		(at 365.76 45.72 0)
+		(at 236.22 57.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5362,65 +3560,70 @@
 		(dnp no)
 		(uuid "c583247b-25f1-5bff-953c-814907740519")
 		(property "Reference" "C307"
-			(at 368.3 39.14 0)
+			(at 238.85 56.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "22u"
-			(at 368.3 53.3 0)
+			(at 238.85 58.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
-			(at 365.76 45.72 0)
+			(at 236.22 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 365.76 45.72 0)
+			(at 236.22 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 365.76 45.72 0)
+			(at 236.22 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "6b6de0f2-5410-4b59-9ee4-434b9880058e")
+			(uuid "fd83da48-2b5b-4e85-93d0-e313a1a71efe")
 		)
 		(pin "2"
-			(uuid "f3f7e8fa-f692-4e28-815d-4760e7133021")
+			(uuid "840072b2-ee2c-4730-aa51-683af2f6fbbc")
 		)
 		(instances
 			(project "The Harp"
@@ -5431,179 +3634,259 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 365.76 41.91) (xy 365.76 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "f404b0b2-36e0-464a-ada7-c5d8eeb1c0bf")
-	)
 	(symbol
-		(lib_id "power:+3V3")
-		(at 365.76 39.37 0)
+		(lib_id "Device:R")
+		(at 264.16 57.15 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
+		(in_bom yes)
+		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "2a8b2992-0f95-4746-9013-b9a75772f1aa")
-		(property "Reference" "#PWR0100"
-			(at 365.76 37.37 0)
-			(hide yes)
+		(uuid "d6f8871f-e538-551c-bd82-dc80befb7804")
+		(property "Reference" "R301"
+			(at 265.78 56.15 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "+3V3"
-			(at 365.76 42.57 0)
+		(property "Value" "49.9"
+			(at 265.78 58.55 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 365.76 39.37 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 264.16 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 365.76 39.37 0)
+			(at 264.16 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 365.76 39.37 0)
+			(at 264.16 57.15 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "2210ef83-b496-46bf-a574-8c81e05c06f4")
+			(uuid "ee259a4d-0c61-4fca-828b-2d56f8ae9ac5")
+		)
+		(pin "2"
+			(uuid "03d363bc-2b47-4eae-a53c-6e40a2b9f1ed")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0100")
+					(reference "R301")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 365.76 49.53) (xy 365.76 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "ca4ef329-27b0-4005-be45-4e465d8e5736")
-	)
 	(symbol
-		(lib_id "power:GND")
-		(at 365.76 52.07 0)
+		(lib_id "Device:R")
+		(at 264.16 69.85 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
+		(in_bom yes)
+		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "8c31c450-d4e9-4f83-8e9e-ac6415c770e4")
-		(property "Reference" "#PWR0101"
-			(at 365.76 50.07 0)
-			(hide yes)
+		(uuid "c0bef2a5-e4ad-5e6e-a22a-1914ec2d9616")
+		(property "Reference" "R302"
+			(at 265.78 68.85 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "GND"
-			(at 365.76 55.27 0)
+		(property "Value" "100k"
+			(at 265.78 71.25 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 365.76 52.07 0)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 264.16 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 365.76 52.07 0)
+			(at 264.16 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 365.76 52.07 0)
+			(at 264.16 69.85 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "f5a48a10-093d-4bf4-8684-5f1ae269d957")
+			(uuid "9d301989-7d2e-4966-a1db-0b2ed4d7fd09")
+		)
+		(pin "2"
+			(uuid "7372eab6-fe37-4fba-a65f-a21f6d552572")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0101")
+					(reference "R302")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 264.16 82.55 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "4ff65b38-28c4-5b5f-a8b8-20088dda2a4e")
+		(property "Reference" "R303"
+			(at 265.78 81.55 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "22k"
+			(at 265.78 83.95 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+			(at 264.16 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 264.16 82.55 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "17cd71f9-1404-46b5-8395-fd3acd20e2e0")
+		)
+		(pin "2"
+			(uuid "fd59ce9a-e8c4-4923-a178-b29fb1d4dd0e")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "R303")
 					(unit 1)
 				)
 			)
@@ -5611,7 +3894,7 @@
 	)
 	(symbol
 		(lib_id "Device:FerriteBead")
-		(at 383.54 45.72 0)
+		(at 44.45 111.76 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -5621,65 +3904,70 @@
 		(dnp no)
 		(uuid "7ede18e0-6353-5805-a9aa-081a4dd2a52c")
 		(property "Reference" "FB302"
-			(at 386.08 39.14 0)
+			(at 44.45 107.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Value" "600R"
-			(at 386.08 53.3 0)
+			(at 44.45 116.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
-			(at 383.54 45.72 0)
+			(at 44.45 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 383.54 45.72 0)
+			(at 44.45 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 383.54 45.72 0)
+			(at 44.45 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "6964b42d-0209-4e95-b876-3ef302982a49")
+			(uuid "64daab29-0937-4f3c-990c-d1fa25034e40")
 		)
 		(pin "2"
-			(uuid "adc8ce30-813d-4d1b-bdf3-5afe351bb992")
+			(uuid "427559e1-3526-40d5-96da-59b7ab83a110")
 		)
 		(instances
 			(project "The Harp"
@@ -5690,1184 +3978,9 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 383.54 41.91) (xy 383.54 39.37)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9cb00114-8b13-4518-ba96-975bb71c0b88")
-	)
-	(symbol
-		(lib_id "power:+9V")
-		(at 383.54 39.37 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "186f8139-2923-40bd-8975-a5e6d91938d3")
-		(property "Reference" "#PWR0102"
-			(at 383.54 37.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "+9V"
-			(at 383.54 42.57 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 383.54 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 383.54 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 383.54 39.37 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "eabe554e-3522-4a46-883e-23f62524d1f4")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0102")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 383.54 49.53) (xy 383.54 52.07)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "16966c62-a04d-4d94-bec1-9950c9b79164")
-	)
-	(label "LDO_IN"
-		(at 383.54 52.07 270)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		(uuid "c62ec219-2a7d-41f2-b396-9248df2c25ad")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 27.94 93.98 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c6888995-489a-5e12-80ab-a13a35f6c960")
-		(property "Reference" "C308"
-			(at 30.48 87.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "47u"
-			(at 30.48 101.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
-			(at 27.94 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 27.94 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "0cf339ca-2da4-45c2-acba-010d8d80bf6e")
-		)
-		(pin "2"
-			(uuid "eddd3833-c1fa-4ea1-897c-b72e824c686d")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "C308")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 27.94 90.17) (xy 27.94 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1bba2f77-39dd-4f9e-94c5-46444f74db8f")
-	)
-	(label "LDO_IN"
-		(at 27.94 87.63 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "e9063b65-5e00-4cf8-a6e6-ccfd23bda211")
-	)
-	(wire
-		(pts
-			(xy 27.94 97.79) (xy 27.94 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "99dedc7f-6002-43e9-86bc-f5fb4a7d5f2f")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 27.94 100.33 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "921f4a19-9204-4293-b0a3-076043ec3a82")
-		(property "Reference" "#PWR0103"
-			(at 27.94 98.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 27.94 103.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 27.94 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 27.94 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 27.94 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "34bcac4f-d0a6-4626-8006-5778553a4e70")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0103")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 45.72 93.98 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "580d2c6a-50b7-582e-8258-3ea5589cc6f0")
-		(property "Reference" "C309"
-			(at 48.26 87.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2.2u"
-			(at 48.26 101.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 45.72 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "84c79492-1bd5-406f-be60-8d603836c6d7")
-		)
-		(pin "2"
-			(uuid "c7781047-a62f-47e3-a32a-44fbe9d4fb4a")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "C309")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 45.72 90.17) (xy 45.72 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "4cffbf08-2c66-4263-a4d9-fe58b527bd99")
-	)
-	(label "LDO_IN"
-		(at 45.72 87.63 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "41ae5f91-8c3e-4dae-a1cf-b0049df5eeb1")
-	)
-	(wire
-		(pts
-			(xy 45.72 97.79) (xy 45.72 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "198391ca-e21b-4968-8e2e-5f545ee94345")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 45.72 100.33 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f2ef8407-b3ac-4e9c-b3fa-0aa43f96e7ea")
-		(property "Reference" "#PWR0104"
-			(at 45.72 98.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 45.72 103.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 45.72 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 45.72 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 45.72 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "f59963cd-c46c-42b7-ac34-fcab5e9df390")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0104")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Regulator_Linear:NCP718xSN500")
-		(at 78.74 88.9 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "4b41a72f-94de-5870-8c7b-607ab3c4ac05")
-		(property "Reference" "U302"
-			(at 60.64 83.59 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NCP718ASN500T1G"
-			(at 60.64 100.29 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-5"
-			(at 78.74 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 78.74 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Manufacturer" "onsemi"
-			(at 78.74 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Mfg Part #" "NCP718ASN500T1G"
-			(at 78.74 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C603786"
-			(at 78.74 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Manufacturer" "onsemi"
-			(at 78.74 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "JLCPCB Part #" "NCP718ASN500T1G"
-			(at 78.74 88.9 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4b32d3ae-48db-4d57-a286-ab0610143dda")
-		)
-		(pin "2"
-			(uuid "c8c49b32-15d8-48cf-a322-29754363c543")
-		)
-		(pin "3"
-			(uuid "190ec667-d5d9-4b9b-b584-9dcae6b39cc3")
-		)
-		(pin "4"
-			(uuid "88243bc2-3e7e-4c20-946f-5a5d11e958f0")
-		)
-		(pin "5"
-			(uuid "0609d0f6-b3c2-45fb-a6ab-bebf77295fcd")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "U302")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 71.12 86.36) (xy 68.58 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "61e28570-7635-4e56-92e0-619bb9b290a1")
-	)
-	(label "LDO_IN"
-		(at 68.58 86.36 180)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		(uuid "b13b4c4e-c077-48a2-9d0c-8c52f980cdf3")
-	)
-	(wire
-		(pts
-			(xy 78.74 96.52) (xy 78.74 99.06)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "976a9db6-7041-45e8-b6e1-c7bcf5bd96d1")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 78.74 99.06 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "dddd9697-c77d-4130-a671-eb561ca2f637")
-		(property "Reference" "#PWR0105"
-			(at 78.74 97.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 78.74 102.26 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 78.74 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 78.74 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 78.74 99.06 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "4801b352-b8b6-40fd-9aa4-6088bf71dfe3")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0105")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 71.12 88.9) (xy 68.58 88.9)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "747ae7b3-4831-4ab4-b18a-d41d73fd1516")
-	)
-	(label "LDO_IN"
-		(at 68.58 88.9 180)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right bottom)
-			)
-		(uuid "770a9937-3e3d-47f3-b1c3-52dbcb963533")
-	)
-	(no_connect
-		(at 83.82 88.9)
-		(uuid "db1f2b84-387d-45de-87b4-a3b66b69642c")
-	)
-	(wire
-		(pts
-			(xy 86.36 86.36) (xy 88.9 86.36)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b72a24e8-6cc3-4a8b-ba71-6fe3c6bb5e6c")
-	)
-	(label "LDO_OUT"
-		(at 88.9 86.36 0)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "1303e820-2d7f-44f4-b47f-28cfe4f92be7")
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 114.3 93.98 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "167a5806-8c74-5f75-9fad-76cc3e8a169e")
-		(property "Reference" "C310"
-			(at 116.84 87.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2.2u"
-			(at 116.84 101.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 114.3 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 114.3 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "85621327-ced1-4502-9917-4dc4948b6874")
-		)
-		(pin "2"
-			(uuid "e5c59366-8d9f-4e1a-981c-a9f4f28060b8")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "C310")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 114.3 90.17) (xy 114.3 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "0e732e06-3eba-474f-8342-f53146a6f413")
-	)
-	(label "LDO_OUT"
-		(at 114.3 87.63 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "f2fb7537-442c-43b1-802e-63b8b49f924f")
-	)
-	(wire
-		(pts
-			(xy 114.3 97.79) (xy 114.3 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "cb76e59e-4764-42bc-b16d-2b90f1df94c6")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 114.3 100.33 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "ea3f0ce1-dc39-4cfd-869f-266c557949fc")
-		(property "Reference" "#PWR0106"
-			(at 114.3 98.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 114.3 103.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 114.3 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 114.3 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 114.3 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e2c0af1e-8844-472d-bf39-dae1632b3bc4")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0106")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:C")
-		(at 132.08 93.98 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "699bf204-c708-5591-ac41-a75c52c6a4d4")
-		(property "Reference" "C311"
-			(at 134.62 87.4 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "2.2u"
-			(at 134.62 101.56 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 132.08 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 132.08 93.98 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "039948af-281d-450d-be3b-77c437a279a1")
-		)
-		(pin "2"
-			(uuid "82b39550-0f55-4f76-917b-1863dd32eed3")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "C311")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 132.08 90.17) (xy 132.08 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "fc6d29ce-7979-4b64-bd81-424ac29e85c6")
-	)
-	(label "LDO_OUT"
-		(at 132.08 87.63 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "4439714c-bdbe-4bdc-ad6e-ec99c0f2b762")
-	)
-	(wire
-		(pts
-			(xy 132.08 97.79) (xy 132.08 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "a3fce70a-057c-4caa-b81d-9611f986df85")
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 132.08 100.33 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "f6b84e0e-9bb7-4312-9235-4e2bfecae8a4")
-		(property "Reference" "#PWR0107"
-			(at 132.08 98.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "GND"
-			(at 132.08 103.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 132.08 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 132.08 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 132.08 100.33 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "e7ec07dd-7403-4d0f-bcd1-9ba76e822244")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0107")
-					(unit 1)
-				)
-			)
-		)
-	)
 	(symbol
 		(lib_id "Device:FerriteBead")
-		(at 149.86 93.98 0)
+		(at 130.81 111.76 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -6877,65 +3990,70 @@
 		(dnp no)
 		(uuid "07eb32f2-cce9-5acd-b179-debe10f5df5f")
 		(property "Reference" "FB303"
-			(at 152.4 87.4 0)
+			(at 130.81 107.99 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Value" "600R"
-			(at 152.4 101.56 0)
+			(at 130.81 116.13 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
-			(at 149.86 93.98 0)
+			(at 130.81 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 149.86 93.98 0)
+			(at 130.81 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 149.86 93.98 0)
+			(at 130.81 111.76 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "be555978-7595-4ce7-959b-4c8ee342a51f")
+			(uuid "be309def-184a-4c7f-9a34-896c7aaa7cfb")
 		)
 		(pin "2"
-			(uuid "f6b081a7-69f3-48e5-a57e-b1b5656ff5c5")
+			(uuid "413f71e7-8cb3-474b-9dfb-e37258bdd00a")
 		)
 		(instances
 			(project "The Harp"
@@ -6946,111 +4064,156 @@
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 149.86 90.17) (xy 149.86 87.63)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "6a3444c0-146b-4f3d-99e8-2852b3f9e21f")
-	)
-	(label "LDO_OUT"
-		(at 149.86 87.63 90)
-		(fields_autoplaced yes)
-		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		(uuid "d140d3bd-c9d9-4abf-853c-3298a751c1d7")
-	)
-	(wire
-		(pts
-			(xy 149.86 97.79) (xy 149.86 100.33)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1e80c770-8af1-4373-b7f5-e8698b0a15d1")
-	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 149.86 100.33 180)
+		(lib_id "Regulator_Linear:NCP718xSN500")
+		(at 91.44 114.3 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
+		(in_bom yes)
+		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "5e19c832-58b9-4fe6-a154-a85958c7cc67")
-		(property "Reference" "#PWR0108"
-			(at 149.86 98.33 0)
-			(hide yes)
+		(uuid "4b41a72f-94de-5870-8c7b-607ab3c4ac05")
+		(property "Reference" "U302"
+			(at 83.82 105.664 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "+5V"
-			(at 149.86 97.13 0)
+		(property "Value" "NCP718ASN500T1G"
+			(at 83.82 125.984 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
-			(at 149.86 100.33 0)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23-5"
+			(at 91.44 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 149.86 100.33 0)
+			(at 91.44 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 149.86 100.33 0)
+			(at 91.44 114.3 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Manufacturer" "onsemi"
+			(at 91.44 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Mfg Part #" "NCP718ASN500T1G"
+			(at 91.44 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C603786"
+			(at 91.44 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Manufacturer" "onsemi"
+			(at 91.44 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "JLCPCB Part #" "NCP718ASN500T1G"
+			(at 91.44 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "4abcc099-91d1-4608-8535-d1f56fd8de61")
+			(uuid "9ca703ac-d341-43e9-a48f-3dfd6f4e74e8")
+		)
+		(pin "2"
+			(uuid "7093b8d2-a79d-4553-9e5a-7ef5cc9fd955")
+		)
+		(pin "3"
+			(uuid "f3f8fcba-6420-4a8c-ab91-5a2fbd543e51")
+		)
+		(pin "4"
+			(uuid "266a2859-ec12-4c52-b850-40acba173bb3")
+		)
+		(pin "5"
+			(uuid "d11140d6-b635-409e-8aba-3489c01dae79")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0108")
+					(reference "U302")
 					(unit 1)
 				)
 			)
@@ -7058,7 +4221,351 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 167.64 88.9 0)
+		(at 58.42 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c6888995-489a-5e12-80ab-a13a35f6c960")
+		(property "Reference" "C308"
+			(at 61.05 114.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "47u"
+			(at 61.05 116.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_1210_3225Metric"
+			(at 58.42 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 58.42 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "8772a492-c8fb-4242-9fc6-e7a0a60e693f")
+		)
+		(pin "2"
+			(uuid "de48cd1a-407a-4aa8-9342-34757e3d0607")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "C308")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 68.58 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "580d2c6a-50b7-582e-8258-3ea5589cc6f0")
+		(property "Reference" "C309"
+			(at 71.21 114.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2u"
+			(at 71.21 116.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 68.58 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 68.58 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "395229b5-a249-4b63-97be-d8a216e23db5")
+		)
+		(pin "2"
+			(uuid "dcb6d0ad-6333-4dd4-b75b-9914490d45ed")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "C309")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 109.22 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "167a5806-8c74-5f75-9fad-76cc3e8a169e")
+		(property "Reference" "C310"
+			(at 111.85 114.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2u"
+			(at 111.85 116.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 109.22 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "735cb29d-219c-4db2-b5ec-c48191d24670")
+		)
+		(pin "2"
+			(uuid "908fc184-ac81-46a0-8759-f335c6419656")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "C310")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 119.38 115.57 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "699bf204-c708-5591-ac41-a75c52c6a4d4")
+		(property "Reference" "C311"
+			(at 122.01 114.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2.2u"
+			(at 122.01 116.97 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 119.38 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 115.57 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "753f8d74-0bb2-417a-8d20-729ceb5a0465")
+		)
+		(pin "2"
+			(uuid "354f6857-7700-4c69-bff9-b931e2ac5460")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "C311")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 142.24 115.57 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7068,65 +4575,70 @@
 		(dnp no)
 		(uuid "657521eb-f918-5612-9597-d6f854809b8c")
 		(property "Reference" "C312"
-			(at 170.18 82.32 0)
+			(at 144.87 114.57 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "2.2u"
-			(at 170.18 96.48 0)
+			(at 144.87 116.97 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
-			(at 167.64 88.9 0)
+			(at 142.24 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 88.9 0)
+			(at 142.24 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 167.64 88.9 0)
+			(at 142.24 115.57 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "a9be7c2e-b2d6-4974-bf94-ee0c534cb3e5")
+			(uuid "dcda6b0b-ce5e-4c6e-8909-19fc772534d3")
 		)
 		(pin "2"
-			(uuid "bccac9d4-86a3-4935-9c71-e9d5d031a731")
+			(uuid "8812014d-9d75-4d4c-a08a-9d00e13280cd")
 		)
 		(instances
 			(project "The Harp"
@@ -7139,106 +4651,777 @@
 	)
 	(wire
 		(pts
-			(xy 167.64 85.09) (xy 167.64 82.55)
+			(xy 35.56 53.34) (xy 43.18 53.34)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "9ee4fc55-85ce-4bfc-aefc-18cd9ff4ae97")
-	)
-	(symbol
-		(lib_id "power:+5V")
-		(at 167.64 82.55 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "6ef6dc6a-64c2-4635-9aa1-2f33990b8501")
-		(property "Reference" "#PWR0109"
-			(at 167.64 80.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "+5V"
-			(at 167.64 85.75 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 167.64 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 167.64 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 167.64 82.55 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "67cb8e1d-3cfc-477c-9ba6-7de3a9a30f7b")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0109")
-					(unit 1)
-				)
-			)
-		)
+		(uuid "7139277a-ea06-4c47-ad59-bfa1a9dbb89f")
 	)
 	(wire
 		(pts
-			(xy 167.64 92.71) (xy 167.64 95.25)
+			(xy 43.18 53.34) (xy 43.18 60.96)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "24e6f768-19d9-4492-9c7a-6aaa5d2504af")
+		(uuid "46fd2d9e-c45d-4cd1-a39d-45014f1f3c6a")
+	)
+	(wire
+		(pts
+			(xy 25.4 71.12) (xy 25.4 68.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4e9e085c-e3e0-41cc-9990-b340f0566734")
+	)
+	(wire
+		(pts
+			(xy 35.56 50.8) (xy 53.34 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6e38871e-4b00-4416-9806-87c0b76c4caf")
+	)
+	(wire
+		(pts
+			(xy 53.34 50.8) (xy 68.58 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d294efce-3528-4ae3-a168-b9253ca64d72")
+	)
+	(wire
+		(pts
+			(xy 68.58 50.8) (xy 91.44 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f948dc4-80b6-4c48-943d-c482d915dd51")
+	)
+	(wire
+		(pts
+			(xy 53.34 58.42) (xy 53.34 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "950ae052-64c6-4e6f-8919-0cc572133dbf")
+	)
+	(wire
+		(pts
+			(xy 68.58 58.42) (xy 68.58 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "24c1e1fc-ab30-4d81-8b72-149a7f2a9dc1")
+	)
+	(wire
+		(pts
+			(xy 99.06 50.8) (xy 106.68 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b79f9055-09ec-4492-8540-bccbdd488848")
+	)
+	(wire
+		(pts
+			(xy 106.68 50.8) (xy 114.3 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "82c1d36b-fc09-43a1-b90f-7a89f0d95475")
+	)
+	(wire
+		(pts
+			(xy 106.68 58.42) (xy 106.68 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf99de9b-3304-4948-b787-44dd0fdc53fb")
+	)
+	(wire
+		(pts
+			(xy 121.92 50.8) (xy 129.54 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08db2344-c71c-4c11-a3b1-cdd729d93ab6")
+	)
+	(wire
+		(pts
+			(xy 129.54 50.8) (xy 139.7 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a04c853f-5d32-43fc-8988-5cf7722db63a")
+	)
+	(wire
+		(pts
+			(xy 139.7 50.8) (xy 149.86 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1b4e478c-24b7-4c96-b33f-9f92ba76e7cd")
+	)
+	(wire
+		(pts
+			(xy 149.86 50.8) (xy 157.48 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0ec7ec1-5d2f-45bc-a5a1-b0ad5baa204b")
+	)
+	(wire
+		(pts
+			(xy 157.48 50.8) (xy 167.64 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d29c32b8-2ce0-4979-acc1-4548b47b7808")
+	)
+	(wire
+		(pts
+			(xy 129.54 58.42) (xy 129.54 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e461c0ea-69e7-4375-a8a3-6582eded3758")
+	)
+	(wire
+		(pts
+			(xy 139.7 58.42) (xy 139.7 60.96)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7e356d5f-7a2e-4ee9-a85d-aeaf7c3e565d")
+	)
+	(wire
+		(pts
+			(xy 149.86 50.8) (xy 149.86 45.72)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a5b8bcc3-d817-4b49-8dce-70fe6875e6e1")
+	)
+	(wire
+		(pts
+			(xy 157.48 50.8) (xy 157.48 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "2b0a1bd3-47a3-42fd-8401-2d859c0b9abc")
+	)
+	(wire
+		(pts
+			(xy 177.8 60.96) (xy 177.8 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "739a2c1f-5c18-4cdd-a78f-f3677593fc62")
+	)
+	(wire
+		(pts
+			(xy 187.96 50.8) (xy 193.04 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "33956cbd-66c8-459c-b908-0fcfb41f123b")
+	)
+	(wire
+		(pts
+			(xy 193.04 50.8) (xy 193.04 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "44952716-f4c4-4b8c-9955-0f4c9428fa0b")
+	)
+	(wire
+		(pts
+			(xy 193.04 40.64) (xy 195.58 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "62730cd0-f14b-433f-b8ad-dc8bbf9b356c")
+	)
+	(wire
+		(pts
+			(xy 203.2 40.64) (xy 205.74 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "148cc969-3b1f-468f-b7fc-981f4ba327de")
+	)
+	(wire
+		(pts
+			(xy 205.74 40.64) (xy 205.74 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7459c839-d6c2-4888-a7a8-4ecf33e6872c")
+	)
+	(wire
+		(pts
+			(xy 187.96 53.34) (xy 205.74 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "86467581-01df-4f2f-aa42-ed32a0238d08")
+	)
+	(wire
+		(pts
+			(xy 205.74 53.34) (xy 208.28 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b76a743e-7de4-4a6c-bc8c-6f57dfac12be")
+	)
+	(wire
+		(pts
+			(xy 215.9 53.34) (xy 226.06 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "137e8009-50ed-498d-93cb-00f848952cc6")
+	)
+	(wire
+		(pts
+			(xy 226.06 53.34) (xy 236.22 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e77a7075-1a75-4fa2-95d5-fde0dcf0df91")
+	)
+	(wire
+		(pts
+			(xy 236.22 53.34) (xy 246.38 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "94ea3e7e-9a85-4bdc-9997-18cee015e70b")
+	)
+	(wire
+		(pts
+			(xy 246.38 53.34) (xy 254.0 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ceec85c7-8599-4020-9a06-abc1f9c55961")
+	)
+	(wire
+		(pts
+			(xy 254.0 53.34) (xy 264.16 53.34)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b7203881-c09e-48eb-b4bb-532b24150041")
+	)
+	(wire
+		(pts
+			(xy 226.06 60.96) (xy 226.06 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0617d18c-7a27-4a9b-a015-258c61afd327")
+	)
+	(wire
+		(pts
+			(xy 236.22 60.96) (xy 236.22 63.5)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "56b3f2fd-d5e9-42a8-9cbf-b94c6016f57a")
+	)
+	(wire
+		(pts
+			(xy 246.38 53.34) (xy 246.38 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bccd9be8-7278-4d45-856e-943c6a961fd9")
+	)
+	(wire
+		(pts
+			(xy 254.0 53.34) (xy 254.0 50.8)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5e65b31c-7c8f-4247-b5e4-8e552df14e55")
+	)
+	(wire
+		(pts
+			(xy 264.16 60.96) (xy 264.16 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8251f7ce-ff2a-46ba-a011-03a2a373d013")
+	)
+	(wire
+		(pts
+			(xy 264.16 73.66) (xy 264.16 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "266bf5f6-2435-4ead-a794-9f00578f1cd3")
+	)
+	(wire
+		(pts
+			(xy 264.16 76.2) (xy 264.16 78.74)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "745c891f-7aeb-49d9-8faf-a38ec8c48e05")
+	)
+	(wire
+		(pts
+			(xy 264.16 86.36) (xy 264.16 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "11299b7e-c16b-4681-9bb3-6dbc4c322925")
+	)
+	(wire
+		(pts
+			(xy 187.96 55.88) (xy 195.58 55.88)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a055907e-288e-4d22-966f-71e06d438338")
+	)
+	(wire
+		(pts
+			(xy 195.58 55.88) (xy 195.58 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "739311f0-acef-48ba-9afd-b05f50a0523b")
+	)
+	(wire
+		(pts
+			(xy 195.58 76.2) (xy 264.16 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0ae23f28-8e18-4301-97e8-5d43d09186bd")
+	)
+	(wire
+		(pts
+			(xy 35.56 111.76) (xy 40.64 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0940697c-be49-4ce3-9234-cf3de3aba4b5")
+	)
+	(wire
+		(pts
+			(xy 48.26 111.76) (xy 58.42 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97d6fd57-0cbe-4198-99cf-64e974256ad2")
+	)
+	(wire
+		(pts
+			(xy 58.42 111.76) (xy 68.58 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "438b9e26-60be-41d3-a834-e75c5325cf11")
+	)
+	(wire
+		(pts
+			(xy 68.58 111.76) (xy 78.74 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "bf7f717e-7ff7-487e-b188-47cd46e505ae")
+	)
+	(wire
+		(pts
+			(xy 78.74 111.76) (xy 83.82 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4568517f-8361-41f4-bebe-6c8f5fa4bed3")
+	)
+	(wire
+		(pts
+			(xy 58.42 119.38) (xy 58.42 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4f0733b1-c956-4aff-81d7-a2e913d32fa1")
+	)
+	(wire
+		(pts
+			(xy 68.58 119.38) (xy 68.58 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e9cf67fa-472a-4e3f-8b25-7abd02846718")
+	)
+	(wire
+		(pts
+			(xy 83.82 114.3) (xy 78.74 114.3)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "09fbd25c-1ea3-447d-9933-a7ebb799a984")
+	)
+	(wire
+		(pts
+			(xy 78.74 114.3) (xy 78.74 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "6f17778e-65ed-41b5-8125-5bfbdc121c4a")
+	)
+	(wire
+		(pts
+			(xy 91.44 121.92) (xy 91.44 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fb510051-98d7-4d40-a327-ee4b689ce87e")
+	)
+	(wire
+		(pts
+			(xy 99.06 111.76) (xy 109.22 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "1e90dc16-a911-4fc5-8041-ef878eca4b66")
+	)
+	(wire
+		(pts
+			(xy 109.22 111.76) (xy 119.38 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ae9fa2ab-9c2f-40bd-aeae-4db3e5a7dc61")
+	)
+	(wire
+		(pts
+			(xy 119.38 111.76) (xy 127.0 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "97f2c252-35d7-4881-973d-8335c20f1e33")
+	)
+	(wire
+		(pts
+			(xy 109.22 119.38) (xy 109.22 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8b19c654-68a1-461e-97e2-b475e3def2aa")
+	)
+	(wire
+		(pts
+			(xy 119.38 119.38) (xy 119.38 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "36f05fa0-589e-4a91-8288-956b31343166")
+	)
+	(wire
+		(pts
+			(xy 134.62 111.76) (xy 142.24 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "08e5865e-5073-44e2-a5d5-d2f5751ad953")
+	)
+	(wire
+		(pts
+			(xy 142.24 111.76) (xy 147.32 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "ac7f8af9-91ee-4280-8ac0-0bf8c9593947")
+	)
+	(wire
+		(pts
+			(xy 147.32 111.76) (xy 152.4 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c99abbd2-12cd-441a-a318-82e1ef44b7d5")
+	)
+	(wire
+		(pts
+			(xy 142.24 119.38) (xy 142.24 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "99f18b24-1513-4565-9b94-b28401463d1f")
+	)
+	(wire
+		(pts
+			(xy 152.4 111.76) (xy 152.4 106.68)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "95bba066-c22f-468d-b496-08d98414efe9")
+	)
+	(wire
+		(pts
+			(xy 147.32 111.76) (xy 147.32 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "48c6a0fa-73e3-4a8b-83cb-4744d7295ee5")
+	)
+	(junction
+		(at 53.34 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a5f73da8-8835-4db3-b197-8587a82da30e")
+	)
+	(junction
+		(at 58.42 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c130c640-037d-4b54-96ae-0d2464056778")
+	)
+	(junction
+		(at 68.58 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "1ca9cc6e-95a2-4f7f-afd6-96bc65194993")
+	)
+	(junction
+		(at 68.58 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ed162eed-e450-4678-a42d-4155024298e9")
+	)
+	(junction
+		(at 78.74 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "4c2f5a8c-bb75-4df7-b13c-584e2584e14e")
+	)
+	(junction
+		(at 106.68 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2796dbe3-e260-4274-aac1-59e0cbd7622f")
+	)
+	(junction
+		(at 109.22 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "a71a417d-56f9-4d92-a68c-7db930d1b82b")
+	)
+	(junction
+		(at 119.38 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c616d857-7d97-421d-9e96-59a77d470d7a")
+	)
+	(junction
+		(at 129.54 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "bb198952-9d1d-4361-860b-adb66642cbe1")
+	)
+	(junction
+		(at 139.7 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e6f3718d-a35c-4464-8883-b5c9a3d332d9")
+	)
+	(junction
+		(at 142.24 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ec5fdea0-d2f0-4a21-9735-7cc164d729db")
+	)
+	(junction
+		(at 147.32 111.76)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "71db0c77-e2f4-4dc5-81fe-bddfe11d21d8")
+	)
+	(junction
+		(at 149.86 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "2c1b80c9-531a-4553-8b1d-39709a141d6f")
+	)
+	(junction
+		(at 157.48 50.8)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6d5dbe2e-4ae8-4aa9-8af0-6bc2366190fc")
+	)
+	(junction
+		(at 205.74 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7380294d-699a-4b4c-84d4-d3b98ab574d5")
+	)
+	(junction
+		(at 226.06 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "f155aa3e-2010-46f6-9f44-cdbbbcc7fbb1")
+	)
+	(junction
+		(at 236.22 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "359f6a91-9708-45c3-8199-d5b04497fc65")
+	)
+	(junction
+		(at 246.38 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6301da1b-062d-4e50-8cdf-30c102aad586")
+	)
+	(junction
+		(at 254.0 53.34)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "854ae471-1e5d-48b3-be10-b20607e58355")
+	)
+	(junction
+		(at 264.16 76.2)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "9ee10913-a854-4e40-abb6-2447681587a5")
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 167.64 95.25 0)
+		(at 43.18 60.96 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7246,167 +5429,83 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "6edc240d-9cf2-43b6-9641-bbc6da63bbad")
-		(property "Reference" "#PWR0110"
-			(at 167.64 93.25 0)
+		(uuid "61b7597c-94e0-467a-b621-f35142b9e3dd")
+		(property "Reference" "#PWR0062"
+			(at 43.18 58.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "GND"
-			(at 167.64 98.45 0)
+			(at 43.18 64.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" ""
-			(at 167.64 95.25 0)
+			(at 43.18 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 167.64 95.25 0)
+			(at 43.18 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 167.64 95.25 0)
+			(at 43.18 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "676a6794-3744-4099-8a7c-d0d0b2baa6fe")
+			(uuid "3500ae2d-0dac-4755-9602-12327d178bfc")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0110")
+					(reference "#PWR0062")
 					(unit 1)
 				)
 			)
 		)
-	)
-	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 20.32 119.38 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board no)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "24682904-bf5b-426d-a788-1a0e7c4ab97b")
-		(property "Reference" "#FLG0111"
-			(at 20.32 117.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "PWR_FLAG"
-			(at 20.32 116.38 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 20.32 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 20.32 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" ""
-			(at 20.32 119.38 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "48763e67-b7f1-4392-9058-91b48134ac76")
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#FLG0111")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(wire
-		(pts
-			(xy 20.32 119.38) (xy 20.32 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "18bc042b-a81b-466d-85e6-90565181febf")
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 20.32 121.92 0)
+		(at 25.4 71.12 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7414,78 +5513,83 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "81e1e28a-e164-4242-8cae-ee8759e3302f")
-		(property "Reference" "#PWR0112"
-			(at 20.32 119.92 0)
+		(uuid "76c36bf4-c0e3-4b21-8106-fc6bdb9c095b")
+		(property "Reference" "#PWR0072"
+			(at 25.4 69.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "GND"
-			(at 20.32 125.12 0)
+			(at 25.4 74.62 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" ""
-			(at 20.32 121.92 0)
+			(at 25.4 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 20.32 121.92 0)
+			(at 25.4 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 20.32 121.92 0)
+			(at 25.4 71.12 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "837f6186-6dc2-4fe2-8ef4-daf68f998a6f")
+			(uuid "081ec7de-1f9e-4b52-a43e-a96bbf3d1ba0")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0112")
+					(reference "#PWR0072")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 35.56 119.38 0)
+		(lib_id "power:GND")
+		(at 53.34 60.96 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7493,88 +5597,419 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "3b99a21e-6872-4827-807d-58912dcba3fd")
-		(property "Reference" "#FLG0113"
-			(at 35.56 117.38 0)
+		(uuid "a21e09f0-b85e-44c9-9d0b-3bbbf2ad20aa")
+		(property "Reference" "#PWR0063"
+			(at 53.34 58.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "PWR_FLAG"
-			(at 35.56 116.38 0)
+		(property "Value" "GND"
+			(at 53.34 64.46 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 119.38 0)
+			(at 53.34 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 119.38 0)
+			(at 53.34 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 35.56 119.38 0)
+			(at 53.34 60.96 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "b948e6ae-2bdb-4aa6-9b11-1b063e30958f")
+			(uuid "622377ea-73e2-4d7e-86b6-54276158561d")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#FLG0113")
+					(reference "#PWR0063")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 35.56 119.38) (xy 35.56 121.92)
+	(symbol
+		(lib_id "power:GND")
+		(at 68.58 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "366a293f-1d2e-454d-b032-36c0eaa4645d")
+		(property "Reference" "#PWR0064"
+			(at 68.58 58.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(property "Value" "GND"
+			(at 68.58 64.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
 		)
-		(uuid "a4df95d6-3cc2-4853-acc1-e38139e58948")
+		(property "Footprint" ""
+			(at 68.58 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 68.58 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "37ec3bd8-2c2b-485e-b20c-86933f7a7cb1")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0064")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 106.68 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b181be89-a460-414f-8b81-61d34bac1b9f")
+		(property "Reference" "#PWR0065"
+			(at 106.68 58.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 106.68 64.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 106.68 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 106.68 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 106.68 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "edcbb158-7386-4b5a-a4f9-66eca8895bf3")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0065")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 129.54 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cc198320-c985-4067-8a9a-09563c4507e9")
+		(property "Reference" "#PWR0066"
+			(at 129.54 58.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 129.54 64.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 129.54 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 129.54 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 129.54 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "fce731e2-65d1-4974-9155-4f96e5bb675c")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0066")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 139.7 60.96 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "a0e9314b-1859-461b-b305-a1756317e262")
+		(property "Reference" "#PWR0067"
+			(at 139.7 58.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 139.7 64.46 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 139.7 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 139.7 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 139.7 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "59764e00-a9ba-4667-929d-5b0aec4ff8fb")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0067")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:+9V")
-		(at 35.56 121.92 180)
+		(at 149.86 45.72 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7582,78 +6017,83 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "510e7d89-f546-4f01-9df1-9d50425704c3")
-		(property "Reference" "#PWR0114"
-			(at 35.56 119.92 0)
+		(uuid "cd2dbb73-deb3-4b94-a6d2-948928e510d1")
+		(property "Reference" "#PWR0058"
+			(at 149.86 43.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "+9V"
-			(at 35.56 125.12 0)
+			(at 149.86 42.22 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" ""
-			(at 35.56 121.92 0)
+			(at 149.86 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 35.56 121.92 0)
+			(at 149.86 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 35.56 121.92 0)
+			(at 149.86 45.72 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "cac744a1-44ba-4eff-8613-58b78b4e35f9")
+			(uuid "58423b6b-70c1-45a8-acf2-60de2f995377")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0114")
+					(reference "#PWR0058")
 					(unit 1)
 				)
 			)
 		)
 	)
 	(symbol
-		(lib_id "power:PWR_FLAG")
-		(at 50.8 119.38 0)
+		(lib_id "power:GND")
+		(at 177.8 63.5 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7661,88 +6101,251 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0545ea6d-5cc5-4627-a70b-4178659dd5a2")
-		(property "Reference" "#FLG0115"
-			(at 50.8 117.38 0)
+		(uuid "fa00bd7c-15bd-431e-b712-5afbd166eecc")
+		(property "Reference" "#PWR0068"
+			(at 177.8 61.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "PWR_FLAG"
-			(at 50.8 116.38 0)
+		(property "Value" "GND"
+			(at 177.8 67.0 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 119.38 0)
+			(at 177.8 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 119.38 0)
+			(at 177.8 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 50.8 119.38 0)
+			(at 177.8 63.5 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "609d8429-39f0-478a-b567-05b27ede4310")
+			(uuid "bd25563a-c583-4109-ac29-b60531f4fd91")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#FLG0115")
+					(reference "#PWR0068")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 50.8 119.38) (xy 50.8 121.92)
+	(symbol
+		(lib_id "power:GND")
+		(at 226.06 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b76a56ed-e188-4ff0-a136-10e9b541034b")
+		(property "Reference" "#PWR0069"
+			(at 226.06 61.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
 		)
-		(stroke
-			(width 0)
-			(type default)
+		(property "Value" "GND"
+			(at 226.06 67.0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
 		)
-		(uuid "b6b9bfbe-e891-46cf-9038-bc6b67226761")
+		(property "Footprint" ""
+			(at 226.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 226.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 226.06 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "63dcea80-6273-4b7b-b717-ba73b8590d5e")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0069")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 236.22 63.5 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "17c4fedf-fc02-48fd-9847-8ef6353f7acf")
+		(property "Reference" "#PWR0070"
+			(at 236.22 61.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 236.22 67.0 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 236.22 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 236.22 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 236.22 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "b7edc916-c110-4deb-a286-06079ecc02d1")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0070")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:+3V3")
-		(at 50.8 121.92 180)
+		(at 246.38 48.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7750,70 +6353,831 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "d309dce1-9e82-4869-862a-45a3664efc82")
-		(property "Reference" "#PWR0116"
-			(at 50.8 119.92 0)
+		(uuid "051e3cdd-44ae-400d-83e1-002942ef9412")
+		(property "Reference" "#PWR0060"
+			(at 246.38 46.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "+3V3"
-			(at 50.8 125.12 0)
+			(at 246.38 44.76 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" ""
-			(at 50.8 121.92 0)
+			(at 246.38 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 50.8 121.92 0)
+			(at 246.38 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 50.8 121.92 0)
+			(at 246.38 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "c07213c2-5423-4a1e-84fa-80aaf0c86a0f")
+			(uuid "b43f2320-7e24-420d-9550-fbb0b25c1343")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0116")
+					(reference "#PWR0060")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 264.16 88.9 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "60830882-8eac-48bc-b5a4-9a79c1f25743")
+		(property "Reference" "#PWR0073"
+			(at 264.16 86.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 264.16 92.4 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 264.16 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 264.16 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 264.16 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9e1a7b53-c895-472d-bf04-8fbeafe5abe8")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0073")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+9V")
+		(at 35.56 111.76 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7ca740fb-1f23-4d2e-bcbb-e15e8e1d4a3e")
+		(property "Reference" "#PWR0076"
+			(at 35.56 109.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+9V"
+			(at 35.56 108.26 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 35.56 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 35.56 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 35.56 111.76 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "bf2c5328-8fb3-48eb-8aed-a34df7c494e6")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0076")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 58.42 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b5e6f80f-0ca7-4bfb-8baa-06853c1b1e1d")
+		(property "Reference" "#PWR0077"
+			(at 58.42 119.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 58.42 125.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 58.42 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 58.42 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 58.42 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "0e7a624a-687c-4252-84ef-e134917f03bb")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0077")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 68.58 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "1b8311e4-e3ee-4ba9-9908-fbc8f0a092c9")
+		(property "Reference" "#PWR0078"
+			(at 68.58 119.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 68.58 125.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 68.58 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 68.58 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 68.58 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "91dd4059-4784-497d-8084-e4fa807d6e68")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0078")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 91.44 124.46 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "147eacbc-809b-4895-b6d0-be0ae0f54cc7")
+		(property "Reference" "#PWR0082"
+			(at 91.44 122.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 127.96 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "80654b7c-8718-40bb-be57-e22b3c4fd755")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0082")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 109.22 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "fae921ce-8d67-4007-85fb-ad25e89f7501")
+		(property "Reference" "#PWR0079"
+			(at 109.22 119.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 109.22 125.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 109.22 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 109.22 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 109.22 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "363c0d5e-1ea0-4a3b-bff0-84d6fe6b529d")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0079")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 119.38 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "2334cb55-ff33-4044-afe8-93a2a558af6b")
+		(property "Reference" "#PWR0080"
+			(at 119.38 119.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 119.38 125.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 119.38 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 119.38 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 119.38 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "c80583c9-f12c-4627-ab83-d28dbae4510a")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0080")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 142.24 121.92 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "cb8943ec-22bf-4508-850d-f9935bfc122c")
+		(property "Reference" "#PWR0081"
+			(at 142.24 119.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "GND"
+			(at 142.24 125.42 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 142.24 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 142.24 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 142.24 121.92 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "3ba63746-f9a1-4a50-a936-1e0a0971b9cd")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0081")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:+5V")
+		(at 152.4 106.68 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "b453739b-7f1e-4591-b60a-5bbebbbde58f")
+		(property "Reference" "#PWR0074"
+			(at 152.4 104.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "+5V"
+			(at 152.4 103.18 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 152.4 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 152.4 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 152.4 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "7b834660-08fc-40e9-8fef-da4e41d2ac2a")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#PWR0074")
 					(unit 1)
 				)
 			)
@@ -7821,7 +7185,7 @@
 	)
 	(symbol
 		(lib_id "power:PWR_FLAG")
-		(at 66.04 119.38 0)
+		(at 25.4 68.58 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7829,88 +7193,83 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "0d1ec8f9-9ed2-4d10-8f0e-3c28dc57c4d0")
-		(property "Reference" "#FLG0117"
-			(at 66.04 117.38 0)
+		(uuid "b573fb14-92ea-4d30-af9a-e0e3bc0e2721")
+		(property "Reference" "#FLG0071"
+			(at 25.4 66.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
 		(property "Value" "PWR_FLAG"
-			(at 66.04 116.38 0)
+			(at 25.4 65.38 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" ""
-			(at 66.04 119.38 0)
+			(at 25.4 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 119.38 0)
+			(at 25.4 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 66.04 119.38 0)
+			(at 25.4 68.58 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "9706a241-3e2b-4578-846e-f218bd9a2dce")
+			(uuid "40fe2f65-6b30-455e-a68f-3a12432d4615")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#FLG0117")
+					(reference "#FLG0071")
 					(unit 1)
 				)
 			)
 		)
 	)
-	(wire
-		(pts
-			(xy 66.04 119.38) (xy 66.04 121.92)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "31fbb954-e4ab-4e79-9351-270e85e96222")
-	)
 	(symbol
-		(lib_id "power:+5V")
-		(at 66.04 121.92 180)
+		(lib_id "power:PWR_FLAG")
+		(at 157.48 48.26 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7918,84 +7277,266 @@
 		(on_board no)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "677bba67-7018-46dc-a7ad-59f56d70c257")
-		(property "Reference" "#PWR0118"
-			(at 66.04 119.92 0)
+		(uuid "85e92ce7-44b1-439b-bf45-bfd1744967e7")
+		(property "Reference" "#FLG0059"
+			(at 157.48 46.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 				(justify left)
 			)
 		)
-		(property "Value" "+5V"
-			(at 66.04 125.12 0)
+		(property "Value" "PWR_FLAG"
+			(at 157.48 45.06 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify center)
 			)
 		)
 		(property "Footprint" ""
-			(at 66.04 121.92 0)
+			(at 157.48 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Datasheet" ""
-			(at 66.04 121.92 0)
+			(at 157.48 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(property "Description" ""
-			(at 66.04 121.92 0)
+			(at 157.48 48.26 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
 				(font
+					(face "Oswald")
 					(size 1.27 1.27)
 				)
 			)
 		)
 		(pin "1"
-			(uuid "163c252a-5d5f-4132-afc2-66b26649e691")
+			(uuid "b12e64ac-5c54-4c38-ad88-66ab4ebae2cd")
 		)
 		(instances
 			(project "The Harp"
 				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
-					(reference "#PWR0118")
+					(reference "#FLG0059")
 					(unit 1)
 				)
 			)
 		)
 	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 254.0 50.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "95514ced-3efd-4efc-8718-daeb7bcf8864")
+		(property "Reference" "#FLG0061"
+			(at 254.0 48.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 254.0 47.6 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 254.0 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 254.0 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 254.0 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "1d10d6c7-17e0-4423-90b5-81a46e233494")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#FLG0061")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:PWR_FLAG")
+		(at 147.32 109.22 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom no)
+		(on_board no)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "7fc6da1e-fcef-405b-80ce-b511df176ebc")
+		(property "Reference" "#FLG0075"
+			(at 147.32 107.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 147.32 106.02 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+				(justify center)
+			)
+		)
+		(property "Footprint" ""
+			(at 147.32 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 147.32 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 147.32 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "64eefe96-3c31-4b8b-b16d-1055f17c8792")
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88/3983f09c-79e8-5800-9821-cf9b89c4194a"
+					(reference "#FLG0075")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(no_connect
+		(at 167.64 55.88)
+		(uuid "2ce5a437-2e7d-40a0-8e8b-4a9f758e79a4")
+	)
+	(no_connect
+		(at 96.52 114.3)
+		(uuid "c16e20eb-44ec-41ae-9f90-79889aec4c82")
+	)
 	(text "Power, after the Timekeeper: 9 V centre-negative on J401 (PJ-063AH, top wall), SMAJ10CA TVS, PMEG3010 series diode, TPS54202 buck to +3V3 (digital), NCP718 to +5V (codec analog and op-amps).\nThe relay coil and the LEDs run from +9V so the audio rails never carry their current."
 		(exclude_from_sim no)
 		(at 20.32 15.24 0)
 		(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
 			)
-		(uuid "ae97ddc4-6e76-495f-bc40-bd58c444efd8")
+			(justify left bottom)
+		)
+		(uuid "fe38211e-ca1b-4877-8d13-c9b03601a78b")
 	)
 )
