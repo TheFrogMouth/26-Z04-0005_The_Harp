@@ -9,8 +9,6 @@ desktop.ini
 __pycache__/
 *.pyc
 
-# LaTeX build output (each document builds into its own build/)
-Documents/**/build/
 
 # KiCad per-user state, backups and locks
 *.kicad_prl
@@ -27,3 +25,24 @@ _autosave-*
 firmware/**/build/
 firmware/**/Debug/
 firmware/**/Release/
+
+# LaTeX build output — every document builds into its own build/ directory
+Documents/**/build/
+Documents/**/main.pdf
+
+# LaTeX generated files
+*.aux
+*.bcf
+*.bcf-SAVE-ERROR
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.lof
+*.log
+*.lot
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.xdv
