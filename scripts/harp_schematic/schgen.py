@@ -155,17 +155,21 @@ def _prop(name, val, x, y, hide=False, justify=None, ang=0):
 
 
 def symbol_block(lid, ref, value, x, y, ang, unit, path_prefix, project, fp='', dnp=False,
-                 props=None, pins=(), refpos=None, valpos=None, hide_ref=False, hide_val=False, desc=''):
+                 props=None, pins=(), refpos=None, valpos=None, hide_ref=False, hide_val=False, desc='',
+                 mirror=None, refjust='left', valjust='left', refang=0, valang=0):
     props = props or {}
     suid = uid('symbol:%s:%s:%d' % (path_prefix, ref, unit)) if not ref.startswith('#') else uid()
     rx, ry = refpos or (x, y - 2)
     vx, vy = valpos or (x, y + 2)
-    out = ['\t(symbol', '\t\t(lib_id "%s")' % lid, '\t\t(at %s %s %s)' % (x, y, ang), '\t\t(unit %d)' % unit,
+    out = ['\t(symbol', '\t\t(lib_id "%s")' % lid, '\t\t(at %s %s %s)' % (x, y, ang)]
+    if mirror:
+        out.append('\t\t(mirror %s)' % mirror)
+    out += ['\t\t(unit %d)' % unit,
            '\t\t(body_style 1)', '\t\t(exclude_from_sim no)', '\t\t(in_bom %s)' % ('no' if ref.startswith('#') else 'yes'),
            '\t\t(on_board %s)' % ('no' if ref.startswith('#') else 'yes'), '\t\t(in_pos_files yes)',
            '\t\t(dnp %s)' % ('yes' if dnp else 'no'), '\t\t(uuid "%s")' % suid]
-    out.append(_prop('Reference', ref, rx, ry, hide=hide_ref, justify='left'))
-    out.append(_prop('Value', value, vx, vy, hide=hide_val, justify='left'))
+    out.append(_prop('Reference', ref, rx, ry, hide=hide_ref, justify=refjust, ang=refang))
+    out.append(_prop('Value', value, vx, vy, hide=hide_val, justify=valjust, ang=valang))
     out.append(_prop('Footprint', fp, x, y, hide=True))
     out.append(_prop('Datasheet', props.pop('Datasheet', ''), x, y, hide=True))
     out.append(_prop('Description', desc, x, y, hide=True))
