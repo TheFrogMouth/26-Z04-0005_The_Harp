@@ -296,7 +296,8 @@ Differences from the Timekeeper, all deliberate:
    items: the OPA2365 1 kHz noise figure on its data sheet plot (estimated
    about 11 nV/√Hz; capacitive-load stability is checked, see below), QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
    unused-channel handling.
-5. ERC, then *Update PCB from Schematic*; place J408 (K401 already moved for the
+5. ERC, then *Update PCB from Schematic* (the board was already synced by
+   script on 2026-10-08: 190 footprints, J408 placed, K401 moved for the
    OLED, see *OLED mounting*); place MCU/flash in the centre band,
    codec under the pots, buffers at the jack ends, buck on the tab. **Go/no-go
    for Plan A here.**
