@@ -7,7 +7,7 @@ The Harp reuses two existing designs. The digital and audio chain is the Timekee
   \item \textbf{Same codec, flash, buck converter, input and output stages and relay bypass} as the Timekeeper and The Relic, so most of the schematic is copied.
   \item \textbf{No SDRAM.} The strings need about 100\,KB of delay memory and the STM32H750 has 1\,MB of internal RAM. Dropping SDRAM removes the external memory bus and about 60 MCU pins.
   \item \textbf{STM32H750VBT6 in LQFP-100} instead of the Timekeeper's LQFP-144: the same core and firmware with a new pin map.
-  \item \textbf{No TFT.} A thin 0.91\,in 128$\times$32 I$^2$C OLED strip replaces the screen (decision 12).
+  \item \textbf{No TFT.} A thin 0.91\,in 128$\times$32 I$^2$C OLED strip replaces the screen (decision 14).
   \item \textbf{Pots, not encoders.} Encoders make sense only with a screen that shows the value. Pots also keep The Relic's face, parts and feel, and the H750 reads the four of them on ADC1 PA0, PA1, PA2 and PA4 with the DMA scan that the Timekeeper's \texttt{controls.c} already runs.
   \item \textbf{Jacks and DC jack at The Alchemist's positions and heights.} This is the main reason the design is one board (Chapter~\ref{ch:pcb}).
 \end{itemize}
@@ -23,18 +23,18 @@ The Harp reuses two existing designs. The digital and audio chain is the Timekee
     1 & One relay with true bypass on OUT~L only, and Trails mode in firmware for stereo use. Two relays were rejected as a cost and current increase for a case most players do not have. \\
     2 & One board on The Alchemist's outline, with jacks and pots on it, unless placement fails; the fallback is a two-board stack (Chapter~\ref{ch:pcb}). \\
     3 & Pots, not encoders. \\
-    4 & Twelve top-side SMD LEDs with 3\,mm light pipes for the note display. Superseded by decision 12. \\
+    4 & Twelve top-side SMD LEDs with 3\,mm light pipes for the note display. Superseded by decision 14. \\
     5 & STM32H750VBT6 (LQFP-100) with no SDRAM; everything else in the digital and audio chain is the Timekeeper's. \\
     6 & Dry signal through the codec; no analogue dry path. \\
     7 & One face standard with The Alchemist and The Relic: the same knob, toggle, jack, DC, LED and footswitch coordinates, each pedal using the subset it needs. \\
     8 & QUADSPI on bank~2 (PB2, PC11, PE7--PE10), so SAI1 keeps the Timekeeper's PE2--PE6 and the audio firmware ports unchanged. \\
-    9 & Mono in, stereo out in hardware: one input buffer and one ADC-driver channel. Superseded by decision 13. \\
-    12 & A 0.91\,in 128$\times$32 I$^2$C OLED strip replaces the twelve note LEDs and their light pipes (\req{J408}, PB6 SCL, PB7 SDA, 4.7\,k$\Omega$ pull-ups). Decided 2026-10-08. \\
-    13 & Stereo in, single-ended at the jacks, stereo out. IN is TRS (tip left, ring right); the right channel has its own OPA2365 half and the second THS4522 channel into AINR. The AK4621EF has no single-ended mode, so the THS4522 converts to its differential inputs, as on the Timekeeper. Decided 2026-10-08. \\
+    9 & Mono in, stereo out in hardware: one input buffer and one ADC-driver channel. Superseded by decision 15. \\
     10 & Input op-amp OPA2365 on the 5\,V rail, replacing the Timekeeper's OPA1656. With the Timekeeper's H2 fix and R603/R604 at 620\,$\Omega$, the jack-to-ADC gain is 0.59, so a 4.8\,Vpp input just reaches full scale. A 9\,V buffer supply was ruled out (2026-10-05). \\
     11 & No line or synth input pad. The input takes up to 4.8\,Vpp (about $+7$\,dBu); hotter sources are turned down at the source. A switchable pad was rejected because it would put a switch at the high-impedance input (2026-10-05). \\
     12 & Shared parts follow The Alchemist: Neutrik NMJ6HCD2 jacks, Omron G6K-2F-Y relay, Alpha RD901F-40-15R1-B10K pots, Kingbright WP710A10ID panel LEDs fitted at final assembly, soft-touch footswitches on hand-solder pads, IN jack ring to ground. Each shared symbol carries the design part and the JLCPCB part. \\
     13 & Face as The Alchemist's: four knobs (Mix, Sustain, Strings, Jawari) and three Taiway 100-DP6 ON-ON-ON toggles, Tuning and Brightness at ($\pm$20, $+13$) and Retune at (0, $-5$), so nothing through-hole sits over the upper jacks. Each toggle reads on two MCU inputs. Bypass mode and expression target move to the secondary layer (2026-10-06). \\
+    14 & A 0.91\,in 128$\times$32 I$^2$C OLED strip replaces the twelve note LEDs and their light pipes (\req{J408}, PB6 SCL, PB7 SDA, 4.7\,k$\Omega$ pull-ups). A 3D-printed carrier bonded under the face holds it behind a 24.4\,$\times$\,7.6\,mm rectangular cut at (0, $-20$). Decided 2026-10-08. \\
+    15 & Stereo in, single-ended at the jacks, stereo out. IN is TRS (tip left, ring right); the right channel has its own OPA2365 half and the second THS4522 channel into AINR. The AK4621EF has no single-ended mode, so the THS4522 converts to its differential inputs, as on the Timekeeper. Decided 2026-10-08. \\
     \bottomrule
   \end{tabularx}
 \end{table}

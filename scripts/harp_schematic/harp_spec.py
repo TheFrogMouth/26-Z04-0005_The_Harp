@@ -75,7 +75,7 @@ ctl.notes.append('Controls and display. Four B10K pots on the Alchemist grid: Mi
                  'wipers to ADC1 PA0, PA1, PA2, PA4 through 1k / 100n.\nThree Taiway 100-DP6 ON-ON-ON toggles, as The Alchemist: Tuning (-20, +13), '
                  'Brightness (+20, +13), Retune (0, -5). Commons (2, 5) to GND, pins 3 and 4 to two MCU inputs with internal pull-ups: '
                  'up = A low B high, centre = both low, down = A high B low.\nDisplay: a thin 0.91 in 128x32 SSD1306 OLED strip on I2C1 (PB6 SCL, PB7 SDA), '
-                 '4.7k pull-ups to +3V3, behind a window at face Y -18. J408 is the module connector (GND, +3V3, SCL, SDA).')
+                 '4.7k pull-ups to +3V3, behind a 24.4 x 7.6 mm window at face (0, -20). J408 is the module connector (GND, +3V3, SCL, SDA).')
 POTS = {1: 'Mix', 2: 'Sustain', 3: 'Strings', 5: 'Jawari'}   # RV10n keeps its face position: 1-3 row +38, 5 = (0, +13)
 for n, nm in POTS.items():
     ctl.add(Part('RV10%d' % n, 'POT:RD901F-40-15R1-B10K-00DL1', 'B10K', 'Potentiometer_THT:RD901F4015R1B10K00DL1',

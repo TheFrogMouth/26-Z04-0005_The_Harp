@@ -22,7 +22,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3b187a6b-a983-4210-80bb-28fede187bef")
+		(uuid "e9a6a0ea-eb39-4d55-b4e5-14d364ef39e4")
 	)
 	(text "One four-layer main board in a Hammond 125B on the Alchemist / Relic grid; pots, toggles, LEDs and jacks board-mounted.\nSignal: IN -> K401 relay bypass -> 1M / 100n -> OPA2365 buffer -> THS4522 ADC driver -> AK4621 ADC -> STM32H750VBT6 (SAI1) -> AK4621 DAC -> OPA1688 difference amps -> OUT L (through K401) and OUT R.\nDesign notes: docs/design-brief.md, docs/pcb-plan.md. The schematic is written by scripts/harp_schematic/build_layout.py from harp_spec.py and the layouts in layouts/; after the first edit in KiCad the KiCad files are the source of truth."
 		(exclude_from_sim no)
@@ -34,7 +34,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "72f07293-acc9-4cf9-85fc-f2cf1935130b")
+		(uuid "a9c6f397-e354-4792-b179-65e53d93ab50")
 	)
 	(rectangle
 		(start 22 58)
@@ -47,7 +47,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "26ec7277-8e55-4fe7-b374-5009a7ec4272")
+		(uuid "82d1036a-2472-47d3-b35e-c53ddd85ed90")
 	)
 	(text "AUDIO / ANALOG"
 		(exclude_from_sim no)
@@ -59,7 +59,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "deee3051-05c6-4706-8b75-13fe58a0ff1a")
+		(uuid "c64cf474-569f-48e9-b84f-f48be8c73d67")
 	)
 	(rectangle
 		(start 22 150)
@@ -72,7 +72,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "cc2e587e-a28c-4b77-8421-c8cb892c1332")
+		(uuid "c876918b-6fe9-4612-8a85-e8308f2f9788")
 	)
 	(text "POWER"
 		(exclude_from_sim no)
@@ -84,7 +84,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "24096d58-47d8-4d86-8c8f-106955f3415c")
+		(uuid "f78a6b40-7950-45f3-be66-86325ee3f594")
 	)
 	(rectangle
 		(start 212 150)
@@ -97,7 +97,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "fe7c09e6-4152-4272-a4e5-10bba19c3961")
+		(uuid "180fd66f-0469-48b0-96b3-9fa9dfb22c4b")
 	)
 	(text "CONTROL / DIGITAL"
 		(exclude_from_sim no)
@@ -109,7 +109,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7bdce97f-0804-4e41-91f8-f01e3e57f4f4")
+		(uuid "99a0fa34-90c4-415b-b20b-25a44cbbd133")
 	)
 	(sheet
 		(at 30 78)
@@ -172,7 +172,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "2be991a8-042e-4d31-abaf-bc705ce886e4")
+		(uuid "06d8dac8-e123-4eb6-9a17-1434e6ce7bf2")
 	)
 	(sheet
 		(at 95 78)
@@ -235,7 +235,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "2c37afb9-1dd2-4eec-b67b-f67e3c85bf9d")
+		(uuid "14ee4a61-3b55-43e9-837a-9b36fb243b0c")
 	)
 	(sheet
 		(at 160 78)
@@ -298,7 +298,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "19fb9dbd-0a34-4df2-b8a5-a686006f33ec")
+		(uuid "39609a2f-d228-4e8c-b0f0-732cf3dfcc97")
 	)
 	(sheet
 		(at 225 78)
@@ -361,7 +361,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "27782275-a83f-403e-bc6a-50b5de69e626")
+		(uuid "c798b817-3b6b-4cf2-a008-915b00f46cb5")
 	)
 	(sheet
 		(at 225 168)
@@ -424,7 +424,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "f35c9640-7b7c-4150-9ed5-73408e0d268e")
+		(uuid "084eac30-15f4-48d5-9377-fb383239f4e6")
 	)
 	(sheet
 		(at 300 168)
@@ -487,7 +487,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "36057a2d-58b0-45ec-8545-f4673219b39d")
+		(uuid "5b02c32d-16dc-444d-a078-bb984598ada7")
 	)
 	(sheet
 		(at 30 168)
@@ -550,7 +550,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "ac4a5e66-a69b-4788-9132-ab901669e4aa")
+		(uuid "e1b97d5c-7364-4ad5-82d7-763077dd2b40")
 	)
 	(polyline
 		(pts
@@ -564,7 +564,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "54bb4f8e-468e-4b51-9044-de119ba3badc")
+		(uuid "9030330a-0a3f-43c5-b2ab-f8bbe02803ce")
 	)
 	(polyline
 		(pts
@@ -578,7 +578,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "530f959c-b17c-4eea-8e1e-6bc4f5673de3")
+		(uuid "017314c8-d09a-49fa-a2f4-dc272e89713c")
 	)
 	(text "EFFECT_IN"
 		(exclude_from_sim no)
@@ -591,7 +591,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1be0cebe-92fc-470c-ae13-e57941d5f419")
+		(uuid "9271ed03-1a4f-4240-a03c-8928f8c17c9e")
 	)
 	(polyline
 		(pts
@@ -605,7 +605,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "7f2b8b5f-57c0-43b5-b7bb-62a52f0875c7")
+		(uuid "bc655607-f820-46df-9189-e697b51ff97c")
 	)
 	(polyline
 		(pts
@@ -619,7 +619,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "d70fea29-04c0-40c3-b152-082163790b3a")
+		(uuid "cb850cfb-ad05-4e89-a01a-a129712bbb21")
 	)
 	(text "EFFECT_IN_BUF"
 		(exclude_from_sim no)
@@ -632,7 +632,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "7239861b-9e59-40e0-b2f1-043fe0674f9c")
+		(uuid "51ed6b73-0870-4b17-9559-15c15ac5df4c")
 	)
 	(polyline
 		(pts
@@ -646,7 +646,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "ab91541e-bb66-4c66-b9c5-8c7f9ff16554")
+		(uuid "1ab19c5e-aca6-4611-ac7c-aa484329e77d")
 	)
 	(polyline
 		(pts
@@ -660,7 +660,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "c210e36b-3d31-4569-b7b2-c4cac8765a8f")
+		(uuid "4040ef0e-ffcf-4d36-ae5f-4ee43f573693")
 	)
 	(text "ADC_L_P/N, ADC_R_P/N"
 		(exclude_from_sim no)
@@ -673,7 +673,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "f2772b44-268e-4f35-ae11-dc785b3ef372")
+		(uuid "79356e61-77d8-46c5-8650-535d27fcc158")
 	)
 	(polyline
 		(pts
@@ -687,7 +687,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "025da2fc-af9d-4f77-aa8b-02681c77bbd1")
+		(uuid "94b39245-2257-4c80-a9e3-54c19e88babb")
 	)
 	(polyline
 		(pts
@@ -701,7 +701,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "e4cd211c-e50f-4be9-9733-fcc64b4893aa")
+		(uuid "68a654ad-0a97-4504-ba7d-d0e368ade509")
 	)
 	(text "DAC_L_P/N, DAC_R_P/N  (codec DAC to the output stages)"
 		(exclude_from_sim no)
@@ -714,7 +714,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "a4ad1228-f29d-4b44-8085-e287102fa454")
+		(uuid "e97fb184-a602-4112-930a-ac8f5f841879")
 	)
 	(polyline
 		(pts
@@ -728,7 +728,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "966e4268-3836-4e70-aa89-b5fd705f3baf")
+		(uuid "b08e0367-e9f9-485c-83e8-18cce8d09d49")
 	)
 	(polyline
 		(pts
@@ -742,7 +742,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "1042a322-d5ea-4afd-9d6f-23d24d2af919")
+		(uuid "8370e957-7759-4bf9-bf51-308ecc30ae2b")
 	)
 	(text "EFFECT_OUT_L, EFFECT_OUT_R"
 		(exclude_from_sim no)
@@ -755,7 +755,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "dac927b4-221e-45b3-8cc7-ee524f6d25fb")
+		(uuid "2f39d2a0-c35b-48e3-98c0-ad7793a9b780")
 	)
 	(polyline
 		(pts
@@ -769,7 +769,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "f0349353-1f9e-4601-aa73-79926f76152a")
+		(uuid "18d32e6e-4f0b-48fc-847f-6bad888563c8")
 	)
 	(polyline
 		(pts
@@ -783,7 +783,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "ae1aeb0b-6f4e-493d-9176-23a8aacce4eb")
+		(uuid "04e8f42d-3741-4855-91c4-1a92aa2d236c")
 	)
 	(text "VCOM_A, VCOM_B  (codec bias to the input buffer, ADC driver and output stages)"
 		(exclude_from_sim no)
@@ -796,7 +796,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cd23828e-0779-4e5d-9856-efb2d66bbd36")
+		(uuid "f21bf6a2-e8ee-4964-aa65-ae57762882d5")
 	)
 	(polyline
 		(pts
@@ -810,7 +810,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "11563d2a-631c-4a3b-b3eb-72147ea76842")
+		(uuid "5b05644b-6bc1-4580-bb5d-0cbfb5d54a27")
 	)
 	(polyline
 		(pts
@@ -824,7 +824,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "fb18b391-d91b-4c62-a5ce-cfa4f82be633")
+		(uuid "e5607fe6-ac97-4893-a342-0d963984f8a9")
 	)
 	(polyline
 		(pts
@@ -838,7 +838,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "bcdbc91e-b234-494e-9038-a4a9a3f52d3b")
+		(uuid "4d75043f-05d2-4e41-9014-e7c01962eeb7")
 	)
 	(polyline
 		(pts
@@ -852,7 +852,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "fb55544e-f6af-4a60-9048-d8c3f53e6904")
+		(uuid "32955f8f-f924-4089-8bc9-5e82f5647fc9")
 	)
 	(polyline
 		(pts
@@ -866,7 +866,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "969de07a-7264-4e75-b019-33e851cdae75")
+		(uuid "5edae0ac-215f-4b9c-9663-4593266d7f62")
 	)
 	(text "CODEC_MCLK, LRCK, BICK, SDTI, SDTO\nCODEC_CCLK, CDTI, CSN, PDN"
 		(exclude_from_sim no)
@@ -879,7 +879,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "1abb4acc-3ba7-40a2-9d02-b4ae195a691f")
+		(uuid "491343b7-bccd-4ee7-8dd5-4c2d6a74fdca")
 	)
 	(polyline
 		(pts
@@ -893,7 +893,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "eb69a5a8-0b95-4bfc-a202-283c5a2d0be3")
+		(uuid "f9b12501-edda-440a-b338-6b07ec881f91")
 	)
 	(polyline
 		(pts
@@ -907,7 +907,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "48e3df6e-f9a4-40f6-9a81-2c732c8a1287")
+		(uuid "862c1899-8bb2-4768-9c10-c3a7e815ba5a")
 	)
 	(text "POT1, POT2, POT3, POT5 / TOG1-3 A, B"
 		(exclude_from_sim no)
@@ -920,7 +920,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "e65bbed4-8a92-41fa-a958-729f98744dd5")
+		(uuid "c4621f43-d8e3-45cf-8c7e-b049b65ef1bc")
 	)
 	(polyline
 		(pts
@@ -934,7 +934,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "b1a44f52-7728-489a-884f-b262ec8020f0")
+		(uuid "83bab1cd-24fd-4f71-bb7d-6cec69dcd708")
 	)
 	(polyline
 		(pts
@@ -948,7 +948,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "8f29744a-ad5e-4f81-b0ac-176adac75974")
+		(uuid "2e8e5e54-b2b8-4eba-9448-2d41c61d77a9")
 	)
 	(text "OLED_SCL, OLED_SDA  (I2C to the OLED)"
 		(exclude_from_sim no)
@@ -961,7 +961,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "4a1eaed5-a562-49f3-8420-5dd95ccc5849")
+		(uuid "16297195-08dd-421b-a031-3a3c9d3e7b01")
 	)
 	(polyline
 		(pts
@@ -975,7 +975,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "3695b082-abe6-48da-bf50-f8457a66f58e")
+		(uuid "52223012-d777-4f32-9cbe-7a9cb1040111")
 	)
 	(polyline
 		(pts
@@ -989,7 +989,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "fd2831dc-210c-4f5d-9529-309e74bc49cc")
+		(uuid "8caaec6d-4d5c-4826-9335-7c91b9c3485e")
 	)
 	(text "RELAY_DRV, LED_EFFECT_DRV, LED_HOLD_DRV"
 		(exclude_from_sim no)
@@ -1002,7 +1002,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "212b88cc-c8b3-4069-aba9-03def6e586dd")
+		(uuid "2561bb3d-ff3d-441e-8db9-f0eea9665e98")
 	)
 	(polyline
 		(pts
@@ -1016,7 +1016,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "9aac5890-a3ef-4e7a-a40c-df49da319b17")
+		(uuid "ea5315a4-a5a0-4a1e-81af-3bf0e8abb895")
 	)
 	(polyline
 		(pts
@@ -1030,7 +1030,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "b2cd7ebe-ef73-456f-aba4-500a7caf9ce5")
+		(uuid "54d0acea-8389-4a7e-8679-75f955b6f4a6")
 	)
 	(text "FSW_BYPASS_IN, FSW_HOLD_IN, EXP"
 		(exclude_from_sim no)
@@ -1043,7 +1043,7 @@
 			)
 			(justify left top)
 		)
-		(uuid "e6d723d3-1074-49dc-8aed-a28f7f219984")
+		(uuid "bcb56d8b-f232-441e-8297-e39a1e095fa9")
 	)
 	(polyline
 		(pts
@@ -1057,7 +1057,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "6e7ddf66-082d-4f71-a783-e6a1e6411852")
+		(uuid "da67d682-f37d-4312-8a06-2f8fa1479fa5")
 	)
 	(polyline
 		(pts
@@ -1071,7 +1071,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "202e3d55-1212-43e0-a72e-dc43f45081bf")
+		(uuid "d3956baa-1cab-4cd2-bb17-e1ba9e2aaf39")
 	)
 	(text "+9V, +5V, +3V3 from Power"
 		(exclude_from_sim no)
@@ -1084,7 +1084,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3ea06f1e-7d19-4c02-9480-4a66024393ab")
+		(uuid "ff6c2d63-b5bd-4790-b7ee-95f806bed2b1")
 	)
 	(polyline
 		(pts
@@ -1098,7 +1098,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "547521ee-fcb7-4be7-9fe1-edc0bcdb0560")
+		(uuid "3a7a5ce7-73a6-4245-8f04-1a7aca4ba84e")
 	)
 	(polyline
 		(pts
@@ -1112,7 +1112,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "57ab69bb-3d38-4a4c-b984-ae82d607e630")
+		(uuid "daccb5a5-54ff-43bb-bb37-5631f3202265")
 	)
 	(polyline
 		(pts
@@ -1126,7 +1126,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "d4b782f2-c00c-4f56-881d-9d9e09d2b05a")
+		(uuid "091094b6-1f7e-4ff0-9c5a-b3779ec15d61")
 	)
 	(polyline
 		(pts
@@ -1140,7 +1140,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "4de3d808-e689-4a80-940c-bc51f1246df4")
+		(uuid "0a32ef47-d2bf-47d7-ba01-90ecca1f4268")
 	)
 	(text "+9V, +3V3"
 		(exclude_from_sim no)
@@ -1153,7 +1153,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "67d153f6-f761-41d4-8567-73b2e7107489")
+		(uuid "15280f22-bb6b-4d27-879a-eaaa7f066826")
 	)
 	(polyline
 		(pts
@@ -1167,7 +1167,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "3eae6fb6-7756-46c2-8735-396291517843")
+		(uuid "6ba69a58-f5d7-4f67-b2e4-346cd978933e")
 	)
 	(polyline
 		(pts
@@ -1181,7 +1181,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "4f2ccf82-dd23-45b5-94fa-ea18eba5edb7")
+		(uuid "d33b76d0-cabb-4fdd-9d62-d422975f005c")
 	)
 	(text "+5V"
 		(exclude_from_sim no)
@@ -1194,7 +1194,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "6866bba4-102c-4d6f-b716-6c2d0d60d718")
+		(uuid "220ea663-5dc0-490b-810e-370b00e8b18f")
 	)
 	(polyline
 		(pts
@@ -1208,7 +1208,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "101738c3-249a-45c1-a99e-20c15e3bac7d")
+		(uuid "f488d161-1c2e-4636-a903-71277f67a088")
 	)
 	(polyline
 		(pts
@@ -1222,7 +1222,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "5eb6b071-ffa2-42f1-a286-d54d8526fb79")
+		(uuid "73714457-5889-47b4-83a9-cf44953876a5")
 	)
 	(text "+5V"
 		(exclude_from_sim no)
@@ -1235,7 +1235,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "c8e17c56-e822-438a-9930-a3ffd6de1d48")
+		(uuid "0820b443-e3ec-49c3-82fd-176cef31606a")
 	)
 	(polyline
 		(pts
@@ -1249,7 +1249,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "373f6820-2bea-4c9c-b008-ed95d547a5e9")
+		(uuid "6f5cbcf5-9b39-47bf-a0ae-235697075a3c")
 	)
 	(polyline
 		(pts
@@ -1263,7 +1263,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "b0e6cf2b-1245-401c-82e4-5b4e5b567013")
+		(uuid "77dbd713-a836-41cc-bc86-9686144aa5d6")
 	)
 	(text "+5V, +3V3"
 		(exclude_from_sim no)
@@ -1276,7 +1276,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "2b6a2a36-9f3a-4e74-8e8a-7eb26b5328b8")
+		(uuid "4f1a7c11-7b68-4b1f-be32-1ca2be2087da")
 	)
 	(text "+3V3"
 		(exclude_from_sim no)
@@ -1289,7 +1289,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "90ea4f54-433a-46a8-9280-03d8b598a361")
+		(uuid "c666be92-b73c-4c51-a699-1c05848b688b")
 	)
 	(text "+3V3"
 		(exclude_from_sim no)
@@ -1302,7 +1302,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "5a5c8fc1-14e6-4b54-9620-904be4c1bc37")
+		(uuid "dd15e3e4-472c-4006-a7bf-51911d12581a")
 	)
 	(text "CONNECTIONS"
 		(exclude_from_sim no)
@@ -1315,7 +1315,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "97cf67ce-f86e-4b79-a3fc-d219f4465071")
+		(uuid "79c27bbf-d4bb-469a-ae29-9ad39db99791")
 	)
 	(polyline
 		(pts
@@ -1329,7 +1329,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "84ecdd20-aa24-4cd9-86ea-4f2aa03c54dd")
+		(uuid "21fa850b-818e-4017-800f-0b3cbf2f054b")
 	)
 	(text "Audio signal"
 		(exclude_from_sim no)
@@ -1342,7 +1342,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "41adc304-6a0e-415f-b719-ea94466a3fc2")
+		(uuid "b477b3da-b547-426b-91da-12ec85cc971b")
 	)
 	(polyline
 		(pts
@@ -1356,7 +1356,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "4b5349cd-73c3-4268-8379-180324da48e5")
+		(uuid "7b6462e8-c9b6-45d7-9996-b8931949c4d8")
 	)
 	(text "MCU control"
 		(exclude_from_sim no)
@@ -1369,7 +1369,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "beb4b56f-3893-43bf-b6cb-385a229bcc07")
+		(uuid "e26b573e-401b-4f90-8ae4-27363d957ee3")
 	)
 	(polyline
 		(pts
@@ -1383,7 +1383,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "b53cdbba-53dc-4bd0-a1d8-fa727e38c553")
+		(uuid "ff4ce472-695f-4b32-bb82-208d88cf6d7c")
 	)
 	(text "Supply rails and bias"
 		(exclude_from_sim no)
@@ -1396,7 +1396,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "3cfbf47e-bf50-43a8-bf94-a7224811a273")
+		(uuid "3ae9a638-a061-432b-a3a6-7a77bc01a82f")
 	)
 	(text "Drawing only: the sheets connect through global labels of the same names.\nArrows point from the sheet that drives a net to the sheet that uses it; a line with a name list carries one label per name."
 		(exclude_from_sim no)
@@ -1408,7 +1408,7 @@
 			)
 			(justify left bottom)
 		)
-		(uuid "cd930b99-0d1a-4370-ad6d-271fb6990cff")
+		(uuid "03ff8adc-e893-4c36-af9f-42a64154898d")
 	)
 	(sheet_instances
 		(path "/"

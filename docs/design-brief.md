@@ -28,7 +28,7 @@ The Harp is a cut-down Timekeeper on the Alchemist/Relic 125B hardware set:
   about 60 pins of MCU.
 - **STM32H750VBT6, LQFP-100** instead of the Timekeeper's LQFP-144. Same
   core, same firmware, new pin map.
-- **No TFT.** A thin 0.91 in 128×32 I²C OLED strip replaces the screen (decision 12, 2026-10-08).
+- **No TFT.** A thin 0.91 in 128×32 I²C OLED strip replaces the screen (decision 14, 2026-10-08).
 - **Pots, not encoders.** Encoders only make sense with a screen that shows
   the value; the Timekeeper has one, this does not. Pots also keep the
   Relic's parts and feel. The H750 reads the four of them on ADC1 PA0,
@@ -91,7 +91,7 @@ the upper jacks (`pcb-plan.md`). The toggles are The Alchemist's Taiway
 | (0, +13) knob | Jawari | Bridge buzz |
 | (+20, +13) toggle | Brightness | Dark / Warm / Glassy loss-filter voicings |
 | (0, −5) toggle | Retune | Snap / Glide / Lock |
-| band at −18 | 0.91 in OLED strip | Note names the strings are tuned to, chord, mode and the value of the knob last moved; behind a window in the face |
+| window at (0, −20) | 0.91 in OLED strip | Note names the strings are tuned to, chord, mode and the value of the knob last moved; behind a window in the face |
 | (−20, −35) | Effect LED | |
 | (−20, −49) | Bypass footswitch | Momentary SPST-NO soft-touch, wired to hand-solder pads |
 | (+20, −49) | Hold footswitch | Freezes the tuning and sets infinite sustain while held or latched |
@@ -143,7 +143,7 @@ labour. Nothing carted.
    placement in `pcb-plan.md` does not fit; the fallback is a two-board
    stack with the face board keeping the jacks (see that document).
 3. **Pots, not encoders.**
-4. **Twelve top-side SMD LEDs with 3 mm light pipes** for the note display. *Superseded by decision 12.*
+4. **Twelve top-side SMD LEDs with 3 mm light pipes** for the note display. *Superseded by decision 14.*
    They sit over the jack bodies, where through-hole parts are not allowed.
 5. **STM32H750VBT6 (LQFP-100), no SDRAM.** Everything else in the digital
    and audio chain is the Timekeeper's.
@@ -153,7 +153,7 @@ labour. Nothing carted.
    subset it needs (table in `pcb-plan.md`).
 8. **QUADSPI on bank 2** (PB2, PC11, PE7–PE10), so SAI1 keeps the
    Timekeeper's PE2–PE6 and the audio firmware ports unchanged.
-9. **Mono in, stereo out** in hardware: one input buffer and one ADC driver *(superseded by decision 13: stereo in)*
+9. **Mono in, stereo out** in hardware: one input buffer and one ADC driver *(superseded by decision 15: stereo in)*
    channel; the codec's right ADC input is parked at VCOM.
 10. **Input op-amp OPA2365 on the 5 V rail** (zero-crossover rail-to-rail
     input), replacing the Timekeeper's OPA1656, whose input stops 2.25 V
@@ -195,14 +195,15 @@ labour. Nothing carted.
 - [CONFIRM] items on the schematic: QUADSPI bank 2 alternate functions
   (the AK4621's right input and the THS4522's second channel are now used,
   so those two items are closed).
-- OLED: the 0.91 in module, its window and bezel (how the face is cut),
-  and the I²C address and refresh budget. The connector sits over the jack bodies,
-  where only SMD parts are allowed.
+- OLED: choose the module (36–38 × 12–12.5 mm envelope, I²C, 3.3 V) and
+  measure it; the 24.4 × 7.6 mm window and the face-mounted carrier follow
+  from it (`pcb-plan.md`, *OLED mounting*). I²C address and refresh budget
+  in firmware.
 
 - Chord tracker quality on distorted or fast playing. Key and Drone modes do
   not depend on it, so the pedal works even if Follow is weak.
-- Display: decided on 2026-10-08, a 0.91 in I²C OLED strip; the window cut
-  is open (above).
+- Display: decided on 2026-10-08, a 0.91 in I²C OLED strip behind a
+  Tayda rectangular cut (above).
 - The Alchemist's side-wall and top-wall hole heights are still to be fixed
   from the NMJ6HCD2 and PJ-063AH drawings and the board depth; The Harp
   inherits whatever is measured.
@@ -216,14 +217,17 @@ labour. Nothing carted.
   Mitigation: The Relic's four-layer stack with one unbroken ground plane,
   zoning in `pcb-plan.md`, buck converter at the DC end away from the input.
 - AK4621EF lifecycle (already flagged in the Timekeeper's BOM audit).
-- The OLED window is a rectangular cut in the face, which Tayda's drilling does not do: a milled or laser-cut face, or a bezel part, is needed (open item).
+- The OLED module hangs from the face over the relay with about 1.65 mm to spare at an 11 mm face-to-PCB depth; K401 moves 2.5 mm towards the heel at placement (`pcb-plan.md`, *OLED mounting*).
 
 ## Decisions taken on 2026-10-08
 
-12. **A 0.91 in 128×32 I²C OLED strip replaces the twelve note LEDs and
+14. **A 0.91 in 128×32 I²C OLED strip replaces the twelve note LEDs and
     their light pipes** (J408, PB6 SCL / PB7 SDA, 4.7 kΩ pull-ups). PD0–PD11
-    are freed. Supersedes decision 4.
-13. **Stereo in, single-ended at the jacks, stereo out.** IN is a TRS jack
+    are freed. Supersedes decision 4. The module is held by a 3D-printed
+    carrier bonded under the face, behind a 24.4 × 7.6 mm Tayda rectangular
+    cut centred at (0, −20), and wired to J408 by a 4-wire lead
+    (`pcb-plan.md`, *OLED mounting*).
+15. **Stereo in, single-ended at the jacks, stereo out.** IN is a TRS jack
     (tip left, ring right); the right channel gets its own OPA2365 half and
     the second THS4522 channel into AINR, so the AK4621's inputs are never
     parked. The AK4621EF has no single-ended mode (its inputs are fully
