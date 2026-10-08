@@ -217,7 +217,7 @@ labour. Nothing carted.
   Mitigation: The Relic's four-layer stack with one unbroken ground plane,
   zoning in `pcb-plan.md`, buck converter at the DC end away from the input.
 - AK4621EF lifecycle (already flagged in the Timekeeper's BOM audit).
-- The OLED module hangs from the face over the relay with about 1.65 mm to spare at an 11 mm face-to-PCB depth; K401 moves 2.5 mm towards the heel at placement (`pcb-plan.md`, *OLED mounting*).
+- The OLED module hangs from the face over the relay zone; K401 was moved 2.15 mm towards the heel on 2026-10-08 so it no longer sits under the module (`pcb-plan.md`, *OLED mounting*). Parts placed under the module later must stay below about 6.8 mm.
 
 ## Decisions taken on 2026-10-08
 

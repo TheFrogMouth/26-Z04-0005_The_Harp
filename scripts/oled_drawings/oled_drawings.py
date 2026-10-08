@@ -30,7 +30,7 @@ HOLES = [  # (label, x, y, diameter)
 ]
 # courtyards on the board (face X0, X1, Y0, Y1) and part height above the board
 SW102_CY = (-7.35, 7.35, -12.45, 2.09)
-K401_CY = (-9.75, -0.45, -35.10, -24.60); K401_H = 5.2
+K401_CY = (-9.25, 0.05, -37.25, -26.75); K401_H = 5.2       # moved 2026-10-08, PCB (143.9, 137)
 D113_CY = (-22.42, -17.58, -37.21, -32.79)
 D114_CY = (17.58, 22.42, -37.21, -32.79)
 JACK_LO = [(-30.0, -6.5, -31.6, -13.4), (6.5, 30.0, -31.6, -13.4)]     # lower jack bodies, underside
@@ -169,8 +169,8 @@ def pcb_relation():
     s.text(*P(0, -2.5), 'SW102 Retune', 9, INK, 'middle')
     s.text(*P(0, -5.5), 'courtyard to Y -12.45', 8, MUTED, 'middle')
     box(K401_CY, INK, '#eaeef2', op=0.9)
-    s.text(*P(-5.1, -31.0), 'K401 relay', 9, INK, 'middle')
-    s.text(*P(-5.1, -33.4), '5.2 mm tall', 8, MUTED, 'middle')
+    s.text(*P(-4.6, -31.4), 'K401 relay', 9, INK, 'middle')
+    s.text(*P(-4.6, -33.8), '5.2 mm tall', 8, MUTED, 'middle')
     for cy, lb in ((D113_CY, 'D113'), (D114_CY, 'D114')):
         box(cy, INK, '#eaeef2', op=0.9)
         s.text(*P((cy[0] + cy[1]) / 2, cy[2] - 3.2), lb, 9, INK, 'middle')
@@ -192,7 +192,7 @@ def pcb_relation():
     s.text(P(mx1, 0)[0] + 26, P(0, my1)[1] - 2, f'{SW102_CY[2] - my1:.1f} to SW102', 9, WARN)
     notes = [f'Module {MODULE[0]:g} x {MODULE[1]} envelope (36-38 x 12-12.5), Y {my1:.2f} to {my0:.2f}; window centre (0, {OLED_Y:g}).',
              'Pads on the left short end; J408 at (-24, -20) on the top side. Both provisional until placement.',
-             'K401 overlaps the module in plan from Y -24.6 to -26.25: see the section for the height check.']
+             'K401 moved to PCB (143.9, 137) on 2026-10-08: courtyard Y -26.75 to -37.25, 0.5 mm clear of the module in plan.']
     for k, t in enumerate(notes):
         s.text(OX - CAV_W / 2 * S, OY + CAV_H / 2 * S + 22 + 15 * k, t, 9.5, MUTED)
     # ------------------------------------------------ section on X = 0
@@ -233,7 +233,7 @@ def pcb_relation():
     slab(SW102_CY[3], SW102_CY[2], 0, BOARD_GAP, INK, '#eaeef2', 0.9)
     s.text(*Q((SW102_CY[2] + SW102_CY[3]) / 2, 5.2), 'SW102 body', 9, INK, 'middle')
     slab(K401_CY[3], K401_CY[2], BOARD_GAP - K401_H, BOARD_GAP, INK, '#eaeef2', 0.9)
-    s.text(*Q(-30, BOARD_GAP - 2.4), 'K401 5.2', 9, INK, 'middle')
+    s.text(*Q(-32, BOARD_GAP - 2.4), 'K401 5.2', 9, INK, 'middle')
     xa, za = Q(-13.4, BOARD_GAP + BOARD_T); xb, zb = Q(-31.6, BOARD_GAP + BOARD_T + 11)
     s.rect(xa, za, xb - xa, zb - za, WARN, 'none', 1, '3 3')
     s.text(*Q(-22.5, BOARD_GAP + BOARD_T + 5.5), 'lower jacks, underside', 9, WARN, 'middle')
@@ -251,9 +251,8 @@ def pcb_relation():
     s.text(Q(YL + 1.5, 0)[0] - 6, Q(0, BOARD_GAP / 2)[1] + 18, '(10-12, provisional)', 9, MUTED, 'end')
     ty = Q(0, BOARD_GAP + BOARD_T + 15)[1]
     for k, (t, c) in enumerate([
-        (f'Over K401 the gap is {BOARD_GAP - hang - K401_H:.2f} mm at an 11 mm face-to-PCB depth, '
-         f'{10 - hang - K401_H:.2f} mm at 10 mm.', WARN),
-        ('Move K401 2.5 mm towards the heel at placement (courtyard to Y -27) so the module never sits over it.', WARN),
+        ('K401 moved 2.15 mm towards the heel and 0.5 mm right (2026-10-08): it no longer sits under the module,', INK),
+        (f'which ends at Y {OLED_Y - MODULE[1] / 2:g}. Nothing else under the module is taller than {BOARD_GAP - hang:.2f} mm.', INK),
         ('Layer thicknesses are typical module figures; measure the bought module and the casting before cutting.', MUTED)]):
         s.text(Q(YL, 0)[0], ty + 16 * k, t, 10, c)
     s.save('oled-pcb-relation.svg')

@@ -23535,7 +23535,7 @@
 	(footprint "Relay_SMD:Relay_DPDT_Omron_G6K-2F-Y"
 		(layer "F.Cu")
 		(uuid "9e0be6f7-64ce-5214-af66-6d5a6f0de129")
-		(at 143.4 134.85)
+		(at 143.9 137)
 		(descr "Omron G6K-2F-Y relay package http://omronfs.omron.com/en_US/ecb/products/pdf/en-g6k.pdf")
 		(tags "Omron G6K-2F-Y relay")
 		(property "Reference" "K401"

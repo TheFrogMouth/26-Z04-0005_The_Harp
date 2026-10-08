@@ -140,13 +140,16 @@ figures below and the footprint courtyards in `The Harp.kicad_pcb`.
 - **Heights.** Face 2.2 mm; below it the gasket 0.5, glass 1.45, module PCB
   1.0 and its parts about 1.2: the module hangs 4.15 mm, leaving 6.85 mm to
   the PCB at the provisional 11 mm face-to-PCB depth (10–12 mm).
-- **Relay K401 under the module.** The relay seeded from The Relic has its
-  courtyard at Y −24.6 to −35.1 and is 5.2 mm tall, so it overlaps the
-  module in plan from −24.6 to −26.25 with only 1.65 mm vertical clearance
-  (0.65 mm at a 10 mm depth). **Move K401 2.5 mm towards the heel at
-  placement** (centre to about Y −32.4, courtyard to −27.1), which clears
-  D113/D114 and the footswitch pads. Keep everything else under the module
-  below 5 mm.
+- **Relay K401 moved clear of the module (2026-10-08).** Seeded from The
+  Relic at PCB (143.4, 134.85), its courtyard (Y −24.6 to −35.1, 5.2 mm
+  tall) overlapped the module in plan from −24.6 to −26.25 with only
+  1.65 mm vertical clearance (0.65 mm at a 10 mm depth). It is now at PCB
+  (143.9, 137.0), face (−4.6, −32.0): 2.15 mm towards the heel and 0.5 mm
+  right, courtyard X −9.25 to +0.05, Y −26.75 to −37.25. That is 0.5 mm
+  clear of the module edge in plan, 0.12 mm clear of Q402's courtyard and
+  0.75 mm from the board edge at −38 (a straight 2.5 mm move would have
+  overlapped Q402 and come within 0.4 mm of the edge). Not yet routed.
+  Keep everything else under the module below about 6.8 mm.
 - **Still to check.** Measure the bought module (pad end, glass position
   on its board, thickness) and the casting depth, then confirm the window
   centre lies on the active area and the carrier height.
@@ -289,8 +292,8 @@ Differences from the Timekeeper, all deliberate:
    items: the OPA2365 1 kHz noise figure on its data sheet plot (estimated
    about 11 nV/√Hz; capacitive-load stability is checked, see below), QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
    unused-channel handling.
-5. ERC, then *Update PCB from Schematic*; place J408, move K401 to about Y −32.4
-   (see *OLED mounting*); place MCU/flash in the centre band,
+5. ERC, then *Update PCB from Schematic*; place J408 (K401 already moved for the
+   OLED, see *OLED mounting*); place MCU/flash in the centre band,
    codec under the pots, buffers at the jack ends, buck on the tab. **Go/no-go
    for Plan A here.**
 6. GND vias per the Relic rule, route (F.Cu short, B.Cu long, In2 power),
