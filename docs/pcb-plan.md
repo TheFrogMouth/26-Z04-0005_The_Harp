@@ -147,9 +147,9 @@ figures below and the footprint courtyards in `The Harp.kicad_pcb`.
   the PCB at the provisional 11 mm face-to-PCB depth (10–12 mm).
 - **Under the module.** After the placement (*Placement*, below) only flat
   parts sit under the module: U201 (1.6 mm, 5.25 mm clear at an 11 mm
-  depth), its decoupling and J408. The relay K401 (5.2 mm) and the
-  electrolytics C502/C508 (5.8 mm) were kept out of the module's outline
-  by the placer. Anything added there later must stay below about 6.8 mm.
+  depth), its decoupling and J408. The relay K401 is on the bottom side
+  and the electrolytics C502/C508 (5.8 mm) were kept out of the module's
+  outline by the placer. Anything added there later must stay below about 6.8 mm.
 - **Still to check.** Measure the bought module (pad end, glass position
   on its board, thickness) and the casting depth, then confirm the window
   centre lies on the active area and the carrier height.
@@ -179,6 +179,8 @@ position (the Alchemist's old FFC spot).
 
 Rules carried over from The Relic:
 
+- Parts on both sides since 2026-10-08 (*Placement*); the bottom only where
+  the jack bodies are not.
 - Four layers, F.Cu signals and parts / In1.Cu solid GND, never cut /
   In2.Cu power (+9V, +3V3, +3V3A, +5VA) / B.Cu longer signals and the jacks.
 - Every SMD GND pad gets its own via to In1.Cu; through-hole parts use their
@@ -193,59 +195,78 @@ Rules carried over from The Relic:
 
 ## Placement (2026-10-08)
 
-![Top-side placement, face coordinates](images/pcb-placement.png)
+![Placement, top and bottom](images/pcb-placement.png)
 
-All 181 footprints are on the board, top side only (the jacks and the DC
-jack stay underneath). Done by script, not in KiCad:
-`scripts/pcb_placement/` (see its README) places each group at a home
-position and each passive as close as it can to the pads it connects to,
-decoupling first, against the courtyards of the face parts, the
-through-hole pins of the underside jacks, the board outline (0.3 mm) and
-the OLED module (nothing taller than about 4 mm under it). Checked from the
-board file: no courtyard overlaps, everything inside the outline, nothing
-tall under the module. Top-side courtyards cover about 68 % of the board.
+All 181 footprints are placed, by script (`scripts/pcb_placement/`, see its
+README), not in KiCad. Checked from the board file: no courtyard overlaps
+on either side (apart from the stacked jacks, as on The Alchemist),
+nothing on a through-hole from the other side, everything inside the
+outline, nothing taller than about 4 mm under the OLED module, and every
+flipped footprint's pads where the placer put them.
 
-**Plan A fits, but only just, and not on the zoning above.** The LQFP-100
-(17.5 mm courtyard) fits in exactly one place: the lower centre between
-the lower jacks' pin rows (X ±11.3) and under the Retune toggle, at face
-(0, −21.5). Everything else was arranged round it:
+**Both sides are used.** A first pass with everything on top fitted
+(68 % courtyard fill) but left three weak spots: the codec's SAI lines ran
+50–55 mm to the MCU across the analogue section, the right-channel ADC
+driver network was spread over up to 62 mm, and the input path was long.
+Moving 37 parts that gain nothing from the top to the bottom freed the
+middle of the top for the codec and the ADC driver. Top fill is now 59 %.
 
-| Group | Where it went | Against the zoning |
+| Bottom side | Where | Why it can go there |
 |---|---|---|
-| H750 U201, flash U202, crystal, decoupling | Lower centre, flash below it, crystal on the left | As planned, but it fills the band, so the relay moved out |
-| Relay K401 and its driver | Right middle (17, −4), next to IN | Planned at the left end; next to IN keeps the high-impedance input short |
-| Input buffers U701 (L and R), EXP buffer U401 | Lower right, next to J402 / J406 | As planned |
-| ADC driver U601 (THS4522) | Left middle (−15, −7) | Planned under the pot rows with the codec |
-| Codec IC501, VCOM buffers U501 | Between the pot rows, centre (6, 23) | Planned under the pot rows; it is above RV105 instead |
-| Output stages U702 | Between the pot rows, right (18, 24), next to the codec's DAC pins | Planned at the lower left |
-| Buck (U301, L301) and LDO (U302) | Top band either side of the DC jack | As planned (the LDO was planned between the pot rows) |
-| SWD needle pads W201 | Between the pot rows, centre left | Planned at the heel: no room left there |
-| Footswitch pads J405 / J407 | Top band / left middle | Planned at the heel: no room left there |
-| D114 (Hold LED) | (+20, −35), mirror of D113 | As planned |
+| Relay K401 and its driver (Q401, D402, R405–R407) | Centre strip under U201, between the lower jack bodies | Equidistant from IN and OUT L, The Relic's centre position; In1 GND shields it from the MCU |
+| Effect and Hold LED drivers, footswitch RCs (Q402, Q403, R404, R408–R414, C408, C409) | Heel strip below the lower jacks | Slow switching signals |
+| Expression buffer (U401, R415–R418, C410–C412) | Above the right upper jack | DC control voltage |
+| Pot RC filters (R101–R105, C101–C105) | Centre strip, near the MCU's ADC pins | DC, filter close to the ADC input |
+| SWD needle pads W201, footswitch wire pads J405/J407 | Above the upper jacks | Copper only, nothing to assemble; SWD reachable from below |
 
-Measured from the board (half-perimeter of each net's pads):
+The bottom side is free only where the jack bodies are not: above the
+upper jacks (face Y > +6.6), the centre strip between the jack bodies
+(|X| < 6) and the heel strip below the lower jacks.
 
-- Decoupling: 20 of the 27 IC supply caps within 5 mm of their IC's supply
-  pin; the rest are bulk or regulator-output caps.
-- Short and good: DAC to output stage 12–17 mm, IN ring to its buffer
-  8.5 mm, QSPI 11 mm, left ADC driver feedback 13.5 mm.
-- **Long and worth fixing by hand:** the right-channel ADC driver network
-  (FDB_INP 39 mm, ADC_R_P 62.5 mm: its parts are spread round U601), the
-  SAI lines codec to MCU (50–55 mm, crossing the analogue middle of the
-  board), the input buffer outputs to the ADC driver (28–30 mm, passing
-  the MCU), and IN to the relay (35 mm, the high-impedance guitar input).
-- Five face parts' courtyards reach over underside jack pins: D113/D114
-  (the shared LED position), RV102 over the DC jack, SW101/SW103 over the
-  upper jacks. These come from the shared face layout and were there
-  before; copper clearance needs a DRC check in KiCad.
+| Top side | Where |
+|---|---|
+| H750 U201, flash U202, crystal, decoupling | Lower centre (the one place a 17.5 mm square fits) |
+| Codec IC501 and its decoupling | Left middle, next to the MCU's SAI pins (PE2–PE6) |
+| VCOM buffers U501, C502 | Between the pot rows (DC bias) |
+| ADC driver U601 (L and R) | Right middle, next to the input buffers; anti-alias caps C605–C607, C615–C617 at the codec's input pins |
+| Input buffers U701, input ESD | Lower right, next to IN |
+| Output stages U702 | Between the pot rows, above the codec's DAC pins |
+| Buck, LDO | Top band either side of the DC jack |
+| J408 (OLED) | (−21.75, −22.0), between the left lower jack's pin rows |
 
-**Recommendation.** The placement proves that every part fits on the
-one board, so Plan B (two boards) is not forced. It is not routing-ready:
-before routing, rework by hand in KiCad (1) the right-channel ADC driver
-into a compact block round U601, (2) the codec closer to the ADC driver
-and the MCU, or the SAI routed on an inner layer away from the analogue
-parts, and (3) check the high-impedance input path IN → relay → U701
-against the hum risk. If (2) cannot be solved, that is the case for Plan B.
+Net lengths (half-perimeter of each net's pads, mm), first pass → now:
+
+| Net | Before | Now |
+|---|---:|---:|
+| SAI (MCLK, BICK, LRCK, SDTI, SDTO) | 50–55 | 15–17 |
+| IN (jack to relay) | 35 | 28 |
+| Relay to input buffer (EFFECT_IN) | 22 | 11 |
+| Input buffer to ADC driver L / R | 30 / 28 | 16 / 12 |
+| ADC driver feedback, L / R (worst net) | 14 / 39 | 19 / 18 |
+| Codec DAC to output stage | 12–17 | 5–17 |
+| ADC driver to codec (ADC_L/R, driven pairs) | 35–62 | 46–58 |
+| QSPI | 11 | 11 |
+
+Decoupling: 20 of 27 IC supply caps within 5 mm of their IC's supply pin;
+the rest are bulk and regulator-output caps.
+
+**What is left.** The one long analogue run is the ADC driver output to the
+codec (about 30 mm between the parts, 46–58 mm net span): the codec sits
+next to the MCU and the driver next to the input buffers, with the Retune
+toggle between them. It is the safest place for the length: a differential
+pair driven through 40.2 Ω, with the anti-alias caps at the codec pins.
+Route it as a tight pair over the unbroken In1 GND, away from the SAI.
+VCOM_A/B (DC bias) also spread wide, which does not matter.
+
+**Assembly.** Bottom-side parts need either JLCPCB double-sided assembly
+(a second setup and stencil) or hand fitting: all are 0603/0805, SOT-23 and
+the SMD relay, so hand fitting is practical. W201, J405 and J407 are bare
+copper. This replaces the Relic rule "top side only, except the jacks".
+
+**Verdict.** Plan A (one board) fits with no weak spot left that needs a
+second board. Before routing: ERC, *Update PCB from Schematic* (expect net
+renames only), a look over the placement in KiCad, and DRC (including the
+five face parts whose courtyards reach over jack pins, as before).
 
 ## Schematic sheets (drawn 2026-10-04)
 
@@ -348,8 +369,8 @@ Differences from the Timekeeper, all deliberate:
    items: the OPA2365 1 kHz noise figure on its data sheet plot (estimated
    about 11 nV/√Hz; capacitive-load stability is checked, see below), QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
    unused-channel handling.
-5. ~~Place.~~ Synced and placed by script on 2026-10-08 (*Placement*).
-   **Go/no-go for Plan A: it fits, with the compromises listed there.**
+5. ~~Place.~~ Synced and placed by script on 2026-10-08, both sides
+   (*Placement*). **Go/no-go for Plan A: it fits.**
    Still to do in KiCad: ERC, *Update PCB from Schematic* (expect net
    renames only), review the placement by eye, then DRC.
 6. GND vias per the Relic rule, route (F.Cu short, B.Cu long, In2 power),

@@ -97,9 +97,11 @@ Signal runs right to left as on The Alchemist: IN and EXP enter on the right wal
 }
 
 \section{Placement}
-All 181 footprints were placed on the top side by script on 2026-10-08 (\texttt{scripts/pcb\_placement/}; drawing in \texttt{docs/images/pcb-placement.png}). The check from the board file finds no courtyard overlaps, every part inside the outline and nothing tall under the OLED module; top-side courtyards cover about 68\,\% of the board.
+All 181 footprints were placed by script on 2026-10-08 (\texttt{scripts/pcb\_placement/}; drawing in \texttt{docs/images/pcb-placement.png}), on both sides. The check from the board file finds no courtyard overlaps on either side apart from the stacked jacks, nothing on a through-hole from the other side, everything inside the outline and nothing tall under the OLED module.
 
-Plan~A fits, but only just and not on the zoning above. The LQFP-100 (17.5\,mm courtyard) fits in one place only, the lower centre between the lower jacks' pin rows and under the Retune toggle, at face (0, $-21.5$). The relay moved to the right middle next to IN, the ADC driver to the left middle, the codec and the output stages between the pot rows, and the SWD pads and footswitch pads into the space left. Decoupling is close (20 of 27 IC supply caps within 5\,mm), the DAC-to-output and QSPI paths are short, but the right-channel ADC driver network (up to 62\,mm), the SAI lines from the codec to the MCU (50--55\,mm, across the analogue middle) and the high-impedance path from IN to the relay (35\,mm) need rework by hand before routing. If the codec-to-MCU path cannot be made acceptable, that is the case for Plan~B.
+The LQFP-100 (17.5\,mm courtyard) fits in one place only, the lower centre between the lower jacks' pin rows, at face (0, $-21.5$). A first pass with everything on the top fitted but left the codec's SAI lines 50--55\,mm from the MCU and the right-channel ADC driver spread over up to 62\,mm. Moving 37 parts that gain nothing from the top to the bottom (the relay and its driver under U201, the LED and footswitch drivers along the heel, the expression buffer, the pot RC filters, the SWD and footswitch pads) freed the middle of the top: the codec now sits next to the MCU's SAI pins (15--17\,mm), the ADC driver next to the input buffers with compact feedback networks, and the output stages over the codec's DAC pins. The bottom is used only where the jack bodies are not. The one long analogue run left is the driven ADC pair from the driver to the codec, about 30\,mm, with its anti-alias capacitors at the codec pins.
+
+Bottom-side parts need double-sided assembly or hand fitting (0603/0805, SOT-23 and the SMD relay); the SWD and footswitch pads are bare copper. Plan~A fits.
 
 \section{Layout Rules}
 Carried over from The Relic:
@@ -107,6 +109,7 @@ Carried over from The Relic:
   \item Four layers: F.Cu for signals and parts, In1.Cu solid GND that is never cut, In2.Cu for power ($+$9V, $+$3V3, $+$3V3A, $+$5VA), B.Cu for longer signals and the jacks.
   \item Every SMD GND pad gets its own via to In1.Cu; through-hole parts use their barrels. No via under the SWD needle pads.
   \item Analogue and digital are separated by placement, not by a split plane. The codec's analogue side and the input and output buffers face the jacks; the MCU, flash and buck stay in the centre and at the DC end. QSPI, SAI and SWD tracks stay inside the MCU zone.
+  \item Parts on both sides since 2026-10-08; the bottom only where the jack bodies are not.
   \item The buck's switching node is kept off B.Cu over the jack bodies.
   \item DRC uses The Relic's \texttt{.kicad\_dru}.
 \end{itemize}

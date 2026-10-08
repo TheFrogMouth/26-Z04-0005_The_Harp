@@ -217,7 +217,7 @@ labour. Nothing carted.
   Mitigation: The Relic's four-layer stack with one unbroken ground plane,
   zoning in `pcb-plan.md`, buck converter at the DC end away from the input.
 - AK4621EF lifecycle (already flagged in the Timekeeper's BOM audit).
-- One-board fit (Plan A): every part fits after the 2026-10-08 placement, at about 68 % courtyard fill, but the MCU has exactly one possible position and the codec ends up 50 mm from it across the analogue section (`pcb-plan.md`, *Placement*). If that cannot be routed cleanly, go to Plan B.
+- One-board fit (Plan A): every part fits after the 2026-10-08 placement, with 37 non-critical parts on the bottom side (`pcb-plan.md`, *Placement*). Those need double-sided assembly or hand fitting.
 
 ## Decisions taken on 2026-10-08
 

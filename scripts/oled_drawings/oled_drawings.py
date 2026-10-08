@@ -194,7 +194,7 @@ def pcb_relation():
     s.text(P(mx1, 0)[0] + 26, P(0, my1)[1] - 2, f'{SW102_CY[2] - my1:.1f} to SW102', 9, WARN)
     notes = [f'Module {MODULE[0]:g} x {MODULE[1]} envelope (36-38 x 12-12.5), Y {my1:.2f} to {my0:.2f}; window centre (0, {OLED_Y:g}).',
              'Module pads on the left short end (check on the bought module); J408 placed at (-21.75, -22.0), rot 90, entry facing +X.',
-             'K401 (relay) now beside IN at (17, -4); only flat parts (U201, its decoupling) sit under the module.']
+             'K401 (relay) is on the bottom side under U201; only flat parts (U201, its decoupling) sit under the module.']
     for k, t in enumerate(notes):
         s.text(OX - CAV_W / 2 * S, OY + CAV_H / 2 * S + 22 + 15 * k, t, 9.5, MUTED)
     # ------------------------------------------------ section on X = 0
@@ -253,7 +253,7 @@ def pcb_relation():
     s.text(Q(YL + 1.5, 0)[0] - 6, Q(0, BOARD_GAP / 2)[1] + 18, '(10-12, provisional)', 9, MUTED, 'end')
     ty = Q(0, BOARD_GAP + BOARD_T + 15)[1]
     for k, (t, c) in enumerate([
-        ('Under the module: U201 (1.6 mm) and its decoupling; the relay and the electrolytics are kept out (2026-10-08).', INK),
+        ('Under the module: U201 (1.6 mm) and its decoupling; the electrolytics are kept out, the relay is on the bottom (2026-10-08).', INK),
         (f'Clearance over U201: {BOARD_GAP - hang - U201_H:.2f} mm at the provisional 11 mm depth.', INK),
         ('Layer thicknesses are typical module figures; measure the bought module and the casting before cutting.', MUTED)]):
         s.text(Q(YL, 0)[0], ty + 16 * k, t, 10, c)

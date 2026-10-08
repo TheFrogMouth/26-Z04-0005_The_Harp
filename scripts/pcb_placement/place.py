@@ -29,16 +29,20 @@ def local(b):
     return dict(X=X, Y=Y, A=A, cy=cy, pads=pads, layer=layer)
 
 L = {r: local(f['b']) for r, f in F.items()}
+SIDE = {}          # ref -> 'F' or 'B' for parts the placer puts on a side other than their file layer
 
-def bbox(ref, fx, fy, a):
-    pts = [rot(x, y, a) for x, y in L[ref]['cy']]
+def bbox(ref, fx, fy, a, side=None):
+    side = side or SIDE.get(ref, L[ref]['layer'][0])
+    pts = [rot(x, -y if side != L[ref]['layer'][0] else y, a) for x, y in L[ref]['cy']]
     xs = [fx + p[0] for p in pts]; ys = [fy - p[1] for p in pts]     # face Y is up: board y down
     return (min(xs), max(xs), min(ys), max(ys))
 
-def padpos(ref, fx, fy, a):
+def padpos(ref, fx, fy, a, side=None):
+    side = side or SIDE.get(ref, L[ref]['layer'][0])
+    flip = side != L[ref]['layer'][0]
     out = []
     for p in L[ref]['pads']:
-        rx, ry = rot(p['lx'], p['ly'], a)
+        rx, ry = rot(p['lx'], -p['ly'] if flip else p['ly'], a)
         out.append((p, fx + rx, fy - ry))
     return out
 
@@ -57,15 +61,18 @@ FIXED += ['D114', 'U201']
 TALL = {'K401', 'C502', 'C508'}            # taller than ~4 mm: kept out from under the OLED module
 MODULE = (-19.0, 19.0, -26.25, -13.75)
 
-occ = []      # (x0, x1, y0, y1, owner)
+occ = []      # top side: (x0, x1, y0, y1, owner)
+occb = []     # bottom side
+def add_fixed(r):
+    fx, fy, a = pos[r][:3]
+    side = L[r]['layer'][0]
+    (occ if side == 'F' else occb).append(bbox(r, fx, fy, a) + (r,))
+    for p, px, py in padpos(r, fx, fy, a):          # through-holes block the other side too
+        if p['kind'] in ('thru_hole', 'np_thru_hole'):
+            s_ = max(p['w'], p['h']) / 2 + 0.5
+            (occb if side == 'F' else occ).append((px - s_, px + s_, py - s_, py + s_, r + ':hole'))
 for r in FIXED:
-    fx, fy, a = pos[r]
-    if L[r]['layer'] == 'F.Cu':
-        occ.append(bbox(r, fx, fy, a) + (r,))
-    for p, px, py in padpos(r, fx, fy, a):          # through-hole pads of underside parts land on the top too
-        if p['kind'] == 'thru_hole' and L[r]['layer'] == 'B.Cu':
-            s = max(p['w'], p['h']) / 2 + 0.5
-            occ.append((px - s, px + s, py - s, py + s, r + ':pad'))
+    add_fixed(r)
 
 E = 0.3                                              # courtyard to board edge
 def in_board(b):
@@ -80,14 +87,22 @@ def in_board(b):
             if math.hypot(px - cx, py - cy) > 2 - E: return False
     return True
 
-def free(b, gap=0.05):
+def free(b, gap=0.05, side='F'):
     x0, x1, y0, y1 = b
-    for o in occ:
+    for o in (occ if side == 'F' else occb):
         if x0 < o[1] + gap and x1 > o[0] - gap and y0 < o[3] + gap and y1 > o[2] - gap:
             return False
     return True
 
-def find_spot(ref, tx, ty, rots=(0, 90), rmax=45, step=0.25):
+def holes_free(ref, x, y, a, side):
+    for p, px, py in padpos(ref, x, y, a, side):
+        if p['kind'] in ('thru_hole', 'np_thru_hole'):
+            s_ = max(p['w'], p['h']) / 2 + 0.3
+            if not free((px - s_, px + s_, py - s_, py + s_), 0, 'B' if side == 'F' else 'F'):
+                return False
+    return True
+
+def find_spot(ref, tx, ty, rots=(0, 90), rmax=45, step=0.25, side='F'):
     best = None
     n = int(rmax / step)
     for k in range(n):
@@ -100,22 +115,27 @@ def find_spot(ref, tx, ty, rots=(0, 90), rmax=45, step=0.25):
         for x, y in cands:
             x = round(x / step) * step; y = round(y / step) * step
             for a in rots:
-                b = bbox(ref, x, y, a)
-                if in_board(b) and free(b):
+                b = bbox(ref, x, y, a, side)
+                if in_board(b) and free(b, side=side) and holes_free(ref, x, y, a, side):
                     return x, y, a, b
     return None
 
 POWER = {'GND', '+3V3', '+5V', '+9V', 'VDDA'}
-def place(ref, tx, ty, rots=(0, 90)):
-    if ref in TALL:
+def place(ref, tx, ty, rots=(0, 90), side='F'):
+    SIDE[ref] = side
+    if ref in TALL and side == 'F':
         occ.append(MODULE + ('module',))
-    s = find_spot(ref, tx, ty, rots, rmax=100)
+    s = find_spot(ref, tx, ty, rots, rmax=100, side=side)
     if ref in TALL:
         occ[:] = [o for o in occ if o[4] != 'module']
     if not s:
         print('NO ROOM', ref); return False
     x, y, a, b = s
-    pos[ref] = (x, y, a); occ.append(b + (ref,))
+    pos[ref] = (x, y, a); (occ if side == 'F' else occb).append(b + (ref,))
+    for p, px, py in padpos(ref, x, y, a, side):
+        if p['kind'] in ('thru_hole', 'np_thru_hole'):
+            s_ = max(p['w'], p['h']) / 2 + 0.3
+            (occb if side == 'F' else occ).append((px - s_, px + s_, py - s_, py + s_, ref + ':hole'))
     return True
 
 def placed_pads(net, refs=None):
@@ -126,9 +146,13 @@ def placed_pads(net, refs=None):
             if p['net'] == net: out.append((px, py))
     return out
 
+BIAS = {'VCOM_A', 'VCOM_B', '/Codec/VCOM'}    # DC bias nets run everywhere: they do not pull parts
+
 def target(ref, home):
-    """Centroid of placed pads on this part's signal nets; decoupling parts: nearest placed pad of their supply net in the group."""
+    """Centroid of placed pads on this part's signal nets (bias nets ignored unless that is all it has);
+    decoupling parts: a supply pin of their group IC."""
     sig = [p['net'] for p in L[ref]['pads'] if p['net'] and p['net'] not in POWER and not p['net'].startswith('unconnected')]
+    sig = [n for n in sig if n not in BIAS] or sig
     pts = []
     for n in sig:
         pts += placed_pads(n)

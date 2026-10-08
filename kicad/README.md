@@ -55,9 +55,8 @@ top side by script (`scripts/pcb_placement/`, `docs/pcb-plan.md` *Placement*).
    Schematic once anyway: it should report no changes apart from net
    renames (KiCad names unlabelled nets `Net-(...)`) and footprint library
    refreshes. Anything else it reports is a sync miss: note it.
-3. Every part is placed (scripted, 2026-10-08). Review it by eye and rework
-   the weak spots listed under *Placement* in `docs/pcb-plan.md` (right-channel
-   ADC driver, codec-to-MCU SAI path, input path) before routing; run DRC.
+3. Every part is placed on both sides (scripted, 2026-10-08; see *Placement*
+   in `docs/pcb-plan.md`). Look it over, then run DRC.
 4. Regenerate the GND vias per the Relic rule, then route.
 
 Once the schematic has been edited in KiCad, the KiCad files are the source
