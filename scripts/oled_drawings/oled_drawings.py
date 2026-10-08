@@ -34,7 +34,7 @@ K401_CY = (-9.25, 0.05, -37.25, -26.75); K401_H = 5.2       # moved 2026-10-08, 
 D113_CY = (-22.42, -17.58, -37.21, -32.79)
 D114_CY = (17.58, 22.42, -37.21, -32.79)
 JACK_LO = [(-30.0, -6.5, -31.6, -13.4), (6.5, 30.0, -31.6, -13.4)]     # lower jack bodies, underside
-J408 = (-24.0, -20.0)                                                   # proposed, provisional
+J408 = (-23.5, -17.5)                                                   # placed 2026-10-08, PCB (125, 122.5) rot 90
 
 INK, MUTED, ACCENT, WARN, BOARD, FILL = '#1f2328', '#6e7781', '#0969da', '#cf222e', '#2da44e', '#f6f8fa'
 FONT = "font-family='Helvetica, Arial, sans-serif'"
@@ -181,17 +181,20 @@ def pcb_relation():
     s.text(*P(mx1 - 0.6, my1 - 2.4), 'OLED module', 9, ACCENT, 'end')
     for k in range(4):
         s.circle(*P(mx0 + 1.3, OLED_Y + 3.81 - k * 2.54), 0.5 * S, ACCENT, 'white')
-    s.line(*P(mx0 + 0.8, OLED_Y), *P(J408[0] + 2.5, J408[1]), ACCENT, 2.2)
-    jx, jy = P(J408[0] - 2.5, J408[1] + 3)
-    s.rect(jx, jy, 5 * S, 6 * S, INK, '#fff8c5', 1.2, op=1)
-    s.text(*P(J408[0] - 2.5, J408[1] + 7.9), 'J408', 9, INK, 'start', 'bold')
+    s.add(f"<polyline points='{P(mx0 + 0.8, OLED_Y)[0]:.1f},{P(0, OLED_Y)[1]:.1f} {P(J408[0] + 4.2, 0)[0]:.1f},{P(0, OLED_Y)[1]:.1f} {P(J408[0] + 4.2, 0)[0]:.1f},{P(0, J408[1])[1]:.1f} {P(J408[0] + 2.7, 0)[0]:.1f},{P(0, J408[1])[1]:.1f}' stroke='{ACCENT}' stroke-width='2.2' fill='none'/>")
+    jx, jy = P(J408[0] - 3.28, J408[1] + 3.9)
+    s.rect(jx, jy, 6.56 * S, 7.8 * S, INK, '#fff8c5', 1.2, op=1)
+    for k in range(4):
+        px, py = P(J408[0] - 2.0, J408[1] + 1.5 - k * 1.0)
+        s.rect(px - 3.9, py - 1.5, 7.8, 3.0, INK, '#d4a72c', 0.5, op=1)
+    s.text(*P(J408[0] - 3.28, J408[1] + 4.6), 'J408', 9, INK, 'start', 'bold')
     # vertical dims on the right
     s.dim_v(P(mx1, 0)[0] + 40, P(0, my1)[1], P(0, my0)[1], f'{MODULE[1]}')
     s.line(P(SW102_CY[1], 0)[0], P(0, SW102_CY[2])[1], P(mx1, 0)[0] + 24, P(0, SW102_CY[2])[1], WARN, 0.6, '2 2')
     s.dim_v(P(mx1, 0)[0] + 20, P(0, SW102_CY[2])[1], P(0, my1)[1], '', WARN)
     s.text(P(mx1, 0)[0] + 26, P(0, my1)[1] - 2, f'{SW102_CY[2] - my1:.1f} to SW102', 9, WARN)
     notes = [f'Module {MODULE[0]:g} x {MODULE[1]} envelope (36-38 x 12-12.5), Y {my1:.2f} to {my0:.2f}; window centre (0, {OLED_Y:g}).',
-             'Pads on the left short end; J408 at (-24, -20) on the top side. Both provisional until placement.',
+             'Module pads on the left short end (check on the bought module); J408 placed at (-23.5, -17.5), rot 90, entry facing +X.',
              'K401 moved to PCB (143.9, 137) on 2026-10-08: courtyard Y -26.75 to -37.25, 0.5 mm clear of the module in plan.']
     for k, t in enumerate(notes):
         s.text(OX - CAV_W / 2 * S, OY + CAV_H / 2 * S + 22 + 15 * k, t, 9.5, MUTED)
@@ -242,7 +245,7 @@ def pcb_relation():
     a = Q(yb + 0.6, GASKET + GLASS + 0.5); b = Q(-19.0, BOARD_GAP - 1.2)
     s.add(f"<path d='M {a[0]:.1f} {a[1]:.1f} C {a[0] - 10:.1f} {a[1] + 25:.1f} {b[0] + 10:.1f} {b[1] - 25:.1f} {b[0]:.1f} {b[1]:.1f}' stroke='{ACCENT}' stroke-width='2' fill='none'/>")
     slab(-17.5, -20.5, BOARD_GAP - 1.5, BOARD_GAP, INK, '#fff8c5')
-    s.text(*Q(-19, BOARD_GAP + BOARD_T + 1.6), 'J408 + lead (really at X -24)', 9, INK, 'middle')
+    s.text(*Q(-19, BOARD_GAP + BOARD_T + 1.6), 'J408 + lead (really at X -23.5)', 9, INK, 'middle')
     # dims at the right end, beyond the relay
     dx = Q(-37.5, 0)[0]
     s.dim_v(dx, Q(0, 0)[1], Q(0, hang)[1], f'{hang:.2f} module hang', ACCENT)

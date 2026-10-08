@@ -133,8 +133,12 @@ figures below and the footprint courtyards in `The Harp.kicad_pcb`.
   also keeps the board-depth tolerance out of the glass position.
 - **Wiring.** The module's pin header is left off. Four wires (28–30 AWG,
   about 40 mm with slack) run from its pads to J408, a JST SH 4-way
-  (SM04B-SRSS-TB) on the top side at about face (−24, −20), over the left
-  lower jack body where SMD parts are allowed. Pin 1 GND, 2 +3V3, 3 SCL,
+  (SM04B-SRSS-TB) on the top side, placed on 2026-10-08 at PCB (125.0,
+  122.5), rotation 90°, face (−23.5, −17.5): pads in a column at face
+  X −25.5, cable entry facing +X towards the module's pad end. Courtyard
+  X −26.78 to −20.22, Y −13.6 to −21.4: 1.22 mm from the board edge and
+  0.62 mm clear of J405. It sits over the left lower jack body, where SMD
+  parts are allowed. Mounting pads (MP) have no net. Pin 1 GND, 2 +3V3, 3 SCL,
   4 SDA. The PCB lifts out with the face, so the lead never has to be
   unplugged to open the box.
 - **Heights.** Face 2.2 mm; below it the gasket 0.5, glass 1.45, module PCB
@@ -163,7 +167,7 @@ figures below and the footprint courtyards in `The Harp.kicad_pcb`.
        │ SW101        RV105        SW103        │  row +13; 3.3 V analog filter, pot RC filters
        │ codec IC501 + U501, ADC driver U601    │  under the pot rows: codec, DFAs, OPA2348
        │              SW102                     │  row −5
-       │ ─── OLED window (0, −20), module ───── │  hangs from the face; J408 at (−24, −20)
+       │ ─── OLED window (0, −20), module ───── │  hangs from the face; J408 at (−23.5, −17.5)
        │ OUT U702  │   H750 U201     │ IN U701  │  band −18…−38: output side left, input side right
        │ relay K401│   flash U202    │ EXP U401 │
        │ D113 (−35)  J405  W201 SWD  J407  D114 │

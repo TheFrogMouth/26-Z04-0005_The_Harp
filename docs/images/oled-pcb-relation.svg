@@ -29,9 +29,13 @@
 <circle cx='131.5' cy='503.6' r='2.5' stroke='#0969da' fill='white' stroke-width='1'/>
 <circle cx='131.5' cy='516.4' r='2.5' stroke='#0969da' fill='white' stroke-width='1'/>
 <circle cx='131.5' cy='529.0' r='2.5' stroke='#0969da' fill='white' stroke-width='1'/>
-<line x1='129.0' y1='510.0' x2='112.5' y2='510.0' stroke='#0969da' stroke-width='2.2'/>
-<rect x='87.5' y='495.0' width='25.0' height='30.0' rx='0.0' stroke='#1f2328' fill='#fff8c5' fill-opacity='1' stroke-width='1.2'/>
-<text x='87.5' y='470.5' font-family='Helvetica, Arial, sans-serif' font-size='9' fill='#1f2328' text-anchor='start' font-weight='bold'>J408</text>
+<polyline points='129.0,510.0 123.5,510.0 123.5,497.5 116.0,497.5' stroke='#0969da' stroke-width='2.2' fill='none'/>
+<rect x='86.1' y='478.0' width='32.8' height='39.0' rx='0.0' stroke='#1f2328' fill='#fff8c5' fill-opacity='1' stroke-width='1.2'/>
+<rect x='88.6' y='488.5' width='7.8' height='3.0' rx='0.0' stroke='#1f2328' fill='#d4a72c' fill-opacity='1' stroke-width='0.5'/>
+<rect x='88.6' y='493.5' width='7.8' height='3.0' rx='0.0' stroke='#1f2328' fill='#d4a72c' fill-opacity='1' stroke-width='0.5'/>
+<rect x='88.6' y='498.5' width='7.8' height='3.0' rx='0.0' stroke='#1f2328' fill='#d4a72c' fill-opacity='1' stroke-width='0.5'/>
+<rect x='88.6' y='503.5' width='7.8' height='3.0' rx='0.0' stroke='#1f2328' fill='#d4a72c' fill-opacity='1' stroke-width='0.5'/>
+<text x='86.1' y='474.5' font-family='Helvetica, Arial, sans-serif' font-size='9' fill='#1f2328' text-anchor='start' font-weight='bold'>J408</text>
 <line x1='355.0' y1='478.8' x2='355.0' y2='541.2' stroke='#0969da' stroke-width='1'/>
 <line x1='351.0' y1='478.8' x2='359.0' y2='478.8' stroke='#0969da' stroke-width='1'/>
 <line x1='351.0' y1='541.2' x2='359.0' y2='541.2' stroke='#0969da' stroke-width='1'/>
@@ -43,7 +47,7 @@
 <text x='341.0' y='479.5' font-family='Helvetica, Arial, sans-serif' font-size='10' fill='#cf222e' text-anchor='start' font-weight='normal'></text>
 <text x='341.0' y='476.8' font-family='Helvetica, Arial, sans-serif' font-size='9' fill='#cf222e' text-anchor='start' font-weight='normal'>1.3 to SW102</text>
 <text x='69.2' y='720.5' font-family='Helvetica, Arial, sans-serif' font-size='9.5' fill='#6e7781' text-anchor='start' font-weight='normal'>Module 38 x 12.5 envelope (36-38 x 12-12.5), Y -13.75 to -26.25; window centre (0, -20).</text>
-<text x='69.2' y='735.5' font-family='Helvetica, Arial, sans-serif' font-size='9.5' fill='#6e7781' text-anchor='start' font-weight='normal'>Pads on the left short end; J408 at (-24, -20) on the top side. Both provisional until placement.</text>
+<text x='69.2' y='735.5' font-family='Helvetica, Arial, sans-serif' font-size='9.5' fill='#6e7781' text-anchor='start' font-weight='normal'>Module pads on the left short end (check on the bought module); J408 placed at (-23.5, -17.5), rot 90, entry facing +X.</text>
 <text x='69.2' y='750.5' font-family='Helvetica, Arial, sans-serif' font-size='9.5' fill='#6e7781' text-anchor='start' font-weight='normal'>K401 moved to PCB (143.9, 137) on 2026-10-08: courtyard Y -26.75 to -37.25, 0.5 mm clear of the module in plan.</text>
 <rect x='680.0' y='188.0' width='202.0' height='22.0' rx='0.0' stroke='#1f2328' fill='#d0d7de' fill-opacity='1' stroke-width='1.2'/>
 <rect x='958.0' y='188.0' width='162.0' height='22.0' rx='0.0' stroke='#1f2328' fill='#d0d7de' fill-opacity='1' stroke-width='1.2'/>
@@ -81,7 +85,7 @@
 <text x='945.0' y='406.0' font-family='Helvetica, Arial, sans-serif' font-size='8' fill='#cf222e' text-anchor='middle' font-weight='normal'>(|X| > 6.5, behind this plane)</text>
 <path d='M 976.5 234.5 C 966.5 259.5 920.0 283.0 910.0 308.0' stroke='#0969da' stroke-width='2' fill='none'/>
 <rect x='895.0' y='305.0' width='30.0' height='15.0' rx='0.0' stroke='#1f2328' fill='#fff8c5' fill-opacity='1' stroke-width='1.2'/>
-<text x='910.0' y='352.0' font-family='Helvetica, Arial, sans-serif' font-size='9' fill='#1f2328' text-anchor='middle' font-weight='normal'>J408 + lead (really at X -24)</text>
+<text x='910.0' y='352.0' font-family='Helvetica, Arial, sans-serif' font-size='9' fill='#1f2328' text-anchor='middle' font-weight='normal'>J408 + lead (really at X -23.5)</text>
 <line x1='1095.0' y1='210.0' x2='1095.0' y2='251.5' stroke='#0969da' stroke-width='1'/>
 <line x1='1091.0' y1='210.0' x2='1099.0' y2='210.0' stroke='#0969da' stroke-width='1'/>
 <line x1='1091.0' y1='251.5' x2='1099.0' y2='251.5' stroke='#0969da' stroke-width='1'/>
