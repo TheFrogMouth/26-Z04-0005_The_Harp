@@ -40,7 +40,7 @@ same depth, and that is the board the pots are on. So:
 | Input buffer OPA2365 + anti-alias, expression buffer MCP6001, ESD | 20 | Timekeeper U801, U702 |
 | Output buffers OPA1688 L/R + reconstruction, ESD | 18 | Timekeeper U802 |
 | Relay bypass: G6K-2F-Y, 2N7002 ×2, diode, resistors, RC on the footswitch inputs | 12 | Relic K401 group, Alchemist relay |
-| 4 pots, 3 toggles, 13 LEDs, LED resistors | 31 | Alchemist + new |
+| 4 pots, 3 toggles, 2 LEDs, OLED connector and pull-ups | 22 | Alchemist + new |
 | 5 jacks, 2 footswitch pad pairs | 7 | Alchemist |
 | **Total** | **≈ 191** | |
 
@@ -85,7 +85,7 @@ the subset it needs.
 | Top wall DC, X 0 | DC | DC | J401 DC |
 | LEDs (−20, −35), (+20, −35) | Effect, Rate | Effect, — | D113 Effect, D114 Hold |
 | Footswitches (−20, −49), (+20, −49) | Bypass, Tap | Bypass, — | Bypass (J405), Hold (J407) |
-| Note LED band, Y −18 | — | — | D101–D112, X −27.5 to +27.5 at 5 mm |
+| OLED strip window, Y −18 | — | — | J408 connector for the 0.91 in OLED module (about 30 × 11 mm window, centred X 0) |
 
 **Controls over the upper jacks (resolved 2026-10-06).** The upper jack
 bodies sit on the underside at face X ±6.5 to ±30, Y +5.6 to −12.6, with
@@ -101,12 +101,10 @@ footprint, pins within X ±2.4, about 2.7 mm clear. No through-hole pad sits
 over a jack. All three toggles are Taiway 100-DP6-T200B1M2QE ON-ON-ON on The
 Alchemist's `100DP3T1B2M2QE` footprint (shaft at origin + (−2.415, +4.7)).
 
-The LED band at Y −18 lies over the lower jack bodies (NMJ6HCD2 bodies span Y +5.6 to
-−12.6 and −13.4 to −31.6 on both walls, X ±6.5 to ±30), which is why the LEDs must be SMD. The
-outer LEDs at X ±27.5 are 2.6 mm from the cavity wall at ±30.15; check the
-light-pipe flange diameter (Bivar PLP1-xxx / Dialight 515 series, 3 mm)
-against the 5 mm pitch and the wall. If it does not fit, use 11 LEDs for
-the chromatic notes with C at the centre, or 4.5 mm pitch.
+The OLED strip at Y −18 lies over the lower jack bodies (NMJ6HCD2 bodies span Y +5.6 to
+−12.6 and −13.4 to −31.6 on both walls, X ±6.5 to ±30), so only an SMD connector (J408, JST SH
+4-way) may sit there. The module is about 30 × 11.5 mm; the window is a rectangle at X 0 and
+needs a milled or laser-cut face, which Tayda's drilling does not give (open item).
 
 ## Zoning (top side, face coordinates)
 
@@ -117,7 +115,7 @@ the chromatic notes with C at the centre, or 4.5 mm pitch.
        │ SW101        RV105        SW103        │  row +13; 3.3 V analog filter, pot RC filters
        │ codec IC501 + U501, ADC driver U601    │  under the pot rows: codec, DFAs, OPA2348
        │              SW102                     │  row −5
-       │ ─── LED strip D101–D112 at −18 ─────── │  over the jack bodies: SMD only
+       │ ─── OLED strip J408 at −18 ─────────── │  over the jack bodies: SMD only
        │ OUT U702  │   H750 U201     │ IN U701  │  band −18…−38: output side left, input side right
        │ relay K401│   flash U202    │ EXP U401 │
        │ D113 (−35)  J405  W201 SWD  J407  D114 │
@@ -154,15 +152,15 @@ Relic's.
 
 | # | Sheet | Designators | Contents |
 |---|---|---|---|
-| 1 | Controls and LEDs | RV101–103, RV105, R101–103, R105, R107–118, C101–103, C105, SW101–103, D101–112 | Pots across +3V3, wipers through 1k / 100n to PA0, PA1, PA2, PA4; ON-ON-ON toggles, commons to GND, pins 3 and 4 to PE11–PE15 and PB10; 12 note LEDs on PD0–PD11 through 1k |
+| 1 | Controls and LEDs | RV101–103, RV105, R101–103, R105, R107–108, C101–105, SW101–103, J408 | Pots across +3V3, wipers through 1k / 100n to PA0, PA1, PA2, PA4; ON-ON-ON toggles, commons to GND, pins 3 and 4 to PE11–PE15 and PB10; J408 for the 0.91 in OLED on PB6 / PB7 (I²C1) with 4.7k pull-ups |
 | 2 | MCU | U201, U202, C201–214, R201–204, FB201, Y201, W201 | STM32H750VBT6, five 100n + 4.7u, 2 × 2.2u VCAP, VDDA/VREF+ through 220R ferrite, 25 MHz HSE, NRST 100n, BOOT0 10k, Segger needle SWD with 22R, W25Q128 on QUADSPI bank 2 |
 | 3 | Power | J401, D301–302, FB301–303, U301–302, L301, C301–312, R301–303 | Timekeeper power: SMAJ10CA, PMEG3010 series, TPS54202 → +3V3, NCP718 → +5V; +9V feeds relay and LEDs |
-| 4 | Jacks and Bypass | J402–407, K401, Q401–403, D113–114, D402–406, R404–418, C408–412, U401 | Four NMJ6HCD2 jacks, ESD on each, relay bypass on OUT L (Omron G6K-2F-Y), effect and Hold LED drivers, two footswitch pad pairs with RC, Timekeeper expression buffer (MCP6001) |
-| 5 | Codec | IC501, U501, R501–505, C501–509 | AK4621EF, OPA2348 VCOM buffers (VCOM_A, VCOM_B), PDN RC, AINR parked at VCOM |
-| 6 | ADC Driver | U601, R601–606, C601–610 | THS4522 channel A, single-ended to differential, gain 0.59 (R603/R604 620 Ω); channel B powered down |
+| 4 | Jacks and Bypass | J402–407, K401, Q401–403, D113–114, D402–407, R404–418, C408–412, U401 | Four NMJ6HCD2 jacks (IN is TRS: tip left, ring right), ESD on each, relay bypass on OUT L (Omron G6K-2F-Y), effect and Hold LED drivers, two footswitch pad pairs with RC, Timekeeper expression buffer (MCP6001) |
+| 5 | Codec | IC501, U501, R501, R504–505, C501–509 | AK4621EF, OPA2348 VCOM buffers (VCOM_A, VCOM_B), PDN RC, AINL and AINR from the two ADC driver channels |
+| 6 | ADC Driver | U601, R601–612, C601–618 | THS4522 channels A (left) and B (right), single-ended to differential, gain 0.59 (R603/R604 and R609/R610 620 Ω) |
 | 7 | Analog In and Out | U701–702, R701–719, C701–707 | OPA2365 input buffer, OPA1688 difference amplifiers L and R, 10u, 100R, 1M |
 
-192 parts. Each sheet is wired directly from a hand layout
+190 parts. Each sheet is wired directly from a hand layout
 (`scripts/harp_schematic/layouts/`) to the Frogmouth schematic standard:
 global labels only for nets that leave the sheet, a power symbol at each
 rail and ground point, and the generator re-reads its own output and traces
@@ -170,8 +168,15 @@ every net pin by pin against the spec (no shorts, every pin on its net).
 
 Differences from the Timekeeper, all deliberate:
 
-- **Mono in.** One input buffer and one ADC driver; AINR+/AINR− parked at
-  VCOM through 1k each [CONFIRM against the AK4621 datasheet].
+- **Stereo in.** The IN jack is TRS, tip left and ring right. Both channels
+  have an input buffer (the two OPA2365 halves) and a THS4522 channel into
+  the codec's AINL and AINR; nothing on the codec inputs is parked. The
+  AK4621EF has no single-ended mode (differential inputs only), so the
+  THS4522 does the single-ended to differential conversion for both
+  channels, as on the Timekeeper. The relay isolates the left input only;
+  the right is muted in firmware in true bypass. A mono plug grounds the
+  ring: the right channel reads silence and the firmware copies left to
+  right.
 - **ADC driver reference.** The Timekeeper left the driver's IN_N open; here
   it goes to VCOM_A, the DC level of the input buffer output. This is the
   fix the Timekeeper's own input noise review recommends (finding H1).
@@ -221,10 +226,10 @@ Differences from the Timekeeper, all deliberate:
 | Footswitches | PB12 bypass, PB13 hold | Internal pull-ups, 1k / 100n RC |
 | Relay | PC10 | Same as the Timekeeper |
 | LEDs | PC6 effect, PC7 hold (TIM3 CH1/CH2 PWM) | Through 2N7002 from +9V |
-| Note LEDs | PD0–PD11 | One GPIOD write; about 1.4 mA each with red/amber LEDs and 1k |
+| OLED | PB6 SCL, PB7 SDA (I2C1) | 4.7k pull-ups to +3V3, J408 module connector |
 | SWD | PA13, PA14, PB3 SWO, NRST | Segger 8.06.05 needle adapter |
 | HSE | PH0, PH1 | 25 MHz, 8 pF |
-| Free | PA6–PA12, PA15, PB0, PB5–PB7, PB9–PB11, PB14–PB15, PC0–PC5, PC8–PC9, PC12–PC13, PD12–PD15, PE0–PE1, PE11, PE15 | No-connect flags on the schematic |
+| Free | PA6–PA12, PA15, PB0, PB5, PB9–PB11, PB14–PB15, PC0–PC5, PC8–PC9, PC12–PC13, PD0–PD15, PE0–PE1, PE11, PE15 | No-connect flags on the schematic |
 
 ## Order of work
 
@@ -239,8 +244,8 @@ Differences from the Timekeeper, all deliberate:
    items: the OPA2365 1 kHz noise figure on its data sheet plot (estimated
    about 11 nV/√Hz; capacitive-load stability is checked, see below), QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
    unused-channel handling.
-5. ERC, then *Update PCB from Schematic*; place the LED strip and check the
-   light-pipe fit against the cavity; place MCU/flash in the centre band,
+5. ERC, then *Update PCB from Schematic*; place the OLED connector and check the
+   module and window against the cavity; place MCU/flash in the centre band,
    codec under the pots, buffers at the jack ends, buck on the tab. **Go/no-go
    for Plan A here.**
 6. GND vias per the Relic rule, route (F.Cu short, B.Cu long, In2 power),

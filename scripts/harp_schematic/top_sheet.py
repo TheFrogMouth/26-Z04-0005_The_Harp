@@ -126,12 +126,12 @@ def build(sheets, root_uuid, project='The Harp'):
     body.append(text('CONTROL / DIGITAL', 215, 156.5, 3.5, justify='left bottom'))
     # ---- sheet blocks
     blocks = [
-        ('Jacks and Bypass', 30, 78, GREEN, 'IN, OUT L, OUT R, EXP jacks (J402-J406)\nK401 relay true bypass, Q401 driver\nEffect / Hold LEDs, footswitch pads\nMCP6001 expression buffer'),
-        ('Analog In and Out', 95, 78, GREEN, 'U701A OPA2365 input buffer\n1M / 100n in, 49.9R / 220p out\nU702 OPA1688 difference amps\n10u out, 100R, 1M'),
-        ('ADC Driver', 160, 78, GREEN, 'U601 THS4522 channel A\nsingle-ended to differential\ngain 0.59, 40.2R / 2.7n filter\nchannel B powered down'),
-        ('Codec', 225, 78, GREEN, 'IC501 AK4621EF\nmono in, stereo out\nU501 OPA2348 VCOM buffers\n-> VCOM_A, VCOM_B'),
+        ('Jacks and Bypass', 30, 78, GREEN, 'IN (TRS), OUT L, OUT R, EXP jacks (J402-J406)\nK401 relay true bypass, Q401 driver\nEffect / Hold LEDs, footswitch pads\nMCP6001 expression buffer'),
+        ('Analog In and Out', 95, 78, GREEN, 'U701A/B OPA2365 L and R input buffers\n1M / 100n in, 49.9R / 220p out\nU702 OPA1688 difference amps\n10u out, 100R, 1M'),
+        ('ADC Driver', 160, 78, GREEN, 'U601 THS4522 channel A (L), B (R)\nsingle-ended to differential\ngain 0.59, 40.2R / 2.7n filter'),
+        ('Codec', 225, 78, GREEN, 'IC501 AK4621EF\nstereo in, stereo out\nU501 OPA2348 VCOM buffers\n-> VCOM_A, VCOM_B'),
         ('MCU', 225, 168, BLUE, 'U201 STM32H750VBT6\nSAI1 to the codec, QSPI flash U202\nHSE 25 MHz, SWD needle pads W201'),
-        ('Controls and LEDs', 300, 168, BLUE, 'RV101-RV105 B10K pots, 1k / 100n\nSW101-SW103 ON-ON-ON toggles\nD101-D112 note LEDs, 1k'),
+        ('Controls and LEDs', 300, 168, BLUE, 'RV101-RV105 B10K pots, 1k / 100n\nSW101-SW103 ON-ON-ON toggles\nJ408 0.91 in OLED, I2C pull-ups'),
         ('Power', 30, 168, RED, 'J401 9 V DC in, SMAJ10CA, PMEG3010\nU301 TPS54202 buck -> +3V3\nU302 NCP718 LDO -> +5V'),
     ]
     for name, x, y, col, summ in blocks:
@@ -139,7 +139,7 @@ def build(sheets, root_uuid, project='The Harp'):
     # ---- audio path (green)
     body += line([(75.72, 88), (95, 88)], GREEN, ['end'], 'EFFECT_IN', (76.5, 87))
     body += line([(140.72, 88), (160, 88)], GREEN, ['end'], 'EFFECT_IN_BUF', (141.5, 87))
-    body += line([(205.72, 88), (225, 88)], GREEN, ['end'], 'ADC_P / ADC_N', (206.5, 87))
+    body += line([(205.72, 88), (225, 88)], GREEN, ['end'], 'ADC_L_P/N, ADC_R_P/N', (206.5, 87))
     body += line([(248, 116.1), (248, 122), (130, 122), (130, 116.1)], GREEN, ['end'], 'DAC_L_P/N, DAC_R_P/N  (codec DAC to the output stages)', (135, 123), 'left top')
     body += line([(95, 104), (75.72, 104)], GREEN, ['end'], 'EFFECT_OUT_L, EFFECT_OUT_R', (76.5, 103))
     # ---- bias (red) from the codec VCOM buffers
@@ -148,7 +148,7 @@ def build(sheets, root_uuid, project='The Harp'):
     # ---- MCU control (blue)
     body += line([(262, 168), (262, 116.1)], BLUE, ['end', 'start'], 'CODEC_MCLK, LRCK, BICK, SDTI, SDTO\nCODEC_CCLK, CDTI, CSN, PDN', (263.5, 136), 'left bottom')
     body += line([(300, 182), (270.72, 182)], BLUE, ['end'], 'POT1, POT2, POT3, POT5 / TOG1-3 A, B', (271.5, 181))
-    body += line([(270.72, 196), (300, 196)], BLUE, ['end'], 'NOTE_C ... NOTE_B  (12 note LEDs)', (271.5, 195))
+    body += line([(270.72, 196), (300, 196)], BLUE, ['end'], 'OLED_SCL, OLED_SDA  (I2C to the OLED)', (271.5, 195))
     body += line([(225, 176), (206, 176), (206, 136), (56, 136), (56, 116.1)], BLUE, ['end'], 'RELAY_DRV, LED_EFFECT_DRV, LED_HOLD_DRV', (60, 135))
     body += line([(62, 116.1), (62, 140), (202, 140), (202, 182), (225, 182)], BLUE, ['end'], 'FSW_BYPASS_IN, FSW_HOLD_IN, EXP', (120, 139), 'left top')
     body[-2:] = body[-2:]

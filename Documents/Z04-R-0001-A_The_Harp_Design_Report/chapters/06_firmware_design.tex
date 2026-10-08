@@ -42,14 +42,14 @@ The four pots are scanned at 1\,kHz or more per channel and smoothed, with 2\,\%
 
 With no screen, secondary settings are reached by holding both footswitches for 2\,s [FSW-5]. In that layer each knob takes a second job: key or drone set; spread width; bypass mode (True or Trails); and expression target and bend range [SEC-1]. On return each pot is ignored until it is moved past its stored value, so leaving the layer never jumps a parameter [SEC-2].
 
-The twelve note LEDs show every pitch class the strings are tuned to, with the root brighter [DSP-1]. A chord change shows as it is committed; in Snap mode the LEDs show the target tuning [DSP-2]. In the secondary layer the LEDs show the value of the knob last moved [DSP-3]. LED switching must not be audible, because the LEDs sit over the jack bodies [DSP-5].
+The OLED strip shows the pitch classes the strings are tuned to as note names, the root highlighted, with mode and chord [DSP-1]. A chord change shows as it is committed; in Snap mode the OLED shows the target tuning [DSP-2]. In the secondary layer it shows the value of the knob last moved [DSP-3]. Display activity must not be audible, because the module sits over the jack bodies [DSP-5].
 
 \section{Bypass, Persistence and Faults}
 True bypass de-energises the relay [BYP-1]. Trails keeps it energised, feeds dry to both outputs and lets the strings ring out [BYP-2]. Every relay change follows the fade, switch, settle and fade-in sequence [BYP-3], and a footswitch tap reaches the relay within 20\,ms [BYP-4]. The relay drive stays low from reset until the codec is running [BYP-6].
 
 Secondary settings and the expression calibration are kept in the W25Q128 with a version number and CRC, as in the Timekeeper's \texttt{preset.c} [PER-1]. Writes are deferred, rate-limited and alternate between sectors, so a power loss leaves the previous copy valid [PER-2]. A corrupt record loads defaults and never blocks start-up [PER-3].
 
-Power to audio should take no more than about 500\,ms [SYS-1]. The independent watchdog and crash record come from the Timekeeper. A watchdog reset drops the relay, so the guitar still reaches OUT~L [SYS-2]. A codec or SAI failure at start-up leaves the relay off and shows a fault pattern on the note LEDs [SYS-3].
+Power to audio should take no more than about 500\,ms [SYS-1]. The independent watchdog and crash record come from the Timekeeper. A watchdog reset drops the relay, so the guitar still reaches OUT~L [SYS-2]. A codec or SAI failure at start-up leaves the relay off and shows a fault message on the OLED [SYS-3].
 
 \section{Budgets and Verification}
 The worst-case audio callback, with 24 strings, full Jawari, Glide active and the tracker running, must take no more than 60\,\% of the block period. It is measured with the DWT cycle counter over a ten-minute playing test [PRF-1], first on the Timekeeper board before the Harp schematic is frozen [PRF-2]. Engine state and buffers must stay within 75\,\% of internal RAM [PRF-3].

@@ -3,13 +3,16 @@ the two footswitch pads and the expression input buffer."""
 from layouts.common import u, U, shunt, series
 
 
-def jack(L, ref, X, Y, ring_gnd=False):
+def jack(L, ref, X, Y, ring_net=None):
     """Jack at (X, Y) with pins to the right: sleeve to GND straight down, tip led down to a lane at Y+8u."""
     L.at(ref, u(X), u(Y), ref_pos=(u(X - 6), u(Y - 3), 'left'), val_pos=(u(X - 6), u(Y + 4.5), 'left'))
-    L.w((ref, 'S'), (u(X + 6), u(Y - 2)), (u(X + 6), u(Y + 3)))
-    L.gnd((u(X + 6), u(Y + 3)))
-    if ring_gnd:
-        L.w((ref, 'R'), (u(X + 6), u(Y)))
+    sx = X + 14 if ring_net else X + 6
+    L.w((ref, 'S'), (u(sx), u(Y - 2)), (u(sx), u(Y + 3)))
+    L.gnd((u(sx), u(Y + 3)))
+    if ring_net:                                   # TRS input: ring to a label, with its TVS
+        L.w((ref, 'R'), (u(X + 9), u(Y)))
+        shunt(L, 'D407', u(X + 7), u(Y), top='2', ang=90)
+        L.gl(ring_net, (u(X + 9), u(Y)), 'right')
     L.w((ref, 'T'), (u(X + 4), u(Y + 2)), (u(X + 4), u(Y + 8)))
     for p in ('SN', 'RN', 'TN'):
         L.nc(ref, p)
@@ -19,7 +22,7 @@ def jack(L, ref, X, Y, ring_gnd=False):
 def layout(L):
     L.text(L.sheet.notes[0], u(8), u(6))
     # ================================================================ IN jack, relay, OUT L
-    t = jack(L, 'J402', 14, 24, ring_gnd=True)                     # IN: tip lane at y = 32u
+    t = jack(L, 'J402', 14, 24, ring_net='IN_R')                     # IN: tip lane at y = 32u
     L.w(t, (u(58), u(32)), (u(58), u(56)), (u(43), u(56)))
     shunt(L, 'D403', u(22), u(32), top='2', ang=90)
     L.at('K401', u(44), u(44), mirror='x', ref_pos=(u(51), u(42.5), 'left'), val_pos=(u(51), u(44), 'left'))

@@ -71,11 +71,11 @@ SHEETS = []
 
 # ===================================================================== 1 Controls
 ctl = Sheet('Controls and LEDs', 'Controls and LEDs.kicad_sch', 'Controls and LEDs')
-ctl.notes.append('Controls and LEDs. Four B10K pots on the Alchemist grid: Mix, Sustain, Strings (row +38) and Jawari (0, +13), across +3V3, '
+ctl.notes.append('Controls and display. Four B10K pots on the Alchemist grid: Mix, Sustain, Strings (row +38) and Jawari (0, +13), across +3V3, '
                  'wipers to ADC1 PA0, PA1, PA2, PA4 through 1k / 100n.\nThree Taiway 100-DP6 ON-ON-ON toggles, as The Alchemist: Tuning (-20, +13), '
                  'Brightness (+20, +13), Retune (0, -5). Commons (2, 5) to GND, pins 3 and 4 to two MCU inputs with internal pull-ups: '
-                 'up = A low B high, centre = both low, down = A high B low.\nTwelve 0603 note LEDs, C to B, on PD0-PD11 (one port write), '
-                 '1k each, behind 3 mm light pipes at face Y -18.')
+                 'up = A low B high, centre = both low, down = A high B low.\nDisplay: a thin 0.91 in 128x32 SSD1306 OLED strip on I2C1 (PB6 SCL, PB7 SDA), '
+                 '4.7k pull-ups to +3V3, behind a window at face Y -18. J408 is the module connector (GND, +3V3, SCL, SDA).')
 POTS = {1: 'Mix', 2: 'Sustain', 3: 'Strings', 5: 'Jawari'}   # RV10n keeps its face position: 1-3 row +38, 5 = (0, +13)
 for n, nm in POTS.items():
     ctl.add(Part('RV10%d' % n, 'POT:RD901F-40-15R1-B10K-00DL1', 'B10K', 'Potentiometer_THT:RD901F4015R1B10K00DL1',
@@ -88,11 +88,11 @@ for i, nm in enumerate(['Tuning: Follow / Key / Drone', 'Retune: Snap / Glide / 
     for unit, pins in ((1, {'1': None, '2': 'GND', '3': 'TOG%d_A' % n}), (2, {'4': 'TOG%d_B' % n, '5': 'GND', '6': None})):
         ctl.add(Part('SW10%d' % n, 'Switch:SW_DPDT_x2', '100-DP6', 'SPDT Switches:100DP3T1B2M2QE', pins, unit=unit,
                      dnp=True, props=P_TOGGLE, note=nm if unit == 1 else None))
-NOTES = ['C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs', 'A', 'As', 'B']
-for i, nm in enumerate(NOTES):
-    ctl.add(r('R%d' % (107 + i), '1k', 'NOTE_%s' % nm, 'NOTE_%s_A' % nm))
-    ctl.add(Part('D1%02d' % (i + 1), 'Device:LED', 'LED', 'LED_SMD:LED_0603_1608Metric',
-                 {'1': 'GND', '2': 'NOTE_%s_A' % nm}, note='Note LED ' + nm.replace('s', '#')))
+ctl.add(Part('J408', 'Connector:Conn_01x04_Socket', 'OLED 0.91 128x32', 'Connector_JST:JST_SH_SM04B-SRSS-TB_1x04-1MP_P1.00mm_Horizontal',
+             {'1': 'GND', '2': '+3V3', '3': 'OLED_SCL', '4': 'OLED_SDA'}, props={'Manufacturer': 'JST', 'Mfg Part #': 'SM04B-SRSS-TB'},
+             note='OLED module (GND, 3V3, SCL, SDA)'))
+ctl.add(r('R107', '4.7k', '+3V3', 'OLED_SCL'), r('R108', '4.7k', '+3V3', 'OLED_SDA'))
+ctl.add(c('C104', '100n', '+3V3', 'GND', note='OLED supply'))
 SHEETS.append(ctl)
 
 # ===================================================================== 2 MCU
@@ -107,12 +107,10 @@ PIN = {
     'PB2': 'QSPI_CLK', 'PC11': 'QSPI_NCS', 'PE7': 'QSPI_IO0', 'PE8': 'QSPI_IO1', 'PE9': 'QSPI_IO2', 'PE10': 'QSPI_IO3',
     'PA0': 'POT1', 'PA1': 'POT2', 'PA2': 'POT3', 'PA4': 'POT5', 'PB1': 'EXP',
     'PE11': 'TOG1_A', 'PE12': 'TOG1_B', 'PE13': 'TOG2_A', 'PE14': 'TOG2_B', 'PE15': 'TOG3_A', 'PB10': 'TOG3_B',
-    'PB12': 'FSW_BYPASS_IN', 'PB13': 'FSW_HOLD_IN', 'PC10': 'RELAY_DRV', 'PC6': 'LED_EFFECT_DRV', 'PC7': 'LED_HOLD_DRV',
+    'PB6': 'OLED_SCL', 'PB7': 'OLED_SDA', 'PB12': 'FSW_BYPASS_IN', 'PB13': 'FSW_HOLD_IN', 'PC10': 'RELAY_DRV', 'PC6': 'LED_EFFECT_DRV', 'PC7': 'LED_HOLD_DRV',
     'PA13': 'SWDIO', 'PA14': 'SWCLK', 'PB3': 'SWO', 'PH0': 'HSE_IN', 'PH1': 'HSE_OUT', 'NRST': 'NRST', 'BOOT0': 'BOOT0',
     'VBAT': '+3V3', 'VDDA': 'VDDA', 'VREF+': 'VDDA', 'VSSA': 'GND', 'VDD': '+3V3', 'VSS': 'GND',
 }
-for i, nm in enumerate(NOTES):
-    PIN['PD%d' % i] = 'NOTE_%s' % nm
 import schgen
 from kisch import lib_pins
 mpins = {}
@@ -181,13 +179,14 @@ SHEETS.append(pw)
 io = Sheet('Jacks and Bypass', 'Jacks and Bypass.kicad_sch', 'Jacks and Bypass')
 io.notes.append('Jacks on the Alchemist positions: IN (J402, right lower), EXP (J406, right upper), OUT L (J403, left lower), OUT R (J404, left upper).\n'
                 'Relay true bypass after The Alchemist: K401 (Omron G6K-2F-Y, 5 V coil) at rest joins IN to OUT L (2-3) and grounds the effect input (6-7); '
-                'energised it routes IN to the effect (5-6) and the effect to OUT L (3-4).\nIN jack ring to GND, as The Alchemist. OUT R is driven straight from the DSP and is silent in true bypass; '
+                'energised it routes IN to the effect (5-6) and the effect to OUT L (3-4).\nIN is a TRS jack, tip = left, ring = right: a mono plug shorts the ring to the sleeve, the right channel reads silence and the firmware copies left to right. '
+                'The relay isolates the left input only; the right input is muted by the DSP in true bypass. OUT R is driven straight from the DSP and is silent in true bypass; '
                 'stereo players use Trails mode. The effect and Hold LEDs and the relay coil run from +9V.')
-io.add(Part('J402', JACK, 'NMJ6HCD2', JACK_FP, {'T': 'IN', 'S': 'GND', 'R': 'GND', 'RN': None, 'SN': None, 'TN': None}, props=P_JACK, note='IN'))
+io.add(Part('J402', JACK, 'NMJ6HCD2', JACK_FP, {'T': 'IN', 'S': 'GND', 'R': 'IN_R', 'RN': None, 'SN': None, 'TN': None}, props=P_JACK, note='IN (TRS: tip L, ring R)'))
 io.add(Part('J403', JACK, 'NMJ6HCD2', JACK_FP, {'T': 'OUT_L', 'S': 'GND', 'R': None, 'RN': None, 'SN': None, 'TN': None}, props=P_JACK, note='OUT L'))
 io.add(Part('J404', JACK, 'NMJ6HCD2', JACK_FP, {'T': 'EFFECT_OUT_R', 'S': 'GND', 'R': None, 'RN': None, 'SN': None, 'TN': None}, props=P_JACK, note='OUT R'))
 io.add(Part('J406', JACK, 'NMJ6HCD2', JACK_FP, {'T': 'EXP_TIP', 'S': 'GND', 'R': 'EXP_RING', 'RN': None, 'SN': None, 'TN': None}, props=P_JACK, note='EXP (TRS)'))
-io.add(tvs('D403', 'IN'), tvs('D404', 'OUT_L'), tvs('D405', 'EFFECT_OUT_R'), tvs('D406', 'EXP_TIP'))
+io.add(tvs('D407', 'IN_R'), tvs('D403', 'IN'), tvs('D404', 'OUT_L'), tvs('D405', 'EFFECT_OUT_R'), tvs('D406', 'EXP_TIP'))
 io.add(Part('K401', 'Relay:G6K-2', 'G6K-2F-Y', 'Relay_SMD:Relay_DPDT_Omron_G6K-2F-Y',
             {'1': 'RELAY_COIL', '8': 'RELAY_LOW', '2': 'IN', '3': 'OUT_L', '4': 'EFFECT_OUT_L', '5': 'IN', '6': 'EFFECT_IN', '7': 'GND'},
             props=P_RELAY, note='5 V coil (178R) from +9V through R405'))
@@ -227,18 +226,17 @@ SHEETS.append(io)
 # ===================================================================== 5 Codec
 cd = Sheet('Codec', 'Codec.kicad_sch', 'Codec')
 cd.notes.append('AK4621EF codec, as the Timekeeper (IC401). Serial control (P/S high) bit-banged on CSN/CCLK/CDTI. PDN reset by RC.\n'
-                'Mono in: AINL from the ADC driver; AINR+/- are parked at VCOM through 1k each [CONFIRM against the AK4621 datasheet]. '
+                'Stereo in, single-ended at the jack: AINL and AINR come from the two THS4522 driver channels (single-ended to differential), as the Timekeeper. '
                 'Stereo out: AOUTL/AOUTR to the output stages (the Timekeeper wired them crossed; here L is L).\n'
                 'U501 buffers VCOM: VCOM_A biases the input buffer and the ADC driver input reference, VCOM_B the ADC driver VOCM and the output stages.')
 cd.add(Part('IC501', 'Audio:AK4621EF', 'AK4621EF', 'Audio_Module:SOP65P760X150-30N',
-            {'1': 'VCOM', '2': 'AINR_P', '3': 'AINR_N', '4': 'ADC_P', '5': 'ADC_N', '6': '+5V', '7': 'GND', '8': '+5V',
+            {'1': 'VCOM', '2': 'ADC_R_P', '3': 'ADC_R_N', '4': 'ADC_L_P', '5': 'ADC_L_N', '6': '+5V', '7': 'GND', '8': '+5V',
              '9': '+3V3', '10': 'CODEC_MCLK', '11': 'CODEC_LRCK', '12': 'CODEC_BICK', '13': 'CODEC_SDTO', '14': 'CODEC_SDTI',
              '15': None, '16': None, '17': 'CODEC_CDTI', '18': 'CODEC_CCLK', '19': 'CODEC_CSN', '20': 'GND', '21': 'PDN',
              '22': 'GND', '23': 'GND', '24': '+3V3', '25': '+3V3', '26': 'GND',
              '27': 'DAC_L_N', '28': 'DAC_L_P', '29': 'DAC_R_N', '30': 'DAC_R_P'},
             props={'Manufacturer': 'Asahi Kasei Microdevices', 'Mfg Part #': 'AK4621EF'}))
 cd.add(r('R501', '5k1', 'CODEC_PDN', 'PDN'), c('C501', '100n', 'PDN', 'GND'))
-cd.add(r('R502', '1k', 'VCOM', 'AINR_P'), r('R503', '1k', 'VCOM', 'AINR_N'))
 cd.add(cp('C502', '10u', 'VCOM', 'GND', 'Capacitor_SMD:CP_Elec_4x5.8'), c('C503', '100n', 'VCOM', 'GND'))
 cd.add(c('C504', '100n', '+3V3', 'GND', note='TVDD'), c('C505', '100n', '+3V3', 'GND', note='DVDD'), c('C506', '100n', '+3V3', 'GND'))
 cd.add(c('C507', '100n', '+5V', 'GND', note='AVDD/VREF'), cp('C508', '10u', '+5V', 'GND', 'Capacitor_SMD:CP_Elec_4x5.8'))
@@ -253,23 +251,30 @@ SHEETS.append(cd)
 
 # ===================================================================== 6 ADC driver
 ad = Sheet('ADC Driver', 'ADC Driver.kicad_sch', 'ADC Driver')
-ad.notes.append('Single-ended to differential ADC driver, the Timekeeper\'s AnalogInputBuffer: THS4522 channel A, gain 0.59 (620R / 1.05k), 40.2R + 2.7n '
+ad.notes.append('Single-ended to differential ADC drivers, the Timekeeper\'s AnalogInputBuffer: THS4522 channel A (left) and B (right), gain 0.59 (620R / 1.05k), 40.2R + 2.7n '
                 'differential filter, VOCM from VCOM_B.\nThe input reference (INN side) goes to VCOM_A, the DC level of the input buffer output '
-                '(the Timekeeper left it open). Channel B is powered down [CONFIRM unused-channel handling in the THS4522 datasheet].')
+                '(the Timekeeper left it open). Channel B drives the right channel the same way (R607-R612, C611-C618), from the IN ring buffer U701B.')
 THS = 'SuperAudioBoard-rescue:THS4521'
 ad.add(Part('U601', THS, 'THS4522IPW', 'Package_SO:TSSOP-16_4.4x5mm_P0.65mm',
             {'1': '+5V', '2': 'FDA_INP', '3': 'FDA_INN', '4': 'VCOM_B', '13': '+5V', '14': 'FDA_OUTP', '15': 'FDA_OUTN', '16': 'GND'},
             unit=1, props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'THS4522IPWR'}))
 ad.add(Part('U601', THS, 'THS4522IPW', 'Package_SO:TSSOP-16_4.4x5mm_P0.65mm',
-            {'5': 'GND', '6': 'GND', '7': 'GND', '8': 'GND', '9': '+5V', '10': None, '11': None, '12': 'GND'},
+            {'5': '+5V', '6': 'FDB_INP', '7': 'FDB_INN', '8': 'VCOM_B', '9': '+5V', '10': 'FDB_OUTP', '11': 'FDB_OUTN', '12': 'GND'},
             unit=2, props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'THS4522IPWR'}))
 ad.add(c('C601', '100p', 'EFFECT_IN_BUF', 'GND'), r('R601', '1k', 'EFFECT_IN_BUF', 'FDA_INP'))
 ad.add(c('C602', '100p', 'VCOM_A', 'GND'), r('R602', '1.05k', 'VCOM_A', 'FDA_INN', note='= R601 + R705: matches the signal leg (Timekeeper review H2)'))
-ad.add(r('R603', '620', 'FDA_INP', 'ADC_N', note='gain 0.59: a 4.8 Vpp input just reaches ADC full scale'), c('C603', '1n', 'FDA_INP', 'FDA_OUTN'))
-ad.add(r('R604', '620', 'FDA_INN', 'ADC_P', note='gain 0.59: a 4.8 Vpp input just reaches ADC full scale'), c('C604', '1n', 'FDA_INN', 'FDA_OUTP'))
-ad.add(r('R605', '40.2', 'FDA_OUTN', 'ADC_N'), r('R606', '40.2', 'FDA_OUTP', 'ADC_P'))
-ad.add(c('C605', '2.7n', 'ADC_P', 'ADC_N'), c('C606', '100p', 'ADC_P', 'GND'), c('C607', '100p', 'ADC_N', 'GND'))
+ad.add(r('R603', '620', 'FDA_INP', 'ADC_L_N', note='gain 0.59: a 4.8 Vpp input just reaches ADC full scale'), c('C603', '1n', 'FDA_INP', 'FDA_OUTN'))
+ad.add(r('R604', '620', 'FDA_INN', 'ADC_L_P', note='gain 0.59: a 4.8 Vpp input just reaches ADC full scale'), c('C604', '1n', 'FDA_INN', 'FDA_OUTP'))
+ad.add(r('R605', '40.2', 'FDA_OUTN', 'ADC_L_N'), r('R606', '40.2', 'FDA_OUTP', 'ADC_L_P'))
+ad.add(c('C605', '2.7n', 'ADC_L_P', 'ADC_L_N'), c('C606', '100p', 'ADC_L_P', 'GND'), c('C607', '100p', 'ADC_L_N', 'GND'))
 ad.add(c('C608', '100n', 'VCOM_B', 'GND'), c('C609', '100n', '+5V', 'GND'), c('C610', '100n', '+5V', 'GND'))
+ad.add(c('C611', '100p', 'EFFECT_IN_BUF_R', 'GND'), r('R607', '1k', 'EFFECT_IN_BUF_R', 'FDB_INP'))
+ad.add(c('C612', '100p', 'VCOM_A', 'GND'), r('R608', '1.05k', 'VCOM_A', 'FDB_INN', note='= R607 + R722: matches the signal leg'))
+ad.add(r('R609', '620', 'FDB_INP', 'ADC_R_N', note='gain 0.59, as channel A'), c('C613', '1n', 'FDB_INP', 'FDB_OUTN'))
+ad.add(r('R610', '620', 'FDB_INN', 'ADC_R_P', note='gain 0.59, as channel A'), c('C614', '1n', 'FDB_INN', 'FDB_OUTP'))
+ad.add(r('R611', '40.2', 'FDB_OUTN', 'ADC_R_N'), r('R612', '40.2', 'FDB_OUTP', 'ADC_R_P'))
+ad.add(c('C615', '2.7n', 'ADC_R_P', 'ADC_R_N'), c('C616', '100p', 'ADC_R_P', 'GND'), c('C617', '100p', 'ADC_R_N', 'GND'))
+ad.add(c('C618', '100n', '+5V', 'GND'))
 SHEETS.append(ad)
 
 # ===================================================================== 7 Analog in/out
@@ -277,19 +282,23 @@ an = Sheet('Analog In and Out', 'Analog In and Out.kicad_sch', 'Analog In and Ou
 an.notes.append('Input buffer (U701A, OPA2365) and output stages (U702, OPA1688), the Timekeeper\'s ANALOG_FRONT on one 5 V rail biased at VCOM.\n'
                 'U701 is an OPA2365 (zero-crossover rail-to-rail input) instead of the Timekeeper\'s OPA1656, whose input stops at (V+) - 2.25 V = 2.75 V on 5 V, '
                 '0.25 V above the 2.5 V bias; hard-played guitar peaks reach about +/-1.5 V here. R705 is 49.9R, not 5k1 (Timekeeper review H2).\n'
-                'In: 1M to ground at the relay, 100n film, 1M bias to VCOM_A, follower (R703 0R; R704 + C707 to VCOM_A, both DNP, set gain), 49.9R / 220p to the ADC driver.\n'
+                'In (left): 1M to ground at the relay, 100n film, 1M bias to VCOM_A, follower (R703 0R; R704 + C707 to VCOM_A, both DNP, set gain), 49.9R / 220p to the ADC driver.\nIn (right, from the IN ring): the same chain on U701B without the relay or gain option: 1M to ground, 100n film, 1M bias to VCOM_A, follower, 49.9R / 220p to the ADC driver.\n'
                 'Out: unity-gain difference amplifier per channel (10k x4) referenced to VCOM_B, 10u out, 100R series, 1M pull-down.')
 an.add(r('R701', '1M', 'EFFECT_IN', 'GND'))
 an.add(Part('C701', C, '100n', C1206, {'1': 'EFFECT_IN', '2': 'IN_AC'}, note='film/C0G'))
 an.add(r('R702', '1M', 'IN_AC', 'VCOM_A'))
 an.add(Part('U701', OPAMP, 'OPA2365AIDR', SOIC8, {'3': 'IN_AC', '2': 'IN_FB', '1': 'IN_BUF_OUT'}, unit=1,
             props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'OPA2365AIDR'}))
-an.add(Part('U701', OPAMP, 'OPA2365AIDR', SOIC8, {'5': 'VCOM_A', '6': 'U701B_OUT', '7': 'U701B_OUT'}, unit=2,
-            props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'OPA2365AIDR'}, note='unused half: follower at VCOM_A'))
+an.add(Part('U701', OPAMP, 'OPA2365AIDR', SOIC8, {'5': 'IN_AC_R', '6': 'IN_BUF_OUT_R', '7': 'IN_BUF_OUT_R'}, unit=2,
+            props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'OPA2365AIDR'}, note='right input follower'))
 an.add(Part('U701', OPAMP, 'OPA2365AIDR', SOIC8, {'4': 'GND', '8': '+5V'}, unit=3,
             props={'Manufacturer': 'Texas Instruments', 'Mfg Part #': 'OPA2365AIDR'}))
 an.add(r('R703', '0R', 'IN_BUF_OUT', 'IN_FB'), r('R704', '0R', 'IN_FB', 'IN_GAIN', dnp=True, note='gain option, DNP'), c('C707', '10u', 'IN_GAIN', 'VCOM_A', fp=C0805, dnp=True, note='gain option, DNP'))
 an.add(r('R705', '49.9', 'IN_BUF_OUT', 'EFFECT_IN_BUF', note='isolates U701A from C702 + C601; was 5k1 (Timekeeper review H2)'), c('C702', '220p', 'EFFECT_IN_BUF', 'GND'))
+an.add(r('R720', '1M', 'IN_R', 'GND'))
+an.add(Part('C708', C, '100n', C1206, {'1': 'IN_R', '2': 'IN_AC_R'}, note='film/C0G'))
+an.add(r('R721', '1M', 'IN_AC_R', 'VCOM_A'))
+an.add(r('R722', '49.9', 'IN_BUF_OUT_R', 'EFFECT_IN_BUF_R', note='isolates U701B from C709 + C611'), c('C709', '220p', 'EFFECT_IN_BUF_R', 'GND'))
 an.add(c('C703', '100n', '+5V', 'GND'))
 for ch, base, unit, (pp, nn, oo) in (('L', 706, 1, ('3', '2', '1')), ('R', 714, 2, ('5', '6', '7'))):
     an.add(Part('U702', OPAMP, 'OPA1688IDR', SOIC8, {pp: 'OUT%s_P' % ch, nn: 'OUT%s_N' % ch, oo: 'OUT%s_AMP' % ch}, unit=unit,

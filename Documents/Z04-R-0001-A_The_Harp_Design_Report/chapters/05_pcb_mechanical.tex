@@ -25,7 +25,7 @@ The jacks decide it. The Alchemist and The Relic mount the four 1/4-inch jacks a
     4 pots, 3 toggles, 13 LEDs, LED resistors & 31 & Alchemist and new \\
     5 jacks, 2 footswitch pad pairs & 7 & Alchemist \\
     \midrule
-    Total & $\approx$191 & \\
+    Total & $\approx$190 & \\
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -60,7 +60,7 @@ One face standard covers The Alchemist, The Relic and The Harp. Every position i
     Top wall DC (X 0) & DC & DC & \req{J401} DC \\
     LEDs ($\pm$20, $-35$) & Effect, Rate & Effect, -- & \req{D113} Effect, \req{D114} Hold \\
     Footswitches ($\pm$20, $-49$) & Bypass, Tap & Bypass, -- & Bypass (\req{J405}), Hold (\req{J407}) \\
-    Note LED band (Y $-18$) & -- & -- & \req{D101}--\req{D112}, X $-27.5$ to $+27.5$ at 5\,mm pitch \\
+    OLED strip window (Y $-18$) & -- & -- & \req{J408}, 0.91\,in module, about 30\,mm wide at X 0 \\
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -70,7 +70,7 @@ The upper jack bodies sit on the underside at face X $\pm$6.5 to $\pm$30, Y $+5.
 
 The Harp now uses The Alchemist's arrangement (decision 13). The outer positions of the $+13$ row carry the Tuning and Brightness toggles; a toggle's pins sit around its bat, from Y $+8.3$ up, 1.3\,mm clear of the jack bodies. Jawari is the only knob in that row, at X 0 where there is no jack body. The Retune toggle at (0, $-5$) uses the Taiway footprint, whose pins lie within X $\pm$2.4, about 2.7\,mm clear of the bodies. The board has no through-hole pad over a jack.
 
-The note LED band at Y $-18$ also lies over the lower jack bodies, which is why the LEDs must be SMD. The outer LEDs at X $\pm$27.5 are 2.6\,mm from the cavity wall at $\pm$30.15; the light-pipe flange (Bivar PLP1 or Dialight 515 series, 3\,mm) is to be checked against the 5\,mm pitch and the wall. If it does not fit, the fallback is 11 LEDs with C at the centre, or a 4.5\,mm pitch.
+The OLED strip at Y $-18$ also lies over the lower jack bodies, so only an SMD connector (\req{J408}, JST SH 4-way) may sit there. The module is about 30\,mm by 11.5\,mm; its window is a rectangle at X 0, which needs a milled or laser-cut face rather than Tayda's drilling.
 
 \section{Zoning}
 Signal runs right to left as on The Alchemist: IN and EXP enter on the right wall, OUT~L and OUT~R leave on the left. The input and expression buffers sit at the right-hand end of the lower band next to \req{J402}/\req{J406}, the output buffers and the relay at the left-hand end next to \req{J403}/\req{J404}, and the H750 with the flash in the middle. The codec, its VCOM buffers and the ADC driver sit under the pot rows. The buck converter and its inductor sit on the DC tab, as far from the input buffer as the board allows.
@@ -83,7 +83,7 @@ Signal runs right to left as on The Alchemist: IN and EXP enter on the right wal
        | SW101        RV105        SW103        |  row +13
        | codec IC501 + U501, ADC driver U601    |  under the pot rows
        |              SW102                     |  row -5
-       | --- LED strip D101-D112 at -18 ------- |  over the jack bodies: SMD only
+       | --- OLED strip J408 at -18 ----------- |  over the jack bodies: SMD only
        | OUT U702  |   H750 U201     | IN U701  |  output side left, input side right
        | relay K401|   flash U202    | EXP U401 |
        | D113 (-35)  J405  W201 SWD  J407  D114 |

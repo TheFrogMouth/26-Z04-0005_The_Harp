@@ -1,7 +1,6 @@
-"""Controls and LEDs: four B10K pots with RC filters, three ON-ON-ON toggles, twelve note LEDs."""
+"""Controls and LEDs: four B10K pots with RC filters, three ON-ON-ON toggles, the OLED connector with its I2C pull-ups."""
 from layouts.common import u, U, shunt, series
 
-NOTES = ['C', 'Cs', 'D', 'Ds', 'E', 'F', 'Fs', 'G', 'Gs', 'A', 'As', 'B']
 
 
 def layout(L):
@@ -37,15 +36,22 @@ def layout(L):
         L.gnd((X - 4 * U, Y + 8 * U))
         L.gl('TOG%d_A' % n, (sw, '3', 1), 'right', length=3 * U)
         L.gl('TOG%d_B' % n, (sw, '4', 2), 'right', length=3 * U)
-    # ---- note LEDs: PDx through 1k into the anode, cathode to GND
-    for i, nm in enumerate(NOTES):
-        X = u(14 + 18 * (i % 6))
-        Y = u(68 + 10 * (i // 6))
-        L.gl('NOTE_%s' % nm, (X, Y), 'left')
-        L.w((X, Y), (X + 2 * U, Y))
-        series(L, 'R%d' % (107 + i), X + 3.5 * U, Y)
-        L.w(('R%d' % (107 + i), '2'), (X + 7 * U, Y))
-        L.at('D1%02d' % (i + 1), X + 8.5 * U, Y, ang=180,
-             ref_pos=(X + 8.5 * U, Y - 1.6 * U, 'center'), val_pos=(X + 8.5 * U, Y + 1.6 * U, 'center'))
-        L.w(('D1%02d' % (i + 1), '1'), (X + 11 * U, Y), (X + 11 * U, Y + 2 * U))
-        L.gnd((X + 11 * U, Y + 2 * U))
+    # ---- OLED: J408 (pin 1 GND, 2 +3V3, 3 SCL, 4 SDA), flipped so SDA is on top; I2C pull-ups on lanes above, 100n at the connector
+    X, Y = u(30), u(72)
+    L.at('J408', X, Y, mirror='x', ref_pos=(X + 1 * U, Y - 3 * U, 'left'), val_pos=(X + 1 * U, Y + 4 * U, 'left'))
+    (x1, y1), (x2, y2), (x3, y3), (x4, y4) = [L.pin('J408', n) for n in '1234']
+    L.gnd(('J408', '1'), dir='down', length=U)
+    L.pwr('+3V3', ('J408', '2'), dir='left', length=U)
+    a4, a3 = round(x4 - 4 * U, 3), round(x4 - 11 * U, 3)
+    L.w(('J408', '4'), (a4, y4))
+    L.gl('OLED_SDA', (a4, y4), 'left')
+    L.w(('J408', '3'), (a3, y3))
+    L.gl('OLED_SCL', (a3, y3), 'left')
+    for ref, ax in (('R108', a4), ('R107', a3)):
+        L.at(ref, ax, round(y4 - 3.5 * U, 3))
+        L.pwr('+3V3', (ref, '1'), 'up', length=U)
+    L.w(('R108', '2'), (a4, y4))
+    L.w(('R107', '2'), (a3, y3))
+    L.pwr('+3V3', (X + 8 * U, Y - 6 * U), 'up')
+    L.w((X + 8 * U, Y - 6 * U), (X + 8 * U, Y - 4 * U))
+    shunt(L, 'C104', X + 8 * U, Y - 4 * U)
