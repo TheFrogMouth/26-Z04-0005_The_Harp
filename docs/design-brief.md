@@ -217,7 +217,7 @@ labour. Nothing carted.
   Mitigation: The Relic's four-layer stack with one unbroken ground plane,
   zoning in `pcb-plan.md`, buck converter at the DC end away from the input.
 - AK4621EF lifecycle (already flagged in the Timekeeper's BOM audit).
-- The OLED module hangs from the face over the relay zone; K401 was moved 2.15 mm towards the heel on 2026-10-08 so it no longer sits under the module (`pcb-plan.md`, *OLED mounting*). Parts placed under the module later must stay below about 6.8 mm.
+- One-board fit (Plan A): every part fits after the 2026-10-08 placement, at about 68 % courtyard fill, but the MCU has exactly one possible position and the codec ends up 50 mm from it across the analogue section (`pcb-plan.md`, *Placement*). If that cannot be routed cleanly, go to Plan B.
 
 ## Decisions taken on 2026-10-08
 

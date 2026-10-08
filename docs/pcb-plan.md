@@ -1,6 +1,6 @@
 # The Harp — schematic and PCB plan
 
-2026-10-04. Planning only: nothing drawn yet. Companion to
+2026-10-04, updated 2026-10-08 (schematic drawn, board synced and placed, see *Placement*). Companion to
 `design-brief.md`. The starting point is The Relic's KiCad project
 (`26-A03-0003_The_Relic/kicad/the_relic/`) for the board, the face guides,
 the jacks, the pots and the relay bypass, and the Timekeeper's DSP board
@@ -133,27 +133,23 @@ figures below and the footprint courtyards in `The Harp.kicad_pcb`.
   also keeps the board-depth tolerance out of the glass position.
 - **Wiring.** The module's pin header is left off. Four wires (28–30 AWG,
   about 40 mm with slack) run from its pads to J408, a JST SH 4-way
-  (SM04B-SRSS-TB) on the top side, placed on 2026-10-08 at PCB (125.0,
-  122.5), rotation 90°, face (−23.5, −17.5): pads in a column at face
-  X −25.5, cable entry facing +X towards the module's pad end. Courtyard
-  X −26.78 to −20.22, Y −13.6 to −21.4: 1.22 mm from the board edge and
-  0.62 mm clear of J405. It sits over the left lower jack body, where SMD
-  parts are allowed. Mounting pads (MP) have no net. Pin 1 GND, 2 +3V3, 3 SCL,
+  (SM04B-SRSS-TB) on the top side at PCB (126.75, 127.0), rotation 90°,
+  face (−21.75, −22.0), cable entry facing +X towards the module's pad
+  end. Courtyard X −25.03 to −18.47, Y −25.9 to −18.1: between the two pin
+  rows of the left lower jack (0.71 mm to the upper row), 2.97 mm from the
+  board edge. It sits over the jack body, where SMD parts are allowed.
+  (A first position at (−23.5, −17.5) put it on J403's rear pins and was
+  dropped at placement.) Mounting pads (MP) have no net. Pin 1 GND, 2 +3V3, 3 SCL,
   4 SDA. The PCB lifts out with the face, so the lead never has to be
   unplugged to open the box.
 - **Heights.** Face 2.2 mm; below it the gasket 0.5, glass 1.45, module PCB
   1.0 and its parts about 1.2: the module hangs 4.15 mm, leaving 6.85 mm to
   the PCB at the provisional 11 mm face-to-PCB depth (10–12 mm).
-- **Relay K401 moved clear of the module (2026-10-08).** Seeded from The
-  Relic at PCB (143.4, 134.85), its courtyard (Y −24.6 to −35.1, 5.2 mm
-  tall) overlapped the module in plan from −24.6 to −26.25 with only
-  1.65 mm vertical clearance (0.65 mm at a 10 mm depth). It is now at PCB
-  (143.9, 137.0), face (−4.6, −32.0): 2.15 mm towards the heel and 0.5 mm
-  right, courtyard X −9.25 to +0.05, Y −26.75 to −37.25. That is 0.5 mm
-  clear of the module edge in plan, 0.12 mm clear of Q402's courtyard and
-  0.75 mm from the board edge at −38 (a straight 2.5 mm move would have
-  overlapped Q402 and come within 0.4 mm of the edge). Not yet routed.
-  Keep everything else under the module below about 6.8 mm.
+- **Under the module.** After the placement (*Placement*, below) only flat
+  parts sit under the module: U201 (1.6 mm, 5.25 mm clear at an 11 mm
+  depth), its decoupling and J408. The relay K401 (5.2 mm) and the
+  electrolytics C502/C508 (5.8 mm) were kept out of the module's outline
+  by the placer. Anything added there later must stay below about 6.8 mm.
 - **Still to check.** Measure the bought module (pad end, glass position
   on its board, thickness) and the casting depth, then confirm the window
   centre lies on the active area and the carrier height.
@@ -167,7 +163,7 @@ figures below and the footprint courtyards in `The Harp.kicad_pcb`.
        │ SW101        RV105        SW103        │  row +13; 3.3 V analog filter, pot RC filters
        │ codec IC501 + U501, ADC driver U601    │  under the pot rows: codec, DFAs, OPA2348
        │              SW102                     │  row −5
-       │ ─── OLED window (0, −20), module ───── │  hangs from the face; J408 at (−23.5, −17.5)
+       │ ─── OLED window (0, −20), module ───── │  hangs from the face; J408 at (−21.75, −22.0)
        │ OUT U702  │   H750 U201     │ IN U701  │  band −18…−38: output side left, input side right
        │ relay K401│   flash U202    │ EXP U401 │
        │ D113 (−35)  J405  W201 SWD  J407  D114 │
@@ -194,6 +190,62 @@ Rules carried over from The Relic:
 - The buck converter and its inductor live on the DC tab, as far from the
   input buffer as the board allows; its switching node is kept off B.Cu over
   the jack bodies.
+
+## Placement (2026-10-08)
+
+![Top-side placement, face coordinates](images/pcb-placement.png)
+
+All 181 footprints are on the board, top side only (the jacks and the DC
+jack stay underneath). Done by script, not in KiCad:
+`scripts/pcb_placement/` (see its README) places each group at a home
+position and each passive as close as it can to the pads it connects to,
+decoupling first, against the courtyards of the face parts, the
+through-hole pins of the underside jacks, the board outline (0.3 mm) and
+the OLED module (nothing taller than about 4 mm under it). Checked from the
+board file: no courtyard overlaps, everything inside the outline, nothing
+tall under the module. Top-side courtyards cover about 68 % of the board.
+
+**Plan A fits, but only just, and not on the zoning above.** The LQFP-100
+(17.5 mm courtyard) fits in exactly one place: the lower centre between
+the lower jacks' pin rows (X ±11.3) and under the Retune toggle, at face
+(0, −21.5). Everything else was arranged round it:
+
+| Group | Where it went | Against the zoning |
+|---|---|---|
+| H750 U201, flash U202, crystal, decoupling | Lower centre, flash below it, crystal on the left | As planned, but it fills the band, so the relay moved out |
+| Relay K401 and its driver | Right middle (17, −4), next to IN | Planned at the left end; next to IN keeps the high-impedance input short |
+| Input buffers U701 (L and R), EXP buffer U401 | Lower right, next to J402 / J406 | As planned |
+| ADC driver U601 (THS4522) | Left middle (−15, −7) | Planned under the pot rows with the codec |
+| Codec IC501, VCOM buffers U501 | Between the pot rows, centre (6, 23) | Planned under the pot rows; it is above RV105 instead |
+| Output stages U702 | Between the pot rows, right (18, 24), next to the codec's DAC pins | Planned at the lower left |
+| Buck (U301, L301) and LDO (U302) | Top band either side of the DC jack | As planned (the LDO was planned between the pot rows) |
+| SWD needle pads W201 | Between the pot rows, centre left | Planned at the heel: no room left there |
+| Footswitch pads J405 / J407 | Top band / left middle | Planned at the heel: no room left there |
+| D114 (Hold LED) | (+20, −35), mirror of D113 | As planned |
+
+Measured from the board (half-perimeter of each net's pads):
+
+- Decoupling: 20 of the 27 IC supply caps within 5 mm of their IC's supply
+  pin; the rest are bulk or regulator-output caps.
+- Short and good: DAC to output stage 12–17 mm, IN ring to its buffer
+  8.5 mm, QSPI 11 mm, left ADC driver feedback 13.5 mm.
+- **Long and worth fixing by hand:** the right-channel ADC driver network
+  (FDB_INP 39 mm, ADC_R_P 62.5 mm: its parts are spread round U601), the
+  SAI lines codec to MCU (50–55 mm, crossing the analogue middle of the
+  board), the input buffer outputs to the ADC driver (28–30 mm, passing
+  the MCU), and IN to the relay (35 mm, the high-impedance guitar input).
+- Five face parts' courtyards reach over underside jack pins: D113/D114
+  (the shared LED position), RV102 over the DC jack, SW101/SW103 over the
+  upper jacks. These come from the shared face layout and were there
+  before; copper clearance needs a DRC check in KiCad.
+
+**Recommendation.** The placement proves that every part fits on the
+one board, so Plan B (two boards) is not forced. It is not routing-ready:
+before routing, rework by hand in KiCad (1) the right-channel ADC driver
+into a compact block round U601, (2) the codec closer to the ADC driver
+and the MCU, or the SAI routed on an inner layer away from the analogue
+parts, and (3) check the high-impedance input path IN → relay → U701
+against the hum risk. If (2) cannot be solved, that is the case for Plan B.
 
 ## Schematic sheets (drawn 2026-10-04)
 
@@ -296,11 +348,10 @@ Differences from the Timekeeper, all deliberate:
    items: the OPA2365 1 kHz noise figure on its data sheet plot (estimated
    about 11 nV/√Hz; capacitive-load stability is checked, see below), QUADSPI bank 2 AFs, AK4621 unused-input handling, THS4522
    unused-channel handling.
-5. ERC, then *Update PCB from Schematic* (the board was already synced by
-   script on 2026-10-08: 181 footprints, J408 placed, K401 moved for the
-   OLED, see *OLED mounting*); place MCU/flash in the centre band,
-   codec under the pots, buffers at the jack ends, buck on the tab. **Go/no-go
-   for Plan A here.**
+5. ~~Place.~~ Synced and placed by script on 2026-10-08 (*Placement*).
+   **Go/no-go for Plan A: it fits, with the compromises listed there.**
+   Still to do in KiCad: ERC, *Update PCB from Schematic* (expect net
+   renames only), review the placement by eye, then DRC.
 6. GND vias per the Relic rule, route (F.Cu short, B.Cu long, In2 power),
    DRC with the Relic's `.kicad_dru`.
 7. Export BOM with the adapted exporter; cost at 100; drill schedule for

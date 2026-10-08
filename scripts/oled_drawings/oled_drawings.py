@@ -30,11 +30,11 @@ HOLES = [  # (label, x, y, diameter)
 ]
 # courtyards on the board (face X0, X1, Y0, Y1) and part height above the board
 SW102_CY = (-7.35, 7.35, -12.45, 2.09)
-K401_CY = (-9.25, 0.05, -37.25, -26.75); K401_H = 5.2       # moved 2026-10-08, PCB (143.9, 137)
+U201_CY = (-8.73, 8.73, -30.23, -12.77); U201_H = 1.6       # MCU under the module after the 2026-10-08 placement
 D113_CY = (-22.42, -17.58, -37.21, -32.79)
 D114_CY = (17.58, 22.42, -37.21, -32.79)
 JACK_LO = [(-30.0, -6.5, -31.6, -13.4), (6.5, 30.0, -31.6, -13.4)]     # lower jack bodies, underside
-J408 = (-23.5, -17.5)                                                   # placed 2026-10-08, PCB (125, 122.5) rot 90
+J408 = (-21.75, -22.0)                                                  # placed 2026-10-08, PCB (126.75, 127) rot 90
 
 INK, MUTED, ACCENT, WARN, BOARD, FILL = '#1f2328', '#6e7781', '#0969da', '#cf222e', '#2da44e', '#f6f8fa'
 FONT = "font-family='Helvetica, Arial, sans-serif'"
@@ -168,9 +168,8 @@ def pcb_relation():
     box(SW102_CY, INK, '#eaeef2', op=0.9)
     s.text(*P(0, -2.5), 'SW102 Retune', 9, INK, 'middle')
     s.text(*P(0, -5.5), 'courtyard to Y -12.45', 8, MUTED, 'middle')
-    box(K401_CY, INK, '#eaeef2', op=0.9)
-    s.text(*P(-4.6, -31.4), 'K401 relay', 9, INK, 'middle')
-    s.text(*P(-4.6, -33.8), '5.2 mm tall', 8, MUTED, 'middle')
+    box(U201_CY, INK, '#eaeef2', op=0.9)
+    s.text(*P(0, -28.4), 'U201 MCU', 9, INK, 'middle')
     for cy, lb in ((D113_CY, 'D113'), (D114_CY, 'D114')):
         box(cy, INK, '#eaeef2', op=0.9)
         s.text(*P((cy[0] + cy[1]) / 2, cy[2] - 3.2), lb, 9, INK, 'middle')
@@ -194,8 +193,8 @@ def pcb_relation():
     s.dim_v(P(mx1, 0)[0] + 20, P(0, SW102_CY[2])[1], P(0, my1)[1], '', WARN)
     s.text(P(mx1, 0)[0] + 26, P(0, my1)[1] - 2, f'{SW102_CY[2] - my1:.1f} to SW102', 9, WARN)
     notes = [f'Module {MODULE[0]:g} x {MODULE[1]} envelope (36-38 x 12-12.5), Y {my1:.2f} to {my0:.2f}; window centre (0, {OLED_Y:g}).',
-             'Module pads on the left short end (check on the bought module); J408 placed at (-23.5, -17.5), rot 90, entry facing +X.',
-             'K401 moved to PCB (143.9, 137) on 2026-10-08: courtyard Y -26.75 to -37.25, 0.5 mm clear of the module in plan.']
+             'Module pads on the left short end (check on the bought module); J408 placed at (-21.75, -22.0), rot 90, entry facing +X.',
+             'K401 (relay) now beside IN at (17, -4); only flat parts (U201, its decoupling) sit under the module.']
     for k, t in enumerate(notes):
         s.text(OX - CAV_W / 2 * S, OY + CAV_H / 2 * S + 22 + 15 * k, t, 9.5, MUTED)
     # ------------------------------------------------ section on X = 0
@@ -235,8 +234,8 @@ def pcb_relation():
     s.text(*Q(YL - 0.3, BOARD_GAP + BOARD_T + 1.6), 'PCB 1.6', 10, BOARD, weight='bold')
     slab(SW102_CY[3], SW102_CY[2], 0, BOARD_GAP, INK, '#eaeef2', 0.9)
     s.text(*Q((SW102_CY[2] + SW102_CY[3]) / 2, 5.2), 'SW102 body', 9, INK, 'middle')
-    slab(K401_CY[3], K401_CY[2], BOARD_GAP - K401_H, BOARD_GAP, INK, '#eaeef2', 0.9)
-    s.text(*Q(-32, BOARD_GAP - 2.4), 'K401 5.2', 9, INK, 'middle')
+    slab(U201_CY[3], U201_CY[2], BOARD_GAP - U201_H, BOARD_GAP, INK, '#eaeef2', 0.9)
+    s.text(*Q(-24, BOARD_GAP - 2.4), 'U201 1.6', 9, INK, 'middle')
     xa, za = Q(-13.4, BOARD_GAP + BOARD_T); xb, zb = Q(-31.6, BOARD_GAP + BOARD_T + 11)
     s.rect(xa, za, xb - xa, zb - za, WARN, 'none', 1, '3 3')
     s.text(*Q(-22.5, BOARD_GAP + BOARD_T + 5.5), 'lower jacks, underside', 9, WARN, 'middle')
@@ -245,7 +244,7 @@ def pcb_relation():
     a = Q(yb + 0.6, GASKET + GLASS + 0.5); b = Q(-19.0, BOARD_GAP - 1.2)
     s.add(f"<path d='M {a[0]:.1f} {a[1]:.1f} C {a[0] - 10:.1f} {a[1] + 25:.1f} {b[0] + 10:.1f} {b[1] - 25:.1f} {b[0]:.1f} {b[1]:.1f}' stroke='{ACCENT}' stroke-width='2' fill='none'/>")
     slab(-17.5, -20.5, BOARD_GAP - 1.5, BOARD_GAP, INK, '#fff8c5')
-    s.text(*Q(-19, BOARD_GAP + BOARD_T + 1.6), 'J408 + lead (really at X -23.5)', 9, INK, 'middle')
+    s.text(*Q(-19, BOARD_GAP + BOARD_T + 1.6), 'J408 + lead (really at X -21.75)', 9, INK, 'middle')
     # dims at the right end, beyond the relay
     dx = Q(-37.5, 0)[0]
     s.dim_v(dx, Q(0, 0)[1], Q(0, hang)[1], f'{hang:.2f} module hang', ACCENT)
@@ -254,8 +253,8 @@ def pcb_relation():
     s.text(Q(YL + 1.5, 0)[0] - 6, Q(0, BOARD_GAP / 2)[1] + 18, '(10-12, provisional)', 9, MUTED, 'end')
     ty = Q(0, BOARD_GAP + BOARD_T + 15)[1]
     for k, (t, c) in enumerate([
-        ('K401 moved 2.15 mm towards the heel and 0.5 mm right (2026-10-08): it no longer sits under the module,', INK),
-        (f'which ends at Y {OLED_Y - MODULE[1] / 2:g}. Nothing else under the module is taller than {BOARD_GAP - hang:.2f} mm.', INK),
+        ('Under the module: U201 (1.6 mm) and its decoupling; the relay and the electrolytics are kept out (2026-10-08).', INK),
+        (f'Clearance over U201: {BOARD_GAP - hang - U201_H:.2f} mm at the provisional 11 mm depth.', INK),
         ('Layer thicknesses are typical module figures; measure the bought module and the casting before cutting.', MUTED)]):
         s.text(Q(YL, 0)[0], ty + 16 * k, t, 10, c)
     s.save('oled-pcb-relation.svg')

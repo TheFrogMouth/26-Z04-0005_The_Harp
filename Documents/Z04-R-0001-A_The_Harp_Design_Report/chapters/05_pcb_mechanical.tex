@@ -73,9 +73,9 @@ The Harp now uses The Alchemist's arrangement (decision 13). The outer positions
 \section{OLED Mounting}
 The 0.91\,in module (envelope 36--38\,mm by 12--12.5\,mm, active area 22.384\,mm by 5.584\,mm) sits behind a 24.4\,mm by 7.6\,mm rectangular cut centred at face (0, $-20$), a Tayda rectangular cut that leaves a 1\,mm border round the active area. The window is at $-20$ rather than $-18$ because the Retune toggle's courtyard reaches Y $-12.45$; at $-20$ the module spans $-13.75$ to $-26.25$, 1.3\,mm clear.
 
-The module hangs from the face, not the PCB: a 3D-printed carrier, as the Timekeeper's TFT frame, is bonded to the inside of the face with VHB tape, with a 0.5\,mm foam gasket round the glass. It is not screwed to the board because the lower jack bodies sit under the board at $|X| > 6.5$ and the MCU fills the middle. Four wires run from the module pads to \req{J408}, a JST SH 4-way on the top side at face ($-23.5$, $-17.5$), rotated so its cable entry faces the module.
+The module hangs from the face, not the PCB: a 3D-printed carrier, as the Timekeeper's TFT frame, is bonded to the inside of the face with VHB tape, with a 0.5\,mm foam gasket round the glass. It is not screwed to the board because the lower jack bodies sit under the board at $|X| > 6.5$ and the MCU fills the middle. Four wires run from the module pads to \req{J408}, a JST SH 4-way on the top side at face ($-21.75$, $-22.0$), between the left lower jack's pin rows, rotated so its cable entry faces the module.
 
-The module hangs about 4.15\,mm below the face, leaving 6.85\,mm to the PCB at the provisional 11\,mm depth. The relay \req{K401}, 5.2\,mm tall, overlapped the module in plan from Y $-24.6$ to $-26.25$ with only 1.65\,mm to spare, so on 2026-10-08 it was moved 2.15\,mm towards the heel and 0.5\,mm right, to face ($-4.6$, $-32.0$); its courtyard now ends 0.5\,mm short of the module edge. The drawings are in \texttt{docs/images/oled-face-cutout.png} and \texttt{docs/images/oled-pcb-relation.png}.
+The module hangs about 4.15\,mm below the face, leaving 6.85\,mm to the PCB at the provisional 11\,mm depth. Only flat parts sit under the module after the placement: \req{U201} (1.6\,mm, 5.25\,mm clear) and its decoupling. The relay \req{K401} (5.2\,mm) and the electrolytics are kept out of the module outline. The drawings are in \texttt{docs/images/oled-face-cutout.png} and \texttt{docs/images/oled-pcb-relation.png}.
 
 \section{Zoning}
 Signal runs right to left as on The Alchemist: IN and EXP enter on the right wall, OUT~L and OUT~R leave on the left. The input and expression buffers sit at the right-hand end of the lower band next to \req{J402}/\req{J406}, the output buffers and the relay at the left-hand end next to \req{J403}/\req{J404}, and the H750 with the flash in the middle. The codec, its VCOM buffers and the ADC driver sit under the pot rows. The buck converter and its inductor sit on the DC tab, as far from the input buffer as the board allows.
@@ -88,13 +88,18 @@ Signal runs right to left as on The Alchemist: IN and EXP enter on the right wal
        | SW101        RV105        SW103        |  row +13
        | codec IC501 + U501, ADC driver U601    |  under the pot rows
        |              SW102                     |  row -5
-       | --- OLED window (0, -20), module ----- |  hangs from the face; J408 at (-23.5, -17.5)
+       | --- OLED window (0, -20), module ----- |  hangs from the face; J408 at (-21.75, -22.0)
        | OUT U702  |   H750 U201     | IN U701  |  output side left, input side right
        | relay K401|   flash U202    | EXP U401 |
        | D113 (-35)  J405  W201 SWD  J407  D114 |
  Y -38 ------------------------------------------
 \end{verbatim}
 }
+
+\section{Placement}
+All 181 footprints were placed on the top side by script on 2026-10-08 (\texttt{scripts/pcb\_placement/}; drawing in \texttt{docs/images/pcb-placement.png}). The check from the board file finds no courtyard overlaps, every part inside the outline and nothing tall under the OLED module; top-side courtyards cover about 68\,\% of the board.
+
+Plan~A fits, but only just and not on the zoning above. The LQFP-100 (17.5\,mm courtyard) fits in one place only, the lower centre between the lower jacks' pin rows and under the Retune toggle, at face (0, $-21.5$). The relay moved to the right middle next to IN, the ADC driver to the left middle, the codec and the output stages between the pot rows, and the SWD pads and footswitch pads into the space left. Decoupling is close (20 of 27 IC supply caps within 5\,mm), the DAC-to-output and QSPI paths are short, but the right-channel ADC driver network (up to 62\,mm), the SAI lines from the codec to the MCU (50--55\,mm, across the analogue middle) and the high-impedance path from IN to the relay (35\,mm) need rework by hand before routing. If the codec-to-MCU path cannot be made acceptable, that is the case for Plan~B.
 
 \section{Layout Rules}
 Carried over from The Relic:

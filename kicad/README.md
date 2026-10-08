@@ -41,8 +41,8 @@ rear pads. The Relic's
 regulator parts (C401–C407, D401, R401–R403, U401, U402) were removed. On
 2026-10-08 the board was synced to the schematic (see step 2 below): every
 footprint is linked to its symbol with its pad nets, the twelve note LEDs
-and their resistors are gone, J408 (OLED) is placed at face (−23.5, −17.5)
-and K401 moved to face (−4.6, −32.0) to clear the OLED module.
+and their resistors are gone. All 181 footprints were then placed on the
+top side by script (`scripts/pcb_placement/`, `docs/pcb-plan.md` *Placement*).
 
 ## First steps in KiCad
 
@@ -51,14 +51,13 @@ and K401 moved to face (−4.6, −32.0) to clear the OLED module.
    power pins or unconnected pins is real, report it.
 2. The board was synced to the schematic on 2026-10-08 without KiCad (no
    KiCad in that session): 181 footprints (190 symbol units), each linked to its symbol, values
-   and pad nets checked pin by pin against `harp_spec.py`. New parts are
-   parked off the board to the right (face X 132–160) beside the other
-   parked groups; J408 and K401 are placed. Run Tools → Update PCB from
+   and pad nets checked pin by pin against `harp_spec.py`. Run Tools → Update PCB from
    Schematic once anyway: it should report no changes apart from net
    renames (KiCad names unlabelled nets `Net-(...)`) and footprint library
    refreshes. Anything else it reports is a sync miss: note it.
-3. Place the rest per the zoning in `docs/pcb-plan.md`. The go/no-go for a
-   one-board build is this placement.
+3. Every part is placed (scripted, 2026-10-08). Review it by eye and rework
+   the weak spots listed under *Placement* in `docs/pcb-plan.md` (right-channel
+   ADC driver, codec-to-MCU SAI path, input path) before routing; run DRC.
 4. Regenerate the GND vias per the Relic rule, then route.
 
 Once the schematic has been edited in KiCad, the KiCad files are the source

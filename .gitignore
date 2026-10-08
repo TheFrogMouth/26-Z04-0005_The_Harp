@@ -46,3 +46,6 @@ Documents/**/main.pdf
 *.synctex.gz
 *.toc
 *.xdv
+
+# PCB placement scratch output
+scripts/pcb_placement/build/
