@@ -50,7 +50,7 @@ and K401 moved to face (−4.6, −32.0) to clear the OLED module.
    cosmetic warnings (label placement, overlapping text); anything about
    power pins or unconnected pins is real, report it.
 2. The board was synced to the schematic on 2026-10-08 without KiCad (no
-   KiCad in that session): 190 footprints, each linked to its symbol, values
+   KiCad in that session): 181 footprints (190 symbol units), each linked to its symbol, values
    and pad nets checked pin by pin against `harp_spec.py`. New parts are
    parked off the board to the right (face X 132–160) beside the other
    parked groups; J408 and K401 are placed. Run Tools → Update PCB from
