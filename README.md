@@ -5,7 +5,7 @@ that nobody plays ring when the guitar sounds their note, retuned continuously
 to the chord being played. STM32H750VBT6, AK4621EF codec, no SDRAM, relay
 bypass, in a Hammond 125B on the Alchemist/Relic board and jack layout.
 
-Status: **first schematic draft, board placed (scripted), unrouted.** Seven sheets generated from the Timekeeper's circuits and The Relic's bypass (190 parts, net-traced, drawn to the Frogmouth schematic standard, not yet opened in KiCad); board outline and 28 face/jack/bypass footprints placed from The Relic. Stereo in (TRS) and a 0.91 in OLED display added 2026-10-08; the PCB was synced to the schematic and every part placed on both sides on 2026-10-08 (scripted; one-board fit confirmed, see `docs/pcb-plan.md` *Placement*). See `docs/pcb-plan.md` and `kicad/README.md`.
+Status: **first schematic draft, board placed and mostly routed (scripted), 32 connections open.** Seven sheets generated from the Timekeeper's circuits and The Relic's bypass (190 parts, net-traced, drawn to the Frogmouth schematic standard, not yet opened in KiCad); board outline and 28 face/jack/bypass footprints placed from The Relic. Stereo in (TRS) and a 0.91 in OLED display added 2026-10-08; the PCB was synced to the schematic and every part placed on both sides on 2026-10-08 (scripted; one-board fit confirmed, see `docs/pcb-plan.md` *Placement*). First routing pass by script on 2026-10-09: GND to In1 and rails on In2 from every pad, analog and digital kept apart, 32 connections left for KiCad (*Routing*). See `docs/pcb-plan.md` and `kicad/README.md`.
 
 ## Layout
 

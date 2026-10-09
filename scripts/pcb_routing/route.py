@@ -10,8 +10,9 @@
            lines, so the bypass paths get the corridors under the MCU to the relay
   drive    digital lines out to the bottom-side LED and relay drivers, kept out of audio
   ctrl     pots, toggles, footswitches, expression (DC): kept out of the audio region
-  repair   whatever is still open, with the region keepouts lifted (rails still In2 only);
-           its tracks are listed so they can be checked by eye
+  repair   whatever is still open, with the region keepouts lifted (rails still In2 only) and
+           the signal tracks unlocked, so the router may move them to make room; GND, rail and
+           power copper stays fixed. The nets it changed are listed so they can be checked
 
 Each Freerouting phase sees only its own nets; everything routed before is fixed (protected).
 Signals never use In2.Cu. Vias cost more than in Freerouting's default (80 against 50), so a
@@ -39,7 +40,8 @@ PHASES = [
     dict(name='audio', kinds={'AUDIO'}, passes=25, via_costs=80, keep_out_of='DIGITAL'),
     dict(name='drive', kinds={'DIGITAL'}, drive=True, passes=20, via_costs=80, keep_out_of='AUDIO'),
     dict(name='ctrl', kinds={'CTRL'}, passes=20, via_costs=80, keep_out_of='AUDIO'),
-    dict(name='repair', kinds={'RAIL', 'POWER', 'AUDIO', 'DIGITAL', 'CTRL'}, passes=20, via_costs=80, repair=True),
+    dict(name='repair', kinds={'RAIL', 'POWER', 'AUDIO', 'DIGITAL', 'CTRL'}, passes=30, via_costs=80, repair=True,
+         loose={'AUDIO', 'DIGITAL', 'CTRL'}),
 ]
 
 
@@ -92,7 +94,8 @@ def freeroute(phase, fps, pads, outline, fixed, phase_nets):
             for poly in regions.territory(pads, outline, 'F.Cu', side):
                 keep.append(('B.Cu', list(poly.exterior.coords)[:-1], 'wire_keepout'))
     d = os.path.join(kpcb.BUILD, name + '.dsn'); s = os.path.join(kpcb.BUILD, name + '.ses')
-    dsn.write(d, fps, outline, phase_nets, classes_for(allnets), keepouts=keep, fixed=fixed)
+    dsn.write(d, fps, outline, phase_nets, classes_for(allnets), keepouts=keep, fixed=fixed,
+              loose=phase.get('loose', ()))
     if os.path.exists(s):
         os.remove(s)
     cmd = [JAVA, '-jar', JAR, '--gui.enabled=false', '--usage_and_diagnostic_data.disable_analytics=true',
@@ -116,10 +119,14 @@ def run(phase, fps, pads, outline, fixed):
         new, failed = fanout.fanout(fps, pads, outline, set(phase_nets), fixed, keepout=Polygon(no_via_w201(pads)))
     if phase.get('passes'):
         got = freeroute(phase, fps, pads, outline, fixed + new, phase_nets)
-        if phase.get('repair'):          # the session repeats every fixed item; keep the new ones
-            old = {key(w) for w in fixed}
-            got = [w for w in got if key(w) not in old]
-            print('repair:', ' '.join(sorted({w['net'] for w in got})) or 'nothing')
+        if phase.get('repair'):
+            # the session holds every item of the phase's nets, old (some moved) and new: it
+            # replaces them all; main() drops the old ones of these nets
+            mine = set(phase_nets)
+            before = {key(w) for w in fixed if w['net'] in mine}
+            got = dedupe(got)
+            print('repair: changed', ' '.join(sorted({w['net'] for w in got if key(w) not in before})) or 'nothing')
+            return got
         new = dedupe(new + got)
     print('%-8s %3d nets  %4d tracks %3d vias  %4.0f s%s' % (
         phase['name'], len(phase_nets), sum(1 for w in new if w['type'] == 'wire'),
@@ -134,21 +141,28 @@ def key(w):
 
 
 def dedupe(items):
-    """The session repeats the fixed fanout items of this phase's nets (rounded to its 0.1 um
-    grid); keep one of each."""
-    seen, vias, out = set(), [], []
+    """Drop repeats: the session hands back fixed items, split and rounded its own way (0.1 um).
+    A segment already covered by kept copper of the same net on the same layer goes, as does a
+    via within 0.02 mm of a kept one; tracks are kept as single segments."""
+    from shapely.geometry import LineString
+    from shapely.ops import unary_union
+    kept, vias, cover = [], [], {}
     for w in items:
         if w['type'] == 'via':
             if any(v['net'] == w['net'] and abs(v['x'] - w['x']) < 0.02 and abs(v['y'] - w['y']) < 0.02 for v in vias):
                 continue
-            vias.append(w)
-        else:
-            k = key(w)
-            if k in seen:
+            vias.append(w); kept.append(w)
+            continue
+        for a, b in zip(w['pts'], w['pts'][1:]):
+            if abs(a[0] - b[0]) < 1e-6 and abs(a[1] - b[1]) < 1e-6:
                 continue
-            seen.add(k)
-        out.append(w)
-    return out
+            g = LineString([a, b]); k = (w['net'], w['layer'])
+            c = cover.get(k)
+            if c is not None and c.contains(g):
+                continue
+            cover[k] = g.buffer(0.01) if c is None else unary_union([c, g.buffer(0.01)])
+            kept.append(dict(w, pts=[a, b]))
+    return kept
 
 
 def main(names):
@@ -162,7 +176,10 @@ def main(names):
         rerun = set(names) - {'repair'}
         fixed = dedupe([w for w in json.load(open(out)) if phase_of(w['net']) not in rerun])
     for ph in todo:
-        fixed = dedupe(fixed + run(ph, fps, pads, outline, fixed))
+        got = run(ph, fps, pads, outline, fixed)
+        if ph.get('repair'):
+            fixed = [w for w in fixed if not in_phase(ph, w['net'])]
+        fixed = dedupe(fixed + got)
         json.dump(fixed, open(out, 'w'))
 
 

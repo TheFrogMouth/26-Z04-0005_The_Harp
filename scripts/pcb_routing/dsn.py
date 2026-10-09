@@ -48,10 +48,11 @@ def padstack(p):
     return shapes
 
 
-def write(path, fps, outline_pts, phase_nets, classes, keepouts=(), fixed=(), plane=True, auto=None):
+def write(path, fps, outline_pts, phase_nets, classes, keepouts=(), fixed=(), plane=True, auto=None, loose=()):
     """phase_nets: nets to route now; fixed: earlier wires/vias (dicts) kept as protected.
     classes: {class name: dict(nets=[...], width=mm, clear=mm, layers=[...])}
     keepouts: [(layer, [(x, y), ...], kind)] kind 'keepout' | 'via_keepout' | 'wire_keepout'.
+    loose: net kinds whose fixed items go in unprotected, so the router may rip them up.
     auto: dict(via_costs=, plane_via_costs=, layers={layer: (active, direction, cost, against_cost)})"""
     stacks, images, comps = {}, [], []
     all_nets = {}
@@ -118,13 +119,14 @@ def write(path, fps, outline_pts, phase_nets, classes, keepouts=(), fixed=(), pl
             q(cname), ' '.join(q(n) for n in members), via_name, ' '.join(c['layers']),
             round(c['width'] * U), round(c['clear'] * U)))
     o.append(' )')
+    typ = lambda w: 'route' if nets.kind(w['net']) in loose else 'protect'
     o.append(' (wiring')
     for w in fixed:
         if w['type'] == 'via':
-            o.append('  (via %s %s (net %s) (type protect))' % (via_name, P(w['x'], w['y']), q(w['net'])))
+            o.append('  (via %s %s (net %s) (type %s))' % (via_name, P(w['x'], w['y']), q(w['net']), typ(w)))
         else:
-            o.append('  (wire (path %s %d %s) (net %s) (type protect))' % (
-                w['layer'], round(w['w'] * U), ' '.join(P(x, y) for x, y in w['pts']), q(w['net'])))
+            o.append('  (wire (path %s %d %s) (net %s) (type %s))' % (
+                w['layer'], round(w['w'] * U), ' '.join(P(x, y) for x, y in w['pts']), q(w['net']), typ(w)))
     o.append(' )')
     o.append(')')
     open(path, 'w').write('\n'.join(o) + '\n')

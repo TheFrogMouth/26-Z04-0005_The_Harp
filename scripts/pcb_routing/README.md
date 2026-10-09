@@ -27,16 +27,21 @@ Phases (`route.py`):
    joins the vias on In2.Cu, the only layer the rails may use.
 3. **power**: local power nets (buck, LDO, DC input, VDDA, relay coil, LED
    current), wide, F/B.
-4. **audio**: F/B only, kept out of the digital region on both layers. First
-   of the signals so the bypass paths get the corridors under the MCU.
-5. **digital**: F/B only, kept out of the audio region on both layers, and on
-   B.Cu also out from under the top-side audio region.
-6. **ctrl**: pots, toggles, footswitches, expression (DC), kept out of the
+4. **core**: digital round the MCU (codec interface, QSPI, crystal, SWD,
+   OLED, reset), kept out of the audio region.
+5. **audio**: kept out of the digital region; before the long digital lines
+   so the bypass paths get the corridors under the MCU to the relay.
+6. **drive**: the LED and relay drive lines to the bottom-side drivers, kept
+   out of the audio region.
+7. **ctrl**: pots, toggles, footswitches, expression (DC), kept out of the
    audio region.
-7. **repair**: anything still open, without the region keepouts.
+8. **repair**: anything still open, without the region keepouts and with the
+   signal tracks unlocked so the router can move them; GND, rail and power
+   copper stays fixed.
 
-Signals never use In2.Cu; vias cost a lot in the signal phases, so a track
-changes side once where it can. No via within 0.6 mm of the SWD needle pads.
+Signals never use In2.Cu; vias cost more than Freerouting's default (80
+against 50), so a track changes side rarely; much higher and it takes long
+one-sided detours instead. No via within 0.6 mm of the SWD needle pads.
 
 Needs Java 25 and Freerouting 2.4.1 (`app.freerouting:freerouting`,
 `freerouting-2.4.1-executable.jar` from Maven Central), plus Python with
@@ -52,4 +57,5 @@ Freerouting quirks found on the way: any `autoroute_settings` block in the
 DSN makes it see nothing to route (so per-layer costs are not used; In2 is
 reserved by net class instead), and with an In1 plane declared it counts GND
 as done and will not fan it out (so `fanout.py` does that). A full run takes
-about an hour on four cores.
+about an hour and a half on four cores. The 2026-10-09 run left 32
+connections open (`docs/pcb-plan.md`, *Routing*).
