@@ -198,11 +198,18 @@
         0.1016,
         0.127,
         0.1524,
+        0.2,
         0.2032,
+        0.25,
         0.254,
+        0.3,
         0.3048,
+        0.4,
+        0.5,
         0.508,
-        0.762
+        0.6,
+        0.762,
+        0.8
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -242,6 +249,10 @@
         {
           "diameter": 0.4572,
           "drill": 0.254
+        },
+        {
+          "diameter": 0.6,
+          "drill": 0.3
         },
         {
           "diameter": 0.61,
@@ -526,44 +537,122 @@
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.1524,
         "tuning_profile": "",
-        "via_diameter": 0.4572,
-        "via_drill": 0.254,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 6
       },
       {
         "bus_width": 12,
-        "clearance": 0.1524,
+        "clearance": 0.18,
         "diff_pair_gap": 0.1524,
+        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.1524,
         "line_style": 0,
         "microvia_diameter": 0.4572,
         "microvia_drill": 0.254,
-        "name": "Power_1",
+        "name": "GND",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 0,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.3048,
+        "track_width": 0.4,
         "tuning_profile": "",
-        "via_diameter": 0.4572,
-        "via_drill": 0.254,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 6
       },
       {
         "bus_width": 12,
-        "clearance": 0.1524,
+        "clearance": 0.18,
         "diff_pair_gap": 0.1524,
+        "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.1524,
         "line_style": 0,
         "microvia_diameter": 0.4572,
         "microvia_drill": 0.254,
-        "name": "Power_2",
+        "name": "Rail",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.508,
+        "track_width": 0.5,
         "tuning_profile": "",
-        "via_diameter": 0.4572,
-        "via_drill": 0.254,
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.18,
+        "diff_pair_gap": 0.1524,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.1524,
+        "line_style": 0,
+        "microvia_diameter": 0.4572,
+        "microvia_drill": 0.254,
+        "name": "Power",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.5,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.18,
+        "diff_pair_gap": 0.1524,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.1524,
+        "line_style": 0,
+        "microvia_diameter": 0.4572,
+        "microvia_drill": 0.254,
+        "name": "Audio",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 3,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.254,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.1524,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.1524,
+        "line_style": 0,
+        "microvia_diameter": 0.4572,
+        "microvia_drill": 0.254,
+        "name": "Digital",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 4,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.15,
+        "diff_pair_gap": 0.1524,
+        "diff_pair_via_gap": 0.25,
+        "diff_pair_width": 0.1524,
+        "line_style": 0,
+        "microvia_diameter": 0.4572,
+        "microvia_drill": 0.254,
+        "name": "Control",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 5,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.2,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
         "wire_width": 6
       }
     ],
@@ -572,7 +661,488 @@
     },
     "net_colors": null,
     "netclass_assignments": null,
-    "netclass_patterns": []
+    "netclass_patterns": [
+      {
+        "netclass": "Rail",
+        "pattern": "+3V3"
+      },
+      {
+        "netclass": "Rail",
+        "pattern": "+5V"
+      },
+      {
+        "netclass": "Rail",
+        "pattern": "+9V"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/ADC Driver/FDA_INN"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/ADC Driver/FDA_INP"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/ADC Driver/FDA_OUTN"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/ADC Driver/FDA_OUTP"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/ADC Driver/FDB_INN"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/ADC Driver/FDB_INP"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/ADC Driver/FDB_OUTN"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/ADC Driver/FDB_OUTP"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/IN_AC"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/IN_AC_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/IN_BUF_OUT"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/IN_BUF_OUT_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/IN_FB"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/IN_GAIN"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/OUTL_AC"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/OUTL_AMP"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/OUTL_N"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/OUTL_P"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/OUTR_AC"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/OUTR_AMP"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/OUTR_N"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Analog In and Out/OUTR_P"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/Codec/PDN"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Codec/VCOM"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Codec/VCOM_A_RAW"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Codec/VCOM_B_RAW"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "/Controls and LEDs/POT1_W"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "/Controls and LEDs/POT2_W"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "/Controls and LEDs/POT3_W"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "/Controls and LEDs/POT5_W"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "/Jacks and Bypass/EXP_BUF_IN"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "/Jacks and Bypass/EXP_BUF_OUT"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "/Jacks and Bypass/EXP_RING"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "/Jacks and Bypass/EXP_TIP"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "/Jacks and Bypass/FSW_BYPASS"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "/Jacks and Bypass/FSW_HOLD"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Jacks and Bypass/IN"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/Jacks and Bypass/LED_EFF_G"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Jacks and Bypass/LED_EFF_K"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Jacks and Bypass/LED_EFF_LOW"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/Jacks and Bypass/LED_HOLD_G"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Jacks and Bypass/LED_HOLD_K"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Jacks and Bypass/LED_HOLD_LOW"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "/Jacks and Bypass/OUT_L"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Jacks and Bypass/RELAY_COIL"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/Jacks and Bypass/RELAY_G"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Jacks and Bypass/RELAY_LOW"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/BOOT0"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/HSE_IN"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/HSE_OUT"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/NRST"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/QSPI_CLK"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/QSPI_IO0"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/QSPI_IO1"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/QSPI_IO2"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/QSPI_IO3"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/QSPI_NCS"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/SWCLK"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/SWCLK_N"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/SWDIO"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/SWDIO_N"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/SWO"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/VCAP1"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "/MCU/VCAP2"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Power/BUCK_BOOT"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Power/BUCK_FB"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Power/BUCK_FBT"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Power/DC_F"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Power/DC_IN"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Power/LDO_IN"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Power/LDO_OUT"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "/Power/SW"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "ADC_L_N"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "ADC_L_P"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "ADC_R_N"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "ADC_R_P"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "CODEC_BICK"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "CODEC_CCLK"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "CODEC_CDTI"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "CODEC_CSN"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "CODEC_LRCK"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "CODEC_MCLK"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "CODEC_PDN"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "CODEC_SDTI"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "CODEC_SDTO"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "DAC_L_N"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "DAC_L_P"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "DAC_R_N"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "DAC_R_P"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "EFFECT_IN"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "EFFECT_IN_BUF"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "EFFECT_IN_BUF_R"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "EFFECT_OUT_L"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "EFFECT_OUT_R"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "EXP"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "FSW_BYPASS_IN"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "FSW_HOLD_IN"
+      },
+      {
+        "netclass": "GND",
+        "pattern": "GND"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "IN_R"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "LED_EFFECT_DRV"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "LED_HOLD_DRV"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "OLED_SCL"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "OLED_SDA"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "POT1"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "POT2"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "POT3"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "POT5"
+      },
+      {
+        "netclass": "Digital",
+        "pattern": "RELAY_DRV"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "TOG1_A"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "TOG1_B"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "TOG2_A"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "TOG2_B"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "TOG3_A"
+      },
+      {
+        "netclass": "Control",
+        "pattern": "TOG3_B"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "VCOM_A"
+      },
+      {
+        "netclass": "Audio",
+        "pattern": "VCOM_B"
+      },
+      {
+        "netclass": "Power",
+        "pattern": "VDDA"
+      }
+    ]
   },
   "pcbnew": {
     "last_paths": {

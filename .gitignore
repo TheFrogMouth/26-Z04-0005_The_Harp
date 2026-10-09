@@ -49,3 +49,6 @@ Documents/**/main.pdf
 
 # PCB placement scratch output
 scripts/pcb_placement/build/
+
+# PCB routing scratch output
+scripts/pcb_routing/build/

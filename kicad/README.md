@@ -57,7 +57,11 @@ top side by script (`scripts/pcb_placement/`, `docs/pcb-plan.md` *Placement*).
    refreshes. Anything else it reports is a sync miss: note it.
 3. Every part is placed on both sides (scripted, 2026-10-08; see *Placement*
    in `docs/pcb-plan.md`). Look it over, then run DRC.
-4. Regenerate the GND vias per the Relic rule, then route.
+4. The board was routed by script on 2026-10-09 (`scripts/pcb_routing/`,
+   *Routing* in `docs/pcb-plan.md`): GND vias per the Relic rule, rails on
+   In2. Fill the In1 GND zone (B), finish the 32 open connections listed
+   there, then DRC. The net classes (GND, Rail, Power, Audio, Digital,
+   Control) are in the project.
 
 Once the schematic has been edited in KiCad, the KiCad files are the source
 of truth; do not re-run the generator over them (see
