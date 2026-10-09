@@ -35,22 +35,28 @@ driver, the effect-LED driver and the bypass footswitch pads. The four
 1/4 in jacks and the relay were replaced on 2026-10-05 with The Alchemist's
 NMJ6HCD2 and G6K-2F-Y footprints at its positions. On 2026-10-06 the face
 moved to The Alchemist's layout: RV104 and RV106 removed, the three toggles
-on the Taiway 100-DP6 footprint at (−20, +13), (0, −5) and (+20, +13), the
+on the Taiway 100-DP6 footprint at (−20, +13), (0, −5) and (+20, +13) (Retune moved to (0, −24) on 2026-10-09), the
 bypass footswitch on hand-solder pads, and R405 / D402 moved off J403's
 rear pads. The Relic's
-regulator parts (C401–C407, D401, R401–R403, U401, U402) were removed. The
-remaining footprints have no schematic links or pad nets yet.
+regulator parts (C401–C407, D401, R401–R403, U401, U402) were removed. On
+2026-10-08 the board was synced to the schematic (see step 2 below): every
+footprint is linked to its symbol with its pad nets, the twelve note LEDs
+and their resistors are gone. All 181 footprints were then placed on the
+top side by script (`scripts/pcb_placement/`, `docs/pcb-plan.md` *Placement*).
 
 ## First steps in KiCad
 
 1. Open `The Harp.kicad_pro`, open every sheet once, run ERC. Expect
    cosmetic warnings (label placement, overlapping text); anything about
    power pins or unconnected pins is real, report it.
-2. Tools → Update PCB from Schematic, with **Re-link footprints to schematic
-   symbols based on their reference designators** ticked. That keeps the 28
-   placed footprints where they are and adds the other 161 parts.
-3. Place the rest per the zoning in `docs/pcb-plan.md`. The go/no-go for a
-   one-board build is this placement.
+2. The board was synced to the schematic on 2026-10-08 without KiCad (no
+   KiCad in that session): 181 footprints (190 symbol units), each linked to its symbol, values
+   and pad nets checked pin by pin against `harp_spec.py`. Run Tools → Update PCB from
+   Schematic once anyway: it should report no changes apart from net
+   renames (KiCad names unlabelled nets `Net-(...)`) and footprint library
+   refreshes. Anything else it reports is a sync miss: note it.
+3. Every part is placed on both sides (scripted, 2026-10-08; see *Placement*
+   in `docs/pcb-plan.md`). Look it over, then run DRC.
 4. Regenerate the GND vias per the Relic rule, then route.
 
 Once the schematic has been edited in KiCad, the KiCad files are the source

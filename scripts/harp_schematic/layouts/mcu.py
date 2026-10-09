@@ -9,7 +9,7 @@ LEFT = {'PE2': 'CODEC_MCLK', 'PE3': 'CODEC_SDTO', 'PE4': 'CODEC_LRCK', 'PE5': 'C
         'PE7': None, 'PE8': None, 'PE9': None, 'PE10': None,
         'PE11': 'TOG1_A', 'PE12': 'TOG1_B', 'PE13': 'TOG2_A', 'PE14': 'TOG2_B', 'PE15': 'TOG3_A'}
 RIGHT = {'PA0': 'POT1', 'PA1': 'POT2', 'PA2': 'POT3', 'PA4': 'POT5', 'PB1': 'EXP', 'PB4': 'CODEC_PDN', 'PB8': 'CODEC_CSN',
-         'PB10': 'TOG3_B', 'PB12': 'FSW_BYPASS_IN', 'PB13': 'FSW_HOLD_IN', 'PC6': 'LED_EFFECT_DRV', 'PC7': 'LED_HOLD_DRV',
+         'PB10': 'TOG3_B', 'PB6': 'OLED_SCL', 'PB7': 'OLED_SDA', 'PB12': 'FSW_BYPASS_IN', 'PB13': 'FSW_HOLD_IN', 'PC6': 'LED_EFFECT_DRV', 'PC7': 'LED_HOLD_DRV',
          'PC10': 'RELAY_DRV', 'PC14': 'CODEC_CCLK', 'PC15': 'CODEC_CDTI'}
 
 
@@ -27,15 +27,13 @@ def layout(L):
     for nm, net in LEFT.items():
         if net:
             L.gl(net, ('U201', pinno[nm]), 'left', length=4 * U)
-    for i, nm in enumerate(NOTES):
-        L.gl('NOTE_%s' % nm, ('U201', pinno['PD%d' % i]), 'left', length=4 * U)
     for nm, net in RIGHT.items():
         L.gl(net, ('U201', pinno[nm]), 'right', length=4 * U)
     L.local('QSPI_CLK', ('U201', pinno['PB2']), 'right', length=4 * U)
     L.local('QSPI_NCS', ('U201', pinno['PC11']), 'right', length=4 * U)
-    for nm in ('PE0', 'PE1', 'PD12', 'PD13', 'PD14', 'PD15', 'PA3', 'PA5', 'PA6', 'PA7', 'PA8', 'PA9', 'PA10', 'PA11', 'PA12',
-               'PA15', 'PB0', 'PB5', 'PB6', 'PB7', 'PB9', 'PB11', 'PB14', 'PB15', 'PC0', 'PC1', 'PC2_C', 'PC3_C', 'PC4', 'PC5',
-               'PC8', 'PC9', 'PC12', 'PC13'):
+    for nm in ['PD%d' % i for i in range(12)] + ['PE0', 'PE1', 'PD12', 'PD13', 'PD14', 'PD15', 'PA3', 'PA5', 'PA6', 'PA7', 'PA8', 'PA9', 'PA10', 'PA11', 'PA12',
+               'PA15', 'PB0', 'PB5', 'PB9', 'PB11', 'PB14', 'PB15', 'PC0', 'PC1', 'PC2_C', 'PC3_C', 'PC4', 'PC5',
+               'PC8', 'PC9', 'PC12', 'PC13']:
         L.nc('U201', pinno[nm])
     # ---- supplies: VDD x5 + VBAT on a +3V3 rail with six decoupling caps; VDDA through FB201 with 1u + 100n
     top = u(22)

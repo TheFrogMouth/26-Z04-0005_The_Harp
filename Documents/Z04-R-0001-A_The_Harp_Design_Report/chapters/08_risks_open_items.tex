@@ -7,7 +7,7 @@
   \item \textbf{CPU load} of 24 strings, Jawari and the tracker together has not been measured.
   \item \textbf{Internal flash.} Whether the image fits the H750's 128\,KB is unknown.
   \item \textbf{AK4621EF lifecycle,} already flagged in the Timekeeper's BOM audit.
-  \item \textbf{Light pipes} add a hand-assembly step and a part to source.
+  \item \textbf{Height under the OLED}: parts placed under the module must stay below about 6.8\,mm; \req{K401} was moved out from under it on 2026-10-08.
 \end{itemize}
 
 \section{Open Items}
@@ -19,12 +19,12 @@
     \fmtophead{Item} & \fmtophead{Status} \\
     \midrule
     Secondary layer & More settings than knobs: key or drone set, spread, bypass mode, expression target and range, Hold latching, Brightness trim, chord commit time, output trim. Pick a second page or drop some, on the prototype. \\
-    Schematic confirmations & QUADSPI bank~2 alternate functions, AK4621 unused right input, THS4522 unused channel, OPA2365 noise at 1\,kHz, then ERC. \\
+    Schematic confirmations & QUADSPI bank~2 alternate functions, OPA2365 noise at 1\,kHz, then ERC. \\
     Wall-hole heights & To be fixed from the NMJ6HCD2 and PJ-063AH drawings and the measured Alchemist and Relic assemblies; the Harp inherits them. \\
-    Note display & Whether 12 LEDs are enough, or a small I$^2$C OLED in the same band is worth the window cut. Judged after the firmware prototype, using the Timekeeper's TFT as a stand-in. \\
-    Light-pipe fit & Flange diameter against the 5\,mm pitch and the cavity wall. \\
+    Note display & Decided 2026-10-08: a 0.91\,in I$^2$C OLED strip. Content to settle on the prototype, using the Timekeeper's TFT as a stand-in. \\
+    OLED fit & Measure the bought module and the casting depth; confirm the window on the active area and the carrier height. \\
     Expression input & TRS wiring and buffer as the Timekeeper (MCP6001); whether an empty jack can be detected depends on that buffer. \\
-    Mono use & The firmware cannot tell that OUT~R is unplugged. Either choose a default spread a mono player can live with, or add a jack-detect line while pins are free. \\
+    Mono use & A mono plug on IN is detected by the right input reading silence (ring grounded), then L is copied to R. OUT~R unplugged is still not detected: choose a default spread or add a jack-detect line. \\
     Power-up state & Effect on, or the last state. \\
     Secondary-layer gesture & Both footswitches together, or holding Bypass. \\
     Code sharing with the Timekeeper & Copy the reused modules with the source commit recorded, or share them as a library. \\
@@ -45,7 +45,7 @@ Writing this report found three small disagreements, to be corrected at the sour
   \item \textbf{Firmware first on the Timekeeper board.} String bank with a fixed tuning, then Jawari, then the tuning manager in Key and Drone modes. Measure the CPU load and settle the TBC ranges by ear.
   \item Chord tracker and Follow mode, offline against reference recordings, then on the board.
   \item Open the schematic in KiCad and run ERC. Close the confirmation items.
-  \item \emph{Update PCB from Schematic}. Place the LED strip and check the light-pipe fit; place the MCU and flash in the centre band, the codec under the pots, the buffers at the jack ends and the buck on the tab. \textbf{Go/no-go for Plan~A.}
+  \item \emph{Update PCB from Schematic} (the board was synced and placed on both sides by script on 2026-10-08; expect net renames only). Look the placement over, then DRC. Decide double-sided assembly or hand fitting for the 37 bottom-side parts. \textbf{Go/no-go for Plan~A: it fits.}
   \item GND vias per The Relic's rule, routing (F.Cu short, B.Cu long, In2 power), DRC with The Relic's rules.
   \item Adapt The Relic's BOM exporter, cost at 100, and produce the Tayda drill schedule from the face table.
   \item Fix the wall-hole heights from the measured Alchemist and Relic assembly.

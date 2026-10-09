@@ -5,7 +5,7 @@ that nobody plays ring when the guitar sounds their note, retuned continuously
 to the chord being played. STM32H750VBT6, AK4621EF codec, no SDRAM, relay
 bypass, in a Hammond 125B on the Alchemist/Relic board and jack layout.
 
-Status: **first schematic draft, board seeded, unplaced.** Seven sheets generated from the Timekeeper's circuits and The Relic's bypass (192 parts, net-traced, drawn to the Frogmouth schematic standard, not yet opened in KiCad); board outline and 28 face/jack/bypass footprints placed from The Relic. See `docs/pcb-plan.md` and `kicad/README.md`.
+Status: **first schematic draft, board placed (scripted), unrouted.** Seven sheets generated from the Timekeeper's circuits and The Relic's bypass (190 parts, net-traced, drawn to the Frogmouth schematic standard, not yet opened in KiCad); board outline and 28 face/jack/bypass footprints placed from The Relic. Stereo in (TRS) and a 0.91 in OLED display added 2026-10-08; the PCB was synced to the schematic and every part placed on both sides on 2026-10-08 (scripted; one-board fit confirmed, see `docs/pcb-plan.md` *Placement*). See `docs/pcb-plan.md` and `kicad/README.md`.
 
 ## Layout
 
@@ -20,6 +20,8 @@ Status: **first schematic draft, board seeded, unplaced.** Seven sheets generate
 | `Documents/` | Controlled LaTeX documents, one folder each |
 | `bom/` | Generated BOM (`scripts/export_bom.py`, to be adapted from The Relic) |
 | `scripts/harp_schematic/` | Schematic generator and net checker (first draft only; see its README) |
+| `scripts/pcb_placement/` | PCB sync to the schematic and scripted placement (2026-10-08; see its README) |
+| `scripts/oled_drawings/` | Face cut-out and OLED-to-PCB drawings in `docs/images/` |
 
 The layout is the Frogmouth product repository standard
 (`docs/repo-structure.md` in 26-F01-0001_Frogmouth).

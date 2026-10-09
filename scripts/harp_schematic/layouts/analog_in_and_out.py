@@ -35,19 +35,30 @@ def layout(L):
     L.w(('R705', '2'), (u(56), u(31)))                                 # EFFECT_IN_BUF
     shunt(L, 'C702', u(52), u(31))
     L.gl('EFFECT_IN_BUF', (u(56), u(31)), 'right')
-    # spare half as a follower at VCOM_A
+    # right input (IN ring): 1M to ground, 100n film, 1M bias to VCOM_A, follower U701B, 49.9R / 220p
     X, Y = 38, 62
     L.at('U701', u(X), u(Y), unit=2, **opamp_text(X, Y))
-    L.gl('VCOM_A', (u(31), u(61)), 'left')
-    L.w((u(31), u(61)), ('U701', '5'))
+    L.gl('IN_R', (u(16), u(61)), 'left')
+    L.w((u(16), u(61)), (u(22), u(61)))
+    shunt(L, 'R720', u(19), u(61))
+    series(L, 'C708', u(23.5), u(61))
+    L.w(('C708', '2'), ('U701', '5'))                                  # IN_AC_R
+    L.at('R721', u(28), u(59.5), ang=180)
+    L.w(('R721', '2'), (u(28), u(56)))
+    L.gl('VCOM_A', (u(28), u(56)), 'up')
     L.w(('U701', '7'), (u(44), u(62)), (u(44), u(68)), (u(32), u(68)), (u(32), u(63)), ('U701', '6'))
+    L.w((u(44), u(62)), (u(46), u(62)))                                # IN_BUF_OUT_R
+    series(L, 'R722', u(47.5), u(62))
+    L.w(('R722', '2'), (u(56), u(62)))                                 # EFFECT_IN_BUF_R
+    shunt(L, 'C709', u(52), u(62))
+    L.gl('EFFECT_IN_BUF_R', (u(56), u(62)), 'right')
     # supply
-    L.at('U701', u(54), u(62), unit=3, ref_pos=(u(50), u(66.5), 'left'), val_pos=(u(50), u(68), 'left'))
+    L.at('U701', u(54), u(77), unit=3, ref_pos=(u(50), u(81.5), 'left'), val_pos=(u(50), u(83), 'left'))
     L.pwr('+5V', ('U701', '8', 3), 'up', length=U)
     L.gnd(('U701', '4', 3), length=U)
-    L.pwr('+5V', (u(60), u(57)), 'up')
-    L.w((u(60), u(57)), (u(60), u(59)))
-    shunt(L, 'C703', u(60), u(59))
+    L.pwr('+5V', (u(60), u(72)), 'up')
+    L.w((u(60), u(72)), (u(60), u(74)))
+    shunt(L, 'C703', u(60), u(74))
     # ================================================================ output stages
     for ch, Y, unit, pp, nn, oo, base, cap in (('L', 32, 1, '3', '2', '1', 706, 'C704'), ('R', 52, 2, '5', '6', '7', 714, 'C705')):
         X = 88

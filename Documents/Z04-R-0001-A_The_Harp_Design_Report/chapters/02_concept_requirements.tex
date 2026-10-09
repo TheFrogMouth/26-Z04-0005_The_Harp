@@ -1,7 +1,7 @@
 \chapter{Concept and Requirements}\label{ch:concept}
 
 \section{Signal Path}
-The input is mono and the output stereo. The guitar passes the relay into the input buffer and the codec's left ADC. The H750 runs the chord tracker and the string bank and mixes dry and wet. The codec's two DAC channels feed the left and right output buffers, and both outputs return through the relay. An expression pedal on a TRS jack goes through its own buffer to an MCU ADC input.
+The input is stereo or mono and the output stereo, single-ended at every jack. The IN jack is TRS, tip left and ring right. The tip passes the relay into the input buffer and the codec's left ADC; the ring goes through its own buffer to the codec's right ADC. A mono plug grounds the ring, the right channel reads silence and the firmware copies left to right. The H750 runs the chord tracker and the string bank and mixes dry and wet. The codec's two DAC channels feed the left and right output buffers, and both outputs return through the relay. An expression pedal on a TRS jack goes through its own buffer to an MCU ADC input.
 
 {\small
 \begin{verbatim}
@@ -14,7 +14,7 @@ EXP (TRS) -> buffer -> H750 ADC
 \end{verbatim}
 }
 
-The dry signal is converted too. The point of the pedal is the wet sound, and keeping the dry in the DSP puts the mix, the trails and the output level under firmware control. The codec's right ADC channel is unused; its input is parked at VCOM, which leaves it available for a later return or auxiliary input.
+The dry signal is converted too. The point of the pedal is the wet sound, and keeping the dry in the DSP puts the mix, the trails and the output level under firmware control. Both codec ADC channels are used. The AK4621EF has differential inputs only, so each channel has a THS4522 single-ended to differential driver, as on the Timekeeper.
 
 \section{Engine}
 \begin{table}[H]
@@ -53,8 +53,8 @@ The face follows The Alchemist's grid (20\,mm columns at $-20$, 0 and $+20$, row
     ($-20$, $+13$) toggle & Tuning & Follow / Key / Drone \\
     (0, $+13$) knob & Jawari & Bridge buzz \\
     ($+20$, $+13$) toggle & Brightness & Dark / Warm / Glassy loss-filter voicings \\
-    (0, $-5$) toggle & Retune & Snap / Glide / Lock \\
-    band at $-18$ & 12 note LEDs & C to B, lit for the notes the strings are tuned to \\
+    (0, $-24$) toggle & Retune & Snap / Glide / Lock \\
+    (0, $-5$) window & 0.91\,in OLED strip & Note names the strings are tuned to, chord, mode and the value of the knob last moved \\
     ($-20$, $-35$) & Effect LED & \\
     ($-20$, $-49$) & Bypass footswitch & Momentary SPST-NO soft-touch on hand-solder pads \\
     ($+20$, $-49$) & Hold footswitch & Freezes the tuning and sets infinite sustain \\
@@ -65,7 +65,7 @@ The face follows The Alchemist's grid (20\,mm columns at $-20$, 0 and $+20$, row
   \end{tabularx}
 \end{table}
 
-All four pots and the three toggles go to the MCU; none is in the audio path. Without a screen, secondary settings (key, drone set, bypass mode True or Trails, expression target Bend or Swell, spread width and others) are reached by a footswitch gesture and set with the knobs, with the note LEDs as the display.
+All four pots and the three toggles go to the MCU; none is in the audio path. Without a screen, secondary settings (key, drone set, bypass mode True or Trails, expression target Bend or Swell, spread width and others) are reached by a footswitch gesture and set with the knobs, with the OLED strip as the display.
 
 \section{Bypass Behaviour}
 There is one relay, with true bypass on OUT~L. De-energised, the relay connects OUT~L to IN and grounds the input buffer, so the pedal passes signal unpowered; \textbf{OUT~R is silent in true bypass}. In Trails mode the relay stays energised and the DSP passes the dry signal to both outputs while the strings ring out, which is the stereo player's bypass. Before every relay change the DSP fades its outputs to silence, switches, waits for the contacts to settle and fades back in. There is no mute transistor.
@@ -81,12 +81,12 @@ The firmware requirements are drafted in \texttt{docs/firmware-requirements.md} 
     \fmtophead{Group} & \fmtophead{Covers} \\
     \midrule
     PLT & Platform: H750 at 480\,MHz, internal RAM only, 128\,KB flash budget, one source tree for the Harp and Timekeeper boards, host-testable modules, no dynamic allocation \\
-    AUD & Audio path: AK4621EF over SAI1 at 44.1\,kHz / 24-bit, mono in, dry at unity, latency target 3\,ms, wet limiter, no clicks \\
+    AUD & Audio path: AK4621EF over SAI1 at 44.1\,kHz / 24-bit, stereo in (mono plug copied), dry at unity, latency target 3\,ms, wet limiter, no clicks \\
     FE, STR, JAW & Front end, string bank (24 strings, C2 to C6, $\pm$2 cents), Jawari \\
     CHD, TUN & Chord tracker (chord set, 400\,ms commit, 90\,\% accuracy target on clean DI) and tuning manager (three modes, Snap / Glide / Lock, Hold) \\
     OUT & Stereo spread, mix law, bypass-matched level \\
     POT, TGL, FSW, EXP, SEC & Controls, footswitches, expression and the secondary layer \\
-    DSP & Note LEDs and effect LED \\
+    DSP & OLED strip and effect LED \\
     BYP & True and Trails bypass, the fade--switch--fade sequence, power-up state \\
     PER, SYS & Settings in QSPI flash, start-up, watchdog and fault handling \\
     PRF, ARC, VER & CPU, RAM and flash budgets, code structure and reuse, host tests and bench verification \\

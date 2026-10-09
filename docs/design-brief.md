@@ -28,7 +28,7 @@ The Harp is a cut-down Timekeeper on the Alchemist/Relic 125B hardware set:
   about 60 pins of MCU.
 - **STM32H750VBT6, LQFP-100** instead of the Timekeeper's LQFP-144. Same
   core, same firmware, new pin map.
-- **No TFT.** Twelve note LEDs replace the screen.
+- **No TFT.** A thin 0.91 in 128×32 I²C OLED strip replaces the screen (decision 14, 2026-10-08).
 - **Pots, not encoders.** Encoders only make sense with a screen that shows
   the value; the Timekeeper has one, this does not. Pots also keep the
   Relic's parts and feel. The H750 reads the four of them on ADC1 PA0,
@@ -40,14 +40,20 @@ The Harp is a cut-down Timekeeper on the Alchemist/Relic 125B hardware set:
 ## Signal path
 
 ```
-IN -> relay -> input buffer -> ADC (codec L) -> H750: chord tracker
+IN tip -> relay -> input buffer -> ADC (codec L) -> H750: chord tracker
                                                        string bank x24  -> DAC L -> out buffer -> relay -> OUT L
                                                        dry + wet mix    -> DAC R -> out buffer -> relay -> OUT R
+IN ring -> input buffer -> ADC (codec R) -> H750 (mono plug: copy L)
 EXP (TRS) -> buffer -> H750 ADC
 ```
 
-Mono in, stereo out. The codec's second ADC channel is unused (left for a
-later return or aux input). The dry signal goes through the codec: the
+Stereo in, stereo out, single-ended at every jack. IN is one TRS jack,
+tip = left, ring = right; both channels are buffered (OPA2365 halves) and
+driven into the AK4621EF's differential inputs by the two channels of the
+THS4522, exactly as the Timekeeper does. A mono plug shorts the ring to the
+sleeve, so the right channel reads silence; the firmware copies left to
+right until the right channel carries signal. The relay isolates the left
+input only, the right is muted by the DSP in true bypass. The dry signal goes through the codec: the
 pedal's whole point is the wet sound, and converting the dry keeps the mix,
 trails and output level in firmware. Latency is one block (about 6 ms at
 44.1 kHz / 256 samples, as the Timekeeper).
@@ -72,7 +78,7 @@ measured**.
 
 125B face laid out as The Alchemist's: 20 mm columns −20 / 0 / +20, rows
 +38 and +13 (the same 20 × 25 mm pitch as The Gremlin and the Timekeeper),
-plus one toggle at (0, −5); 12.5 mm knobs. Nothing through-hole sits over
+plus one toggle at (0, −24) (moved from (0, −5) on 2026-10-09 to make room for the OLED); 12.5 mm knobs. Nothing through-hole sits over
 the upper jacks (`pcb-plan.md`). The toggles are The Alchemist's Taiway
 100-DP6 ON-ON-ON, so each one stages the effect in three steps.
 
@@ -84,8 +90,8 @@ the upper jacks (`pcb-plan.md`). The toggles are The Alchemist's Taiway
 | (−20, +13) toggle | Tuning | Follow / Key / Drone (key and drone set in the secondary layer) |
 | (0, +13) knob | Jawari | Bridge buzz |
 | (+20, +13) toggle | Brightness | Dark / Warm / Glassy loss-filter voicings |
-| (0, −5) toggle | Retune | Snap / Glide / Lock |
-| band at −18 | 12 note LEDs | C to B, lit for the notes the strings are tuned to |
+| (0, −24) toggle | Retune | Snap / Glide / Lock |
+| window at (0, −5) | 0.91 in OLED strip | Note names the strings are tuned to, chord, mode and the value of the knob last moved; behind a window in the face |
 | (−20, −35) | Effect LED | |
 | (−20, −49) | Bypass footswitch | Momentary SPST-NO soft-touch, wired to hand-solder pads |
 | (+20, −49) | Hold footswitch | Freezes the tuning and sets infinite sustain while held or latched |
@@ -96,7 +102,7 @@ the upper jacks (`pcb-plan.md`). The toggles are The Alchemist's Taiway
 All four pots and the three toggles go to the MCU; none is in the audio
 path. There is no screen, so secondary settings (key, drone set, bypass
 mode True / Trails, expression target Bend / Swell, latch behaviour) are
-set by a footswitch gesture and a knob, with the note LEDs as the display.
+set by a footswitch gesture and a knob, with the OLED strip as the display.
 
 ## Bypass
 
@@ -119,7 +125,7 @@ double and the rest is the same:
 | Group | EUR |
 |---|---:|
 | H750, codec, flash, buck, LDO, op-amps, passives | 22.00 |
-| 4 pots, 3 ON-ON-ON toggles, 2 momentary footswitches, 4 knobs, 13 LEDs + 12 light pipes | 19.00 |
+| 4 pots, 3 ON-ON-ON toggles, 2 momentary footswitches, 4 knobs, 2 LEDs + 0.91 in OLED module (replaces 12 LEDs and 12 light pipes; price to confirm) | 19.00 |
 | 5 jacks, relay, footswitch pads | 7.00 |
 | 125B, Tayda drilled and UV printed | 9.20 |
 | PCB (4-layer), SMT assembly, freight, packaging allocation | 9.00 |
@@ -137,7 +143,7 @@ labour. Nothing carted.
    placement in `pcb-plan.md` does not fit; the fallback is a two-board
    stack with the face board keeping the jacks (see that document).
 3. **Pots, not encoders.**
-4. **Twelve top-side SMD LEDs with 3 mm light pipes** for the note display.
+4. **Twelve top-side SMD LEDs with 3 mm light pipes** for the note display. *Superseded by decision 14.*
    They sit over the jack bodies, where through-hole parts are not allowed.
 5. **STM32H750VBT6 (LQFP-100), no SDRAM.** Everything else in the digital
    and audio chain is the Timekeeper's.
@@ -147,7 +153,7 @@ labour. Nothing carted.
    subset it needs (table in `pcb-plan.md`).
 8. **QUADSPI on bank 2** (PB2, PC11, PE7–PE10), so SAI1 keeps the
    Timekeeper's PE2–PE6 and the audio firmware ports unchanged.
-9. **Mono in, stereo out** in hardware: one input buffer and one ADC driver
+9. **Mono in, stereo out** in hardware: one input buffer and one ADC driver *(superseded by decision 15: stereo in)*
    channel; the codec's right ADC input is parked at VCOM.
 10. **Input op-amp OPA2365 on the 5 V rail** (zero-crossover rail-to-rail
     input), replacing the Timekeeper's OPA1656, whose input stops 2.25 V
@@ -186,14 +192,18 @@ labour. Nothing carted.
   or drone set, spread, bypass mode, expression target and range, Hold
   latching, Brightness trim, chord commit time, output trim). Pick a second
   page or drop some, on the prototype.
-- [CONFIRM] items on the schematic: QUADSPI bank 2 alternate functions,
-  AK4621 unused right input, THS4522 unused channel.
+- [CONFIRM] items on the schematic: QUADSPI bank 2 alternate functions
+  (the AK4621's right input and the THS4522's second channel are now used,
+  so those two items are closed).
+- OLED: choose the module (36–38 × 12–12.5 mm envelope, I²C, 3.3 V) and
+  measure it; the 24.4 × 7.6 mm window and the face-mounted carrier follow
+  from it (`pcb-plan.md`, *OLED mounting*). I²C address and refresh budget
+  in firmware.
 
 - Chord tracker quality on distorted or fast playing. Key and Drone modes do
   not depend on it, so the pedal works even if Follow is weak.
-- Whether 12 LEDs are enough display, or a small I2C OLED in the same band is
-  worth the window cut. Decide after the first firmware prototype on the
-  Timekeeper hardware.
+- Display: decided on 2026-10-08, a 0.91 in I²C OLED strip behind a
+  Tayda rectangular cut (above).
 - The Alchemist's side-wall and top-wall hole heights are still to be fixed
   from the NMJ6HCD2 and PJ-063AH drawings and the board depth; The Harp
   inherits whatever is measured.
@@ -207,4 +217,30 @@ labour. Nothing carted.
   Mitigation: The Relic's four-layer stack with one unbroken ground plane,
   zoning in `pcb-plan.md`, buck converter at the DC end away from the input.
 - AK4621EF lifecycle (already flagged in the Timekeeper's BOM audit).
-- Light pipes add a hand-assembly step and a part to source.
+- One-board fit (Plan A): every part fits after the 2026-10-08 placement, with 37 non-critical parts on the bottom side (`pcb-plan.md`, *Placement*). Those need double-sided assembly or hand fitting.
+
+## Decisions taken on 2026-10-08
+
+14. **A 0.91 in 128×32 I²C OLED strip replaces the twelve note LEDs and
+    their light pipes** (J408, PB6 SCL / PB7 SDA, 4.7 kΩ pull-ups). PD0–PD11
+    are freed. Supersedes decision 4. The module is held by a 3D-printed
+    carrier bonded under the face, behind a 24.4 × 7.6 mm Tayda rectangular
+    cut centred at (0, −5) (decision 16), and wired to J408 by a 4-wire lead
+    (`pcb-plan.md`, *OLED mounting*).
+15. **Stereo in, single-ended at the jacks, stereo out.** IN is a TRS jack
+    (tip left, ring right); the right channel gets its own OPA2365 half and
+    the second THS4522 channel into AINR, so the AK4621's inputs are never
+    parked. The AK4621EF has no single-ended mode (its inputs are fully
+    differential); the Timekeeper's single-ended-to-differential THS4522
+    driver does that job. A mono plug is detected by the right channel
+    reading silence. Supersedes decision 9.
+
+## Decisions taken on 2026-10-09
+
+16. **OLED in the middle of the face, Retune toggle below it (option 1).**
+    The OLED window moves from (0, −20) to (0, −5), centred under the Jawari
+    knob and away from the footswitches; the Retune toggle moves from
+    (0, −5) to (0, −24). On the board the H750 moves up under the screen to
+    (0, −7) and the codec sits beside it (`pcb-plan.md`, *Placement*). The
+    module is mounted turned round (pads at its right end); the firmware
+    flips the image.

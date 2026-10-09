@@ -55,7 +55,7 @@ field-update path, and an OLED display (open item in the brief).
 | ID | Requirement | Ver. | Pri. |
 |---|---|---|---|
 | AUD-1 | AK4621EF over SAI1, 44.1 kHz, 24-bit, codec configured over I2C1, using the Timekeeper's driver. | B | 1 |
-| AUD-2 | Input is codec ADC L (mono). ADC R is ignored and its data discarded; the DAC drives OUT L and OUT R. | B | 1 |
+| AUD-2 | Input is the codec's two ADC channels (L from the IN tip, R from the IN ring). If R carries no signal (mono plug: ring grounded) for ≥ 2 s *(TBC)*, L is copied to R; otherwise L and R are processed as a stereo pair. The DAC drives OUT L and OUT R. | B | 1 |
 | AUD-3 | Processing runs in the SAI DMA half/complete callbacks on blocks of the Timekeeper's size (64 frames, `AUDIO_BUFFER_SIZE` 256 half-words). | I | 1 |
 | AUD-4 | Dry path: the dry signal shall pass the DSP at unity gain (±0.1 dB) with no processing other than the mix, the bypass fades and the output limiter. The front end (hum filter, gate) applies to the string feed only, not to the dry. | T, B | 1 |
 | AUD-5 | Input-to-output latency of the dry path shall be ≤ 3 ms, measured jack to jack *(TBC on the bench; 64-frame blocks with double buffering plus the codec filters should give about 2.5 ms)*. | B | 1 |
@@ -185,29 +185,31 @@ Two momentary SPST-NO switches: Bypass (J105, face −20, −49) and Hold
 ### 6.5 Secondary layer
 
 There is no screen. Secondary settings are reached by a footswitch gesture
-and set with the knobs, with the note LEDs as the display.
+and set with the knobs, with the OLED strip as the display.
 
 | ID | Requirement | Ver. | Pri. |
 |---|---|---|---|
 | SEC-1 | In the secondary layer the knobs set: Mix → key / drone set (the meaning follows the Tuning toggle), Sustain → spread width, Strings → bypass mode (counter-clockwise half True, clockwise half Trails), Jawari → expression target and range (counter-clockwise half Swell, clockwise half Bend with the range growing to the end) *(all TBC; Hold latching, Brightness trim, chord commit time and output trim need a second page or a default, see open item 3)*. The toggles keep their primary job in the layer. | T | 1 |
 | SEC-2 | Entering and leaving the layer never changes a primary parameter: on return each pot is ignored until it is moved past the stored value (pick-up), and the effect LED shows a pot that has not been picked up. | T | 1 |
 | SEC-3 | The layer is left by the same gesture or after 10 s with no knob moved. Values are saved on leaving (PER-1). | T | 1 |
-| SEC-4 | The note LEDs show the value of the knob last moved (DSP-3). | T | 1 |
+| SEC-4 | The OLED shows the value of the knob last moved (DSP-3). | T | 1 |
 | SEC-5 | Audio keeps running while in the layer. | T | 1 |
 
-## 7. Note display
+## 7. Display
 
-Twelve note LEDs D101–D112, C to B left to right, on direct GPIO through
-1 kΩ; the effect LED D113 on a PWM pin.
+A 0.91 in 128×32 SSD1306 OLED on I2C1 (PB6 SCL, PB7 SDA, J408) shows the
+state; the effect LED D113 is on a PWM pin. The module is mounted turned
+round (pads at its right end), so the driver sets the SSD1306 segment and
+COM remap to flip the image 180° (design brief, decision 16).
 
 | ID | Requirement | Ver. | Pri. |
 |---|---|---|---|
-| DSP-1 | Normal running: a note LED is lit for every pitch class the active strings are tuned to. The root is brighter than the others (two levels by software PWM ≥ 1 kHz, or blink, if a dim level shows flicker through the light pipe). | T, B | 1 |
-| DSP-2 | A chord change shows on the LEDs at the moment it is committed (CHD-3); in Snap mode, LEDs show the target tuning, not the strings still waiting to retune. | T | 1 |
-| DSP-3 | Secondary layer: a stepped value shows as one lit LED (key root, set index 1–12), a continuous value as a bar of LEDs from C. | T | 1 |
+| DSP-1 | Normal running: the OLED shows the pitch classes the active strings are tuned to as note names, the root highlighted, plus mode and chord. | T, B | 1 |
+| DSP-2 | A chord change shows on the OLED at the moment it is committed (CHD-3); in Snap mode, the OLED shows the target tuning, not the strings still waiting to retune. | T | 1 |
+| DSP-3 | Secondary layer: a stepped value shows as its name (key root, set index), a continuous value as a bar. | T | 1 |
 | DSP-4 | Effect LED: on when the effect is engaged; breathing slowly while Hold is active; off in bypass. In Trails bypass it fades out with the strings *(TBC)*. | T | 1 |
-| DSP-5 | LED switching shall not be audible at the outputs. LED edges are not synchronised to anything in the audio band; any software PWM runs above 20 kHz or below 2 Hz *(TBC: to be checked on the bench, since the LEDs sit over the jack bodies)*. | B | 1 |
-| DSP-6 | Faults and test mode use LED patterns listed in the firmware README, distinct from any normal display. | I | 2 |
+| DSP-5 | Display and LED activity shall not be audible at the outputs. OLED refresh and I2C traffic are not synchronised to anything in the audio band, and any software PWM runs above 20 kHz or below 2 Hz *(TBC: to be checked on the bench, since the display sits over the jack bodies)*. | B | 1 |
+| DSP-6 | Faults and test mode use OLED messages listed in the firmware README, distinct from any normal display. | I | 2 |
 
 ## 8. Bypass and relay
 
@@ -241,10 +243,10 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
 |---|---|---|---|
 | SYS-1 | Power to audio within 500 ms *(TBC)*: clocks, codec reset and init, settings load, audio start, fade-in. Outputs silent until the codec is running. | B | 1 |
 | SYS-2 | Independent watchdog as the Timekeeper's (IWDG1 from the LSI, crash record kept across reset). A watchdog reset drops the relay (true bypass, signal still on OUT L) and restarts. | B | 1 |
-| SYS-3 | Codec, I2C or SAI failure at start-up: relay stays off (OUT L passes the guitar), fault pattern on the note LEDs, retry once. | B | 1 |
+| SYS-3 | Codec, I2C or SAI failure at start-up: relay stays off (OUT L passes the guitar), fault message on the OLED, retry once. | B | 1 |
 | SYS-4 | Audio-callback overrun (block not finished in time) is counted, never crashes, and is visible over SWD/SWO. | I, B | 1 |
 | SYS-5 | Brown-out reset enabled at a level that keeps the QSPI write valid. | I | 1 |
-| SYS-6 | Firmware version (major.minor.patch and git hash) in the image, readable over SWD and shown on the note LEDs by a gesture *(TBC)*. | I | 2 |
+| SYS-6 | Firmware version (major.minor.patch and git hash) in the image, readable over SWD and shown on the OLED by a gesture *(TBC)*. | I | 2 |
 
 ## 11. Performance budgets
 
@@ -264,7 +266,7 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
 | ARC-2 | Reused from the Timekeeper: the `audio_fx_t` chain and ISR parameter hand-off, `controls.c`, the hum filter, the noise gate, the STFT from `fx_spectral.c`, the QSPI preset storage, the AK4621EF driver, the IWDG and crash record, the DWT budget timing. How they are shared (copy with a recorded source commit, or a shared library) is open item 7. | I | 1 |
 | ARC-3 | Not carried over: SDRAM, FMC, TFT and LVGL, USB, MIDI, encoders, the knob board link, the mod matrix and the other effects. | I | 1 |
 | ARC-4 | Parameter changes from the main loop reach the ISR by the Timekeeper's staging pattern (stage, adopt at block boundary); no locks in the audio path. | I | 1 |
-| ARC-5 | `BOARD_TIMEKEEPER` build: the note LEDs are drawn on the Timekeeper's TFT, the four pots on four of its control channels and the three toggles in the UI simulator *(TBC)*, Hold and Bypass on its existing switches. | B | 1 |
+| ARC-5 | `BOARD_TIMEKEEPER` build: the OLED content is drawn on the Timekeeper's TFT, the four pots on four of its control channels and the three toggles in the UI simulator *(TBC)*, Hold and Bypass on its existing switches. | B | 1 |
 
 ## 13. Verification
 
@@ -284,7 +286,7 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
    the *(TBC)* ranges in sections 5 and 6.
 2. Chord tracker and Follow mode, offline first against the reference
    recordings (VER-3, VER-4), then on the board.
-3. Controls, secondary layer and the TFT stand-in for the note LEDs.
+3. Controls, secondary layer and the TFT stand-in for the OLED.
 4. Port to `BOARD_HARP` when the schematic pin map exists: LEDs on GPIO,
    relay sequence, toggles, settings in QSPI, start-up and fault handling.
 5. Production test mode and the bench measurements (sections 4, 8, 11).
@@ -315,14 +317,14 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
    avoids two copies of the same fixes.
 8. **Expression detection without a switch** (EXP-5) depends on the
    Timekeeper buffer circuit carried into sheet 6.
-9. **Display.** Whether 12 LEDs are enough (brief open item) is judged
+9. **Display.** The 0.91 in OLED content (note names, chord, values) is judged
    after step 3 of section 14, using the TFT stand-in.
 
 ## 16. Trace to the brief
 
 | Brief item | Requirements |
 |---|---|
-| Signal path, mono in / stereo out, dry through the codec | AUD-1 – AUD-5, OUT-1 – OUT-5 |
+| Signal path, stereo in (mono plug copied) / stereo out, dry through the codec | AUD-1 – AUD-5, OUT-1 – OUT-5 |
 | String bank, 24 strings, no envelope trigger | STR-1 – STR-8 |
 | Jawari | JAW-1 – JAW-3 |
 | Chord tracker, ~400 ms commit, hysteresis | CHD-1 – CHD-7 |
@@ -332,7 +334,7 @@ grounded, OUT R silent. Energised: signal goes through the DSP.
 | Framework: chain, presets in QSPI, smoothing, expression, UI simulator | ARC-2, ARC-4, PER-1 – PER-5, POT-3, EXP-1 – EXP-5, ARC-5 |
 | Controls and face | POT-1 – POT-4, TGL-1 – TGL-3, FSW-1 – FSW-5 |
 | Secondary settings by footswitch + knob | SEC-1 – SEC-5 |
-| 12 note LEDs, effect LED | DSP-1 – DSP-6 |
+| OLED strip, effect LED | DSP-1 – DSP-6 |
 | Relay true bypass, Trails, fades, no mute transistor | BYP-1 – BYP-7 |
 | No SDRAM, H750VBT6 | PLT-1 – PLT-3, STR-2 |
 | CPU "not yet measured" | PRF-1, PRF-2 |

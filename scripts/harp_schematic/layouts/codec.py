@@ -42,20 +42,16 @@ def layout(L):
     for pin, net in (('19', 'CODEC_CSN'), ('18', 'CODEC_CCLK'), ('17', 'CODEC_CDTI')):
         L.gl(net, ('IC501', pin), 'right', length=8 * U)
     L.nc('IC501', '16')
-    # ---- analogue inputs: AINR parked at VCOM through 1k, AINL from the ADC driver
-    L.w(('IC501', '2'), (u(76), u(38.5)))
-    series(L, 'R502', u(77.5), u(38.5), flip=True, ref_pos=(u(77.5), u(36.4), 'center'), val_pos=(u(77.5), u(37.5), 'center'))
-    L.w(('R502', '1'), (u(92), u(38.5)), (u(92), u(48)))
-    L.w(('IC501', '3'), (u(87), u(39.5)))
-    series(L, 'R503', u(88.5), u(39.5), flip=True, ref_pos=(u(88.5), u(40.6), 'center'), val_pos=(u(88.5), u(41.7), 'center'))
-    L.w(('R503', '1'), (u(92), u(39.5)))
-    L.gl('ADC_P', ('IC501', '4'), 'right', length=8 * U)
-    L.gl('ADC_N', ('IC501', '5'), 'right', length=8 * U)
+    # ---- analogue inputs: AINL and AINR from the ADC driver channels
+    L.gl('ADC_R_P', ('IC501', '2'), 'right', length=8 * U)
+    L.gl('ADC_R_N', ('IC501', '3'), 'right', length=8 * U)
+    L.gl('ADC_L_P', ('IC501', '4'), 'right', length=8 * U)
+    L.gl('ADC_L_N', ('IC501', '5'), 'right', length=8 * U)
     # ---- ground and VCOM
     L.w(('IC501', '7'), (u(62), u(46)), (u(58), u(46)), (u(58), u(49)))
     L.w(('IC501', '26'), (u(64), u(46)), (u(62), u(46)))
     L.gnd((u(58), u(49)))
-    L.w(('IC501', '1'), (u(67), u(48)), (u(92), u(48)))                        # VCOM bus
+    L.w(('IC501', '1'), (u(67), u(48)), (u(77), u(48)))                        # VCOM bus
     shunt(L, 'C502', u(69), u(48))
     shunt(L, 'C503', u(73), u(48))
     # ---- VCOM buffers: U501A -> VCOM_A, U501B -> VCOM_B
