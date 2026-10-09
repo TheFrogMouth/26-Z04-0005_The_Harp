@@ -198,7 +198,9 @@ and set with the knobs, with the OLED strip as the display.
 ## 7. Display
 
 A 0.91 in 128×32 SSD1306 OLED on I2C1 (PB6 SCL, PB7 SDA, J408) shows the
-state; the effect LED D113 is on a PWM pin.
+state; the effect LED D113 is on a PWM pin. The module is mounted turned
+round (pads at its right end), so the driver sets the SSD1306 segment and
+COM remap to flip the image 180° (design brief, decision 16).
 
 | ID | Requirement | Ver. | Pri. |
 |---|---|---|---|

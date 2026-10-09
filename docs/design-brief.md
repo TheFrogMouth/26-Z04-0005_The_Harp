@@ -78,7 +78,7 @@ measured**.
 
 125B face laid out as The Alchemist's: 20 mm columns −20 / 0 / +20, rows
 +38 and +13 (the same 20 × 25 mm pitch as The Gremlin and the Timekeeper),
-plus one toggle at (0, −5); 12.5 mm knobs. Nothing through-hole sits over
+plus one toggle at (0, −24) (moved from (0, −5) on 2026-10-09 to make room for the OLED); 12.5 mm knobs. Nothing through-hole sits over
 the upper jacks (`pcb-plan.md`). The toggles are The Alchemist's Taiway
 100-DP6 ON-ON-ON, so each one stages the effect in three steps.
 
@@ -90,8 +90,8 @@ the upper jacks (`pcb-plan.md`). The toggles are The Alchemist's Taiway
 | (−20, +13) toggle | Tuning | Follow / Key / Drone (key and drone set in the secondary layer) |
 | (0, +13) knob | Jawari | Bridge buzz |
 | (+20, +13) toggle | Brightness | Dark / Warm / Glassy loss-filter voicings |
-| (0, −5) toggle | Retune | Snap / Glide / Lock |
-| window at (0, −20) | 0.91 in OLED strip | Note names the strings are tuned to, chord, mode and the value of the knob last moved; behind a window in the face |
+| (0, −24) toggle | Retune | Snap / Glide / Lock |
+| window at (0, −5) | 0.91 in OLED strip | Note names the strings are tuned to, chord, mode and the value of the knob last moved; behind a window in the face |
 | (−20, −35) | Effect LED | |
 | (−20, −49) | Bypass footswitch | Momentary SPST-NO soft-touch, wired to hand-solder pads |
 | (+20, −49) | Hold footswitch | Freezes the tuning and sets infinite sustain while held or latched |
@@ -225,7 +225,7 @@ labour. Nothing carted.
     their light pipes** (J408, PB6 SCL / PB7 SDA, 4.7 kΩ pull-ups). PD0–PD11
     are freed. Supersedes decision 4. The module is held by a 3D-printed
     carrier bonded under the face, behind a 24.4 × 7.6 mm Tayda rectangular
-    cut centred at (0, −20), and wired to J408 by a 4-wire lead
+    cut centred at (0, −5) (decision 16), and wired to J408 by a 4-wire lead
     (`pcb-plan.md`, *OLED mounting*).
 15. **Stereo in, single-ended at the jacks, stereo out.** IN is a TRS jack
     (tip left, ring right); the right channel gets its own OPA2365 half and
@@ -234,3 +234,13 @@ labour. Nothing carted.
     differential); the Timekeeper's single-ended-to-differential THS4522
     driver does that job. A mono plug is detected by the right channel
     reading silence. Supersedes decision 9.
+
+## Decisions taken on 2026-10-09
+
+16. **OLED in the middle of the face, Retune toggle below it (option 1).**
+    The OLED window moves from (0, −20) to (0, −5), centred under the Jawari
+    knob and away from the footswitches; the Retune toggle moves from
+    (0, −5) to (0, −24). On the board the H750 moves up under the screen to
+    (0, −7) and the codec sits beside it (`pcb-plan.md`, *Placement*). The
+    module is mounted turned round (pads at its right end); the firmware
+    flips the image.

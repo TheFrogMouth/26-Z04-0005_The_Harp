@@ -3,13 +3,13 @@ import os, sys, json, subprocess
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, 'build'); os.makedirs(OUT, exist_ok=True)
 sys.path.insert(0, HERE)
-from place import bbox, L, padpos, SIDE
+from place import bbox, L, padpos, SIDE, MODULE
 pos = json.load(open(os.path.join(OUT, 'pos.json')))
 groups = json.load(open(os.path.join(OUT, 'groups.json')))
 OUTP = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(OUT, 'place')
 COL = {'buck': '#cf222e', 'ldo': '#fa4549', 'codec': '#8250df', 'adc': '#a475f9', 'mcu': '#0969da', 'in': '#1a7f37',
-       'out': '#2da44e', 'relay': '#d4a72c', 'leds': '#bf8700', 'exp': '#9a6700', 'pads': '#57606a', 'pots': '#6e7781', 'fixed': '#8c959f'}
-LEG = [('fixed', 'Face parts, jacks, U201'), ('mcu', 'MCU periphery, flash, OLED'), ('codec', 'Codec, VCOM buffers'),
+       'out': '#2da44e', 'relay': '#d4a72c', 'leds': '#bf8700', 'exp': '#9a6700', 'pads': '#57606a', 'pots': '#6e7781', 'vcom': '#c297ff', 'fixed': '#8c959f'}
+LEG = [('fixed', 'Face parts, jacks, U201'), ('mcu', 'MCU periphery, flash, OLED'), ('codec', 'Codec and its decoupling'), ('vcom', 'VCOM buffers, bulk caps'),
        ('adc', 'ADC driver (L + R)'), ('in', 'Input buffers, input ESD'), ('out', 'Output stages, output ESD'),
        ('relay', 'Relay bypass'), ('leds', 'LED and footswitch drivers'), ('exp', 'Expression buffer'),
        ('pads', 'SWD and footswitch pads'), ('pots', 'Pot RC filters'), ('buck', 'Buck 3V3'), ('ldo', 'LDO 5V')]
@@ -20,7 +20,7 @@ def panel(ox, oy, side, title):
     x, y = P(-28, 52); o.append(f"<rect x='{x}' y='{y}' width='{56*S}' height='{90*S}' rx='{2*S}' fill='#f6fff8' stroke='#1a7f37' stroke-width='2'/>")
     x, y = P(-9, 56.5); o.append(f"<rect x='{x}' y='{y}' width='{18*S}' height='{4.5*S}' fill='#f6fff8' stroke='#1a7f37' stroke-width='2'/>")
     if side == 'F':
-        x, y = P(-19, -13.75); o.append(f"<rect x='{x}' y='{y}' width='{38*S}' height='{12.5*S}' fill='none' stroke='#0969da' stroke-dasharray='6 4' stroke-width='1.5'/>")
+        x, y = P(MODULE[0], MODULE[3]); o.append(f"<rect x='{x}' y='{y}' width='{(MODULE[1]-MODULE[0])*S}' height='{(MODULE[3]-MODULE[2])*S}' fill='none' stroke='#0969da' stroke-dasharray='6 4' stroke-width='1.5'/>")
     for r, v in pos.items():
         fx, fy, a, sd = v
         if sd != side:
@@ -38,7 +38,7 @@ def panel(ox, oy, side, title):
     return o
 W, H = 1240, 1060
 out = [f"<svg xmlns='http://www.w3.org/2000/svg' width='{W}' height='{H}'><rect width='100%' height='100%' fill='white'/>",
-       "<text x='24' y='34' font-family='Helvetica' font-size='20' font-weight='bold'>The Harp - placement, top and bottom, 2026-10-08</text>",
+       "<text x='24' y='34' font-family='Helvetica' font-size='20' font-weight='bold'>The Harp - placement, top and bottom, 2026-10-09</text>",
        "<text x='24' y='56' font-family='Helvetica' font-size='12' fill='#57606a'>Both sides seen from the top (face coordinates). Red circles: through-holes from the other side. Dashed blue: OLED module.</text>"]
 out += panel(260, 600, 'F', 'Top side')
 out += panel(760, 600, 'B', 'Bottom side (seen through the board)')

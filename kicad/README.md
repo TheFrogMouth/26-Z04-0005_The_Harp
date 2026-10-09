@@ -35,7 +35,7 @@ driver, the effect-LED driver and the bypass footswitch pads. The four
 1/4 in jacks and the relay were replaced on 2026-10-05 with The Alchemist's
 NMJ6HCD2 and G6K-2F-Y footprints at its positions. On 2026-10-06 the face
 moved to The Alchemist's layout: RV104 and RV106 removed, the three toggles
-on the Taiway 100-DP6 footprint at (−20, +13), (0, −5) and (+20, +13), the
+on the Taiway 100-DP6 footprint at (−20, +13), (0, −5) and (+20, +13) (Retune moved to (0, −24) on 2026-10-09), the
 bypass footswitch on hand-solder pads, and R405 / D402 moved off J403's
 rear pads. The Relic's
 regulator parts (C401–C407, D401, R401–R403, U401, U402) were removed. On

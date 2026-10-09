@@ -21,7 +21,7 @@ for sd in 'FB':
     h = sorted({(r, q) for r, a in P for q, b in holes[sd] if r != q and ov(a, b)})
     e = [r for r, c in P if not place.in_board(c) and r not in ('J401', 'J402', 'J403', 'J404', 'J406')]
     print(sd, 'parts', len(P), '| overlaps', o, '| over holes', h, '| outside', e)
-MOD = (-19, 19, -26.25, -13.75)
+MOD = place.MODULE
 print('tall under OLED:', [r for r, c in side_parts['F'] if r in ('K401', 'C502', 'C508') and ov(c, MOD)])
 # flip convention: pads read from the file vs the placer's model
 pos = json.load(open(os.path.join(HERE, 'build', 'pos.json')))

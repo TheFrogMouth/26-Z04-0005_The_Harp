@@ -26,7 +26,8 @@ def local(b):
             cy += [(p['lx'] - p['w'] / 2 - .5, p['ly'] - p['h'] / 2 - .5), (p['lx'] + p['w'] / 2 + .5, p['ly'] + p['h'] / 2 + .5)]
         cy += [(-3.9, -4.6), (3.9, 4.6)]
     layer = re.search(r'\n\t\t\(layer "([^"]+)"\)', b).group(1)
-    return dict(X=X, Y=Y, A=A, cy=cy, pads=pads, layer=layer)
+    fp = re.search(r'\(footprint "([^"]+)"', b).group(1)
+    return dict(X=X, Y=Y, A=A, cy=cy, pads=pads, layer=layer, fp=fp)
 
 L = {r: local(f['b']) for r, f in F.items()}
 SIDE = {}          # ref -> 'F' or 'B' for parts the placer puts on a side other than their file layer
@@ -56,10 +57,11 @@ pos = {}
 for r in FIXED:
     pos[r] = face_of(r)
 pos['D114'] = (18.73, -35.0, 0.0)          # mirror of D113 (LED centre at pad 1 + 1.27)
-pos['U201'] = (0.0, -21.5, 0.0)            # the only 17.5 mm square on the board: between the lower jack pins, under SW102
+pos['U201'] = (0.0, -7.0, 0.0)             # under the OLED (option 1, 2026-10-09): the centre is free once Retune moves down
+pos['SW102'] = (2.415, -28.7, 0.0)         # Retune toggle bat at face (0, -24) (footprint origin = bat + (2.415, -4.7))
 FIXED += ['D114', 'U201']
 TALL = {'K401', 'C502', 'C508'}            # taller than ~4 mm: kept out from under the OLED module
-MODULE = (-19.0, 19.0, -26.25, -13.75)
+MODULE = (-19.0, 19.0, -11.25, 1.25)      # OLED module outline, window centred at (0, -5)
 
 occ = []      # top side: (x0, x1, y0, y1, owner)
 occb = []     # bottom side
@@ -102,23 +104,45 @@ def holes_free(ref, x, y, a, side):
                 return False
     return True
 
-def find_spot(ref, tx, ty, rots=(0, 90), rmax=45, step=0.25, side='F'):
-    best = None
+GRID = 0.5
+PREF = {}          # (group, footprint) -> preferred rotation, so like parts in a group share an orientation
+GROUP_OF = {}      # ref -> group name, set by the run script
+
+def find_spot(ref, tx, ty, rots=(0, 90), rmax=45, step=GRID, side='F'):
+    """Nearest free spot on the grid to (tx, ty); among spots within 1.5 mm of the nearest, prefer ones that line up
+    with parts of the same group (same X or Y centre) and the group's usual rotation for this footprint."""
+    tx, ty = round(tx / step) * step, round(ty / step) * step
+    grp = GROUP_OF.get(ref)
+    mates = [(pos[r][0], pos[r][1]) for r in pos if GROUP_OF.get(r) == grp and r != ref] if grp else []
+    pref = PREF.get((grp, L[ref]['fp'] if 'fp' in L[ref] else None))
+    found, r0 = [], None
     n = int(rmax / step)
     for k in range(n):
         r = k * step
-        cands = []
+        if r0 is not None and r > r0 + 2.5:
+            break
         m = max(1, int(2 * math.pi * r / step))
+        seen = set()
         for i in range(m):
             th = 2 * math.pi * i / m
-            cands.append((tx + r * math.cos(th), ty + r * math.sin(th)))
-        for x, y in cands:
-            x = round(x / step) * step; y = round(y / step) * step
+            x = round((tx + r * math.cos(th)) / step) * step; y = round((ty + r * math.sin(th)) / step) * step
+            if (x, y) in seen: continue
+            seen.add((x, y))
             for a in rots:
                 b = bbox(ref, x, y, a, side)
                 if in_board(b) and free(b, side=side) and holes_free(ref, x, y, a, side):
-                    return x, y, a, b
-    return None
+                    if r0 is None: r0 = r
+                    d = math.hypot(x - tx, y - ty)
+                    al = any(abs(x - mx) < 1e-6 or abs(y - my) < 1e-6 for mx, my in mates)
+                    score = d + (0 if al or not mates else 2.0) + (0 if pref is None or a % 180 == pref % 180 else 1.0)
+                    found.append((score, x, y, a, b))
+    if not found:
+        return None
+    found.sort(key=lambda f: f[0])
+    _, x, y, a, b = found[0]
+    if grp is not None:
+        PREF.setdefault((grp, L[ref].get('fp')), a)
+    return x, y, a, b
 
 POWER = {'GND', '+3V3', '+5V', '+9V', 'VDDA'}
 def place(ref, tx, ty, rots=(0, 90), side='F'):

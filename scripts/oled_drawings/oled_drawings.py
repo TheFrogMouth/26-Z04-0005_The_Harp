@@ -16,7 +16,7 @@ CAV_W, CAV_H = 60.3, 115.4                          # cavity
 FACE_T = 2.2                                        # wall / face thickness (Tayda)
 BOARD_GAP = 11.0                                    # face underside to board top, PROVISIONAL (10-12 mm)
 BOARD_T = 1.6
-OLED_Y = -20.0                                      # active-area centre
+OLED_Y = -5.0                                       # active-area centre (option 1, 2026-10-09)
 ACTIVE = (22.384, 5.584)
 WINDOW = (24.4, 7.6)                                # viewable area, cut in the face
 MODULE = (38.0, 12.5)                               # module board envelope (Waveshare 36 x 12.5, generic up to 38 x 12)
@@ -24,17 +24,17 @@ GASKET, GLASS, MOD_PCB, MOD_PARTS = 0.5, 1.45, 1.0, 1.2
 HOLES = [  # (label, x, y, diameter)
     ('RV101 Mix', -20, 38, 7.0), ('RV102 Sustain', 0, 38, 7.0), ('RV103 Strings', 20, 38, 7.0),
     ('SW101 Tuning', -20, 13, 6.5), ('RV105 Jawari', 0, 13, 7.0), ('SW103 Brightness', 20, 13, 6.5),
-    ('SW102 Retune', 0, -5, 6.5),
+    ('SW102 Retune', 0, -24, 6.5),
     ('D113 Effect', -20, -35, 6.0), ('D114 Hold', 20, -35, 6.0),
     ('Bypass FSW', -20, -49, 12.0), ('Hold FSW', 20, -49, 12.0),
 ]
 # courtyards on the board (face X0, X1, Y0, Y1) and part height above the board
-SW102_CY = (-7.35, 7.35, -12.45, 2.09)
-U201_CY = (-8.73, 8.73, -30.23, -12.77); U201_H = 1.6       # MCU under the module after the 2026-10-08 placement
+SW102_CY = (-7.35, 7.35, -31.45, -16.91)                   # Retune toggle, bat at (0, -24)
+U201_CY = (-8.73, 8.73, -15.73, 1.73); U201_H = 1.6        # MCU under the module, (0, -7)
 D113_CY = (-22.42, -17.58, -37.21, -32.79)
 D114_CY = (17.58, 22.42, -37.21, -32.79)
 JACK_LO = [(-30.0, -6.5, -31.6, -13.4), (6.5, 30.0, -31.6, -13.4)]     # lower jack bodies, underside
-J408 = (-21.75, -22.0)                                                  # placed 2026-10-08, PCB (126.75, 127) rot 90
+J408 = (22.0, -3.5)                                                     # PCB (170.5, 108.5) rot 270, at the module's right (pad) end
 
 INK, MUTED, ACCENT, WARN, BOARD, FILL = '#1f2328', '#6e7781', '#0969da', '#cf222e', '#2da44e', '#f6f8fa'
 FONT = "font-family='Helvetica, Arial, sans-serif'"
@@ -124,8 +124,8 @@ def face_cutout():
         '1 mm border round the active area',
         '',
         'Clearances on the face:',
-        f'  to Retune toggle hole  {(-5 - 3.25) - (OLED_Y + WINDOW[1] / 2):.1f} mm',
-        f'  to LED holes  {(OLED_Y - WINDOW[1] / 2) - (-35 + 3.0):.1f} mm',
+        f'  to Jawari knob edge  {(13 - 6.25) - (OLED_Y + WINDOW[1] / 2):.1f} mm (12.5 mm knob)',
+        f'  to Retune toggle hole  {(OLED_Y - WINDOW[1] / 2) - (-24 + 3.25):.1f} mm',
         f'  to cavity wall  {CAV_W / 2 - WINDOW[0] / 2:.1f} mm each side',
         '',
         'Hole sizes: pots Ø7.0 (RD901F M7),',
@@ -166,10 +166,10 @@ def pcb_relation():
     s.text(*P(-29.3, -30.6), 'jack body, underside', 8, WARN)
     s.text(*P(7.0, -30.6), 'jack body, underside', 8, WARN)
     box(SW102_CY, INK, '#eaeef2', op=0.9)
-    s.text(*P(0, -2.5), 'SW102 Retune', 9, INK, 'middle')
-    s.text(*P(0, -5.5), 'courtyard to Y -12.45', 8, MUTED, 'middle')
+    s.text(*P(0, -21.5), 'SW102 Retune', 9, INK, 'middle')
+    s.text(*P(0, -24.5), 'bat at (0, -24)', 8, MUTED, 'middle')
     box(U201_CY, INK, '#eaeef2', op=0.9)
-    s.text(*P(0, -28.4), 'U201 MCU', 9, INK, 'middle')
+    s.text(*P(0, -14.2), 'U201 MCU', 9, INK, 'middle')
     for cy, lb in ((D113_CY, 'D113'), (D114_CY, 'D114')):
         box(cy, INK, '#eaeef2', op=0.9)
         s.text(*P((cy[0] + cy[1]) / 2, cy[2] - 3.2), lb, 9, INK, 'middle')
@@ -177,24 +177,24 @@ def pcb_relation():
     box((mx0, mx1, my0, my1), ACCENT, '#ddf4ff', op=0.55, sw=1.8)
     box((-WINDOW[0] / 2, WINDOW[0] / 2, OLED_Y - WINDOW[1] / 2, OLED_Y + WINDOW[1] / 2), ACCENT, 'white', op=0.9, sw=1)
     s.text(*P(0, OLED_Y - 1), 'window / active area', 9, ACCENT, 'middle', 'bold')
-    s.text(*P(mx1 - 0.6, my1 - 2.4), 'OLED module', 9, ACCENT, 'end')
+    s.text(*P(mx0 + 0.6, my1 - 2.4), 'OLED module (turned: pads right)', 9, ACCENT, 'start')
     for k in range(4):
-        s.circle(*P(mx0 + 1.3, OLED_Y + 3.81 - k * 2.54), 0.5 * S, ACCENT, 'white')
-    s.add(f"<polyline points='{P(mx0 + 0.8, OLED_Y)[0]:.1f},{P(0, OLED_Y)[1]:.1f} {P(J408[0] + 4.2, 0)[0]:.1f},{P(0, OLED_Y)[1]:.1f} {P(J408[0] + 4.2, 0)[0]:.1f},{P(0, J408[1])[1]:.1f} {P(J408[0] + 2.7, 0)[0]:.1f},{P(0, J408[1])[1]:.1f}' stroke='{ACCENT}' stroke-width='2.2' fill='none'/>")
+        s.circle(*P(mx1 - 1.3, OLED_Y + 3.81 - k * 2.54), 0.5 * S, ACCENT, 'white')
+    s.add(f"<polyline points='{P(mx1 - 0.8, OLED_Y)[0]:.1f},{P(0, OLED_Y)[1]:.1f} {P(J408[0] - 2.7, 0)[0]:.1f},{P(0, J408[1])[1]:.1f}' stroke='{ACCENT}' stroke-width='2.2' fill='none'/>")
     jx, jy = P(J408[0] - 3.28, J408[1] + 3.9)
     s.rect(jx, jy, 6.56 * S, 7.8 * S, INK, '#fff8c5', 1.2, op=1)
     for k in range(4):
-        px, py = P(J408[0] - 2.0, J408[1] + 1.5 - k * 1.0)
+        px, py = P(J408[0] + 2.0, J408[1] + 1.5 - k * 1.0)
         s.rect(px - 3.9, py - 1.5, 7.8, 3.0, INK, '#d4a72c', 0.5, op=1)
     s.text(*P(J408[0] - 3.28, J408[1] + 4.6), 'J408', 9, INK, 'start', 'bold')
     # vertical dims on the right
     s.dim_v(P(mx1, 0)[0] + 40, P(0, my1)[1], P(0, my0)[1], f'{MODULE[1]}')
-    s.line(P(SW102_CY[1], 0)[0], P(0, SW102_CY[2])[1], P(mx1, 0)[0] + 24, P(0, SW102_CY[2])[1], WARN, 0.6, '2 2')
-    s.dim_v(P(mx1, 0)[0] + 20, P(0, SW102_CY[2])[1], P(0, my1)[1], '', WARN)
-    s.text(P(mx1, 0)[0] + 26, P(0, my1)[1] - 2, f'{SW102_CY[2] - my1:.1f} to SW102', 9, WARN)
+    s.line(P(SW102_CY[1], 0)[0], P(0, SW102_CY[3])[1], P(mx1, 0)[0] + 24, P(0, SW102_CY[3])[1], WARN, 0.6, '2 2')
+    s.dim_v(P(mx1, 0)[0] + 20, P(0, my0)[1], P(0, SW102_CY[3])[1], '', WARN)
+    s.text(P(mx1, 0)[0] + 26, P(0, (my0 + SW102_CY[3]) / 2)[1] + 4, f'{my0 - SW102_CY[3]:.1f} to SW102', 9, WARN)
     notes = [f'Module {MODULE[0]:g} x {MODULE[1]} envelope (36-38 x 12-12.5), Y {my1:.2f} to {my0:.2f}; window centre (0, {OLED_Y:g}).',
-             'Module pads on the left short end (check on the bought module); J408 placed at (-21.75, -22.0), rot 90, entry facing +X.',
-             'K401 (relay) is on the bottom side under U201; only flat parts (U201, its decoupling) sit under the module.']
+             'Module turned so its pads are at the right end (image flipped in firmware); J408 at (22, -3.5), rot 270, entry facing -X.',
+             'Under the module: U201 and its decoupling, the codec IC501 (all flat). The relay is on the bottom.']
     for k, t in enumerate(notes):
         s.text(OX - CAV_W / 2 * S, OY + CAV_H / 2 * S + 22 + 15 * k, t, 9.5, MUTED)
     # ------------------------------------------------ section on X = 0
@@ -234,17 +234,15 @@ def pcb_relation():
     s.text(*Q(YL - 0.3, BOARD_GAP + BOARD_T + 1.6), 'PCB 1.6', 10, BOARD, weight='bold')
     slab(SW102_CY[3], SW102_CY[2], 0, BOARD_GAP, INK, '#eaeef2', 0.9)
     s.text(*Q((SW102_CY[2] + SW102_CY[3]) / 2, 5.2), 'SW102 body', 9, INK, 'middle')
+    s.text(*Q((SW102_CY[2] + SW102_CY[3]) / 2, 6.7), '(Retune, moved)', 8, MUTED, 'middle')
     slab(U201_CY[3], U201_CY[2], BOARD_GAP - U201_H, BOARD_GAP, INK, '#eaeef2', 0.9)
-    s.text(*Q(-24, BOARD_GAP - 2.4), 'U201 1.6', 9, INK, 'middle')
+    s.text(*Q(-7, BOARD_GAP - 2.4), 'U201 1.6', 9, INK, 'middle')
     xa, za = Q(-13.4, BOARD_GAP + BOARD_T); xb, zb = Q(-31.6, BOARD_GAP + BOARD_T + 11)
     s.rect(xa, za, xb - xa, zb - za, WARN, 'none', 1, '3 3')
     s.text(*Q(-22.5, BOARD_GAP + BOARD_T + 5.5), 'lower jacks, underside', 9, WARN, 'middle')
     s.text(*Q(-22.5, BOARD_GAP + BOARD_T + 7.0), '(|X| > 6.5, behind this plane)', 8, WARN, 'middle')
-    # lead and J408, drawn in this plane for clarity
-    a = Q(yb + 0.6, GASKET + GLASS + 0.5); b = Q(-19.0, BOARD_GAP - 1.2)
-    s.add(f"<path d='M {a[0]:.1f} {a[1]:.1f} C {a[0] - 10:.1f} {a[1] + 25:.1f} {b[0] + 10:.1f} {b[1] - 25:.1f} {b[0]:.1f} {b[1]:.1f}' stroke='{ACCENT}' stroke-width='2' fill='none'/>")
-    slab(-17.5, -20.5, BOARD_GAP - 1.5, BOARD_GAP, INK, '#fff8c5')
-    s.text(*Q(-19, BOARD_GAP + BOARD_T + 1.6), 'J408 + lead (really at X -21.75)', 9, INK, 'middle')
+    # the lead runs from the module's right-end pads to J408 at X +22, outside this plane
+    s.text(*Q(OLED_Y + 4.0, hang + 1.8), 'lead from the pad end to J408 (X +22, outside this plane)', 8.5, ACCENT, 'start')
     # dims at the right end, beyond the relay
     dx = Q(-37.5, 0)[0]
     s.dim_v(dx, Q(0, 0)[1], Q(0, hang)[1], f'{hang:.2f} module hang', ACCENT)
@@ -253,7 +251,7 @@ def pcb_relation():
     s.text(Q(YL + 1.5, 0)[0] - 6, Q(0, BOARD_GAP / 2)[1] + 18, '(10-12, provisional)', 9, MUTED, 'end')
     ty = Q(0, BOARD_GAP + BOARD_T + 15)[1]
     for k, (t, c) in enumerate([
-        ('Under the module: U201 (1.6 mm) and its decoupling; the electrolytics are kept out, the relay is on the bottom (2026-10-08).', INK),
+        ('Under the module: U201 (1.6 mm), its decoupling and the codec; the electrolytics are kept out, the relay is on the bottom.', INK),
         (f'Clearance over U201: {BOARD_GAP - hang - U201_H:.2f} mm at the provisional 11 mm depth.', INK),
         ('Layer thicknesses are typical module figures; measure the bought module and the casting before cutting.', MUTED)]):
         s.text(Q(YL, 0)[0], ty + 16 * k, t, 10, c)

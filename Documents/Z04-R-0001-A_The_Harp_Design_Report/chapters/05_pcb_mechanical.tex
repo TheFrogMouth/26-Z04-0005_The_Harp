@@ -52,7 +52,8 @@ One face standard covers The Alchemist, The Relic and The Harp. Every position i
     \midrule
     Knob row $+38$ & Rate, Depth, Wave & Wow, Flutter, Age & \req{RV101} Mix, \req{RV102} Sustain, \req{RV103} Strings \\
     Knob row $+13$ & Mode toggle, Exp/offset pot, Resonance toggle & Saturation, Mix, Hiss & \req{SW101} Tuning toggle, \req{RV105} Jawari, \req{SW103} Brightness toggle \\
-    Toggle row $-5$ & -- & Dropout, Age range, Hiss on & centre only: \req{SW102} Retune toggle \\
+    Toggle row $-5$ & -- & Dropout, Age range, Hiss on & none: the OLED window takes the centre \\
+    Centre (0, $-24$) & -- & -- & \req{SW102} Retune toggle (moved 2026-10-09) \\
     Right wall, lower jack (Y $-22.5$) & IN & IN & \req{J402} IN \\
     Right wall, upper jack (Y $-3.5$) & Expression & -- & \req{J406} EXP \\
     Left wall, lower jack (Y $-22.5$) & OUT & OUT & \req{J403} OUT L \\
@@ -60,7 +61,7 @@ One face standard covers The Alchemist, The Relic and The Harp. Every position i
     Top wall DC (X 0) & DC & DC & \req{J401} DC \\
     LEDs ($\pm$20, $-35$) & Effect, Rate & Effect, -- & \req{D113} Effect, \req{D114} Hold \\
     Footswitches ($\pm$20, $-49$) & Bypass, Tap & Bypass, -- & Bypass (\req{J405}), Hold (\req{J407}) \\
-    OLED window (0, $-20$) & -- & -- & 24.4\,$\times$\,7.6\,mm rectangular cut; module on \req{J408} \\
+    OLED window (0, $-5$) & -- & -- & 24.4\,$\times$\,7.6\,mm rectangular cut; module on \req{J408} \\
     \bottomrule
   \end{tabularx}
 \end{table}
@@ -71,35 +72,32 @@ The upper jack bodies sit on the underside at face X $\pm$6.5 to $\pm$30, Y $+5.
 The Harp now uses The Alchemist's arrangement (decision 13). The outer positions of the $+13$ row carry the Tuning and Brightness toggles; a toggle's pins sit around its bat, from Y $+8.3$ up, 1.3\,mm clear of the jack bodies. Jawari is the only knob in that row, at X 0 where there is no jack body. The Retune toggle at (0, $-5$) uses the Taiway footprint, whose pins lie within X $\pm$2.4, about 2.7\,mm clear of the bodies. The board has no through-hole pad over a jack.
 
 \section{OLED Mounting}
-The 0.91\,in module (envelope 36--38\,mm by 12--12.5\,mm, active area 22.384\,mm by 5.584\,mm) sits behind a 24.4\,mm by 7.6\,mm rectangular cut centred at face (0, $-20$), a Tayda rectangular cut that leaves a 1\,mm border round the active area. The window is at $-20$ rather than $-18$ because the Retune toggle's courtyard reaches Y $-12.45$; at $-20$ the module spans $-13.75$ to $-26.25$, 1.3\,mm clear.
+The 0.91\,in module (envelope 36--38\,mm by 12--12.5\,mm, active area 22.384\,mm by 5.584\,mm) sits behind a 24.4\,mm by 7.6\,mm rectangular cut centred at face (0, $-5$), a Tayda rectangular cut that leaves a 1\,mm border round the active area. It moved there from (0, $-20$) on 2026-10-09 (option 1, decision 16): in the middle of the face, under the Jawari knob and away from the footswitches. The Retune toggle that stood there moved down to (0, $-24$); the module spans Y $+1.25$ to $-11.25$, 5.7\,mm clear of the toggle's body.
 
-The module hangs from the face, not the PCB: a 3D-printed carrier, as the Timekeeper's TFT frame, is bonded to the inside of the face with VHB tape, with a 0.5\,mm foam gasket round the glass. It is not screwed to the board because the lower jack bodies sit under the board at $|X| > 6.5$ and the MCU fills the middle. Four wires run from the module pads to \req{J408}, a JST SH 4-way on the top side at face ($-21.75$, $-22.0$), between the left lower jack's pin rows, rotated so its cable entry faces the module.
+The module hangs from the face, not the PCB: a 3D-printed carrier, as the Timekeeper's TFT frame, is bonded to the inside of the face with VHB tape, with a 0.5\,mm foam gasket round the glass. It is not screwed to the board because the lower jack bodies sit under the board at $|X| > 6.5$ and the MCU fills the middle. Four wires run from the module pads to \req{J408}, a JST SH 4-way on the top side at face (22, $-3.5$), between the right upper jack's pin rows. The module is mounted turned round, pads at its right end, and the firmware flips the image.
 
-The module hangs about 4.15\,mm below the face, leaving 6.85\,mm to the PCB at the provisional 11\,mm depth. Only flat parts sit under the module after the placement: \req{U201} (1.6\,mm, 5.25\,mm clear) and its decoupling. The relay \req{K401} (5.2\,mm) and the electrolytics are kept out of the module outline. The drawings are in \texttt{docs/images/oled-face-cutout.png} and \texttt{docs/images/oled-pcb-relation.png}.
+The module hangs about 4.15\,mm below the face, leaving 6.85\,mm to the PCB at the provisional 11\,mm depth. Only flat parts sit under the module after the placement: \req{U201} (1.6\,mm, 5.25\,mm clear), its decoupling and part of the codec. The relay \req{K401} (5.2\,mm) and the electrolytics are kept out of the module outline. The drawings are in \texttt{docs/images/oled-face-cutout.png} and \texttt{docs/images/oled-pcb-relation.png}.
 
 \section{Zoning}
-Signal runs right to left as on The Alchemist: IN and EXP enter on the right wall, OUT~L and OUT~R leave on the left. The input and expression buffers sit at the right-hand end of the lower band next to \req{J402}/\req{J406}, the output buffers and the relay at the left-hand end next to \req{J403}/\req{J404}, and the H750 with the flash in the middle. The codec, its VCOM buffers and the ADC driver sit under the pot rows. The buck converter and its inductor sit on the DC tab, as far from the input buffer as the board allows.
+Signal runs right to left as on The Alchemist: IN and EXP enter on the right wall, OUT~L and OUT~R leave on the left. After option 1 (2026-10-09) the H750 sits in the middle under the OLED, the codec to its left next to the SAI pins, the ADC driver below the codec, the input buffers and the flash on the right next to IN, and the output stages between the pot rows. The buck converter and the LDO sit in the top band either side of the DC jack.
 
 {\footnotesize
 \begin{verbatim}
- Y +52 ------------------------------------------  DC tab: TVS, Schottky, buck and inductor
+ Y +52 ------------------------------------------  DC tab: buck left, LDO right
        | RV101        RV102        RV103        |  row +38
-       |   LDO 5VA, +3V3 distribution           |
+       | output U702 | VCOM U501 | bulk caps    |  between the pot rows
        | SW101        RV105        SW103        |  row +13
-       | codec IC501 + U501, ADC driver U601    |  under the pot rows
-       |              SW102                     |  row -5
-       | --- OLED window (0, -20), module ----- |  hangs from the face; J408 at (-21.75, -22.0)
-       | OUT U702  |   H750 U201     | IN U701  |  output side left, input side right
-       | relay K401|   flash U202    | EXP U401 |
-       | D113 (-35)  J405  W201 SWD  J407  D114 |
- Y -38 ------------------------------------------
+       | codec IC501 | OLED (0,-5) | J408       |  U201 (0,-7) under the module
+       | ADC driver  | SW102 (0,-24)| flash, IN |  lower band
+       | D113 (-35)                    D114     |
+ Y -38 ------------------------------------------  bottom: relay under U201, drivers at the heel
 \end{verbatim}
 }
 
 \section{Placement}
-All 181 footprints were placed by script on 2026-10-08 (\texttt{scripts/pcb\_placement/}; drawing in \texttt{docs/images/pcb-placement.png}), on both sides. The check from the board file finds no courtyard overlaps on either side apart from the stacked jacks, nothing on a through-hole from the other side, everything inside the outline and nothing tall under the OLED module.
+All 181 footprints were placed by script (\texttt{scripts/pcb\_placement/}; drawing in \texttt{docs/images/pcb-placement.png}) on both sides, on a 0.5\,mm grid with like parts lined up in each group. The check from the board file finds no courtyard overlaps on either side apart from the stacked jacks, nothing on a through-hole from the other side, everything inside the outline and nothing tall under the OLED module.
 
-The LQFP-100 (17.5\,mm courtyard) fits in one place only, the lower centre between the lower jacks' pin rows, at face (0, $-21.5$). A first pass with everything on the top fitted but left the codec's SAI lines 50--55\,mm from the MCU and the right-channel ADC driver spread over up to 62\,mm. Moving 37 parts that gain nothing from the top to the bottom (the relay and its driver under U201, the LED and footswitch drivers along the heel, the expression buffer, the pot RC filters, the SWD and footswitch pads) freed the middle of the top: the codec now sits next to the MCU's SAI pins (15--17\,mm), the ADC driver next to the input buffers with compact feedback networks, and the output stages over the codec's DAC pins. The bottom is used only where the jack bodies are not. The one long analogue run left is the driven ADC pair from the driver to the codec, about 30\,mm, with its anti-alias capacitors at the codec pins.
+With option 1 the H750 (17.5\,mm courtyard) moved up to face (0, $-7$), under the screen, once the Retune toggle left the middle. The codec sits beside it, next to the SAI pins (11--16\,mm), with the ADC driver below it (left-channel ADC pair 17--19\,mm). The input buffers and the flash sit on the right next to IN, the output stages between the pot rows. Thirty-seven parts that gain nothing from the top are on the bottom: the relay and its driver under U201, the LED and footswitch drivers, the expression buffer, the pot RC filters, and the SWD and footswitch pads. The cost of option 1 is a longer IN run to the relay (44\,mm) and the buffered input crossing under the Retune toggle to the ADC driver; both are routable.
 
 Bottom-side parts need double-sided assembly or hand fitting (0603/0805, SOT-23 and the SMD relay); the SWD and footswitch pads are bare copper. Plan~A fits.
 

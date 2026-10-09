@@ -77,7 +77,8 @@ the subset it needs.
 |---|---|---|---|
 | Knob row +38: (−20), (0), (+20) | Rate, Depth, Wave | Wow, Flutter, Age | RV101 Mix, RV102 Sustain, RV103 Strings |
 | Knob row +13: (−20), (0), (+20) | Mode toggle, Exp/offset pot, Resonance toggle | Saturation, Mix, Hiss | SW101 Tuning toggle, RV105 Jawari, SW103 Brightness toggle |
-| Toggle row −5: (−20), (0), (+20) | — | Dropout, Age range, Hiss on | centre only: SW102 Retune toggle |
+| Toggle row −5: (−20), (0), (+20) | — | Dropout, Age range, Hiss on | none: the OLED window takes the centre (option 1, 2026-10-09) |
+| Centre (0, −24) | — | — | SW102 Retune toggle (moved down from (0, −5) on 2026-10-09) |
 | Right wall, lower jack, axis Y −22.5 | IN | IN | J402 IN |
 | Right wall, upper jack, axis Y −3.5 | Expression | — | J406 EXP |
 | Left wall, lower jack, axis Y −22.5 | OUT | OUT | J403 OUT L |
@@ -85,7 +86,7 @@ the subset it needs.
 | Top wall DC, X 0 | DC | DC | J401 DC |
 | LEDs (−20, −35), (+20, −35) | Effect, Rate | Effect, — | D113 Effect, D114 Hold |
 | Footswitches (−20, −49), (+20, −49) | Bypass, Tap | Bypass, — | Bypass (J405), Hold (J407) |
-| OLED window (0, −20) | — | — | 24.4 × 7.6 mm rectangular cut for the 0.91 in OLED; module on J408 (see *OLED mounting*) |
+| OLED window (0, −5) | — | — | 24.4 × 7.6 mm rectangular cut for the 0.91 in OLED; module on J408 (see *OLED mounting*) |
 
 **Controls over the upper jacks (resolved 2026-10-06).** The upper jack
 bodies sit on the underside at face X ±6.5 to ±30, Y +5.6 to −12.6, with
@@ -96,8 +97,9 @@ their pins at Y +5.5, on the jacks' rear pads, and the outer toggles at
 Alchemist (design brief, decision 13): the outer positions of the +13 row
 carry the Tuning and Brightness toggles, whose pins start at Y +8.3, 1.3 mm
 clear of the bodies; Jawari is the only knob in that row, at X 0 where
-there is no jack body; the Retune toggle at (0, −5) uses the Taiway
-footprint, pins within X ±2.4, about 2.7 mm clear. No through-hole pad sits
+there is no jack body; the Retune toggle uses the Taiway footprint, pins
+within X ±2.4, about 2.7 mm clear of the jack bodies (it moved from
+(0, −5) to (0, −24) on 2026-10-09, still in the centre between the jacks). No through-hole pad sits
 over a jack. All three toggles are Taiway 100-DP6-T200B1M2QE ON-ON-ON on The
 Alchemist's `100DP3T1B2M2QE` footprint (shaft at origin + (−2.415, +4.7)).
 
@@ -115,13 +117,16 @@ figures below and the footprint courtyards in `The Harp.kicad_pcb`.
   (Waveshare 36 × 12.5; generic boards up to 38 × 12); glass 30 × 11.5 ×
   1.45 mm; active area 22.384 × 5.584 mm. The SSD1306 and its charge pump
   are on the module, so the PCB carries only J408, the pull-ups and C104.
-- **Window.** 24.4 × 7.6 mm, R0.5, centred at face (0, −20), a Tayda
-  rectangular cut: the active area plus a 1 mm border. 7.9 mm clear of the
-  Retune toggle hole, 8.2 mm clear of the LED holes, 17.9 mm from the
-  cavity wall each side.
-- **Why Y −20, not −18.** The Retune toggle's courtyard (SW102) reaches
-  face Y −12.45. A 12.5 mm module centred at −18 would reach −11.75 and sit
-  on it; centred at −20 it spans −13.75 to −26.25, 1.3 mm clear.
+- **Window.** 24.4 × 7.6 mm, R0.5, centred at face (0, −5), a Tayda
+  rectangular cut: the active area plus a 1 mm border. 8.0 mm below the edge
+  of the Jawari knob (12.5 mm knob at (0, +13)), 11.9 mm above the Retune
+  toggle hole, 17.9 mm from the cavity wall each side.
+- **Why (0, −5) (option 1, 2026-10-09).** The first position, (0, −20), put
+  the screen near the footswitches. At (0, −5) it sits in the middle of the
+  face, under the Jawari knob and closer to eye line. The Retune toggle that
+  was there moved down to (0, −24), and the MCU moved up into the space it
+  left (*Placement*). The module spans Y +1.25 to −11.25, 5.7 mm clear of
+  the toggle's body below it.
 - **Fixing.** The module hangs from the face, not from the PCB. A small
   3D-printed carrier (a pocket for the module with a lip round the glass,
   as the Timekeeper's TFT frame) is bonded to the inside of the face with
@@ -133,13 +138,13 @@ figures below and the footprint courtyards in `The Harp.kicad_pcb`.
   also keeps the board-depth tolerance out of the glass position.
 - **Wiring.** The module's pin header is left off. Four wires (28–30 AWG,
   about 40 mm with slack) run from its pads to J408, a JST SH 4-way
-  (SM04B-SRSS-TB) on the top side at PCB (126.75, 127.0), rotation 90°,
-  face (−21.75, −22.0), cable entry facing +X towards the module's pad
-  end. Courtyard X −25.03 to −18.47, Y −25.9 to −18.1: between the two pin
-  rows of the left lower jack (0.71 mm to the upper row), 2.97 mm from the
-  board edge. It sits over the jack body, where SMD parts are allowed.
-  (A first position at (−23.5, −17.5) put it on J403's rear pins and was
-  dropped at placement.) Mounting pads (MP) have no net. Pin 1 GND, 2 +3V3, 3 SCL,
+  (SM04B-SRSS-TB) on the top side at PCB (170.5, 108.5), rotation 270°,
+  face (22.0, −3.5), cable entry facing −X towards the module. The module
+  is mounted turned round, pads at its right-hand end (the codec sits at
+  the left end), so the firmware flips the image (SSD1306 segment and COM
+  remap). Courtyard X 18.72 to 25.28, Y −7.4 to +0.4: between the two pin
+  rows of the right upper jack, 2.7 mm from the board edge, over the jack
+  body where SMD parts are allowed. Mounting pads (MP) have no net. Pin 1 GND, 2 +3V3, 3 SCL,
   4 SDA. The PCB lifts out with the face, so the lead never has to be
   unplugged to open the box.
 - **Heights.** Face 2.2 mm; below it the gasket 0.5, glass 1.45, module PCB
@@ -147,7 +152,7 @@ figures below and the footprint courtyards in `The Harp.kicad_pcb`.
   the PCB at the provisional 11 mm face-to-PCB depth (10–12 mm).
 - **Under the module.** After the placement (*Placement*, below) only flat
   parts sit under the module: U201 (1.6 mm, 5.25 mm clear at an 11 mm
-  depth), its decoupling and J408. The relay K401 is on the bottom side
+  depth), its decoupling and part of the codec IC501. The relay K401 is on the bottom side
   and the electrolytics C502/C508 (5.8 mm) were kept out of the module's
   outline by the placer. Anything added there later must stay below about 6.8 mm.
 - **Still to check.** Measure the bought module (pad end, glass position
@@ -156,18 +161,17 @@ figures below and the footprint courtyards in `The Harp.kicad_pcb`.
 
 ## Zoning (top side, face coordinates)
 
+Updated for option 1 (2026-10-09); *Placement* below has the drawing.
+
 ```
- Y +52 ─────────────────────────────────────────  DC tab: TVS, Schottky, buck (U301) and its inductor
+ Y +52 ─────────────────────────────────────────  DC tab: TVS, Schottky, buck (U301) and its inductor; LDO right
        │ RV101        RV102        RV103        │  row +38; buck output filter between the pots
-       │   LDO 5VA, +3V3 distribution           │
-       │ SW101        RV105        SW103        │  row +13; 3.3 V analog filter, pot RC filters
-       │ codec IC501 + U501, ADC driver U601    │  under the pot rows: codec, DFAs, OPA2348
-       │              SW102                     │  row −5
-       │ ─── OLED window (0, −20), module ───── │  hangs from the face; J408 at (−21.75, −22.0)
-       │ OUT U702  │   H750 U201     │ IN U701  │  band −18…−38: output side left, input side right
-       │ relay K401│   flash U202    │ EXP U401 │
-       │ D113 (−35)  J405  W201 SWD  J407  D114 │
- Y −38 ─────────────────────────────────────────
+       │ output stage U702 │ VCOM U501 │ bulk caps │  between the pot rows
+       │ SW101        RV105        SW103        │  row +13
+       │ codec IC501 │ OLED (0, −5) │ J408       │  module hangs from the face; MCU U201 under it at (0, −7)
+       │ ADC driver  │ SW102 (0,−24)│ flash, IN  │  lower band: ADC driver left, input buffers and flash right
+       │ D113 (−35)                    D114      │
+ Y −38 ─────────────────────────────────────────  bottom side: relay under U201, LED drivers along the heel
 ```
 
 Signal runs right to left as on the Alchemist: IN and EXP enter on the
@@ -193,7 +197,7 @@ Rules carried over from The Relic:
   input buffer as the board allows; its switching node is kept off B.Cu over
   the jack bodies.
 
-## Placement (2026-10-08)
+## Placement (option 1, 2026-10-09)
 
 ![Placement, top and bottom](images/pcb-placement.png)
 
@@ -202,71 +206,63 @@ README), not in KiCad. Checked from the board file: no courtyard overlaps
 on either side (apart from the stacked jacks, as on The Alchemist),
 nothing on a through-hole from the other side, everything inside the
 outline, nothing taller than about 4 mm under the OLED module, and every
-flipped footprint's pads where the placer put them.
+footprint's pads where the placer put them. Parts sit on a 0.5 mm grid;
+within each group like parts share an orientation and line up in rows
+and columns where the space allows. Top-side courtyards cover about 59 %.
 
-**Both sides are used.** A first pass with everything on top fitted
-(68 % courtyard fill) but left three weak spots: the codec's SAI lines ran
-50–55 mm to the MCU across the analogue section, the right-channel ADC
-driver network was spread over up to 62 mm, and the input path was long.
-Moving 37 parts that gain nothing from the top to the bottom freed the
-middle of the top for the codec and the ADC driver. Top fill is now 59 %.
-
-| Bottom side | Where | Why it can go there |
-|---|---|---|
-| Relay K401 and its driver (Q401, D402, R405–R407) | Centre strip under U201, between the lower jack bodies | Equidistant from IN and OUT L, The Relic's centre position; In1 GND shields it from the MCU |
-| Effect and Hold LED drivers, footswitch RCs (Q402, Q403, R404, R408–R414, C408, C409) | Heel strip below the lower jacks | Slow switching signals |
-| Expression buffer (U401, R415–R418, C410–C412) | Above the right upper jack | DC control voltage |
-| Pot RC filters (R101–R105, C101–C105) | Centre strip, near the MCU's ADC pins | DC, filter close to the ADC input |
-| SWD needle pads W201, footswitch wire pads J405/J407 | Above the upper jacks | Copper only, nothing to assemble; SWD reachable from below |
-
-The bottom side is free only where the jack bodies are not: above the
-upper jacks (face Y > +6.6), the centre strip between the jack bodies
-(|X| < 6) and the heel strip below the lower jacks.
+**Option 1.** The OLED window moved up to (0, −5) and the Retune toggle
+down to (0, −24). With the toggle out of the middle, the H750 (17.5 mm
+courtyard) moved up from (0, −21.5) to (0, −7), under the screen, 1.2 mm
+clear of the Jawari pot and of the toggle. The rest was arranged round it:
 
 | Top side | Where |
 |---|---|
-| H750 U201, flash U202, crystal, decoupling | Lower centre (the one place a 17.5 mm square fits) |
-| Codec IC501 and its decoupling | Left middle, next to the MCU's SAI pins (PE2–PE6) |
-| VCOM buffers U501, C502 | Between the pot rows (DC bias) |
-| ADC driver U601 (L and R) | Right middle, next to the input buffers; anti-alias caps C605–C607, C615–C617 at the codec's input pins |
-| Input buffers U701, input ESD | Lower right, next to IN |
-| Output stages U702 | Between the pot rows, above the codec's DAC pins |
+| H750 U201 and its decoupling, crystal | (0, −7), under the OLED, caps in columns along its sides |
+| Codec IC501 and its decoupling | Left middle (−18, −4), next to the MCU's SAI pins; anti-alias caps at its input pins |
+| ADC driver U601 (L and R) | Lower left (−17, −26), below the codec |
+| Input buffers U701, input ESD | Lower right (20, −24), next to IN |
+| Flash U202 | Lower right (12.5, −21), next to the QSPI pins |
+| Output stages U702 | Between the pot rows, left (−18.5, 24) |
+| VCOM buffers U501, bulk caps C502/C508 | Between the pot rows, centre and right |
+| J408 (OLED) | (22, −3.5), at the module's right (pad) end |
 | Buck, LDO | Top band either side of the DC jack |
-| J408 (OLED) | (−21.75, −22.0), between the left lower jack's pin rows |
 
-Net lengths (half-perimeter of each net's pads, mm), first pass → now:
+| Bottom side | Where |
+|---|---|
+| Relay K401 and its driver | Centre strip under U201, (0, −8) |
+| LED and footswitch drivers | Heel strip and centre strip |
+| Expression buffer | Above the right upper jack |
+| Pot RC filters | Centre strip, near the MCU's ADC pins |
+| SWD pads W201, footswitch pads J405/J407 | Above the upper jacks (bare copper) |
 
-| Net | Before | Now |
+Net lengths (half-perimeter of each net's pads, mm), 2026-10-08 → option 1:
+
+| Net | 10-08 | Option 1 |
 |---|---:|---:|
-| SAI (MCLK, BICK, LRCK, SDTI, SDTO) | 50–55 | 15–17 |
-| IN (jack to relay) | 35 | 28 |
-| Relay to input buffer (EFFECT_IN) | 22 | 11 |
-| Input buffer to ADC driver L / R | 30 / 28 | 16 / 12 |
-| ADC driver feedback, L / R (worst net) | 14 / 39 | 19 / 18 |
-| Codec DAC to output stage | 12–17 | 5–17 |
-| ADC driver to codec (ADC_L/R, driven pairs) | 35–62 | 46–58 |
-| QSPI | 11 | 11 |
+| SAI (MCLK, BICK, LRCK, SDTI, SDTO) | 15–17 | 11–16 |
+| ADC driver to codec, L / R | 46–58 / 46–58 | 17–19 / 35–38 |
+| ADC driver feedback (worst net) | 19 | 22 |
+| Input buffer to ADC driver L / R | 16 / 12 | 26 / 32 |
+| Codec DAC to output stage L / R | 5 / 17 | 5 / 24 |
+| IN (jack to relay) | 28 | 44 |
+| QSPI | 11 | 25 |
 
-Decoupling: 20 of 27 IC supply caps within 5 mm of their IC's supply pin;
-the rest are bulk and regulator-output caps.
+What option 1 costs: the relay can no longer sit low in the centre strip
+(the Retune toggle's pins are there), so IN runs 44 mm from the jack to the
+relay on the bottom, and the buffered input crosses under the toggle to the
+ADC driver. Both are routable: IN on B.Cu next to the In2 plane is the
+bypass path as before, and the buffer output is low impedance. In return
+the codec sits next to the MCU and the ADC driver, so the left-channel ADC
+pair is short and the SAI is the shortest it has been.
 
-**What is left.** The one long analogue run is the ADC driver output to the
-codec (about 30 mm between the parts, 46–58 mm net span): the codec sits
-next to the MCU and the driver next to the input buffers, with the Retune
-toggle between them. It is the safest place for the length: a differential
-pair driven through 40.2 Ω, with the anti-alias caps at the codec pins.
-Route it as a tight pair over the unbroken In1 GND, away from the SAI.
-VCOM_A/B (DC bias) also spread wide, which does not matter.
+**Assembly.** Bottom-side parts (37, all 0603/0805, SOT-23 and the SMD
+relay) need JLCPCB double-sided assembly or hand fitting; W201, J405 and
+J407 are bare copper.
 
-**Assembly.** Bottom-side parts need either JLCPCB double-sided assembly
-(a second setup and stencil) or hand fitting: all are 0603/0805, SOT-23 and
-the SMD relay, so hand fitting is practical. W201, J405 and J407 are bare
-copper. This replaces the Relic rule "top side only, except the jacks".
-
-**Verdict.** Plan A (one board) fits with no weak spot left that needs a
-second board. Before routing: ERC, *Update PCB from Schematic* (expect net
-renames only), a look over the placement in KiCad, and DRC (including the
-five face parts whose courtyards reach over jack pins, as before).
+**Verdict.** Plan A fits. Before routing: ERC, *Update PCB from Schematic*
+(expect net renames only), a look over the placement in KiCad, and DRC
+(including the five face parts whose courtyards reach over jack pins, as
+before).
 
 ## Schematic sheets (drawn 2026-10-04)
 
