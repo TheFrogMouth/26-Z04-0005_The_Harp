@@ -24,8 +24,8 @@ rerun these only for a deliberate restart (they replace every track and via).
 | `fill.py`, `smooth.py` | Grid maze router for the connections Freerouting left open, and a straightener for its staircases (2026-10-09; not used since). |
 
 Widths are the Alchemist's: 1.0 (DC input, SW), 0.762 (rails, local power),
-0.508 (GND stubs, VDDA), 0.254 (audio, control), 0.2 (digital: it passes
-between the MCU's 0.5 mm pads), NRST 0.1016; clearance 0.1524.
+0.508 (GND stubs, VDDA), 0.254 (audio, control), 0.1524 (digital, 6 mil as
+on the DSP board), NRST 0.1016; clearance 0.1524.
 
 Phases (`route.py`):
 
