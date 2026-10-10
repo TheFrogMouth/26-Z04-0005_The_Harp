@@ -54,6 +54,13 @@ def run(verbose=False):
         for l in kpcb.CU:
             items.append((l, g, v['net'], 'via', 'via%d' % i))
 
+    for z in kpcb.findall(tree, 'zone'):         # pours: the outline counts as copper of its net (connectivity only)
+        zl = kpcb.find(z, 'layer')[1]
+        if zl == 'In1.Cu':
+            continue                             # the GND plane is handled below
+        pts = [(float(c[1]), float(c[2])) for c in kpcb.find(kpcb.find(z, 'polygon'), 'pts') if isinstance(c, list)]
+        items.append((zl, Polygon(pts), kpcb.find(z, 'net')[1], 'zone', 'zone%d' % len(items)))
+
     # connectivity
     parent = list(range(len(items)))
     def f(i):
@@ -94,6 +101,8 @@ def run(verbose=False):
                     continue
                 if kind_a == 'pad' and kind_b == 'pad':
                     continue           # pad to pad is the footprint's business
+                if 'zone' in (kind_a, kind_b):
+                    continue           # pours get their clearances from the fill
                 need = max(clear_of(na), clear_of(nb))
                 if d < need - TOL:
                     if l == 'In1.Cu' and 'GND' in (na, nb):
@@ -107,7 +116,7 @@ def run(verbose=False):
     # edge
     edge = Polygon(kpcb.outline(tree)).exterior
     for l, g, n, kind, idd in items:
-        if kind == 'pad': continue
+        if kind in ('pad', 'zone'): continue
         if g.distance(edge) < EDGE - TOL:
             problems.append(('edge', l, idd, n, '', '', round(g.distance(edge), 3), EDGE))
     # holes: via to via and via to through-hole
