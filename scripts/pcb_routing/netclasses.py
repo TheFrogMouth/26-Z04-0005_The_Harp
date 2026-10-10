@@ -25,9 +25,11 @@ def main():
     ns['classes'] = classes
     _, _, _, pads = kpcb.load()
     allnets = sorted({p['net'] for p in pads if p['net'] and not p['net'].startswith('unconnected')})
-    ns['netclass_patterns'] = [dict(netclass=NAMES[nets.kind(n)], pattern=n) for n in allnets]
+    # KiCad mangles a pattern holding "{slash}" (W201's SWDIO/TMS, SWCLK/TCK) into "slash": wildcard it
+    ns['netclass_patterns'] = [dict(netclass=NAMES[nets.kind(n)], pattern=n.split('{slash}')[0] + ('*' if '{slash}' in n else ''))
+                               for n in allnets]
     ds = d['board']['design_settings']
-    ds['track_widths'] = [0.0, 0.254, 0.508, 0.762, 1.0]       # the Alchemist's set
+    ds['track_widths'] = [0.0, 0.1524, 0.2, 0.254, 0.508, 0.762, 1.0]   # the Alchemist's set, plus digital 0.2 and NRST's
     default['clearance'] = 0.1524
     ds['rules']['min_track_width'] = 0.1016                     # NRST through the SWD needle pads
     vd = {(v['diameter'], v['drill']) for v in ds['via_dimensions']} | {nets.VIA}

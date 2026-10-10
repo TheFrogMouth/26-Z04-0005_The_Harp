@@ -61,7 +61,7 @@ top side by script (`scripts/pcb_placement/`, `docs/pcb-plan.md` *Placement*).
    *Routing* in `docs/pcb-plan.md`): GND vias per the Relic rule, rails on
    In2. On 2026-10-10 the power section was re-placed and re-routed and
    every track brought to the Alchemist widths (0.254 / 0.508 / 0.762 /
-   1.0 mm) and to 0/45/90°. Fill the In1 GND zone (B), finish the 29 open
+   1.0 mm, digital 0.2) and to 0/45/90°. Fill the In1 GND zone (B), finish the 29 open
    connections listed there, then DRC. The net classes (GND, Rail, Power,
    Audio, Digital, Control, clearance 0.1524) are in the project.
 

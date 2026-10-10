@@ -23,7 +23,7 @@ def kind(net):
         return 'RAIL'
     if net == 'VDDA' or net.startswith('/Power/') or net in LOCAL_POWER:
         return 'POWER'
-    if net.startswith(('Net-(U201-', 'Net-(U202-', 'Net-(IC501-PDN)', 'Net-(U203-', 'Net-(Y201-', 'Net-(J201-')):
+    if net.startswith(('Net-(U201-', 'Net-(U202-', 'Net-(IC501-PDN)', 'Net-(U203-', 'Net-(Y201-', 'Net-(J201-', 'Net-(W201-')):
         return 'DIGITAL'
     if net in ('/Jacks and Bypass/RELAY_COIL', '/Jacks and Bypass/RELAY_LOW',
                '/Jacks and Bypass/LED_EFF_K', '/Jacks and Bypass/LED_HOLD_K',
@@ -39,7 +39,7 @@ def kind(net):
 
 
 # width, clearance (mm): the Alchemist's set, 0.254 / 0.508 / 0.762 / 1.0 and 0.1524 everywhere
-WIDTH = {'GND': 0.508, 'RAIL': 0.762, 'POWER': 0.762, 'AUDIO': 0.254, 'DIGITAL': 0.254, 'CTRL': 0.254}
+WIDTH = {'GND': 0.508, 'RAIL': 0.762, 'POWER': 0.762, 'AUDIO': 0.254, 'DIGITAL': 0.2, 'CTRL': 0.254}   # digital 0.2: passes between the MCU's 0.5 mm pads
 CLEAR = {'GND': 0.1524, 'RAIL': 0.1524, 'POWER': 0.1524, 'AUDIO': 0.1524, 'DIGITAL': 0.1524, 'CTRL': 0.1524}
 WIDE = {'Net-(D301-A2)': 1.0, 'Net-(D302-A)': 1.0, 'Net-(U301-SW)': 1.0,         # DC input and the buck's SW node
         'Net-(U301-FB)': 0.254, 'Net-(R301-Pad2)': 0.254, 'Net-(U301-BOOT)': 0.254,
