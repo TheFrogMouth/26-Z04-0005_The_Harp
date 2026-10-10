@@ -2380,7 +2380,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "100n"
@@ -2392,7 +2391,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
@@ -2466,7 +2464,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "600R"
@@ -2478,7 +2475,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
@@ -2552,7 +2548,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "PMEG3010ER"
@@ -2564,7 +2559,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Diode_SMD:Nexperia_CFP3_SOD-123W"
@@ -2942,7 +2936,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "10u"
@@ -2954,7 +2947,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_APV_ANR5020"
@@ -3912,7 +3904,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "600R"
@@ -3924,7 +3915,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
@@ -3998,7 +3988,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "600R"
@@ -4010,7 +3999,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
@@ -5452,7 +5440,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5536,7 +5523,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5620,7 +5606,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5704,7 +5689,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5788,7 +5772,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5872,7 +5855,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5956,7 +5938,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6040,7 +6021,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6124,7 +6104,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6208,7 +6187,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6292,7 +6270,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6376,7 +6353,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6460,7 +6436,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6544,7 +6519,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6628,7 +6602,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6712,7 +6685,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6796,7 +6768,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6880,7 +6851,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6964,7 +6934,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -7048,7 +7017,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -7132,7 +7100,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -7216,7 +7183,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -7300,7 +7266,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -7384,7 +7349,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -7468,7 +7432,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
