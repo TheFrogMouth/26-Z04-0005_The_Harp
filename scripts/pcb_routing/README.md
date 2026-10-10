@@ -18,6 +18,13 @@ rerun these only for a deliberate restart (they replace every track and via).
 | `render.py` | Draws F.Cu, B.Cu and In2.Cu with tracks coloured by class. |
 | `netclasses.py` | Writes the same classes into `The Harp.kicad_pro` (one pattern per net) for KiCad's DRC and router. |
 | `kpcb.py` | Board-file reader: footprints, pads in board coordinates, outline. |
+| `power.py` | Places and routes the power section (y < 70) by hand, in code: the DC input row, the LDO row, the buck's feedback divider; 0/45/90 only. Keeps the owner's buck placement. Safe to rerun on a KiCad-saved board: it only replaces the power nets' copper above y = 70. |
+| `rail.py` | Joins the open pieces of one rail (`rail.py +5V`): octilinear A* on In2.Cu, hopping onto F/B with a via pair where another rail is in the way. |
+| `widths.py` | Brings every track to its class width (stepping down where the clearance will not allow it) and every segment to 0/45/90. Safe to rerun. |
+| `fill.py`, `smooth.py` | Grid maze router for the connections Freerouting left open, and a straightener for its staircases (2026-10-09; not used since). |
+
+Widths are the Alchemist's: 1.0 (DC input, SW), 0.762 (rails, local power),
+0.508 (GND stubs, VDDA), 0.254 (signals), NRST 0.1016; clearance 0.1524.
 
 Phases (`route.py`):
 

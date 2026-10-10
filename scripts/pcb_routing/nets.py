@@ -11,13 +11,20 @@ GND = {'GND'}
 RAILS = {'+3V3', '+5V', '+9V'}
 
 
+# KiCad's own names for the unlabelled local nets (after Update PCB from Schematic)
+LOCAL_POWER = {'Net-(U301-SW)', 'Net-(U301-FB)', 'Net-(U301-BOOT)', 'Net-(R301-Pad2)', 'Net-(D301-A2)',
+               'Net-(D302-A)', 'Net-(U302-EN)', 'Net-(U302-OUT)'}
+
+
 def kind(net):
     if net in GND:
         return 'GND'
     if net in RAILS:
         return 'RAIL'
-    if net == 'VDDA' or net.startswith('/Power/'):
+    if net == 'VDDA' or net.startswith('/Power/') or net in LOCAL_POWER:
         return 'POWER'
+    if net.startswith(('Net-(U201-', 'Net-(U202-', 'Net-(IC501-PDN)', 'Net-(U203-', 'Net-(Y201-', 'Net-(J201-')):
+        return 'DIGITAL'
     if net in ('/Jacks and Bypass/RELAY_COIL', '/Jacks and Bypass/RELAY_LOW',
                '/Jacks and Bypass/LED_EFF_K', '/Jacks and Bypass/LED_HOLD_K',
                '/Jacks and Bypass/LED_EFF_LOW', '/Jacks and Bypass/LED_HOLD_LOW'):
@@ -31,13 +38,13 @@ def kind(net):
     return 'AUDIO'
 
 
-# width, clearance (mm). The H750's and the codec's pins are 0.2 mm apart, so no class asks for more than 0.18.
-WIDTH = {'GND': 0.4, 'RAIL': 0.5, 'POWER': 0.5, 'AUDIO': 0.254, 'DIGITAL': 0.2, 'CTRL': 0.2}
-CLEAR = {'GND': 0.18, 'RAIL': 0.18, 'POWER': 0.18, 'AUDIO': 0.18, 'DIGITAL': 0.15, 'CTRL': 0.15}
-WIDE = {'+9V': 0.6, '/Power/DC_IN': 0.8, '/Power/DC_F': 0.8, '/Power/SW': 0.8,
-        '/Power/BUCK_FB': 0.25, '/Power/BUCK_FBT': 0.25, '/Power/BUCK_BOOT': 0.3,
-        'VDDA': 0.3,
-        '/MCU/NRST': 0.1016}    # escapes the SWD needle pads (0.48 mm between pads, all six in use)
+# width, clearance (mm): the Alchemist's set, 0.254 / 0.508 / 0.762 / 1.0 and 0.1524 everywhere
+WIDTH = {'GND': 0.508, 'RAIL': 0.762, 'POWER': 0.762, 'AUDIO': 0.254, 'DIGITAL': 0.254, 'CTRL': 0.254}
+CLEAR = {'GND': 0.1524, 'RAIL': 0.1524, 'POWER': 0.1524, 'AUDIO': 0.1524, 'DIGITAL': 0.1524, 'CTRL': 0.1524}
+WIDE = {'Net-(D301-A2)': 1.0, 'Net-(D302-A)': 1.0, 'Net-(U301-SW)': 1.0,         # DC input and the buck's SW node
+        'Net-(U301-FB)': 0.254, 'Net-(R301-Pad2)': 0.254, 'Net-(U301-BOOT)': 0.254,
+        'VDDA': 0.508,
+        'Net-(U201-NRST)': 0.1016}    # escapes the SWD needle pads (0.48 mm between pads, all six in use)
 VIA = (0.6, 0.3)
 
 

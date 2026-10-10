@@ -27,7 +27,9 @@ def main():
     allnets = sorted({p['net'] for p in pads if p['net'] and not p['net'].startswith('unconnected')})
     ns['netclass_patterns'] = [dict(netclass=NAMES[nets.kind(n)], pattern=n) for n in allnets]
     ds = d['board']['design_settings']
-    ds['track_widths'] = sorted(set(ds['track_widths']) | {0.2, 0.25, 0.3, 0.4, 0.5, 0.6, 0.8})
+    ds['track_widths'] = [0.0, 0.254, 0.508, 0.762, 1.0]       # the Alchemist's set
+    default['clearance'] = 0.1524
+    ds['rules']['min_track_width'] = 0.1016                     # NRST through the SWD needle pads
     vd = {(v['diameter'], v['drill']) for v in ds['via_dimensions']} | {nets.VIA}
     ds['via_dimensions'] = [dict(diameter=a, drill=b) for a, b in sorted(vd)]
     json.dump(d, open(PRO, 'w'), indent=2)
