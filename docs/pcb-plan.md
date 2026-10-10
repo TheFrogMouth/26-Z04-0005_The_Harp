@@ -317,7 +317,9 @@ power section was re-placed and re-routed by `scripts/pcb_routing/power.py`:
 
 **Widths** are the Alchemist's four, applied board-wide by `widths.py`:
 1.0 mm (DC input, SW), 0.762 (rails, local power), 0.508 (GND stubs, VDDA),
-0.254 (signals; NRST 0.1016 through the SWD needle pads), clearance 0.1524
+0.254 (audio, control), 0.2 (digital, since 2026-10-10 evening: nothing on
+the board needs 0.254 for a logic line and 0.2 passes between the MCU's
+0.5 mm pads; NRST 0.1016 through the SWD needle pads), clearance 0.1524
 everywhere. A track that could not be widened to its class steps down one
 size (144 did). Every segment is at 0, 45 or 90 degrees (127 re-drawn). The
 KiCad net classes carry the same values.
