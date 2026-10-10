@@ -1,0 +1,620 @@
+** Drc report for The Harp.kicad_pcb **
+** Created on 2026-10-10T13:52:06 **
+** Report includes: Errors, Exclusions **
+
+** Found 50 DRC violations **
+[shorting_items]: Items shorting two nets (nets  and unconnected-(J402-PadT))
+    Local override; error
+    @(160.9870 mm, 135.8020 mm): Track [<no net>] on B.Cu, length 1.1498 mm
+    @(161.8000 mm, 136.6150 mm): PTH pad T [unconnected-(J402-PadT)] of J402
+[shorting_items]: Items shorting two nets (nets  and unconnected-(J402-PadT))
+    Local override; error
+    @(160.9870 mm, 134.2800 mm): Track [<no net>] on B.Cu, length 1.5220 mm
+    @(161.8000 mm, 136.6150 mm): PTH pad T [unconnected-(J402-PadT)] of J402
+[shorting_items]: Items shorting two nets (nets unconnected-(D407-A2-Pad2) and )
+    Local override; error
+    @(174.5000 mm, 132.3000 mm): Pad 2 [unconnected-(D407-A2-Pad2)] of D407 on F.Cu
+    @(174.5000 mm, 132.3000 mm): Track [<no net>] on F.Cu, length 1.6750 mm
+[shorting_items]: Items shorting two nets (nets  and unconnected-(J402-PadR))
+    Local override; error
+    @(169.4400 mm, 135.3250 mm): Track [<no net>] on F.Cu, length 1.8243 mm
+    @(168.1500 mm, 136.6150 mm): PTH pad R [unconnected-(J402-PadR)] of J402
+[shorting_items]: Items shorting two nets (nets  and unconnected-(R404-Pad1))
+    Local override; error
+    @(123.0880 mm, 140.5000 mm): Track [<no net>] on B.Cu, length 1.6702 mm
+    @(123.0880 mm, 140.5000 mm): Pad 1 [unconnected-(R404-Pad1)] of R404 on B.Cu
+[shorting_items]: Items shorting two nets (nets unconnected-(D113-K-Pad1) and )
+    Local override; error
+    @(127.2300 mm, 140.0000 mm): PTH pad 1 [unconnected-(D113-K-Pad1)] of D113
+    @(127.2300 mm, 140.0000 mm): Track [<no net>] on B.Cu, length 1.3320 mm
+[shorting_items]: Items shorting two nets (nets unconnected-(IC501-DVDD-Pad25) and )
+    Local override; error
+    @(129.2000 mm, 105.4500 mm): Pad 25 [unconnected-(IC501-DVDD-Pad25)] of IC501 on F.Cu
+    @(129.2000 mm, 105.4500 mm): Track [<no net>] on F.Cu, length 1.9105 mm
+[shorting_items]: Items shorting two nets (nets unconnected-(IC501-TVDD-Pad24) and )
+    Local override; error
+    @(129.8500 mm, 105.4500 mm): Pad 24 [unconnected-(IC501-TVDD-Pad24)] of IC501 on F.Cu
+    @(129.8500 mm, 105.4500 mm): Track [<no net>] on F.Cu, length 1.2042 mm
+[shorting_items]: Items shorting two nets (nets unconnected-(IC501-P{slash}S-Pad9) and )
+    Local override; error
+    @(131.1500 mm, 112.5500 mm): Pad 9 [unconnected-(IC501-P/S-Pad9)] of IC501 on F.Cu
+    @(131.1500 mm, 112.5500 mm): Track [<no net>] on F.Cu, length 1.3153 mm
+[shorting_items]: Items shorting two nets (nets  and unconnected-(C506-Pad1))
+    Local override; error
+    @(126.2250 mm, 103.5000 mm): Track [<no net>] on F.Cu, length 0.9000 mm
+    @(126.2250 mm, 103.5000 mm): Pad 1 [unconnected-(C506-Pad1)] of C506 on F.Cu
+[shorting_items]: Items shorting two nets (nets  and unconnected-(C504-Pad1))
+    Local override; error
+    @(137.5000 mm, 113.2750 mm): Track [<no net>] on F.Cu, length 0.9000 mm
+    @(137.5000 mm, 113.2750 mm): Pad 1 [unconnected-(C504-Pad1)] of C504 on F.Cu
+[shorting_items]: Items shorting two nets (nets unconnected-(C505-Pad1) and )
+    Local override; error
+    @(129.7250 mm, 103.5000 mm): Pad 1 [unconnected-(C505-Pad1)] of C505 on F.Cu
+    @(129.7250 mm, 103.5000 mm): Track [<no net>] on F.Cu, length 0.9899 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1524 mm; actual 0.1508 mm)
+    Rule: netclass 'Default'; error
+    @(133.9560 mm, 107.0930 mm): Via [unconnected-(IC501-CDTI/CKS0-Pad17)] on F.Cu - B.Cu
+    @(133.7280 mm, 106.5420 mm): Track [unconnected-(IC501-MCLK-Pad10)] on B.Cu, length 2.0534 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1524 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(126.2250 mm, 103.5000 mm): Pad 1 [unconnected-(C506-Pad1)] of C506 on F.Cu
+    @(125.3250 mm, 103.5000 mm): Via [<no net>] on F.Cu - B.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1524 mm; actual 0.1515 mm)
+    Rule: netclass 'Default'; error
+    @(141.8890 mm, 102.9350 mm): Via [<no net>] on F.Cu - B.Cu
+    @(141.6610 mm, 102.3830 mm): Track [unconnected-(IC501-CSN/DIF-Pad19)] on B.Cu, length 0.3917 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1524 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(137.5000 mm, 114.1750 mm): Via [<no net>] on F.Cu - B.Cu
+    @(137.5000 mm, 113.2750 mm): Pad 1 [unconnected-(C504-Pad1)] of C504 on F.Cu
+[clearance]: Clearance violation (netclass 'GND' clearance 0.1800 mm; actual 0.1118 mm)
+    Rule: netclass 'GND'; error
+    @(158.0000 mm, 113.7000 mm): Pad 1 [unconnected-(D403-A1-Pad1)] of D403 on F.Cu
+    @(158.5000 mm, 114.3250 mm): Via [GND] on F.Cu - B.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1524 mm; actual 0.1293 mm)
+    Rule: netclass 'Default'; error
+    @(129.7250 mm, 103.5000 mm): Pad 1 [unconnected-(C505-Pad1)] of C505 on F.Cu
+    @(129.0250 mm, 102.8000 mm): Via [<no net>] on F.Cu - B.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1524 mm; actual 0.1510 mm)
+    Rule: netclass 'Default'; error
+    @(133.9560 mm, 107.0930 mm): Via [unconnected-(IC501-CDTI/CKS0-Pad17)] on F.Cu - B.Cu
+    @(135.9200 mm, 106.5420 mm): Track [unconnected-(IC501-MCLK-Pad10)] on B.Cu, length 2.1920 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1524 mm; actual 0.1519 mm)
+    Rule: netclass 'Default'; error
+    @(130.9150 mm, 87.3000 mm): PTH pad 3 [TOG1_A] of SW101
+    @(132.6900 mm, 87.8430 mm): Track [<no net>] on B.Cu, length 1.9240 mm
+[shorting_items]: Items shorting two nets (nets unconnected-(IC501-AVDD-Pad8) and )
+    Local override; error
+    @(130.5000 mm, 112.5500 mm): Pad 8 [unconnected-(IC501-AVDD-Pad8)] of IC501 on F.Cu
+    @(130.5000 mm, 112.5500 mm): Track [<no net>] on F.Cu, length 1.7029 mm
+[shorting_items]: Items shorting two nets (nets unconnected-(IC501-VREF-Pad6) and )
+    Local override; error
+    @(129.2000 mm, 112.5500 mm): Pad 6 [unconnected-(IC501-VREF-Pad6)] of IC501 on F.Cu
+    @(129.2000 mm, 112.5500 mm): Track [<no net>] on F.Cu, length 1.7029 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1524 mm; actual 0.1515 mm)
+    Rule: netclass 'Default'; error
+    @(166.0850 mm, 87.3000 mm): PTH pad 6 [unconnected-(SW103B-C-Pad6)] of SW103
+    @(164.4460 mm, 86.7830 mm): Track [<no net>] on B.Cu, length 1.2010 mm
+[shorting_items]: Items shorting two nets (nets  and unconnected-(C507-Pad1))
+    Local override; error
+    @(123.5000 mm, 106.2750 mm): Track [<no net>] on F.Cu, length 0.9000 mm
+    @(123.5000 mm, 106.2750 mm): Pad 1 [unconnected-(C507-Pad1)] of C507 on F.Cu
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1524 mm; actual 0.1510 mm)
+    Rule: netclass 'Default'; error
+    @(138.7220 mm, 106.2260 mm): Track [unconnected-(IC501-SDTO-Pad13)] on B.Cu, length 1.8340 mm
+    @(137.5960 mm, 105.6750 mm): Via [<no net>] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets unconnected-(D403-A2-Pad2) and )
+    Local override; error
+    @(158.0000 mm, 112.3000 mm): Pad 2 [unconnected-(D403-A2-Pad2)] of D403 on F.Cu
+    @(157.5000 mm, 111.8000 mm): Track [<no net>] on F.Cu, length 0.7071 mm
+[clearance]: Clearance violation (netclass 'Default' clearance 0.1524 mm; actual 0.1500 mm)
+    Rule: netclass 'Default'; error
+    @(123.5000 mm, 106.2750 mm): Pad 1 [unconnected-(C507-Pad1)] of C507 on F.Cu
+    @(123.5000 mm, 107.1750 mm): Via [<no net>] on F.Cu - B.Cu
+[shorting_items]: Items shorting two nets (nets unconnected-(IC501-DEM0-Pad22) and GND)
+    Local override; error
+    @(131.1500 mm, 105.4500 mm): Pad 22 [unconnected-(IC501-DEM0-Pad22)] of IC501 on F.Cu
+    @(131.1500 mm, 105.4500 mm): Track [GND] on F.Cu, length 1.1705 mm
+[clearance]: Clearance violation (footprint IC501 clearance 0.1000 mm; actual 0.0758 mm)
+    Local override; error
+    @(130.7500 mm, 106.5500 mm): Via [GND] on F.Cu - B.Cu
+    @(130.5000 mm, 105.4500 mm): Pad 23 [unconnected-(IC501-SDFIL-Pad23)] of IC501 on F.Cu
+[shorting_items]: Items shorting two nets (nets GND and unconnected-(IC501-SDFIL-Pad23))
+    Local override; error
+    @(130.5000 mm, 105.4500 mm): Track [GND] on F.Cu, length 1.8028 mm
+    @(130.5000 mm, 105.4500 mm): Pad 23 [unconnected-(IC501-SDFIL-Pad23)] of IC501 on F.Cu
+[hole_clearance]: Hole clearance violation (board minimum hole clearance 0.2540 mm; actual 0.2258 mm)
+    Local override; error
+    @(130.5000 mm, 105.4500 mm): Pad 23 [unconnected-(IC501-SDFIL-Pad23)] of IC501 on F.Cu
+    @(130.7500 mm, 106.5500 mm): Via [GND] on F.Cu - B.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(126.2250 mm, 103.5000 mm): Track [<no net>] on F.Cu, length 0.9000 mm
+    @(126.2250 mm, 103.5000 mm): Pad 1 [unconnected-(C506-Pad1)] of C506 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(137.5000 mm, 113.2750 mm): Track [<no net>] on F.Cu, length 0.9000 mm
+    @(137.5000 mm, 113.2750 mm): Pad 1 [unconnected-(C504-Pad1)] of C504 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(129.7250 mm, 103.5000 mm): Track [<no net>] on F.Cu, length 0.9899 mm
+    @(129.7250 mm, 103.5000 mm): Pad 1 [unconnected-(C505-Pad1)] of C505 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(130.5000 mm, 112.5500 mm): Track [<no net>] on F.Cu, length 1.7029 mm
+    @(130.5000 mm, 112.5500 mm): Pad 8 [unconnected-(IC501-AVDD-Pad8)] of IC501 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(129.2000 mm, 112.5500 mm): Track [<no net>] on F.Cu, length 1.7029 mm
+    @(129.2000 mm, 112.5500 mm): Pad 6 [unconnected-(IC501-VREF-Pad6)] of IC501 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(174.5000 mm, 132.3000 mm): Track [<no net>] on F.Cu, length 1.6750 mm
+    @(174.5000 mm, 132.3000 mm): Pad 2 [unconnected-(D407-A2-Pad2)] of D407 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(169.4400 mm, 135.3250 mm): Track [<no net>] on F.Cu, length 1.8243 mm
+    @(168.1500 mm, 136.6150 mm): PTH pad R [unconnected-(J402-PadR)] of J402
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(157.5000 mm, 111.8000 mm): Track [<no net>] on F.Cu, length 0.7071 mm
+    @(158.0000 mm, 112.3000 mm): Pad 2 [unconnected-(D403-A2-Pad2)] of D403 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(123.5000 mm, 106.2750 mm): Track [<no net>] on F.Cu, length 0.9000 mm
+    @(123.5000 mm, 106.2750 mm): Pad 1 [unconnected-(C507-Pad1)] of C507 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(131.1500 mm, 105.4500 mm): Track [GND] on F.Cu, length 1.1705 mm
+    @(131.1500 mm, 105.4500 mm): Pad 22 [unconnected-(IC501-DEM0-Pad22)] of IC501 on F.Cu
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(160.9870 mm, 135.8020 mm): Track [<no net>] on B.Cu, length 1.1498 mm
+    @(161.8000 mm, 136.6150 mm): PTH pad T [unconnected-(J402-PadT)] of J402
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(160.9870 mm, 134.2800 mm): Track [<no net>] on B.Cu, length 1.5220 mm
+    @(161.8000 mm, 136.6150 mm): PTH pad T [unconnected-(J402-PadT)] of J402
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(131.1500 mm, 105.4500 mm): Track [GND] on F.Cu, length 1.1705 mm
+    @(130.5000 mm, 105.4500 mm): Pad 23 [unconnected-(IC501-SDFIL-Pad23)] of IC501 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(130.5000 mm, 105.4500 mm): Track [GND] on F.Cu, length 1.8028 mm
+    @(130.5000 mm, 105.4500 mm): Pad 23 [unconnected-(IC501-SDFIL-Pad23)] of IC501 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(129.2000 mm, 105.4500 mm): Track [<no net>] on F.Cu, length 1.9105 mm
+    @(129.2000 mm, 105.4500 mm): Pad 25 [unconnected-(IC501-DVDD-Pad25)] of IC501 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(129.8500 mm, 105.4500 mm): Track [<no net>] on F.Cu, length 1.2042 mm
+    @(129.8500 mm, 105.4500 mm): Pad 24 [unconnected-(IC501-TVDD-Pad24)] of IC501 on F.Cu
+[solder_mask_bridge]: Front solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(131.1500 mm, 112.5500 mm): Track [<no net>] on F.Cu, length 1.3153 mm
+    @(131.1500 mm, 112.5500 mm): Pad 9 [unconnected-(IC501-P/S-Pad9)] of IC501 on F.Cu
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(123.0880 mm, 140.5000 mm): Track [<no net>] on B.Cu, length 1.6702 mm
+    @(123.0880 mm, 140.5000 mm): Pad 1 [unconnected-(R404-Pad1)] of R404 on B.Cu
+[solder_mask_bridge]: Rear solder mask aperture bridges items with different nets
+    Rule: board setup solder mask min width; error
+    @(127.2300 mm, 140.0000 mm): Track [<no net>] on B.Cu, length 1.3320 mm
+    @(127.2300 mm, 140.0000 mm): PTH pad 1 [unconnected-(D113-K-Pad1)] of D113
+
+** Found 100 unconnected pads **
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(123.5000 mm, 111.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(126.0000 mm, 117.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(124.5000 mm, 130.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(126.5000 mm, 130.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(126.0000 mm, 117.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(131.1000 mm, 113.8250 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(126.0000 mm, 117.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(126.0000 mm, 121.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(126.5000 mm, 80.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(131.9050 mm, 83.4750 mm): Track [GND] on F.Cu, length 1.3416 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(130.5000 mm, 55.5250 mm): Track [GND] on F.Cu, length 1.0000 mm
+    @(133.3625 mm, 56.0500 mm): Track [GND] on F.Cu, length 1.1402 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(130.9150 mm, 92.0000 mm): PTH pad 2 [GND] of SW101
+    @(126.0850 mm, 92.0000 mm): PTH pad 5 [GND] of SW101
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(130.9150 mm, 92.0000 mm): PTH pad 2 [GND] of SW101
+    @(137.0000 mm, 88.4000 mm): Track [GND] on B.Cu, length 2.2361 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(131.3625 mm, 139.4500 mm): Via [GND] on F.Cu - B.Cu
+    @(132.0000 mm, 138.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.0000 mm, 117.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(132.0000 mm, 114.2250 mm): Track [GND] on F.Cu, length 0.9849 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.0000 mm, 125.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(133.8000 mm, 125.4500 mm): Track [GND] on F.Cu, length 0.9220 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.0000 mm, 125.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(126.5000 mm, 130.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(132.5625 mm, 139.5500 mm): Track [GND] on B.Cu, length 1.2042 mm
+    @(134.0000 mm, 139.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(133.1625 mm, 128.8250 mm): Via [GND] on F.Cu - B.Cu
+    @(134.3625 mm, 131.3250 mm): Track [GND] on F.Cu, length 1.2042 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(137.0000 mm, 81.7000 mm): Track [GND] on F.Cu, length 3.3000 mm
+    @(131.9050 mm, 83.4750 mm): Track [GND] on F.Cu, length 1.3416 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(134.3625 mm, 128.7250 mm): Track [GND] on F.Cu, length 1.2042 mm
+    @(135.2000 mm, 126.5500 mm): Track [GND] on F.Cu, length 0.9220 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(134.3625 mm, 128.7250 mm): Track [GND] on F.Cu, length 1.2042 mm
+    @(136.5000 mm, 129.3250 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(133.8000 mm, 125.4500 mm): Track [GND] on F.Cu, length 0.9220 mm
+    @(135.2750 mm, 123.5000 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(133.3625 mm, 56.0500 mm): Track [GND] on F.Cu, length 1.1402 mm
+    @(135.2750 mm, 59.5000 mm): Track [GND] on F.Cu, length 0.9220 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(135.2000 mm, 126.5500 mm): Track [GND] on F.Cu, length 0.9220 mm
+    @(133.8000 mm, 125.4500 mm): Track [GND] on F.Cu, length 0.9220 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.0000 mm, 139.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(138.0000 mm, 140.2250 mm): Track [GND] on F.Cu, length 0.9434 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.0000 mm, 139.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(134.0000 mm, 139.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.2750 mm, 103.5000 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(131.1500 mm, 105.4500 mm): Track [GND] on F.Cu, length 1.1705 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.5000 mm, 130.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(138.0000 mm, 135.2250 mm): Track [GND] on F.Cu, length 0.9434 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(137.0000 mm, 81.7000 mm): Track [GND] on F.Cu, length 3.3000 mm
+    @(136.3650 mm, 79.5000 mm): Track [GND] on B.Cu, length 2.0616 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(137.0000 mm, 81.7000 mm): Track [GND] on F.Cu, length 3.3000 mm
+    @(137.0000 mm, 88.4000 mm): Track [GND] on B.Cu, length 2.2361 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(137.0000 mm, 125.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(135.2750 mm, 123.5000 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(137.0000 mm, 125.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(139.0000 mm, 124.8250 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.3650 mm, 79.5000 mm): Track [GND] on B.Cu, length 2.0616 mm
+    @(141.7000 mm, 78.3750 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(136.2750 mm, 103.5000 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(137.5000 mm, 108.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(138.5000 mm, 55.5250 mm): Track [GND] on F.Cu, length 1.0000 mm
+    @(133.3625 mm, 56.0500 mm): Track [GND] on F.Cu, length 1.1402 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(138.5000 mm, 115.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(132.0000 mm, 114.2250 mm): Track [GND] on F.Cu, length 0.9849 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(138.5000 mm, 117.8250 mm): Via [GND] on F.Cu - B.Cu
+    @(138.5000 mm, 115.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(138.5000 mm, 118.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(139.0000 mm, 121.3250 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(138.7750 mm, 96.5000 mm): Track [GND] on B.Cu, length 1.1705 mm
+    @(139.0000 mm, 94.7250 mm): Track [GND] on F.Cu, length 1.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.0000 mm, 113.7000 mm): Track [GND] on F.Cu, length 0.7616 mm
+    @(138.5000 mm, 115.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.0000 mm, 122.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(139.0000 mm, 124.8250 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.0000 mm, 113.7000 mm): Track [GND] on F.Cu, length 0.7616 mm
+    @(140.8250 mm, 115.0000 mm): Track [GND] on F.Cu, length 1.3000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.3250 mm, 64.5000 mm): Track [GND] on F.Cu, length 0.8000 mm
+    @(136.3650 mm, 79.5000 mm): Track [GND] on B.Cu, length 2.0616 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.7750 mm, 138.5000 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(138.0000 mm, 140.2250 mm): Track [GND] on F.Cu, length 0.9434 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.7750 mm, 138.5000 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(138.0000 mm, 135.2250 mm): Track [GND] on F.Cu, length 0.9434 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.8000 mm, 94.1250 mm): Via [GND] on F.Cu - B.Cu
+    @(142.0000 mm, 95.7250 mm): Track [GND] on B.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.8000 mm, 94.1250 mm): Via [GND] on F.Cu - B.Cu
+    @(137.0000 mm, 88.4000 mm): Track [GND] on B.Cu, length 2.2361 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.8750 mm, 96.9000 mm): Via [GND] on F.Cu - B.Cu
+    @(139.0000 mm, 98.2250 mm): Track [GND] on F.Cu, length 0.9055 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.9500 mm, 102.0000 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(136.2750 mm, 103.5000 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.9500 mm, 102.0000 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(139.0000 mm, 98.2250 mm): Track [GND] on F.Cu, length 0.9055 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.9750 mm, 60.5000 mm): Track [GND] on F.Cu, length 1.0000 mm
+    @(135.2750 mm, 59.5000 mm): Track [GND] on F.Cu, length 0.9220 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.9750 mm, 60.5000 mm): Track [GND] on F.Cu, length 1.0000 mm
+    @(140.1250 mm, 64.5000 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.8250 mm, 110.5000 mm): Track [GND] on F.Cu, length 1.3000 mm
+    @(139.0000 mm, 113.7000 mm): Track [GND] on F.Cu, length 0.7616 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(140.8250 mm, 110.5000 mm): Track [GND] on F.Cu, length 1.3000 mm
+    @(137.5000 mm, 108.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(139.9500 mm, 102.0000 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(143.0000 mm, 104.3250 mm): Track [GND] on F.Cu, length 1.2000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.0000 mm, 79.1750 mm): Track [GND] on F.Cu, length 0.8544 mm
+    @(146.5000 mm, 82.6750 mm): Track [GND] on F.Cu, length 0.8544 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(142.5000 mm, 119.6750 mm): Track [GND] on F.Cu, length 1.2000 mm
+    @(140.8250 mm, 115.0000 mm): Track [GND] on F.Cu, length 1.3000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(144.2750 mm, 138.0000 mm): Track [GND] on F.Cu, length 0.9055 mm
+    @(140.6750 mm, 138.5000 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(145.1750 mm, 138.1000 mm): Via [GND] on F.Cu - B.Cu
+    @(145.4120 mm, 137.0000 mm): Track [GND] on B.Cu, length 1.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(147.5625 mm, 104.5500 mm): Track [GND] on B.Cu, length 1.8868 mm
+    @(143.0000 mm, 104.3250 mm): Track [GND] on F.Cu, length 1.2000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(147.0000 mm, 95.7250 mm): Track [GND] on B.Cu, length 0.9000 mm
+    @(152.0000 mm, 95.7250 mm): Track [GND] on B.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(147.5625 mm, 104.5500 mm): Track [GND] on B.Cu, length 1.8868 mm
+    @(149.4120 mm, 102.5000 mm): Track [GND] on B.Cu, length 1.2042 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(147.7750 mm, 121.5000 mm): Track [GND] on B.Cu, length 0.9000 mm
+    @(142.5000 mm, 119.6750 mm): Track [GND] on F.Cu, length 1.2000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(148.5000 mm, 59.8000 mm): PTH pad 1 [GND] of J401
+    @(153.0000 mm, 57.0000 mm): Track [GND] on F.Cu, length 1.7000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(148.5000 mm, 59.8000 mm): PTH pad 1 [GND] of J401
+    @(139.9750 mm, 60.5000 mm): Track [GND] on F.Cu, length 1.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(150.0250 mm, 82.9050 mm): Track [GND] on F.Cu, length 1.3416 mm
+    @(146.5000 mm, 82.6750 mm): Track [GND] on F.Cu, length 0.8544 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(149.4120 mm, 102.5000 mm): Track [GND] on B.Cu, length 1.2042 mm
+    @(153.5000 mm, 99.2250 mm): Track [GND] on B.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(150.9150 mm, 129.0000 mm): PTH pad 2 [GND] of SW102
+    @(146.0850 mm, 129.0000 mm): PTH pad 5 [GND] of SW102
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(150.9150 mm, 129.0000 mm): PTH pad 2 [GND] of SW102
+    @(157.4000 mm, 127.9050 mm): Track [GND] on F.Cu, length 1.2083 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(152.0000 mm, 113.6000 mm): Track [GND] on B.Cu, length 1.3153 mm
+    @(154.0000 mm, 119.6750 mm): Track [GND] on F.Cu, length 1.2000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(153.5000 mm, 105.2250 mm): Track [GND] on B.Cu, length 0.9849 mm
+    @(149.4120 mm, 102.5000 mm): Track [GND] on B.Cu, length 1.2042 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(153.0000 mm, 57.0000 mm): Track [GND] on F.Cu, length 1.7000 mm
+    @(159.5000 mm, 56.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(153.4125 mm, 137.0000 mm): Track [GND] on B.Cu, length 1.0000 mm
+    @(145.4120 mm, 137.0000 mm): Track [GND] on B.Cu, length 1.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(153.5000 mm, 99.2250 mm): Track [GND] on B.Cu, length 0.9000 mm
+    @(152.0000 mm, 95.7250 mm): Track [GND] on B.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(153.5000 mm, 105.2250 mm): Track [GND] on B.Cu, length 0.9849 mm
+    @(156.1750 mm, 106.5000 mm): Track [GND] on F.Cu, length 1.3000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(153.4125 mm, 137.0000 mm): Track [GND] on B.Cu, length 1.0000 mm
+    @(158.4625 mm, 138.8500 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(154.7000 mm, 94.8750 mm): Via [GND] on F.Cu - B.Cu
+    @(152.0000 mm, 94.8250 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(157.0000 mm, 88.2250 mm): Track [GND] on B.Cu, length 0.9000 mm
+    @(158.5000 mm, 92.2000 mm): Track [GND] on F.Cu, length 1.7000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.3250 mm, 122.0000 mm): Track [GND] on F.Cu, length 0.8000 mm
+    @(158.5000 mm, 118.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.3250 mm, 122.0000 mm): Track [GND] on F.Cu, length 0.8000 mm
+    @(158.5000 mm, 127.4050 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.5000 mm, 92.2000 mm): Track [GND] on F.Cu, length 1.7000 mm
+    @(154.7000 mm, 94.8750 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.5000 mm, 105.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(158.5000 mm, 107.8250 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.5000 mm, 105.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(156.1750 mm, 106.5000 mm): Track [GND] on F.Cu, length 1.3000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.5000 mm, 108.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(158.5000 mm, 115.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.5000 mm, 115.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(163.5000 mm, 113.7000 mm): Track [GND] on F.Cu, length 0.7000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.5000 mm, 115.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(158.5000 mm, 117.8250 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.5000 mm, 118.7250 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(154.0000 mm, 119.6750 mm): Track [GND] on F.Cu, length 1.2000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(158.8250 mm, 102.0000 mm): Track [GND] on F.Cu, length 0.8000 mm
+    @(158.5000 mm, 105.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(161.3625 mm, 57.0000 mm): Track [GND] on F.Cu, length 1.1000 mm
+    @(159.5000 mm, 56.2250 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(161.3625 mm, 57.0000 mm): Track [GND] on F.Cu, length 1.1000 mm
+    @(158.7750 mm, 62.5000 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(161.5000 mm, 86.4000 mm): Via [GND] on F.Cu - B.Cu
+    @(167.3625 mm, 83.5000 mm): Track [GND] on B.Cu, length 1.1000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(161.5000 mm, 88.4000 mm): Track [GND] on B.Cu, length 2.0000 mm
+    @(158.5000 mm, 92.2000 mm): Track [GND] on F.Cu, length 1.7000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(161.3625 mm, 57.0000 mm): Track [GND] on F.Cu, length 1.1000 mm
+    @(163.2750 mm, 54.5000 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(163.5000 mm, 113.7000 mm): Track [GND] on F.Cu, length 0.7000 mm
+    @(172.5000 mm, 107.0000 mm): Track [GND] on F.Cu, length 1.2369 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(166.0850 mm, 92.0000 mm): PTH pad 5 [GND] of SW103
+    @(170.9150 mm, 92.0000 mm): PTH pad 2 [GND] of SW103
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(166.0850 mm, 92.0000 mm): PTH pad 5 [GND] of SW103
+    @(161.5000 mm, 88.4000 mm): Track [GND] on B.Cu, length 2.0000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(166.5000 mm, 55.5250 mm): Track [GND] on F.Cu, length 1.0000 mm
+    @(163.2750 mm, 54.5000 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(166.5000 mm, 55.5250 mm): Track [GND] on F.Cu, length 1.0000 mm
+    @(170.7750 mm, 55.0000 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(167.3625 mm, 83.5000 mm): Track [GND] on B.Cu, length 1.1000 mm
+    @(171.5000 mm, 82.7250 mm): Track [GND] on B.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(169.2750 mm, 124.0000 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(159.1250 mm, 122.0000 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(170.1750 mm, 124.0000 mm): Via [GND] on F.Cu - B.Cu
+    @(169.8050 mm, 130.2750 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(170.4050 mm, 131.4750 mm): Track [GND] on F.Cu, length 1.3416 mm
+    @(171.0000 mm, 132.8750 mm): Via [GND] on F.Cu - B.Cu
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(170.7750 mm, 57.0000 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(170.7750 mm, 59.0000 mm): Track [GND] on F.Cu, length 0.9000 mm
+[unconnected_items]: Missing connection between items
+    Local override; error
+    @(170.7750 mm, 57.0000 mm): Track [GND] on F.Cu, length 0.9000 mm
+    @(171.6750 mm, 55.0000 mm): Via [GND] on F.Cu - B.Cu
+
+** Found 0 Footprint errors **
+
+** Ignored checks **
+    - Footprint has no courtyard defined
+    - Track endpoint not centered on via
+    - Tuning profile track geometries
+    - Footprint doesn't match symbol's footprint filters
+    - PTH inside courtyard
+    - NPTH inside courtyard
+    - Footprint component type doesn't match footprint pads
+
+** End of Report **

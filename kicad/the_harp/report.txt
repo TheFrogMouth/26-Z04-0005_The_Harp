@@ -1,0 +1,771 @@
+Info: Processing symbol 'C506:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C213:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'R707:Resistor_SMD:R_0603_1608Metric'.
+Info: Processing symbol 'R404:Resistor_SMD:R_0805_2012Metric'.
+Info: Processing symbol 'J402:Connector_Audio:Jack_6.35mm_Neutrik_NMJ6HCD2_Horizontal'.
+Info: Processing symbol 'C504:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'IC501:Audio_Module:SOP65P760X150-30N'.
+Info: Processing symbol 'D407:Diode_SMD:D_SOD-523'.
+Info: Processing symbol 'D403:Diode_SMD:D_SOD-523'.
+Info: Processing symbol 'D113:LED_THT:LED_D3.0mm'.
+Info: Processing symbol 'C505:Capacitor_SMD:C_0603_1608Metric'.
+Info: Processing symbol 'C508:Capacitor_SMD:CP_Elec_4x5.8'.
+Info: Processing symbol 'C507:Capacitor_SMD:C_0603_1608Metric'.
+Reconnected via from CODEC_CDTI to unconnected-(IC501-CDTI/CKS0-Pad17).
+Removed unused net /MCU/SWDIO_N.
+Add net unconnected-(C505-Pad2).
+Add net unconnected-(C506-Pad2).
+Reconnected C506 pin 2 from GND to unconnected-(C506-Pad2).
+Add net unconnected-(C506-Pad1).
+Reconnected C506 pin 1 from +3V3 to unconnected-(C506-Pad1).
+Reconnected C505 pin 1 from +3V3 to unconnected-(C505-Pad1).
+Add net unconnected-(C507-Pad2).
+Reconnected C507 pin 2 from GND to unconnected-(C507-Pad2).
+Add net unconnected-(C507-Pad1).
+Reconnected C507 pin 1 from +5V to unconnected-(C507-Pad1).
+Add net unconnected-(C505-Pad1).
+Add net unconnected-(C508-Pad1).
+Reconnected C508 pin 1 from +5V to unconnected-(C508-Pad1).
+Add net unconnected-(C508-Pad2).
+Reconnected C508 pin 2 from GND to unconnected-(C508-Pad2).
+Reconnected C504 pin 1 from +3V3 to unconnected-(C504-Pad1).
+Add net unconnected-(D113-K-Pad1).
+Reconnected D113 pin 1 from /Jacks and Bypass/LED_EFF_K to unconnected-(D113-K-Pad1).
+Add net unconnected-(D113-A-Pad2).
+Reconnected D113 pin 2 from +9V to unconnected-(D113-A-Pad2).
+Add net unconnected-(C504-Pad1).
+Add net unconnected-(D403-A1-Pad1).
+Reconnected D403 pin 1 from GND to unconnected-(D403-A1-Pad1).
+Add net unconnected-(D403-A2-Pad2).
+Reconnected D403 pin 2 from /Jacks and Bypass/IN to unconnected-(D403-A2-Pad2).
+Reconnected C504 pin 2 from GND to unconnected-(C504-Pad2).
+Updated D407 footprint filters to 'TO-???* *_Diode_* *SingleDiode* D_*'.
+Add net unconnected-(D407-A1-Pad1).
+Reconnected D407 pin 1 from GND to unconnected-(D407-A1-Pad1).
+Add net unconnected-(D407-A2-Pad2).
+Reconnected D407 pin 2 from IN_R to unconnected-(D407-A2-Pad2).
+Add net unconnected-(C504-Pad2).
+Updated IC501 fields.
+Add net unconnected-(IC501-VSS1-Pad7).
+Reconnected IC501 pin 7 from GND to unconnected-(IC501-VSS1-Pad7).
+Add net unconnected-(IC501-LRCK-Pad11).
+Reconnected IC501 pin 11 from CODEC_LRCK to unconnected-(IC501-LRCK-Pad11).
+Add net unconnected-(IC501-TVDD-Pad24).
+Reconnected IC501 pin 24 from +3V3 to unconnected-(IC501-TVDD-Pad24).
+Add net unconnected-(IC501-AVDD-Pad8).
+Reconnected IC501 pin 8 from +5V to unconnected-(IC501-AVDD-Pad8).
+Add net unconnected-(IC501-P/S-Pad9).
+Reconnected IC501 pin 9 from +3V3 to unconnected-(IC501-P/S-Pad9).
+Add net unconnected-(IC501-OVFL/DZFL-Pad16).
+Reconnected IC501 pin 16 from unconnected-(IC501-OVFL/DZFL-Pad16) to unconnected-(IC501-OVFL/DZFL-Pad16).
+Add net unconnected-(IC501-DVDD-Pad25).
+Reconnected IC501 pin 25 from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Add net unconnected-(IC501-AOUTR--Pad29).
+Reconnected IC501 pin 29 from DAC_R_N to unconnected-(IC501-AOUTR--Pad29).
+Add net unconnected-(IC501-AOUTR+-Pad30).
+Reconnected IC501 pin 30 from DAC_R_P to unconnected-(IC501-AOUTR+-Pad30).
+Add net unconnected-(IC501-OVFR/DZFR-Pad15).
+Reconnected IC501 pin 15 from unconnected-(IC501-OVFR/DZFR-Pad15) to unconnected-(IC501-OVFR/DZFR-Pad15).
+Add net unconnected-(IC501-VREF-Pad6).
+Reconnected IC501 pin 6 from +5V to unconnected-(IC501-VREF-Pad6).
+Add net unconnected-(IC501-CDTI/CKS0-Pad17).
+Reconnected IC501 pin 17 from CODEC_CDTI to unconnected-(IC501-CDTI/CKS0-Pad17).
+Add net unconnected-(IC501-DFS0-Pad20).
+Reconnected IC501 pin 20 from GND to unconnected-(IC501-DFS0-Pad20).
+Add net unconnected-(IC501-AOUTL+-Pad28).
+Reconnected IC501 pin 28 from DAC_L_P to unconnected-(IC501-AOUTL+-Pad28).
+Add net unconnected-(IC501-AINR+-Pad2).
+Reconnected IC501 pin 2 from ADC_R_P to unconnected-(IC501-AINR+-Pad2).
+Add net unconnected-(IC501-DEM0-Pad22).
+Reconnected IC501 pin 22 from GND to unconnected-(IC501-DEM0-Pad22).
+Add net unconnected-(IC501-SDTO-Pad13).
+Reconnected IC501 pin 13 from CODEC_SDTO to unconnected-(IC501-SDTO-Pad13).
+Add net unconnected-(IC501-SDTI-Pad14).
+Reconnected IC501 pin 14 from CODEC_SDTI to unconnected-(IC501-SDTI-Pad14).
+Add net unconnected-(IC501-VCOM-Pad1).
+Reconnected IC501 pin 1 from /Codec/VCOM to unconnected-(IC501-VCOM-Pad1).
+Add net unconnected-(IC501-MCLK-Pad10).
+Reconnected IC501 pin 10 from CODEC_MCLK to unconnected-(IC501-MCLK-Pad10).
+Add net unconnected-(IC501-AINR--Pad3).
+Reconnected IC501 pin 3 from ADC_R_N to unconnected-(IC501-AINR--Pad3).
+Add net unconnected-(IC501-CCLK/CKS1-Pad18).
+Reconnected IC501 pin 18 from CODEC_CCLK to unconnected-(IC501-CCLK/CKS1-Pad18).
+Add net unconnected-(IC501-VSS2-Pad26).
+Reconnected IC501 pin 26 from GND to unconnected-(IC501-VSS2-Pad26).
+Add net unconnected-(IC501-AINL+-Pad4).
+Reconnected IC501 pin 4 from ADC_L_P to unconnected-(IC501-AINL+-Pad4).
+Add net unconnected-(IC501-CSN/DIF-Pad19).
+Reconnected IC501 pin 19 from CODEC_CSN to unconnected-(IC501-CSN/DIF-Pad19).
+Add net unconnected-(IC501-SDFIL-Pad23).
+Reconnected IC501 pin 23 from GND to unconnected-(IC501-SDFIL-Pad23).
+Add net unconnected-(IC501-AINL--Pad5).
+Reconnected IC501 pin 5 from ADC_L_N to unconnected-(IC501-AINL--Pad5).
+Add net unconnected-(IC501-PDN-Pad21).
+Reconnected IC501 pin 21 from /Codec/PDN to unconnected-(IC501-PDN-Pad21).
+Add net unconnected-(IC501-BICK-Pad12).
+Reconnected IC501 pin 12 from CODEC_BICK to unconnected-(IC501-BICK-Pad12).
+Add net unconnected-(IC501-AOUTL--Pad27).
+Reconnected IC501 pin 27 from DAC_L_N to unconnected-(IC501-AOUTL--Pad27).
+Reconnected C213 pin 2 from GND to unconnected-(C213-Pad2).
+Updated J402 fields.
+Add net unconnected-(J402-PadT).
+Reconnected J402 pin T from /Jacks and Bypass/IN to unconnected-(J402-PadT).
+Add net unconnected-(J402-PadS).
+Reconnected J402 pin S from GND to unconnected-(J402-PadS).
+Add net unconnected-(J402-PadR).
+Reconnected J402 pin R from IN_R to unconnected-(J402-PadR).
+Add net unconnected-(C213-Pad2).
+Add net unconnected-(R404-Pad2).
+Reconnected R404 pin 2 from /Jacks and Bypass/LED_EFF_LOW to unconnected-(R404-Pad2).
+Add net unconnected-(R404-Pad1).
+Reconnected R404 pin 1 from /Jacks and Bypass/LED_EFF_K to unconnected-(R404-Pad1).
+Reconnected C213 pin 1 from /MCU/NRST to unconnected-(C213-Pad1).
+Add net unconnected-(R707-Pad2).
+Reconnected R707 pin 2 from VCOM_B to unconnected-(R707-Pad2).
+Add net unconnected-(R707-Pad1).
+Reconnected R707 pin 1 from /Analog In and Out/OUTL_P to unconnected-(R707-Pad1).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from GND to unconnected-(J402-PadS).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +3V3 to unconnected-(IC501-DVDD-Pad25).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +5V to unconnected-(IC501-VREF-Pad6).
+Reconnected via from +9V to unconnected-(D113-A-Pad2).
+Reconnected via from +9V to unconnected-(D113-A-Pad2).
+Reconnected via from +9V to unconnected-(D113-A-Pad2).
+Reconnected via from +9V to unconnected-(D113-A-Pad2).
+Reconnected via from +9V to unconnected-(D113-A-Pad2).
+Reconnected via from +9V to unconnected-(D113-A-Pad2).
+Removed unused net unconnected-(U302-NC-Pad4).
+Removed unused net unconnected-(U201-PE1-Pad98).
+Removed unused net unconnected-(U201-PE0-Pad97).
+Removed unused net unconnected-(U201-PD9-Pad56).
+Removed unused net unconnected-(U201-PD8-Pad55).
+Removed unused net unconnected-(U201-PD7-Pad88).
+Removed unused net unconnected-(U201-PD6-Pad87).
+Removed unused net unconnected-(U201-PD5-Pad86).
+Removed unused net unconnected-(U201-PD4-Pad85).
+Removed unused net unconnected-(U201-PD3-Pad84).
+Removed unused net unconnected-(U201-PD2-Pad83).
+Removed unused net unconnected-(U201-PD15-Pad62).
+Removed unused net unconnected-(U201-PD14-Pad61).
+Removed unused net unconnected-(U201-PD13-Pad60).
+Removed unused net unconnected-(U201-PD12-Pad59).
+Removed unused net unconnected-(U201-PD11-Pad58).
+Removed unused net unconnected-(U201-PD10-Pad57).
+Removed unused net unconnected-(U201-PD1-Pad82).
+Removed unused net unconnected-(U201-PD0-Pad81).
+Removed unused net unconnected-(U201-PC9-Pad66).
+Removed unused net unconnected-(U201-PC8-Pad65).
+Removed unused net unconnected-(U201-PC5-Pad33).
+Removed unused net unconnected-(U201-PC4-Pad32).
+Removed unused net unconnected-(U201-PC3_C-Pad18).
+Removed unused net unconnected-(U201-PC2_C-Pad17).
+Reconnected via from /Codec/VCOM to unconnected-(IC501-VCOM-Pad1).
+Reconnected via from /Codec/VCOM to unconnected-(IC501-VCOM-Pad1).
+Removed unused net unconnected-(U201-PC13-Pad7).
+Removed unused net unconnected-(U201-PC12-Pad80).
+Removed unused net unconnected-(U201-PC1-Pad16).
+Removed unused net unconnected-(U201-PC0-Pad15).
+Removed unused net unconnected-(U201-PB9-Pad96).
+Removed unused net unconnected-(U201-PB5-Pad91).
+Removed unused net unconnected-(U201-PB15-Pad54).
+Removed unused net unconnected-(U201-PB14-Pad53).
+Removed unused net unconnected-(U201-PB11-Pad47).
+Removed unused net unconnected-(U201-PB0-Pad34).
+Reconnected via from /Jacks and Bypass/IN to unconnected-(J402-PadT).
+Removed unused net unconnected-(U201-PA9-Pad68).
+Removed unused net unconnected-(U201-PA8-Pad67).
+Removed unused net unconnected-(U201-PA7-Pad31).
+Removed unused net unconnected-(U201-PA6-Pad30).
+Removed unused net unconnected-(U201-PA5-Pad29).
+Removed unused net unconnected-(U201-PA3-Pad25).
+Removed unused net unconnected-(U201-PA15-Pad77).
+Removed unused net unconnected-(U201-PA12-Pad71).
+Removed unused net unconnected-(U201-PA11-Pad70).
+Removed unused net unconnected-(U201-PA10-Pad69).
+Removed unused net unconnected-(J406-PadTN).
+Removed unused net unconnected-(J406-PadSN).
+Removed unused net unconnected-(J406-PadRN).
+Removed unused net unconnected-(J404-PadTN).
+Removed unused net unconnected-(J404-PadSN).
+Removed unused net unconnected-(J404-PadRN).
+Removed unused net unconnected-(J404-PadR).
+Removed unused net unconnected-(J403-PadTN).
+Removed unused net unconnected-(J403-PadSN).
+Removed unused net unconnected-(J403-PadRN).
+Removed unused net unconnected-(J403-PadR).
+Removed unused net unconnected-(IC501-OVFR/DZFR-Pad15).
+Removed unused net unconnected-(IC501-OVFL/DZFL-Pad16).
+Removed unused net VDDA.
+Removed unused net VCOM_B.
+Removed unused net VCOM_A.
+Removed unused net RELAY_DRV.
+Removed unused net POT5.
+Removed unused net POT3.
+Removed unused net POT2.
+Removed unused net POT1.
+Removed unused net OLED_SDA.
+Removed unused net OLED_SCL.
+Removed unused net LED_HOLD_DRV.
+Removed unused net LED_EFFECT_DRV.
+Removed unused net IN_R.
+Removed unused net FSW_HOLD_IN.
+Removed unused net FSW_BYPASS_IN.
+Removed unused net EXP.
+Removed unused net EFFECT_OUT_R.
+Removed unused net EFFECT_OUT_L.
+Removed unused net EFFECT_IN_BUF_R.
+Reconnected via from ADC_L_N to unconnected-(IC501-AINL--Pad5).
+Reconnected via from ADC_L_N to unconnected-(IC501-AINL--Pad5).
+Reconnected via from ADC_L_P to unconnected-(IC501-AINL+-Pad4).
+Reconnected via from ADC_L_P to unconnected-(IC501-AINL+-Pad4).
+Reconnected via from ADC_L_P to unconnected-(IC501-AINL+-Pad4).
+Reconnected via from ADC_L_P to unconnected-(IC501-AINL+-Pad4).
+Reconnected via from ADC_R_N to unconnected-(IC501-AINR--Pad3).
+Reconnected via from ADC_R_N to unconnected-(IC501-AINR--Pad3).
+Reconnected via from ADC_R_N to unconnected-(IC501-AINR--Pad3).
+Reconnected via from ADC_R_P to unconnected-(IC501-AINR+-Pad2).
+Reconnected via from ADC_R_P to unconnected-(IC501-AINR+-Pad2).
+Reconnected via from ADC_R_P to unconnected-(IC501-AINR+-Pad2).
+Reconnected via from CODEC_CDTI to unconnected-(IC501-CDTI/CKS0-Pad17).
+Add net unconnected-(C213-Pad1).
+Reconnected via from CODEC_CSN to unconnected-(IC501-CSN/DIF-Pad19).
+Reconnected via from CODEC_CSN to unconnected-(IC501-CSN/DIF-Pad19).
+Reconnected via from CODEC_MCLK to unconnected-(IC501-MCLK-Pad10).
+Reconnected via from CODEC_MCLK to unconnected-(IC501-MCLK-Pad10).
+Removed unused net EFFECT_IN_BUF.
+Removed unused net unconnected-(U301-EN-Pad5).
+Reconnected C505 pin 2 from GND to unconnected-(C505-Pad2).
+Reconnected via from CODEC_SDTO to unconnected-(IC501-SDTO-Pad13).
+Reconnected via from DAC_L_N to unconnected-(IC501-AOUTL--Pad27).
+Reconnected via from DAC_L_N to unconnected-(IC501-AOUTL--Pad27).
+Reconnected via from DAC_R_N to unconnected-(IC501-AOUTR--Pad29).
+Reconnected via from DAC_R_N to unconnected-(IC501-AOUTR--Pad29).
+Removed unused net EFFECT_IN.
+Removed unused net DAC_R_P.
+Removed unused net DAC_R_N.
+Removed unused net DAC_L_P.
+Removed unused net DAC_L_N.
+Removed unused net CODEC_SDTO.
+Removed unused net CODEC_SDTI.
+Removed unused net CODEC_PDN.
+Removed unused net CODEC_MCLK.
+Removed unused net CODEC_LRCK.
+Removed unused net CODEC_CSN.
+Removed unused net CODEC_CDTI.
+Removed unused net CODEC_CCLK.
+Removed unused net CODEC_BICK.
+Removed unused net ADC_R_P.
+Removed unused net ADC_R_N.
+Removed unused net ADC_L_P.
+Removed unused net ADC_L_N.
+Removed unused net /Power/SW.
+Removed unused net /Power/LDO_OUT.
+Removed unused net /Power/LDO_IN.
+Removed unused net /Power/DC_F.
+Reconnected via from VCOM_B to unconnected-(R707-Pad2).
+Reconnected via from VCOM_B to unconnected-(R707-Pad2).
+Reconnected via from VCOM_B to unconnected-(R707-Pad2).
+Reconnected via from VCOM_B to unconnected-(R707-Pad2).
+Reconnected via from VCOM_B to unconnected-(R707-Pad2).
+Reconnected via from VCOM_B to unconnected-(R707-Pad2).
+Reconnected via from VCOM_B to unconnected-(R707-Pad2).
+Removed unused net /Power/BUCK_FBT.
+Removed unused net /Power/BUCK_FB.
+Reconnected copper zone 'GND plane' from GND to unconnected-(J402-PadS).
+Removed unused footprint R202.
+Removed unused footprint C705.
+Removed unused footprint U301.
+Removed unused footprint RV102.
+Removed unused footprint R705.
+Removed unused footprint R409.
+Removed unused footprint C702.
+Removed unused footprint R601.
+Removed unused footprint R413.
+Removed unused footprint C310.
+Removed unused footprint R718.
+Removed unused footprint C304.
+Removed unused footprint C608.
+Removed unused footprint U601.
+Removed unused footprint C607.
+Removed unused footprint R505.
+Removed unused footprint R417.
+Removed unused footprint D406.
+Removed unused footprint C501.
+Removed unused footprint C610.
+Removed unused footprint Y201.
+Removed unused footprint U702.
+Removed unused footprint C706.
+Removed unused footprint U302.
+Removed unused footprint J405.
+Removed unused footprint J408.
+Removed unused footprint C306.
+Removed unused footprint R418.
+Removed unused footprint C308.
+Removed unused footprint R301.
+Removed unused footprint C212.
+Removed unused footprint D302.
+Removed unused footprint C102.
+Removed unused footprint D402.
+Removed unused footprint R504.
+Removed unused footprint C301.
+Removed unused footprint R407.
+Removed unused footprint C701.
+Removed unused footprint R501.
+Removed unused footprint C606.
+Removed unused net /Power/BUCK_BOOT.
+Removed unused footprint U201.
+Removed unused footprint C201.
+Removed unused footprint R203.
+Removed unused footprint C601.
+Removed unused footprint C410.
+Removed unused footprint C502.
+Removed unused footprint C604.
+Removed unused footprint R105.
+Removed unused footprint R101.
+Removed unused footprint R704.
+Removed unused net /MCU/VCAP2.
+Removed unused footprint C408.
+Removed unused footprint R702.
+Removed unused footprint RV105.
+Removed unused footprint Q401.
+Removed unused footprint U501.
+Removed unused footprint R201.
+Removed unused footprint C605.
+Removed unused footprint R416.
+Removed unused footprint C411.
+Removed unused footprint R716.
+Removed unused footprint C103.
+Removed unused footprint FB303.
+Removed unused footprint R715.
+Removed unused footprint C203.
+Removed unused footprint R717.
+Removed unused footprint R703.
+Removed unused footprint R102.
+Removed unused footprint C311.
+Removed unused footprint W201.
+Removed unused footprint R706.
+Removed unused footprint C312.
+Removed unused footprint D405.
+Removed unused footprint C207.
+Removed unused footprint R302.
+Removed unused footprint C302.
+Removed unused footprint R708.
+Removed unused footprint C307.
+Removed unused footprint C202.
+Removed unused footprint Q402.
+Removed unused footprint C703.
+Removed unused footprint R103.
+Removed unused footprint C205.
+Removed unused footprint RV103.
+Removed unused footprint K401.
+Removed unused footprint R714.
+Removed unused footprint C609.
+Removed unused footprint U701.
+Removed unused footprint C503.
+Removed unused footprint C210.
+Removed unused footprint C204.
+Removed unused footprint C303.
+Removed unused footprint C209.
+Removed unused footprint C208.
+Removed unused footprint C704.
+Removed unused footprint R602.
+Removed unused footprint C101.
+Removed unused footprint L301.
+Removed unused footprint U401.
+Removed unused footprint R719.
+Removed unused footprint R606.
+Removed unused footprint R405.
+Removed unused footprint Q403.
+Removed unused footprint R710.
+Removed unused footprint R603.
+Removed unused net /MCU/VCAP1.
+Removed unused footprint R415.
+Removed unused footprint C412.
+Removed unused footprint R701.
+Removed unused footprint R406.
+Removed unused footprint RV101.
+Removed unused footprint D114.
+Removed unused footprint C214.
+Removed unused footprint R709.
+Removed unused footprint C206.
+Removed unused footprint FB301.
+Removed unused footprint D301.
+Removed unused footprint J407.
+Removed unused footprint FB201.
+Removed unused footprint C105.
+Removed unused footprint R412.
+Removed unused footprint C409.
+Removed unused footprint R414.
+Removed unused footprint C305.
+Removed unused footprint R107.
+Removed unused footprint C602.
+Removed unused footprint C309.
+Removed unused footprint R711.
+Removed unused footprint C707.
+Removed unused footprint R108.
+Removed unused footprint R605.
+Removed unused footprint R408.
+Removed unused footprint C211.
+Removed unused footprint D404.
+Removed unused footprint C603.
+Removed unused footprint R204.
+Removed unused footprint R303.
+Removed unused footprint C509.
+Removed unused footprint R604.
+Removed unused footprint FB302.
+Removed unused footprint R411.
+Removed unused footprint R410.
+Removed unused net /MCU/SWO.
+Removed unused footprint J403.
+Removed unused footprint J404.
+Removed unused footprint J406.
+Removed unused footprint C104.
+Removed unused footprint C611.
+Removed unused footprint C612.
+Removed unused footprint C613.
+Removed unused footprint C614.
+Removed unused footprint C615.
+Removed unused footprint C616.
+Removed unused footprint C617.
+Removed unused footprint C618.
+Removed unused footprint C708.
+Removed unused footprint C709.
+Removed unused footprint R607.
+Removed unused footprint R608.
+Removed unused footprint R609.
+Removed unused footprint R610.
+Removed unused footprint R611.
+Removed unused footprint R612.
+Removed unused footprint R720.
+Removed unused footprint R721.
+Removed unused footprint R722.
+Removed unused footprint U202.
+Removed unused net +3V3.
+Removed unused net +5V.
+Removed unused net +9V.
+Removed unused net /ADC Driver/FDA_INN.
+Removed unused net /ADC Driver/FDA_INP.
+Removed unused net /ADC Driver/FDA_OUTN.
+Removed unused net /ADC Driver/FDA_OUTP.
+Removed unused net /ADC Driver/FDB_INN.
+Removed unused net /ADC Driver/FDB_INP.
+Removed unused net /ADC Driver/FDB_OUTN.
+Removed unused net /ADC Driver/FDB_OUTP.
+Removed unused net /Analog In and Out/IN_AC.
+Removed unused net /Analog In and Out/IN_AC_R.
+Removed unused net /Analog In and Out/IN_BUF_OUT.
+Removed unused net /Analog In and Out/IN_BUF_OUT_R.
+Removed unused net /Analog In and Out/IN_FB.
+Removed unused net /Analog In and Out/IN_GAIN.
+Removed unused net /Analog In and Out/OUTL_AC.
+Removed unused net /Analog In and Out/OUTL_AMP.
+Removed unused net /Analog In and Out/OUTL_N.
+Removed unused net /Analog In and Out/OUTL_P.
+Removed unused net /Analog In and Out/OUTR_AC.
+Removed unused net /Analog In and Out/OUTR_AMP.
+Removed unused net /Analog In and Out/OUTR_N.
+Removed unused net /Analog In and Out/OUTR_P.
+Removed unused net /Codec/PDN.
+Removed unused net /Codec/VCOM.
+Removed unused net /Codec/VCOM_A_RAW.
+Removed unused net /Codec/VCOM_B_RAW.
+Removed unused net /Controls and LEDs/POT1_W.
+Removed unused net /Controls and LEDs/POT2_W.
+Removed unused net /Controls and LEDs/POT3_W.
+Removed unused net /Controls and LEDs/POT5_W.
+Removed unused net /Jacks and Bypass/EXP_BUF_IN.
+Removed unused net /Jacks and Bypass/EXP_BUF_OUT.
+Removed unused net /Jacks and Bypass/EXP_RING.
+Removed unused net /Jacks and Bypass/EXP_TIP.
+Removed unused net /Jacks and Bypass/FSW_BYPASS.
+Removed unused net /Jacks and Bypass/FSW_HOLD.
+Removed unused net /Jacks and Bypass/IN.
+Removed unused net /Jacks and Bypass/LED_EFF_G.
+Removed unused net /Jacks and Bypass/LED_EFF_K.
+Removed unused net /Jacks and Bypass/LED_EFF_LOW.
+Removed unused net /Jacks and Bypass/LED_HOLD_G.
+Removed unused net /Jacks and Bypass/LED_HOLD_K.
+Removed unused net /Jacks and Bypass/LED_HOLD_LOW.
+Removed unused net /Jacks and Bypass/OUT_L.
+Removed unused net /Jacks and Bypass/RELAY_COIL.
+Removed unused net /Jacks and Bypass/RELAY_G.
+Removed unused net /Jacks and Bypass/RELAY_LOW.
+Removed unused net /MCU/BOOT0.
+Removed unused net /MCU/HSE_IN.
+Removed unused net /MCU/HSE_OUT.
+Removed unused net /MCU/NRST.
+Removed unused net /MCU/QSPI_CLK.
+Removed unused net /MCU/QSPI_IO0.
+Removed unused net /MCU/QSPI_IO1.
+Removed unused net /MCU/QSPI_IO2.
+Removed unused net /MCU/QSPI_IO3.
+Removed unused net /MCU/QSPI_NCS.
+Removed unused net /MCU/SWCLK.
+Removed unused net /MCU/SWCLK_N.
+Removed unused net /MCU/SWDIO.
+Reconnected via from CODEC_SDTO to unconnected-(IC501-SDTO-Pad13).
+Warning: Could not remove unused footprint J401 (footprint is locked).
+Warning: Could not remove unused footprint SW101 (footprint is locked).
+Warning: Could not remove unused footprint SW103 (footprint is locked).
+Warning: Could not remove unused footprint SW102 (footprint is locked).
+Warning: Via connected to unknown net (VDDA).
+Warning: Via connected to unknown net (VDDA).
+Warning: Via connected to unknown net (VCOM_A).
+Warning: Via connected to unknown net (VCOM_A).
+Warning: Via connected to unknown net (TOG2_A).
+Warning: Via connected to unknown net (TOG2_A).
+Warning: Via connected to unknown net (RELAY_DRV).
+Warning: Via connected to unknown net (POT5).
+Warning: Via connected to unknown net (POT5).
+Warning: Via connected to unknown net (POT5).
+Warning: Via connected to unknown net (POT2).
+Warning: Via connected to unknown net (POT2).
+Warning: Via connected to unknown net (OLED_SDA).
+Warning: Via connected to unknown net (OLED_SDA).
+Warning: Via connected to unknown net (OLED_SDA).
+Warning: Via connected to unknown net (OLED_SCL).
+Warning: Via connected to unknown net (OLED_SCL).
+Warning: Via connected to unknown net (OLED_SCL).
+Warning: Via connected to unknown net (FSW_HOLD_IN).
+Warning: Via connected to unknown net (EXP).
+Warning: Via connected to unknown net (EXP).
+Warning: Via connected to unknown net (EXP).
+Warning: Via connected to unknown net (EFFECT_OUT_L).
+Warning: Via connected to unknown net (EFFECT_IN).
+Warning: Via connected to unknown net (CODEC_PDN).
+Warning: Via connected to unknown net (/Power/SW).
+Warning: Via connected to unknown net (/Power/SW).
+Warning: Via connected to unknown net (/Power/SW).
+Warning: Via connected to unknown net (/Power/LDO_OUT).
+Warning: Via connected to unknown net (/Power/LDO_OUT).
+Warning: Via connected to unknown net (/Power/LDO_IN).
+Warning: Via connected to unknown net (/Power/LDO_IN).
+Warning: Via connected to unknown net (/MCU/VCAP2).
+Warning: Via connected to unknown net (/MCU/VCAP2).
+Warning: Via connected to unknown net (/MCU/SWO).
+Warning: Via connected to unknown net (/MCU/SWDIO_N).
+Warning: Via connected to unknown net (/MCU/SWDIO).
+Warning: Via connected to unknown net (/MCU/SWDIO).
+Warning: Via connected to unknown net (/MCU/SWCLK_N).
+Warning: Via connected to unknown net (/MCU/SWCLK).
+Warning: Via connected to unknown net (/MCU/SWCLK).
+Warning: Via connected to unknown net (/MCU/QSPI_NCS).
+Warning: Via connected to unknown net (/MCU/QSPI_NCS).
+Warning: Via connected to unknown net (/MCU/QSPI_IO3).
+Warning: Via connected to unknown net (/MCU/QSPI_IO3).
+Warning: Via connected to unknown net (/MCU/QSPI_IO2).
+Warning: Via connected to unknown net (/MCU/QSPI_IO2).
+Warning: Via connected to unknown net (/MCU/QSPI_IO1).
+Warning: Via connected to unknown net (/MCU/QSPI_IO1).
+Warning: Via connected to unknown net (/MCU/QSPI_IO0).
+Warning: Via connected to unknown net (/MCU/QSPI_IO0).
+Warning: Via connected to unknown net (/MCU/QSPI_CLK).
+Warning: Via connected to unknown net (/MCU/QSPI_CLK).
+Warning: Via connected to unknown net (/MCU/HSE_OUT).
+Warning: Via connected to unknown net (/MCU/HSE_OUT).
+Warning: Via connected to unknown net (/MCU/HSE_IN).
+Warning: Via connected to unknown net (/MCU/HSE_IN).
+Warning: Via connected to unknown net (/MCU/BOOT0).
+Warning: Via connected to unknown net (/MCU/BOOT0).
+Warning: Via connected to unknown net (/Jacks and Bypass/RELAY_G).
+Warning: Via connected to unknown net (/Jacks and Bypass/RELAY_G).
+Warning: Via connected to unknown net (/Jacks and Bypass/RELAY_G).
+Warning: Via connected to unknown net (/Jacks and Bypass/RELAY_G).
+Warning: Via connected to unknown net (/Jacks and Bypass/RELAY_COIL).
+Warning: Via connected to unknown net (/Jacks and Bypass/RELAY_COIL).
+Warning: Via connected to unknown net (/Jacks and Bypass/LED_EFF_G).
+Warning: Via connected to unknown net (/Jacks and Bypass/LED_EFF_G).
+Warning: Via connected to unknown net (/Jacks and Bypass/FSW_HOLD).
+Warning: Via connected to unknown net (/Jacks and Bypass/FSW_HOLD).
+Warning: Via connected to unknown net (/Jacks and Bypass/EXP_TIP).
+Warning: Via connected to unknown net (/Jacks and Bypass/EXP_BUF_OUT).
+Warning: Via connected to unknown net (/Jacks and Bypass/EXP_BUF_OUT).
+Warning: Via connected to unknown net (/Jacks and Bypass/EXP_BUF_IN).
+Warning: Via connected to unknown net (/Jacks and Bypass/EXP_BUF_IN).
+Warning: Via connected to unknown net (/Controls and LEDs/POT5_W).
+Warning: Via connected to unknown net (/Controls and LEDs/POT1_W).
+Warning: Via connected to unknown net (/Controls and LEDs/POT1_W).
+Warning: Via connected to unknown net (/Analog In and Out/OUTR_P).
+Warning: Via connected to unknown net (/Analog In and Out/OUTR_P).
+Warning: Via connected to unknown net (/Analog In and Out/OUTL_N).
+Warning: Via connected to unknown net (/Analog In and Out/OUTL_N).
+Warning: Via connected to unknown net (/Analog In and Out/OUTL_AMP).
+Warning: Via connected to unknown net (/Analog In and Out/OUTL_AMP).
+Warning: Via connected to unknown net (/Analog In and Out/OUTL_AC).
+Warning: Via connected to unknown net (/Analog In and Out/OUTL_AC).
+Warning: Via connected to unknown net (/Analog In and Out/IN_BUF_OUT_R).
+Warning: Via connected to unknown net (/Analog In and Out/IN_BUF_OUT_R).
+Warning: Via connected to unknown net (/ADC Driver/FDB_OUTP).
+Warning: Via connected to unknown net (/ADC Driver/FDB_OUTP).
+Warning: Via connected to unknown net (/ADC Driver/FDB_INN).
+Warning: Via connected to unknown net (/ADC Driver/FDB_INN).
+Warning: Via connected to unknown net (/ADC Driver/FDB_INN).
+Warning: Via connected to unknown net (/ADC Driver/FDA_OUTP).
+Warning: Via connected to unknown net (/ADC Driver/FDA_OUTP).
+Warning: Via connected to unknown net (/ADC Driver/FDA_OUTN).
+Warning: Via connected to unknown net (/ADC Driver/FDA_OUTN).
+Warning: Via connected to unknown net (/ADC Driver/FDA_OUTN).
+Warning: Via connected to unknown net (/ADC Driver/FDA_INP).
+Warning: Via connected to unknown net (/ADC Driver/FDA_INP).
+Warning: Via connected to unknown net (/ADC Driver/FDA_INN).
+Warning: Via connected to unknown net (/ADC Driver/FDA_INN).
+Warning: Via connected to unknown net (CODEC_PDN).
+Warning: Via connected to unknown net (/ADC Driver/FDA_INN).
+
+
+Info: Total warnings: 107, errors: 0.
