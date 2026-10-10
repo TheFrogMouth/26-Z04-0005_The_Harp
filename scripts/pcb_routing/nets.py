@@ -36,7 +36,8 @@ WIDTH = {'GND': 0.4, 'RAIL': 0.5, 'POWER': 0.5, 'AUDIO': 0.254, 'DIGITAL': 0.2, 
 CLEAR = {'GND': 0.18, 'RAIL': 0.18, 'POWER': 0.18, 'AUDIO': 0.18, 'DIGITAL': 0.15, 'CTRL': 0.15}
 WIDE = {'+9V': 0.6, '/Power/DC_IN': 0.8, '/Power/DC_F': 0.8, '/Power/SW': 0.8,
         '/Power/BUCK_FB': 0.25, '/Power/BUCK_FBT': 0.25, '/Power/BUCK_BOOT': 0.3,
-        'VDDA': 0.3}
+        'VDDA': 0.3,
+        '/MCU/NRST': 0.1016}    # escapes the SWD needle pads (0.48 mm between pads, all six in use)
 VIA = (0.6, 0.3)
 
 
