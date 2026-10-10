@@ -268,7 +268,7 @@
       "internal_id": "",
       "mfg": "",
       "mpn": "",
-      "sch_revision": ""
+      "sch_revision": "A"
     },
     "layer_pairs": [],
     "layer_presets": [],
@@ -1422,7 +1422,7 @@
   "sheets": [
     [
       "596641a7-eeca-47a8-9244-68f1910acd88",
-      "Root"
+      "The Harp"
     ],
     [
       "081123bd-8d69-5338-8158-1f150ab455dd",

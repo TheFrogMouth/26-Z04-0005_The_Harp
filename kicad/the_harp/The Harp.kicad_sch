@@ -10,643 +10,19 @@
 		(company "The Frogmouth")
 	)
 	(lib_symbols)
-	(text "THE HARP  26-Z04-0005  SYMPATHETIC-STRING DIGITAL PEDAL"
-		(exclude_from_sim no)
-		(at 20.32 40.64 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 3.5 3.5)
-				(bold yes)
-				(color 40 40 40 1)
-			)
-			(justify left bottom)
+	(polyline
+		(pts
+			(xy 51.116 76.476) (xy 52 78) (xy 52.884 76.476)
 		)
-		(uuid "197d3674-c393-48eb-a9be-927be1e90059")
-	)
-	(text "One four-layer main board in a Hammond 125B on the Alchemist / Relic grid; pots, toggles, LEDs and jacks board-mounted.\nSignal: IN -> K401 relay bypass -> 1M / 100n -> OPA2365 buffer -> THS4522 ADC driver -> AK4621 ADC -> STM32H750VBT6 (SAI1) -> AK4621 DAC -> OPA1688 difference amps -> OUT L (through K401) and OUT R.\nDesign notes: docs/design-brief.md, docs/pcb-plan.md. The schematic is written by scripts/harp_schematic/build_layout.py from harp_spec.py and the layouts in layouts/; after the first edit in KiCad the KiCad files are the source of truth."
-		(exclude_from_sim no)
-		(at 20.32 44 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.5 1.5)
-			)
-			(justify left top)
-		)
-		(uuid "68eddac2-e5a3-41b1-8284-f06e0ef20adc")
-	)
-	(rectangle
-		(start 22 58)
-		(end 285 128)
 		(stroke
-			(width 0.3)
-			(type dash)
-			(color 90 90 90 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "962711aa-e570-4d2a-8d07-b5a65a46d20d")
-	)
-	(text "AUDIO / ANALOG"
-		(exclude_from_sim no)
-		(at 25 64.5 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 3.5 3.5)
-			)
-			(justify left bottom)
-		)
-		(uuid "c750bbdd-6ed3-4468-9cc8-19d08c3fc2ad")
-	)
-	(rectangle
-		(start 22 150)
-		(end 88 228)
-		(stroke
-			(width 0.3)
-			(type dash)
-			(color 90 90 90 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "68c80fc5-f879-440a-869a-5776f6dc2eef")
-	)
-	(text "POWER"
-		(exclude_from_sim no)
-		(at 25 156.5 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 3.5 3.5)
-			)
-			(justify left bottom)
-		)
-		(uuid "9a0cf757-4ad9-43c0-9fee-91ebde0562fa")
-	)
-	(rectangle
-		(start 212 150)
-		(end 365 228)
-		(stroke
-			(width 0.3)
-			(type dash)
-			(color 90 90 90 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "ab919336-e80b-49f5-816e-76aac9a10491")
-	)
-	(text "CONTROL / DIGITAL"
-		(exclude_from_sim no)
-		(at 215 156.5 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 3.5 3.5)
-			)
-			(justify left bottom)
-		)
-		(uuid "08c3a916-4407-404f-99f0-65d7b37781e9")
-	)
-	(sheet
-		(at 30 78)
-		(size 45.72 38.1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.3)
-			(type solid)
-			(color 0 140 0 1)
-		)
-		(fill
-			(color 0 140 0 0.08)
-		)
-		(uuid "e4049e47-7d7e-5fff-a503-0f184e0b2d1d")
-		(property "Sheetname" "Jacks and Bypass"
-			(at 30 77.238 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 2.032 2.032)
-				(bold yes)
-			)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "Jacks and Bypass.kicad_sch"
-			(at 30 116.862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 110 110 110 1)
-			)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
-					(page "5")
-				)
-			)
-		)
-	)
-	(text "IN (TRS), OUT L, OUT R, EXP jacks (J402-J406)\nK401 relay true bypass, Q401 driver\nEffect / Hold LEDs, footswitch pads\nMCP6001 expression buffer"
-		(exclude_from_sim no)
-		(at 32 83 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.5 1.5)
-			)
-			(justify left top)
-		)
-		(uuid "a1c85f01-36ff-4102-8427-12eb32361cf1")
-	)
-	(sheet
-		(at 95 78)
-		(size 45.72 38.1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.3)
-			(type solid)
-			(color 0 140 0 1)
-		)
-		(fill
-			(color 0 140 0 0.08)
-		)
-		(uuid "b9c627d2-2d27-52af-bf10-9a8b87be0765")
-		(property "Sheetname" "Analog In and Out"
-			(at 95 77.238 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 2.032 2.032)
-				(bold yes)
-			)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "Analog In and Out.kicad_sch"
-			(at 95 116.862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 110 110 110 1)
-			)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
-					(page "8")
-				)
-			)
-		)
-	)
-	(text "U701A/B OPA2365 L and R input buffers\n1M / 100n in, 49.9R / 220p out\nU702 OPA1688 difference amps\n10u out, 100R, 1M"
-		(exclude_from_sim no)
-		(at 97 83 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.5 1.5)
-			)
-			(justify left top)
-		)
-		(uuid "3c07a137-ec56-4115-a510-b3db09631b29")
-	)
-	(sheet
-		(at 160 78)
-		(size 45.72 38.1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.3)
-			(type solid)
-			(color 0 140 0 1)
-		)
-		(fill
-			(color 0 140 0 0.08)
-		)
-		(uuid "4c2ab8ff-3630-5d5d-ac66-e312a3c9a378")
-		(property "Sheetname" "ADC Driver"
-			(at 160 77.238 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 2.032 2.032)
-				(bold yes)
-			)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "ADC Driver.kicad_sch"
-			(at 160 116.862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 110 110 110 1)
-			)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
-					(page "7")
-				)
-			)
-		)
-	)
-	(text "U601 THS4522 channel A (L), B (R)\nsingle-ended to differential\ngain 0.59, 40.2R / 2.7n filter"
-		(exclude_from_sim no)
-		(at 162 83 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.5 1.5)
-			)
-			(justify left top)
-		)
-		(uuid "31ed808f-906c-413d-90d6-f28d9a9f1370")
-	)
-	(sheet
-		(at 225 78)
-		(size 45.72 38.1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.3)
-			(type solid)
-			(color 0 140 0 1)
-		)
-		(fill
-			(color 0 140 0 0.08)
-		)
-		(uuid "772c7b2e-e76e-5ba5-a88d-5c0f9a24ff2d")
-		(property "Sheetname" "Codec"
-			(at 225 77.238 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 2.032 2.032)
-				(bold yes)
-			)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "Codec.kicad_sch"
-			(at 225 116.862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 110 110 110 1)
-			)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
-					(page "6")
-				)
-			)
-		)
-	)
-	(text "IC501 AK4621EF\nstereo in, stereo out\nU501 OPA2348 VCOM buffers\n-> VCOM_A, VCOM_B"
-		(exclude_from_sim no)
-		(at 227 83 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.5 1.5)
-			)
-			(justify left top)
-		)
-		(uuid "276fd37e-a240-4866-a0f9-aae090a944e1")
-	)
-	(sheet
-		(at 225 168)
-		(size 45.72 38.1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.3)
-			(type solid)
-			(color 0 90 220 1)
-		)
-		(fill
-			(color 0 90 220 0.08)
-		)
-		(uuid "b7e390ec-f73e-50c4-bd68-cb336df070bd")
-		(property "Sheetname" "MCU"
-			(at 225 167.238 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 2.032 2.032)
-				(bold yes)
-			)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "MCU.kicad_sch"
-			(at 225 206.862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 110 110 110 1)
-			)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
-					(page "3")
-				)
-			)
-		)
-	)
-	(text "U201 STM32H750VBT6\nSAI1 to the codec, QSPI flash U202\nHSE 25 MHz, SWD needle pads W201"
-		(exclude_from_sim no)
-		(at 227 173 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.5 1.5)
-			)
-			(justify left top)
-		)
-		(uuid "82d86ee1-605c-4545-9f9b-86da198b3784")
-	)
-	(sheet
-		(at 300 168)
-		(size 45.72 38.1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.3)
-			(type solid)
-			(color 0 90 220 1)
-		)
-		(fill
-			(color 0 90 220 0.08)
-		)
-		(uuid "081123bd-8d69-5338-8158-1f150ab455dd")
-		(property "Sheetname" "Controls and LEDs"
-			(at 300 167.238 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 2.032 2.032)
-				(bold yes)
-			)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "Controls and LEDs.kicad_sch"
-			(at 300 206.862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 110 110 110 1)
-			)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
-					(page "2")
-				)
-			)
-		)
-	)
-	(text "RV101-RV105 B10K pots, 1k / 100n\nSW101-SW103 ON-ON-ON toggles\nJ408 0.91 in OLED, I2C pull-ups"
-		(exclude_from_sim no)
-		(at 302 173 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.5 1.5)
-			)
-			(justify left top)
-		)
-		(uuid "c27fc059-8f07-4d7d-8166-6cf3e204864c")
-	)
-	(sheet
-		(at 30 168)
-		(size 45.72 38.1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.3)
-			(type solid)
+			(width 0.6)
+			(type default)
 			(color 214 39 40 1)
 		)
 		(fill
-			(color 214 39 40 0.08)
-		)
-		(uuid "3983f09c-79e8-5800-9821-cf9b89c4194a")
-		(property "Sheetname" "Power"
-			(at 30 167.238 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 2.032 2.032)
-				(bold yes)
-			)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "Power.kicad_sch"
-			(at 30 206.862 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 110 110 110 1)
-			)
-				(justify left top)
-			)
-		)
-		(instances
-			(project "The Harp"
-				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
-					(page "4")
-				)
-			)
-		)
-	)
-	(text "J401 9 V DC in, SMAJ10CA, PMEG3010\nU301 TPS54202 buck -> +3V3\nU302 NCP718 LDO -> +5V"
-		(exclude_from_sim no)
-		(at 32 173 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.5 1.5)
-			)
-			(justify left top)
-		)
-		(uuid "07fc306e-df5c-436f-8f87-4e47572ea06c")
-	)
-	(polyline
-		(pts
-			(xy 75.72 88) (xy 95 88)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 140 0 1)
-		)
-		(fill
 			(type none)
 		)
-		(uuid "4de95bbb-3806-4988-bdbe-9d7474be4fa5")
-	)
-	(polyline
-		(pts
-			(xy 93.476 87.116) (xy 95 88) (xy 93.476 88.884)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 140 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "bbcc365d-c1f6-4693-8a8d-468e390d3cc6")
-	)
-	(text "EFFECT_IN"
-		(exclude_from_sim no)
-		(at 76.5 87 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 0 140 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "cbefe5de-23f7-4dcf-9fe5-1b0fc8dfc4d6")
-	)
-	(polyline
-		(pts
-			(xy 140.72 88) (xy 160 88)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 140 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "90e57fec-9293-4fe2-9d23-c2d64e6d06e5")
-	)
-	(polyline
-		(pts
-			(xy 158.476 87.116) (xy 160 88) (xy 158.476 88.884)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 140 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "98524817-418b-4e14-92d3-2c3c53c32a30")
-	)
-	(text "EFFECT_IN_BUF"
-		(exclude_from_sim no)
-		(at 141.5 87 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 0 140 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "2cf9dc32-4d64-421d-8acd-1362b111070d")
-	)
-	(polyline
-		(pts
-			(xy 205.72 88) (xy 225 88)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 140 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "82355632-7474-482f-9455-3da1d4da29ba")
+		(uuid "0e3de918-4755-44b4-b68c-11247ae1225e")
 	)
 	(polyline
 		(pts
@@ -661,307 +37,6 @@
 			(type none)
 		)
 		(uuid "1dbddb68-de48-4a0b-aeec-3fcbfb499db1")
-	)
-	(text "ADC_L_P/N, ADC_R_P/N"
-		(exclude_from_sim no)
-		(at 206.5 87 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 0 140 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "e7946359-7f0c-4d8a-9eea-055c0c757e8a")
-	)
-	(polyline
-		(pts
-			(xy 248 116.1) (xy 248 122) (xy 130 122) (xy 130 116.1)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 140 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "68b0e411-c239-495d-aeb9-76c0fb2ca28a")
-	)
-	(polyline
-		(pts
-			(xy 129.116 117.624) (xy 130 116.1) (xy 130.884 117.624)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 140 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "ef55f7ae-89bc-4817-b40c-f28da8dcd49f")
-	)
-	(text "DAC_L_P/N, DAC_R_P/N  (codec DAC to the output stages)"
-		(exclude_from_sim no)
-		(at 135 123 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 0 140 0 1)
-			)
-			(justify left top)
-		)
-		(uuid "15504fa9-0eef-4ee8-b98e-bbf092e7572a")
-	)
-	(polyline
-		(pts
-			(xy 95 104) (xy 75.72 104)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 140 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "a7238219-4730-4f60-b607-e82009c2e1db")
-	)
-	(polyline
-		(pts
-			(xy 77.244 103.116) (xy 75.72 104) (xy 77.244 104.884)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 140 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "7835508d-0feb-4e58-a466-b45a521e6647")
-	)
-	(text "EFFECT_OUT_L, EFFECT_OUT_R"
-		(exclude_from_sim no)
-		(at 76.5 103 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 0 140 0 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "119ec6f4-a5ac-4258-b282-bc4a5a03564b")
-	)
-	(polyline
-		(pts
-			(xy 238 116.1) (xy 238 119) (xy 120 119) (xy 120 116.1)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "7d71350a-7574-442d-89ec-c8c5c2a27ca4")
-	)
-	(polyline
-		(pts
-			(xy 119.116 117.624) (xy 120 116.1) (xy 120.884 117.624)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "472a029d-8a70-4f3d-9602-bb8bc90a8dd3")
-	)
-	(text "VCOM_A, VCOM_B  (codec bias to the input buffer, ADC driver and output stages)"
-		(exclude_from_sim no)
-		(at 182 118.2 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 214 39 40 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "db6e9962-49b4-4679-90f5-e3a72fd5ea92")
-	)
-	(polyline
-		(pts
-			(xy 176 119) (xy 176 116.1)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "4811804b-69b8-462b-a73d-3ead80eb50a0")
-	)
-	(polyline
-		(pts
-			(xy 175.116 117.624) (xy 176 116.1) (xy 176.884 117.624)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "31a6d465-5c1f-4457-b242-7bb760f3a25a")
-	)
-	(polyline
-		(pts
-			(xy 262 168) (xy 262 116.1)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 90 220 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "f3370bef-98e3-4aa2-8d36-1c2ba61f1dbf")
-	)
-	(polyline
-		(pts
-			(xy 261.116 117.624) (xy 262 116.1) (xy 262.884 117.624)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 90 220 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "cc52ba08-5df9-48ac-ba3a-a6cf05beaa27")
-	)
-	(polyline
-		(pts
-			(xy 261.116 166.476) (xy 262 168) (xy 262.884 166.476)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 90 220 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "c3df9c14-d1f5-41ab-a387-d7e500c95205")
-	)
-	(text "CODEC_MCLK, LRCK, BICK, SDTI, SDTO\nCODEC_CCLK, CDTI, CSN, PDN"
-		(exclude_from_sim no)
-		(at 263.5 136 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 0 90 220 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "9870cd26-9d5f-4c78-9ad3-9e29fec4e7c0")
-	)
-	(polyline
-		(pts
-			(xy 300 182) (xy 270.72 182)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 90 220 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "05b77952-ddac-4a58-a86b-03cbd1a3daef")
-	)
-	(polyline
-		(pts
-			(xy 272.244 181.116) (xy 270.72 182) (xy 272.244 182.884)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 90 220 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "4b4cab19-8816-4c3a-b14a-1cf552ccbd1c")
-	)
-	(text "POT1, POT2, POT3, POT5 / TOG1-3 A, B"
-		(exclude_from_sim no)
-		(at 271.5 181 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 0 90 220 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "29c63f21-b7b9-4a8f-bc1c-9b4a6bbcf2e9")
-	)
-	(polyline
-		(pts
-			(xy 270.72 196) (xy 300 196)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 90 220 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "c920ca76-c8d4-443f-b908-bd48734b46f3")
-	)
-	(polyline
-		(pts
-			(xy 298.476 195.116) (xy 300 196) (xy 298.476 196.884)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 90 220 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "fb3dfdb6-02a1-40e7-a4bb-aa0063750df9")
-	)
-	(text "OLED_SCL, OLED_SDA  (I2C to the OLED)"
-		(exclude_from_sim no)
-		(at 271.5 195 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 0 90 220 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "3978c316-6110-4d56-8ee0-50a0f96f29eb")
 	)
 	(polyline
 		(pts
@@ -991,33 +66,6 @@
 		)
 		(uuid "2477e284-e217-4ca4-82eb-e743a06eae22")
 	)
-	(text "RELAY_DRV, LED_EFFECT_DRV, LED_HOLD_DRV"
-		(exclude_from_sim no)
-		(at 60 135 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 0 90 220 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "02c8cdab-c0fc-4a24-86bf-f4417112eb89")
-	)
-	(polyline
-		(pts
-			(xy 62 116.1) (xy 62 140) (xy 202 140) (xy 202 182) (xy 225 182)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 90 220 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "f8c4a143-9b28-443f-857b-7a22c57aa1b1")
-	)
 	(polyline
 		(pts
 			(xy 223.476 181.116) (xy 225 182) (xy 223.476 182.884)
@@ -1032,18 +80,47 @@
 		)
 		(uuid "26749deb-e3e4-4613-85f4-950906467ff7")
 	)
-	(text "FSW_BYPASS_IN, FSW_HOLD_IN, EXP"
-		(exclude_from_sim no)
-		(at 120 139 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 0 90 220 1)
-			)
-			(justify left top)
+	(polyline
+		(pts
+			(xy 175.116 117.624) (xy 176 116.1) (xy 176.884 117.624)
 		)
-		(uuid "1cbab387-ba05-4477-b12a-3d6e6b0903c8")
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 214 39 40 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "31a6d465-5c1f-4457-b242-7bb760f3a25a")
+	)
+	(polyline
+		(pts
+			(xy 119.116 117.624) (xy 120 116.1) (xy 120.884 117.624)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 214 39 40 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "472a029d-8a70-4f3d-9602-bb8bc90a8dd3")
+	)
+	(polyline
+		(pts
+			(xy 272.244 181.116) (xy 270.72 182) (xy 272.244 182.884)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 90 220 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "4b4cab19-8816-4c3a-b14a-1cf552ccbd1c")
 	)
 	(polyline
 		(pts
@@ -1061,7 +138,7 @@
 	)
 	(polyline
 		(pts
-			(xy 261.616 166.476) (xy 262.5 168) (xy 263.384 166.476)
+			(xy 117.116 76.476) (xy 118 78) (xy 118.884 76.476)
 		)
 		(stroke
 			(width 0.6)
@@ -1071,20 +148,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "ab3afb61-bde3-4b33-876e-5f46fbeb067b")
-	)
-	(text "+9V, +5V, +3V3 from Power"
-		(exclude_from_sim no)
-		(at 41 150 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 214 39 40 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "2091c177-622d-43f1-ac08-e516bd559936")
+		(uuid "56b4db8f-200c-47c6-aaa4-9b61b96360c0")
 	)
 	(polyline
 		(pts
@@ -1102,116 +166,6 @@
 	)
 	(polyline
 		(pts
-			(xy 321.116 166.476) (xy 322 168) (xy 322.884 166.476)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "994b1a92-2d91-4a10-a16a-5344baf78436")
-	)
-	(polyline
-		(pts
-			(xy 52 72) (xy 52 78)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "eed54b7c-c54a-4ba8-924d-8ec41b86daff")
-	)
-	(polyline
-		(pts
-			(xy 51.116 76.476) (xy 52 78) (xy 52.884 76.476)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "0e3de918-4755-44b4-b68c-11247ae1225e")
-	)
-	(text "+9V, +3V3"
-		(exclude_from_sim no)
-		(at 53 77 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 214 39 40 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "65091144-b5fa-46ee-a5be-02619316ba2a")
-	)
-	(polyline
-		(pts
-			(xy 118 72) (xy 118 78)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "df138e86-905d-4c46-905f-92fd21407d69")
-	)
-	(polyline
-		(pts
-			(xy 117.116 76.476) (xy 118 78) (xy 118.884 76.476)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "56b4db8f-200c-47c6-aaa4-9b61b96360c0")
-	)
-	(text "+5V"
-		(exclude_from_sim no)
-		(at 119 77 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 214 39 40 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "ee976a33-0c41-4735-a608-328c3d67e042")
-	)
-	(polyline
-		(pts
-			(xy 182 72) (xy 182 78)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "7c7cf6dd-2beb-4b64-84e0-aa4c1a41544f")
-	)
-	(polyline
-		(pts
 			(xy 181.116 76.476) (xy 182 78) (xy 182.884 76.476)
 		)
 		(stroke
@@ -1224,22 +178,50 @@
 		)
 		(uuid "57d40ff2-83e1-4619-9811-ede67b0ab3da")
 	)
-	(text "+5V"
-		(exclude_from_sim no)
-		(at 183 77 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 214 39 40 1)
-			)
-			(justify left bottom)
+	(polyline
+		(pts
+			(xy 248 116.1) (xy 248 122) (xy 130 122) (xy 130 116.1)
 		)
-		(uuid "0a0271d8-8c7b-429c-8bf2-a48747d169ea")
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "68b0e411-c239-495d-aeb9-76c0fb2ca28a")
+	)
+	(rectangle
+		(start 22 150)
+		(end 88 228)
+		(stroke
+			(width 0.3)
+			(type dash)
+			(color 90 90 90 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "68c80fc5-f879-440a-869a-5776f6dc2eef")
 	)
 	(polyline
 		(pts
-			(xy 248 72) (xy 248 78)
+			(xy 77.244 103.116) (xy 75.72 104) (xy 77.244 104.884)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "7835508d-0feb-4e58-a466-b45a521e6647")
+	)
+	(polyline
+		(pts
+			(xy 238 116.1) (xy 238 119) (xy 120 119) (xy 120 116.1)
 		)
 		(stroke
 			(width 0.6)
@@ -1249,7 +231,7 @@
 		(fill
 			(type none)
 		)
-		(uuid "ab6d2775-a686-47f8-8ff1-cc8367fa0277")
+		(uuid "7d71350a-7574-442d-89ec-c8c5c2a27ca4")
 	)
 	(polyline
 		(pts
@@ -1265,6 +247,171 @@
 		)
 		(uuid "83828811-39f3-43d2-9bd6-574274060111")
 	)
+	(rectangle
+		(start 22 58)
+		(end 285 128)
+		(stroke
+			(width 0.3)
+			(type dash)
+			(color 90 90 90 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "962711aa-e570-4d2a-8d07-b5a65a46d20d")
+	)
+	(polyline
+		(pts
+			(xy 158.476 87.116) (xy 160 88) (xy 158.476 88.884)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "98524817-418b-4e14-92d3-2c3c53c32a30")
+	)
+	(polyline
+		(pts
+			(xy 321.116 166.476) (xy 322 168) (xy 322.884 166.476)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 214 39 40 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "994b1a92-2d91-4a10-a16a-5344baf78436")
+	)
+	(polyline
+		(pts
+			(xy 261.616 166.476) (xy 262.5 168) (xy 263.384 166.476)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 214 39 40 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "ab3afb61-bde3-4b33-876e-5f46fbeb067b")
+	)
+	(rectangle
+		(start 212 150)
+		(end 365 228)
+		(stroke
+			(width 0.3)
+			(type dash)
+			(color 90 90 90 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "ab919336-e80b-49f5-816e-76aac9a10491")
+	)
+	(polyline
+		(pts
+			(xy 93.476 87.116) (xy 95 88) (xy 93.476 88.884)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "bbcc365d-c1f6-4693-8a8d-468e390d3cc6")
+	)
+	(polyline
+		(pts
+			(xy 261.116 166.476) (xy 262 168) (xy 262.884 166.476)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 90 220 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "c3df9c14-d1f5-41ab-a387-d7e500c95205")
+	)
+	(polyline
+		(pts
+			(xy 261.116 117.624) (xy 262 116.1) (xy 262.884 117.624)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 90 220 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "cc52ba08-5df9-48ac-ba3a-a6cf05beaa27")
+	)
+	(polyline
+		(pts
+			(xy 129.116 117.624) (xy 130 116.1) (xy 130.884 117.624)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 0 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "ef55f7ae-89bc-4817-b40c-f28da8dcd49f")
+	)
+	(polyline
+		(pts
+			(xy 62 116.1) (xy 62 140) (xy 202 140) (xy 202 182) (xy 225 182)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 90 220 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "f8c4a143-9b28-443f-857b-7a22c57aa1b1")
+	)
+	(polyline
+		(pts
+			(xy 298.476 195.116) (xy 300 196) (xy 298.476 196.884)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 90 220 1)
+		)
+		(fill
+			(type none)
+		)
+		(uuid "fb3dfdb6-02a1-40e7-a4bb-aa0063750df9")
+	)
+	(text "RELAY_DRV, LED_EFFECT_DRV, LED_HOLD_DRV"
+		(exclude_from_sim no)
+		(at 60 135 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 0 90 220 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "02c8cdab-c0fc-4a24-86bf-f4417112eb89")
+	)
 	(text "+5V, +3V3"
 		(exclude_from_sim no)
 		(at 249 77 0)
@@ -1278,112 +425,108 @@
 		)
 		(uuid "06309366-83db-48ca-9179-59d56a25cef3")
 	)
-	(text "+3V3"
+	(text "J401 9 V DC in, SMAJ10CA, PMEG3010\nU301 TPS54202 buck -> +3V3\nU302 NCP718 LDO -> +5V"
 		(exclude_from_sim no)
-		(at 263.5 167 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 214 39 40 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "9f5fc6b1-2416-43c2-af73-c9ad57c1b22d")
-	)
-	(text "+3V3"
-		(exclude_from_sim no)
-		(at 323 167 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 1.27 1.27)
-				(color 214 39 40 1)
-			)
-			(justify left bottom)
-		)
-		(uuid "72592151-a864-49cb-9914-2ae03ef3e69b")
-	)
-	(text "CONNECTIONS"
-		(exclude_from_sim no)
-		(at 20.32 245 0)
-		(effects
-			(font
-				(face "Oswald")
-				(size 2.0 2.0)
-				(bold yes)
-			)
-			(justify left bottom)
-		)
-		(uuid "de7ad48b-8d09-45ef-b71d-7e4072a53efe")
-	)
-	(polyline
-		(pts
-			(xy 20.32 250) (xy 40 250)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 140 0 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "32561330-5aa0-4343-a082-6cb710a03f4f")
-	)
-	(text "Audio signal"
-		(exclude_from_sim no)
-		(at 43 250.6 0)
+		(at 32 173 0)
 		(effects
 			(font
 				(face "Oswald")
 				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "07fc306e-df5c-436f-8f87-4e47572ea06c")
+	)
+	(text "CONTROL / DIGITAL"
+		(exclude_from_sim no)
+		(at 215 156.5 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 3.5 3.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "08c3a916-4407-404f-99f0-65d7b37781e9")
+	)
+	(text "+5V"
+		(exclude_from_sim no)
+		(at 183 77 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 214 39 40 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "0a0271d8-8c7b-429c-8bf2-a48747d169ea")
+	)
+	(text "EFFECT_OUT_L, EFFECT_OUT_R"
+		(exclude_from_sim no)
+		(at 76.5 103 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
 				(color 0 140 0 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "59ff547a-f1fc-4521-a08b-6dcc5b5c23af")
+		(uuid "119ec6f4-a5ac-4258-b282-bc4a5a03564b")
 	)
-	(polyline
-		(pts
-			(xy 20.32 255) (xy 40 255)
-		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 0 90 220 1)
-		)
-		(fill
-			(type none)
-		)
-		(uuid "0fb69b91-36e8-468e-8127-5bf20b6c1b77")
-	)
-	(text "MCU control"
+	(text "DAC_L_P/N, DAC_R_P/N  (codec DAC to the output stages)"
 		(exclude_from_sim no)
-		(at 43 255.6 0)
+		(at 135 123 0)
 		(effects
 			(font
 				(face "Oswald")
-				(size 1.5 1.5)
-				(color 0 90 220 1)
+				(size 1.27 1.27)
+				(color 0 140 0 1)
+			)
+			(justify left top)
+		)
+		(uuid "15504fa9-0eef-4ee8-b98e-bbf092e7572a")
+	)
+	(text "THE HARP  26-Z04-0005  SYMPATHETIC-STRING DIGITAL PEDAL"
+		(exclude_from_sim no)
+		(at 20.32 40.64 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 3.5 3.5)
+				(bold yes)
+				(color 40 40 40 1)
 			)
 			(justify left bottom)
 		)
-		(uuid "948c689b-1ed2-4a1d-aabf-b07fdedad0b9")
+		(uuid "197d3674-c393-48eb-a9be-927be1e90059")
 	)
-	(polyline
-		(pts
-			(xy 20.32 260) (xy 40 260)
+	(text "FSW_BYPASS_IN, FSW_HOLD_IN, EXP"
+		(exclude_from_sim no)
+		(at 120 139 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 0 90 220 1)
+			)
+			(justify left top)
 		)
-		(stroke
-			(width 0.6)
-			(type default)
-			(color 214 39 40 1)
+		(uuid "1cbab387-ba05-4477-b12a-3d6e6b0903c8")
+	)
+	(text "+9V, +5V, +3V3 from Power"
+		(exclude_from_sim no)
+		(at 41 150 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 214 39 40 1)
+			)
+			(justify left bottom)
 		)
-		(fill
-			(type none)
-		)
-		(uuid "2de87e27-3fb8-43de-837a-81acc0a70633")
+		(uuid "2091c177-622d-43f1-ac08-e516bd559936")
 	)
 	(text "Supply rails and bias"
 		(exclude_from_sim no)
@@ -1398,6 +541,296 @@
 		)
 		(uuid "222b4567-62e9-42bd-8e5b-31dde27ba78a")
 	)
+	(text "IC501 AK4621EF\nstereo in, stereo out\nU501 OPA2348 VCOM buffers\n-> VCOM_A, VCOM_B"
+		(exclude_from_sim no)
+		(at 227 83 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "276fd37e-a240-4866-a0f9-aae090a944e1")
+	)
+	(text "POT1, POT2, POT3, POT5 / TOG1-3 A, B"
+		(exclude_from_sim no)
+		(at 271.5 181 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 0 90 220 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "29c63f21-b7b9-4a8f-bc1c-9b4a6bbcf2e9")
+	)
+	(text "EFFECT_IN_BUF"
+		(exclude_from_sim no)
+		(at 141.5 87 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 0 140 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "2cf9dc32-4d64-421d-8acd-1362b111070d")
+	)
+	(text "U601 THS4522 channel A (L), B (R)\nsingle-ended to differential\ngain 0.59, 40.2R / 2.7n filter"
+		(exclude_from_sim no)
+		(at 162 83 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "31ed808f-906c-413d-90d6-f28d9a9f1370")
+	)
+	(text "OLED_SCL, OLED_SDA  (I2C to the OLED)"
+		(exclude_from_sim no)
+		(at 271.5 195 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 0 90 220 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "3978c316-6110-4d56-8ee0-50a0f96f29eb")
+	)
+	(text "U701A/B OPA2365 L and R input buffers\n1M / 100n in, 49.9R / 220p out\nU702 OPA1688 difference amps\n10u out, 100R, 1M"
+		(exclude_from_sim no)
+		(at 97 83 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "3c07a137-ec56-4115-a510-b3db09631b29")
+	)
+	(text "Audio signal"
+		(exclude_from_sim no)
+		(at 43 250.6 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.5 1.5)
+				(color 0 140 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "59ff547a-f1fc-4521-a08b-6dcc5b5c23af")
+	)
+	(text "+9V, +3V3"
+		(exclude_from_sim no)
+		(at 53 77 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 214 39 40 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "65091144-b5fa-46ee-a5be-02619316ba2a")
+	)
+	(text "One four-layer main board in a Hammond 125B on the Alchemist / Relic grid; pots, toggles, LEDs and jacks board-mounted.\nSignal: IN -> K401 relay bypass -> 1M / 100n -> OPA2365 buffer -> THS4522 ADC driver -> AK4621 ADC -> STM32H750VBT6 (SAI1) -> AK4621 DAC -> OPA1688 difference amps -> OUT L (through K401) and OUT R.\nDesign notes: docs/design-brief.md, docs/pcb-plan.md. The schematic is written by scripts/harp_schematic/build_layout.py from harp_spec.py and the layouts in layouts/; after the first edit in KiCad the KiCad files are the source of truth."
+		(exclude_from_sim no)
+		(at 20.32 44 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "68eddac2-e5a3-41b1-8284-f06e0ef20adc")
+	)
+	(text "+3V3"
+		(exclude_from_sim no)
+		(at 323 167 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 214 39 40 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "72592151-a864-49cb-9914-2ae03ef3e69b")
+	)
+	(text "U201 STM32H750VBT6\nSAI1 to the codec, QSPI flash U202\nHSE 25 MHz, SWD needle pads W201"
+		(exclude_from_sim no)
+		(at 227 173 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "82d86ee1-605c-4545-9f9b-86da198b3784")
+	)
+	(text "MCU control"
+		(exclude_from_sim no)
+		(at 43 255.6 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.5 1.5)
+				(color 0 90 220 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "948c689b-1ed2-4a1d-aabf-b07fdedad0b9")
+	)
+	(text "CODEC_MCLK, LRCK, BICK, SDTI, SDTO\nCODEC_CCLK, CDTI, CSN, PDN"
+		(exclude_from_sim no)
+		(at 263.5 136 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 0 90 220 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "9870cd26-9d5f-4c78-9ad3-9e29fec4e7c0")
+	)
+	(text "POWER"
+		(exclude_from_sim no)
+		(at 25 156.5 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 3.5 3.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "9a0cf757-4ad9-43c0-9fee-91ebde0562fa")
+	)
+	(text "+3V3"
+		(exclude_from_sim no)
+		(at 263.5 167 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 214 39 40 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "9f5fc6b1-2416-43c2-af73-c9ad57c1b22d")
+	)
+	(text "IN (TRS), OUT L, OUT R, EXP jacks (J402-J406)\nK401 relay true bypass, Q401 driver\nEffect / Hold LEDs, footswitch pads\nMCP6001 expression buffer"
+		(exclude_from_sim no)
+		(at 32 83 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "a1c85f01-36ff-4102-8427-12eb32361cf1")
+	)
+	(text "RV101-RV105 B10K pots, 1k / 100n\nSW101-SW103 ON-ON-ON toggles\nJ408 0.91 in OLED, I2C pull-ups"
+		(exclude_from_sim no)
+		(at 302 173 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.5 1.5)
+			)
+			(justify left top)
+		)
+		(uuid "c27fc059-8f07-4d7d-8166-6cf3e204864c")
+	)
+	(text "AUDIO / ANALOG"
+		(exclude_from_sim no)
+		(at 25 64.5 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 3.5 3.5)
+			)
+			(justify left bottom)
+		)
+		(uuid "c750bbdd-6ed3-4468-9cc8-19d08c3fc2ad")
+	)
+	(text "EFFECT_IN"
+		(exclude_from_sim no)
+		(at 76.5 87 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 0 140 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "cbefe5de-23f7-4dcf-9fe5-1b0fc8dfc4d6")
+	)
+	(text "VCOM_A, VCOM_B  (codec bias to the input buffer, ADC driver and output stages)"
+		(exclude_from_sim no)
+		(at 182 118.2 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 214 39 40 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "db6e9962-49b4-4679-90f5-e3a72fd5ea92")
+	)
+	(text "CONNECTIONS"
+		(exclude_from_sim no)
+		(at 20.32 245 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 2 2)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+		(uuid "de7ad48b-8d09-45ef-b71d-7e4072a53efe")
+	)
+	(text "ADC_L_P/N, ADC_R_P/N"
+		(exclude_from_sim no)
+		(at 206.5 87 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 0 140 0 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "e7946359-7f0c-4d8a-9eea-055c0c757e8a")
+	)
+	(text "+5V"
+		(exclude_from_sim no)
+		(at 119 77 0)
+		(effects
+			(font
+				(face "Oswald")
+				(size 1.27 1.27)
+				(color 214 39 40 1)
+			)
+			(justify left bottom)
+		)
+		(uuid "ee976a33-0c41-4735-a608-328c3d67e042")
+	)
 	(text "Drawing only: the sheets connect through global labels of the same names.\nArrows point from the sheet that drives a net to the sheet that uses it; a line with a name list carries one label per name."
 		(exclude_from_sim no)
 		(at 20.32 272 0)
@@ -1409,6 +842,528 @@
 			(justify left bottom)
 		)
 		(uuid "f6f62f05-f756-41ab-9e49-b7c0e9588d58")
+	)
+	(polyline
+		(pts
+			(xy 300 182) (xy 270.72 182)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 90 220 1)
+		)
+		(uuid "05b77952-ddac-4a58-a86b-03cbd1a3daef")
+	)
+	(polyline
+		(pts
+			(xy 20.32 255) (xy 40 255)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 90 220 1)
+		)
+		(uuid "0fb69b91-36e8-468e-8127-5bf20b6c1b77")
+	)
+	(polyline
+		(pts
+			(xy 20.32 260) (xy 40 260)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 214 39 40 1)
+		)
+		(uuid "2de87e27-3fb8-43de-837a-81acc0a70633")
+	)
+	(polyline
+		(pts
+			(xy 20.32 250) (xy 40 250)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 0 1)
+		)
+		(uuid "32561330-5aa0-4343-a082-6cb710a03f4f")
+	)
+	(polyline
+		(pts
+			(xy 176 119) (xy 176 116.1)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 214 39 40 1)
+		)
+		(uuid "4811804b-69b8-462b-a73d-3ead80eb50a0")
+	)
+	(polyline
+		(pts
+			(xy 75.72 88) (xy 95 88)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 0 1)
+		)
+		(uuid "4de95bbb-3806-4988-bdbe-9d7474be4fa5")
+	)
+	(polyline
+		(pts
+			(xy 182 72) (xy 182 78)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 214 39 40 1)
+		)
+		(uuid "7c7cf6dd-2beb-4b64-84e0-aa4c1a41544f")
+	)
+	(polyline
+		(pts
+			(xy 205.72 88) (xy 225 88)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 0 1)
+		)
+		(uuid "82355632-7474-482f-9455-3da1d4da29ba")
+	)
+	(polyline
+		(pts
+			(xy 140.72 88) (xy 160 88)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 0 1)
+		)
+		(uuid "90e57fec-9293-4fe2-9d23-c2d64e6d06e5")
+	)
+	(polyline
+		(pts
+			(xy 95 104) (xy 75.72 104)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 140 0 1)
+		)
+		(uuid "a7238219-4730-4f60-b607-e82009c2e1db")
+	)
+	(polyline
+		(pts
+			(xy 248 72) (xy 248 78)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 214 39 40 1)
+		)
+		(uuid "ab6d2775-a686-47f8-8ff1-cc8367fa0277")
+	)
+	(polyline
+		(pts
+			(xy 270.72 196) (xy 300 196)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 90 220 1)
+		)
+		(uuid "c920ca76-c8d4-443f-b908-bd48734b46f3")
+	)
+	(polyline
+		(pts
+			(xy 118 72) (xy 118 78)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 214 39 40 1)
+		)
+		(uuid "df138e86-905d-4c46-905f-92fd21407d69")
+	)
+	(polyline
+		(pts
+			(xy 52 72) (xy 52 78)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 214 39 40 1)
+		)
+		(uuid "eed54b7c-c54a-4ba8-924d-8ec41b86daff")
+	)
+	(polyline
+		(pts
+			(xy 262 168) (xy 262 116.1)
+		)
+		(stroke
+			(width 0.6)
+			(type default)
+			(color 0 90 220 1)
+		)
+		(uuid "f3370bef-98e3-4aa2-8d36-1c2ba61f1dbf")
+	)
+	(sheet
+		(at 300 168)
+		(size 45.72 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+			(color 0 90 220 1)
+		)
+		(fill
+			(color 0 90 220 0.08)
+		)
+		(uuid "081123bd-8d69-5338-8158-1f150ab455dd")
+		(property "Sheetname" "Controls and LEDs"
+			(at 300 167.238 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 2.032 2.032)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Controls and LEDs.kicad_sch"
+			(at 300 206.862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+					(color 110 110 110 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
+					(page "2")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30 168)
+		(size 45.72 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+			(color 214 39 40 1)
+		)
+		(fill
+			(color 214 39 40 0.08)
+		)
+		(uuid "3983f09c-79e8-5800-9821-cf9b89c4194a")
+		(property "Sheetname" "Power"
+			(at 30 167.238 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 2.032 2.032)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Power.kicad_sch"
+			(at 30 206.862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+					(color 110 110 110 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
+					(page "4")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 160 78)
+		(size 45.72 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+			(color 0 140 0 1)
+		)
+		(fill
+			(color 0 140 0 0.08)
+		)
+		(uuid "4c2ab8ff-3630-5d5d-ac66-e312a3c9a378")
+		(property "Sheetname" "ADC Driver"
+			(at 160 77.238 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 2.032 2.032)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "ADC Driver.kicad_sch"
+			(at 160 116.862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+					(color 110 110 110 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
+					(page "7")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 225 78)
+		(size 45.72 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+			(color 0 140 0 1)
+		)
+		(fill
+			(color 0 140 0 0.08)
+		)
+		(uuid "772c7b2e-e76e-5ba5-a88d-5c0f9a24ff2d")
+		(property "Sheetname" "Codec"
+			(at 225 77.238 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 2.032 2.032)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Codec.kicad_sch"
+			(at 225 116.862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+					(color 110 110 110 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
+					(page "6")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 225 168)
+		(size 45.72 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+			(color 0 90 220 1)
+		)
+		(fill
+			(color 0 90 220 0.08)
+		)
+		(uuid "b7e390ec-f73e-50c4-bd68-cb336df070bd")
+		(property "Sheetname" "MCU"
+			(at 225 167.238 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 2.032 2.032)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "MCU.kicad_sch"
+			(at 225 206.862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+					(color 110 110 110 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
+					(page "3")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 95 78)
+		(size 45.72 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+			(color 0 140 0 1)
+		)
+		(fill
+			(color 0 140 0 0.08)
+		)
+		(uuid "b9c627d2-2d27-52af-bf10-9a8b87be0765")
+		(property "Sheetname" "Analog In and Out"
+			(at 95 77.238 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 2.032 2.032)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Analog In and Out.kicad_sch"
+			(at 95 116.862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+					(color 110 110 110 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
+					(page "8")
+				)
+			)
+		)
+	)
+	(sheet
+		(at 30 78)
+		(size 45.72 38.1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(stroke
+			(width 0.3)
+			(type solid)
+			(color 0 140 0 1)
+		)
+		(fill
+			(color 0 140 0 0.08)
+		)
+		(uuid "e4049e47-7d7e-5fff-a503-0f184e0b2d1d")
+		(property "Sheetname" "Jacks and Bypass"
+			(at 30 77.238 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 2.032 2.032)
+					(bold yes)
+				)
+				(justify left bottom)
+			)
+		)
+		(property "Sheetfile" "Jacks and Bypass.kicad_sch"
+			(at 30 116.862 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(face "Oswald")
+					(size 1.27 1.27)
+					(color 110 110 110 1)
+				)
+				(justify left top)
+			)
+		)
+		(instances
+			(project "The Harp"
+				(path "/596641a7-eeca-47a8-9244-68f1910acd88"
+					(page "5")
+				)
+			)
+		)
 	)
 	(sheet_instances
 		(path "/"
