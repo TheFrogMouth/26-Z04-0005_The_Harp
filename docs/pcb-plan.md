@@ -279,26 +279,35 @@ Routed without KiCad by `scripts/pcb_routing/` (see its README): Freerouting
 | B.Cu | Longer signals, the bypass paths to the relay, the bottom-side drivers |
 
 **In2 pours (2026-10-10).** The rails first ran as 0.5 / 0.6 mm tracks on In2;
-they are now zones. The old tracks were a valid planar layout, so they became
-the backbone of each pour: every other point of In2 goes to the nearest
-backbone, each region is pulled in 0.12 mm so the rails never touch, and the
-result is written as four zones (+9V one, +5V one, +3V3 two) with solid
-connection to their vias, 0.2 mm clearance, 0.25 mm minimum width. Smaller
-zones have the higher priority, so a rail inside another's pocket wins it.
-What the pours look like: +9V along the left edge, the top and the bottom
-edge, with a spur down to the relay coil; +5V wrapped round the codec side
-and the lower right; +3V3 across the middle and right. On a four-layer board
-with one plane for three supplies, two of them could not be joined on In2
-alone: the buck's +3V3 output has to cross the +5V of the codec. It is joined
-by a 5.0 mm jumper on F.Cu beside the codec IC501, between the +3V3 vias at
-(129.4, 107.3) and (131.3, 111.2); the rest of the rails are whole in the
-pours.
+they are now zones, drawn as big blocks with 45 degree corners rather than
+grown round the tracks (`pour_plan.py`; the first attempt, `pours.py`,
+followed the autorouter and gave free-form outlines).
 
-**In KiCad: press B to fill** (both In1 and In2); the fill makes the
-clearances and the antipads round every foreign via. The zones have not been
-filled or checked in KiCad; the script imitates the fill (foreign copper
-0.2 mm back, thin bits dropped) and finds every rail terminal joined except
-the two cases under *Still open*.
+* **+9V**: a band across the top (DC jack and buck input), a block round
+  each far pin (relay coil, the two LEDs), joined to them by 0.6 mm bars.
+* **+3V3 and +5V**: each cell of a 1 mm grid takes the rail of its nearest
+  supply pin (square metric, so the borders run at 0, 45 and 90 degrees),
+  the map is smoothed so small mixed patches go to their neighbours, and
+  the blocks are rounded with a 1.2 mm bevel: every corner becomes a
+  chamfer and slivers under 2 mm go. Result: +3V3 across the middle, +5V at
+  the top right (LDO), the bottom (codec side and U701), a pocket at the left
+  and one for U501, and a 1 mm trunk down the right-hand edge from the LDO to
+  the bottom.
+* Where a rail's blocks were not joined (the fill is imitated), the shortest
+  path along its old In2 tracks became a bus bar, cutting the neighbouring
+  blocks with a 0.22 mm gap; the two joins that had no old track (the LDO
+  to the rest of +5V) are routed afresh along the board edge.
+
+Five zones in all: +9V one, +5V two, +3V3 two; solid connection to their
+vias and pins, 0.2 mm clearance, 0.25 mm minimum width, island removal.
+Smaller zones have the higher priority, so a rail inside another's pocket
+wins it. No rail needs a jumper.
+
+**In KiCad: press B to fill** (In1 and In2); the fill makes the clearances
+and the antipads round every foreign via. The zones have not been filled or
+checked in KiCad: the script imitates the fill (foreign copper 0.2 mm back,
+thin bits dropped) and finds every rail pin joined to the rest of its rail,
+and every pin inside the zone that wins at its position.
 
 Analog and digital: each point of F.Cu and B.Cu is worked out as audio,
 digital or neutral from the nearest pads of each kind (a region reaches 5 mm
@@ -314,7 +323,7 @@ and relay drive lines, control (pots, toggles, footswitches, expression),
 then a repair pass with the region keepouts lifted and the signal tracks
 free to move; then the rails' In2 tracks became pours (above).
 
-**Result:** 1367 tracks, 302 vias, 4 pours on In2; the scripted check
+**Result:** 1357 tracks, 302 vias, 5 pours on In2; the scripted check
 (connectivity with GND through the plane and the rails through their pours,
 clearances 0.18 mm, 0.15 mm for digital and control, 0.5 mm to the edge,
 0.254 mm hole to hole) finds no violations. **29 connections in 26 nets are
@@ -326,10 +335,6 @@ still open**, all signals but VDDA, to be finished in KiCad:
 | Digital (7) | HSE_OUT, NRST (2), CODEC_BICK, CODEC_CCLK, LED_EFFECT_DRV, LED_HOLD_DRV, LED_HOLD_G |
 | Audio (3) | OUT_L, EFFECT_OUT_R, VCOM_A (2) |
 | Power | VDDA (2, U201 pins 20/21: boxed in by the neighbouring pins' stubs) |
-
-One more is not in the count: the +3V3 via at (136.0, 84.1) for W201 pin 1
-(the programmer's voltage sense) falls inside the +9V pour, so the fill
-leaves it cut off; it needs a short track to the nearest +3V3 via.
 
 What to look at in KiCad besides the open ones: the long B.Cu detours (the
 audio bundle down the right-hand edge, the loops over the output stage), the
