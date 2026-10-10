@@ -59,7 +59,7 @@ top side by script (`scripts/pcb_placement/`, `docs/pcb-plan.md` *Placement*).
    in `docs/pcb-plan.md`). Look it over, then run DRC.
 4. The board was routed by script on 2026-10-09 (`scripts/pcb_routing/`,
    *Routing* in `docs/pcb-plan.md`): GND vias per the Relic rule, rails on
-   In2, the rails as pours (2026-10-10). Fill the In1 and In2 zones (B), finish the 29 open connections listed
+   In2. Fill the In1 GND zone (B), finish the 32 open connections listed
    there, then DRC. The net classes (GND, Rail, Power, Audio, Digital,
    Control) are in the project.
 

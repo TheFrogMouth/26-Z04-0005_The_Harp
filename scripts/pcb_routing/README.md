@@ -15,8 +15,6 @@ rerun these only for a deliberate restart (they replace every track and via).
 | `nets.py` | Net classes: what each net is, its width and clearance, the via. |
 | `write_tracks.py` | Replaces the board's tracks and vias with `build/routes.json`. |
 | `check.py` | Stand-in for DRC: connectivity (GND through the plane), clearances per class, copper to edge, hole to hole. |
-| `pour_plan.py` | Replaces the rails' In2 tracks with five pours drawn as big blocks with 45 degree corners (+9V band and blocks, +5V and +3V3 from a smoothed nearest-pin map, bevelled), joined by bus bars along the old tracks or by a link hugging the board edge. Imitates the fill and checks every pin. Needs the In2 tracks to be present in the board file. |
-| `pours.py` | The engine for `pour_plan.py` (fill imitation, jumpers on F.Cu/B.Cu, zone writer) and the first, organic version: pours grown from the old tracks. |
 | `render.py` | Draws F.Cu, B.Cu and In2.Cu with tracks coloured by class. |
 | `netclasses.py` | Writes the same classes into `The Harp.kicad_pro` (one pattern per net) for KiCad's DRC and router. |
 | `kpcb.py` | Board-file reader: footprints, pads in board coordinates, outline. |
@@ -26,8 +24,7 @@ Phases (`route.py`):
 1. **gnd**: every SMD GND pad gets its own via to the In1.Cu plane (Relic
    rule). ICs put the via under the package, two-pin parts off the free end.
 2. **rails**: every SMD pad on +3V3, +5V, +9V gets its own via; Freerouting
-   joins the vias on In2.Cu, the only layer the rails may use. `pour_plan.py`
-   then turns those tracks into pours.
+   joins the vias on In2.Cu, the only layer the rails may use.
 3. **power**: local power nets (buck, LDO, DC input, VDDA, relay coil, LED
    current), wide, F/B.
 4. **core**: digital round the MCU (codec interface, QSPI, crystal, SWD,
