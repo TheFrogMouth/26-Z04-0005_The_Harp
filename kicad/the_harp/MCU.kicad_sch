@@ -4988,7 +4988,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "220R"
@@ -5000,7 +4999,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Inductor_SMD:L_0603_1608Metric"
@@ -6284,7 +6282,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "22R"
@@ -6296,7 +6293,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -6370,7 +6366,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "22R"
@@ -6382,7 +6377,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -6556,7 +6550,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "W25Q128JVSIQ"
@@ -6568,7 +6561,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Package_SO:SOIC-8_5.23x5.23mm_P1.27mm"
@@ -8687,7 +8679,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -8771,7 +8762,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -8855,7 +8845,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -8939,7 +8928,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9023,7 +9011,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9107,7 +9094,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9191,7 +9177,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9275,7 +9260,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9359,7 +9343,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9443,7 +9426,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9527,7 +9509,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9611,7 +9592,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9695,7 +9675,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9779,7 +9758,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9863,7 +9841,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -9947,7 +9924,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -10115,7 +10091,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -10199,7 +10174,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -10283,7 +10257,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -10367,7 +10340,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -10451,7 +10423,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -10535,7 +10506,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -10619,7 +10589,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -10703,7 +10672,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -10787,7 +10755,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""

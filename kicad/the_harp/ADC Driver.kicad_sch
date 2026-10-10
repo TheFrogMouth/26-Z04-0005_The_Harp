@@ -1048,7 +1048,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "620"
@@ -1060,7 +1059,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -1134,7 +1132,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "1n"
@@ -1146,7 +1143,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
@@ -1392,7 +1388,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "1k"
@@ -1404,7 +1399,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -1564,7 +1558,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "40.2"
@@ -1576,7 +1569,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -1950,7 +1942,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "40.2"
@@ -1962,7 +1953,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -2122,7 +2112,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "1.05k"
@@ -2134,7 +2123,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -2380,7 +2368,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "1n"
@@ -2392,7 +2379,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
@@ -2466,7 +2452,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "620"
@@ -2478,7 +2463,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -2552,7 +2536,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "620"
@@ -2564,7 +2547,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -2638,7 +2620,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "1n"
@@ -2650,7 +2631,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
@@ -2810,7 +2790,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "1k"
@@ -2822,7 +2801,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -2982,7 +2960,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "40.2"
@@ -2994,7 +2971,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -3368,7 +3344,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "40.2"
@@ -3380,7 +3355,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -3540,7 +3514,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "1.05k"
@@ -3552,7 +3525,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -3712,7 +3684,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "1n"
@@ -3724,7 +3695,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
@@ -3798,7 +3768,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Value" "620"
@@ -3810,7 +3779,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
@@ -5309,7 +5277,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5393,7 +5360,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5477,7 +5443,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5561,7 +5526,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5645,7 +5609,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5729,7 +5692,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5813,7 +5775,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5897,7 +5858,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -5981,7 +5941,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6065,7 +6024,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6149,7 +6107,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6233,7 +6190,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6317,7 +6273,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6401,7 +6356,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6485,7 +6439,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6569,7 +6522,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6653,7 +6605,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""
@@ -6737,7 +6688,6 @@
 					(face "Oswald")
 					(size 1.27 1.27)
 				)
-				(justify center)
 			)
 		)
 		(property "Footprint" ""

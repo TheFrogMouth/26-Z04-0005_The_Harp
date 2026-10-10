@@ -144,6 +144,8 @@ def g(v):
 
 # ---------------------------------------------------------------- emitters
 def _eff(justify=None, hide=False, size=1.27):
+    # centre is KiCad's default and not a valid justify token: drop it
+    justify = ' '.join(t for t in (justify or '').split() if t != 'center')
     j = '\n\t\t\t\t(justify %s)' % justify if justify else ''
     return '(effects\n\t\t\t\t(font\n\t\t\t\t\t(size %s %s)\n\t\t\t\t)%s\n\t\t\t)' % (size, size, j)
 
