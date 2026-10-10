@@ -275,7 +275,7 @@ Routed without KiCad by `scripts/pcb_routing/` (see its README): Freerouting
 |---|---|
 | F.Cu | Parts, short signals, the local power nets |
 | In1.Cu | Solid GND (the zone; fill it in KiCad). Every SMD GND pad has its own via to it (106) |
-| In2.Cu | The rails only, +3V3, +5V (0.5 mm) and +9V (0.6 mm); every SMD rail pad has its own via down to it. No signal uses In2 |
+| In2.Cu | The rails only, +3V3, +5V and +9V (0.762 mm); every SMD rail pad has its own via down to it. No signal uses In2 |
 | B.Cu | Longer signals, the bypass paths to the relay, the bottom-side drivers |
 
 Analog and digital: each point of F.Cu and B.Cu is worked out as audio,
@@ -293,16 +293,44 @@ then a repair pass with the region keepouts lifted and the signal tracks
 free to move.
 
 **Result:** 1546 tracks, 302 vias; the scripted check (connectivity with GND
-through the plane, clearances 0.18 mm, 0.15 mm for digital and control,
-0.5 mm to the edge, 0.254 mm hole to hole) finds no violations. **32
-connections in 28 nets are still open** and are to be finished in KiCad:
+through the plane, clearances, 0.5 mm to the edge, 0.254 mm hole to hole)
+finds no violations. 32 connections in 28 nets were left open.
+
+### Power section and widths (2026-10-10)
+
+The board has since been opened in KiCad (it is the source of truth now; the
+unlabelled local nets carry KiCad's `Net-(...)` names). The buck was
+re-placed by hand (U301, C305, C304, L301, C306, C307), and the rest of the
+power section was re-placed and re-routed by `scripts/pcb_routing/power.py`:
+
+- **DC input**, one bus at y = 56 from the jack pin: D301 (TVS) hangs off it,
+  FB301 with C301 and C302 under its two pads, D302, then +9V straight down
+  to the LDO and onto In2 (1.0 mm on F.Cu).
+- **+5V LDO**, a second row at y = 63 flowing back towards the +5V via, in
+  order: FB302, C308 and C309, U302 (input pins facing right), C310 and
+  C311, FB303, C312. The Alchemist's U201 pattern: a cap 2.5 mm each side.
+- **Buck feedback** R301–R303 in a column beside the FB pin instead of 6–10 mm
+  below the chip; the SW node to the BOOT cap crosses under the chip on a
+  short B.Cu link rather than on In2.
+- **+5V** reaches the rest of the board on In2 (`rail.py`), hopping the +3V3
+  and +9V In2 rails with two short via pairs.
+
+**Widths** are the Alchemist's four, applied board-wide by `widths.py`:
+1.0 mm (DC input, SW), 0.762 (rails, local power), 0.508 (GND stubs, VDDA),
+0.254 (signals; NRST 0.1016 through the SWD needle pads), clearance 0.1524
+everywhere. A track that could not be widened to its class steps down one
+size (144 did). Every segment is at 0, 45 or 90 degrees (127 re-drawn). The
+KiCad net classes carry the same values.
+
+**Now:** 1623 tracks, 294 vias, no violations in the scripted check; **29
+connections in 26 nets still open**, all signals bar VDDA:
 
 | Class | Open |
 |---|---|
-| Control (15) | POT1, POT2, POT3, POT2_W, POT3_W, TOG1_A, TOG1_B, TOG2_B, TOG3_A, TOG3_B, EXP, EXP_RING, FSW_BYPASS, FSW_BYPASS_IN, FSW_HOLD_IN |
-| Digital (7) | HSE_OUT, NRST (2), CODEC_BICK, CODEC_CCLK, LED_EFFECT_DRV, LED_HOLD_DRV, LED_HOLD_G |
-| Audio (3) | OUT_L, EFFECT_OUT_R, VCOM_A (2) |
-| Rails, power | +3V3 (2), +5V, VDDA (2, U201 pins 20/21) |
+| Control (15) | POT1, POT2, POT3, POT2_W (`Net-(R102-Pad1)`), POT3_W (`Net-(R103-Pad1)`), TOG1_A, TOG1_B, TOG2_B, TOG3_A, TOG3_B, EXP, EXP_RING (`Net-(J406-PadR)`), FSW_BYPASS (`Net-(J405-Pin_1)`), FSW_BYPASS_IN, FSW_HOLD_IN |
+| Digital (7) | HSE_OUT (`Net-(U201-PH1)`), NRST (2), CODEC_BICK, CODEC_CCLK, LED_EFFECT_DRV, LED_HOLD_DRV, LED_HOLD_G (`Net-(Q403-G)`) |
+| Audio (3) | OUT_L (`Net-(D404-A2)`), EFFECT_OUT_R, VCOM_A (2) |
+| Power | VDDA (2, U201 pins 20/21) |
 
 What to look at in KiCad besides the open ones: the long B.Cu detours (the
 audio bundle down the right-hand edge, the loops over the output stage), the
