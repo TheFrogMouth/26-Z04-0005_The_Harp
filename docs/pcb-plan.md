@@ -264,7 +264,7 @@ J407 are bare copper.
 (including the five face parts whose courtyards reach over jack pins, as
 before).
 
-## Routing (first pass, scripted, 2026-10-09)
+## Routing (first pass, scripted, 2026-10-09; In2 pours 2026-10-10)
 
 ![Routing, F.Cu, B.Cu and In2.Cu](images/pcb-routing.png)
 
@@ -275,8 +275,30 @@ Routed without KiCad by `scripts/pcb_routing/` (see its README): Freerouting
 |---|---|
 | F.Cu | Parts, short signals, the local power nets |
 | In1.Cu | Solid GND (the zone; fill it in KiCad). Every SMD GND pad has its own via to it (106) |
-| In2.Cu | The rails only, +3V3, +5V (0.5 mm) and +9V (0.6 mm); every SMD rail pad has its own via down to it. No signal uses In2 |
+| In2.Cu | The rails as **pours**, +3V3, +5V and +9V in one zone each (see below); every SMD rail pad has its own via down to it. No signal uses In2 |
 | B.Cu | Longer signals, the bypass paths to the relay, the bottom-side drivers |
+
+**In2 pours (2026-10-10).** The rails first ran as 0.5 / 0.6 mm tracks on In2;
+they are now zones. The old tracks were a valid planar layout, so they became
+the backbone of each pour: every other point of In2 goes to the nearest
+backbone, each region is pulled in 0.12 mm so the rails never touch, and the
+result is written as four zones (+9V one, +5V one, +3V3 two) with solid
+connection to their vias, 0.2 mm clearance, 0.25 mm minimum width. Smaller
+zones have the higher priority, so a rail inside another's pocket wins it.
+What the pours look like: +9V along the left edge, the top and the bottom
+edge, with a spur down to the relay coil; +5V wrapped round the codec side
+and the lower right; +3V3 across the middle and right. On a four-layer board
+with one plane for three supplies, two of them could not be joined on In2
+alone: the buck's +3V3 output has to cross the +5V of the codec. It is joined
+by a 5.0 mm jumper on F.Cu beside the codec IC501, between the +3V3 vias at
+(129.4, 107.3) and (131.3, 111.2); the rest of the rails are whole in the
+pours.
+
+**In KiCad: press B to fill** (both In1 and In2); the fill makes the
+clearances and the antipads round every foreign via. The zones have not been
+filled or checked in KiCad; the script imitates the fill (foreign copper
+0.2 mm back, thin bits dropped) and finds every rail terminal joined except
+the two cases under *Still open*.
 
 Analog and digital: each point of F.Cu and B.Cu is worked out as audio,
 digital or neutral from the nearest pads of each kind (a region reaches 5 mm
@@ -290,26 +312,31 @@ is some long one-sided detours on B.Cu.
 Order: GND fanout, rails, local power, digital round the MCU, audio, the LED
 and relay drive lines, control (pots, toggles, footswitches, expression),
 then a repair pass with the region keepouts lifted and the signal tracks
-free to move.
+free to move; then the rails' In2 tracks became pours (above).
 
-**Result:** 1546 tracks, 302 vias; the scripted check (connectivity with GND
-through the plane, clearances 0.18 mm, 0.15 mm for digital and control,
-0.5 mm to the edge, 0.254 mm hole to hole) finds no violations. **32
-connections in 28 nets are still open** and are to be finished in KiCad:
+**Result:** 1367 tracks, 302 vias, 4 pours on In2; the scripted check
+(connectivity with GND through the plane and the rails through their pours,
+clearances 0.18 mm, 0.15 mm for digital and control, 0.5 mm to the edge,
+0.254 mm hole to hole) finds no violations. **29 connections in 26 nets are
+still open**, all signals but VDDA, to be finished in KiCad:
 
 | Class | Open |
 |---|---|
 | Control (15) | POT1, POT2, POT3, POT2_W, POT3_W, TOG1_A, TOG1_B, TOG2_B, TOG3_A, TOG3_B, EXP, EXP_RING, FSW_BYPASS, FSW_BYPASS_IN, FSW_HOLD_IN |
 | Digital (7) | HSE_OUT, NRST (2), CODEC_BICK, CODEC_CCLK, LED_EFFECT_DRV, LED_HOLD_DRV, LED_HOLD_G |
 | Audio (3) | OUT_L, EFFECT_OUT_R, VCOM_A (2) |
-| Rails, power | +3V3 (2), +5V, VDDA (2, U201 pins 20/21) |
+| Power | VDDA (2, U201 pins 20/21: boxed in by the neighbouring pins' stubs) |
+
+One more is not in the count: the +3V3 via at (136.0, 84.1) for W201 pin 1
+(the programmer's voltage sense) falls inside the +9V pour, so the fill
+leaves it cut off; it needs a short track to the nearest +3V3 via.
 
 What to look at in KiCad besides the open ones: the long B.Cu detours (the
 audio bundle down the right-hand edge, the loops over the output stage), the
 digital and audio tracks that meet on B.Cu above the relay, and the GND and
 rail vias between the codec and the MCU, which crowd the codec's control
-lines. Thinning the per-pad rail vias (one via per decoupling pair instead
-of per pad) is the change most likely to free room. The `W201` footprint
+lines. The rail vias on every pad are no longer needed to connect the rails
+on In2 (the pours reach them), but each still serves as its pad's feed. The `W201` footprint
 carries a stale 3.4 × 0.2 mm keepout from its library (off the board, also
 on The Relic and the DSP board); it does no harm.
 
